@@ -4,6 +4,9 @@
  * Theme setup, asset enqueueing, nav menus, and helpers.
  */
 
+// ─── SEO Module ─────────────────────────────────────────────────────────────
+require get_template_directory() . '/inc/seo.php';
+
 // ─── Theme Setup ────────────────────────────────────────────────────────────
 
 function rfp_setup() {
