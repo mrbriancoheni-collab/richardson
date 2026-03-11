@@ -2,7 +2,7 @@
 
   <!-- ========== HERO ========== -->
   <section id="hero" class="hero">
-    <div class="hero-bg">
+    <div class="hero-bg" style="background-image: url('<?php echo esc_url( rfp_bg_img_url() ); ?>'); background-size: cover; background-position: center; background-attachment: fixed;">
       <div class="hero-overlay"></div>
       <div class="hero-pattern"></div>
     </div>
@@ -69,14 +69,20 @@
       <div class="about-visual reveal-left">
         <div class="about-img-wrap">
           <div class="about-img-card about-img-card--1">
-            <div class="about-img-inner about-img-inner--1">
-              <i class="fa-solid fa-fire-extinguisher about-icon-large"></i>
-            </div>
+            <img
+              src="<?php echo esc_url( rfp_truck_img_url() ); ?>"
+              alt="Richardson Fire Protection service truck"
+              style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block;"
+              loading="lazy"
+            />
           </div>
           <div class="about-img-card about-img-card--2">
-            <div class="about-img-inner about-img-inner--2">
-              <i class="fa-solid fa-shield-fire about-icon-large"></i>
-            </div>
+            <img
+              src="<?php echo esc_url( rfp_bg_img_url() ); ?>"
+              alt="Richardson Fire Protection team at work"
+              style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block;"
+              loading="lazy"
+            />
           </div>
           <div class="about-float-card">
             <div class="float-card-icon"><i class="fa-solid fa-award"></i></div>
@@ -461,11 +467,10 @@
                 $cat_name = $cats ? esc_html( $cats[0]->name ) : 'News';
         ?>
         <article class="blog-card">
-          <?php if ( has_post_thumbnail() ) : ?>
-          <div class="blog-card__img" style="background-image: url('<?php the_post_thumbnail_url( 'medium' ); ?>'); background-size: cover; background-position: center;"></div>
-          <?php else : ?>
-          <div class="blog-card__img"><i class="fa-solid fa-fire-extinguisher"></i></div>
-          <?php endif; ?>
+          <?php
+          $thumb = has_post_thumbnail() ? get_the_post_thumbnail_url( null, 'medium' ) : rfp_truck_img_url();
+          ?>
+          <div class="blog-card__img" style="background-image: url('<?php echo esc_url( $thumb ); ?>'); background-size: cover; background-position: center;"></div>
           <div class="blog-card__body">
             <span class="blog-tag"><?php echo $cat_name; ?></span>
             <h3><?php the_title(); ?></h3>
@@ -480,7 +485,7 @@
         ?>
         <!-- Placeholder cards shown until blog posts are published -->
         <article class="blog-card">
-          <div class="blog-card__img"><i class="fa-solid fa-fire-extinguisher"></i></div>
+          <div class="blog-card__img" style="background-image: url('<?php echo esc_url( rfp_truck_img_url() ); ?>'); background-size: cover; background-position: center;"></div>
           <div class="blog-card__body">
             <span class="blog-tag">Compliance</span>
             <h3>NFPA 25: What Every Property Manager Needs to Know</h3>
@@ -489,7 +494,7 @@
           </div>
         </article>
         <article class="blog-card">
-          <div class="blog-card__img"><i class="fa-solid fa-building"></i></div>
+          <div class="blog-card__img" style="background-image: url('<?php echo esc_url( rfp_bg_img_url() ); ?>'); background-size: cover; background-position: center;"></div>
           <div class="blog-card__body">
             <span class="blog-tag">Multifamily</span>
             <h3>NFPA 13R vs. 13: Which Standard Applies to Your Apartment Complex?</h3>
@@ -498,7 +503,7 @@
           </div>
         </article>
         <article class="blog-card">
-          <div class="blog-card__img"><i class="fa-solid fa-warehouse"></i></div>
+          <div class="blog-card__img" style="background-image: url('<?php echo esc_url( rfp_truck_img_url() ); ?>'); background-size: cover; background-position: center;"></div>
           <div class="blog-card__body">
             <span class="blog-tag">Industrial</span>
             <h3>High-Piled Storage &amp; Fire Code: A Warehouse Owner's Guide</h3>

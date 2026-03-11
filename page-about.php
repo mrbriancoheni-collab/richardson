@@ -13,7 +13,7 @@ get_header();
 
     <!-- ========== HERO ========== -->
     <section class="hero" style="min-height: 55vh; padding-top: 7rem; padding-bottom: 4rem;">
-      <div class="hero-bg">
+      <div class="hero-bg" style="background-image: url('<?php echo esc_url( rfp_bg_img_url() ); ?>'); background-size: cover; background-position: center; background-attachment: fixed;">
         <div class="hero-overlay"></div>
         <div class="hero-pattern"></div>
       </div>
@@ -45,14 +45,20 @@ get_header();
         <div class="about-visual reveal-left">
           <div class="about-img-wrap">
             <div class="about-img-card about-img-card--1">
-              <div class="about-img-inner about-img-inner--1">
-                <i class="fa-solid fa-fire-extinguisher about-icon-large"></i>
-              </div>
+              <img
+                src="<?php echo esc_url( rfp_truck_img_url() ); ?>"
+                alt="Richardson Fire Protection service truck"
+                style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block;"
+                loading="lazy"
+              />
             </div>
             <div class="about-img-card about-img-card--2">
-              <div class="about-img-inner about-img-inner--2">
-                <i class="fa-solid fa-shield-fire about-icon-large"></i>
-              </div>
+              <img
+                src="<?php echo esc_url( rfp_bg_img_url() ); ?>"
+                alt="Richardson Fire Protection team at work"
+                style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block;"
+                loading="lazy"
+              />
             </div>
             <div class="about-float-card">
               <div class="float-card-icon"><i class="fa-solid fa-award"></i></div>

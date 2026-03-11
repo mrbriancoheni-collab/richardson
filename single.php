@@ -11,7 +11,7 @@ get_header();
     <?php while ( have_posts() ) : the_post(); ?>
 
       <!-- Post Hero -->
-      <div class="page-hero">
+      <div class="page-hero" style="background-image: url('<?php echo esc_url( rfp_bg_img_url() ); ?>'); background-size: cover; background-position: center; background-attachment: fixed;">
         <div class="hero-overlay"></div>
         <div class="container" style="position: relative; z-index: 2; padding-top: 9rem; padding-bottom: 4rem;">
           <?php

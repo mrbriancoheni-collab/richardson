@@ -9,7 +9,7 @@ get_header();
   <main class="site-main">
 
     <!-- Search Hero -->
-    <div class="page-hero">
+    <div class="page-hero" style="background-image: url('<?php echo esc_url( rfp_bg_img_url() ); ?>'); background-size: cover; background-position: center; background-attachment: fixed;">
       <div class="hero-overlay"></div>
       <div class="hero-pattern"></div>
       <div class="container" style="position: relative; z-index: 2; padding-top: 9rem; padding-bottom: 5rem;">
@@ -53,19 +53,8 @@ get_header();
           <?php while ( have_posts() ) : the_post(); ?>
 
             <article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-card' ); ?>>
-              <?php if ( has_post_thumbnail() ) : ?>
-                <a href="<?php the_permalink(); ?>"
-                   class="blog-card__img"
-                   style="background-image: url('<?php the_post_thumbnail_url( 'medium' ); ?>'); background-size: cover; background-position: center; display: block;"></a>
-              <?php else : ?>
-                <div class="blog-card__img">
-                  <?php if ( is_page() ) : ?>
-                    <i class="fa-solid fa-file-lines"></i>
-                  <?php else : ?>
-                    <i class="fa-solid fa-fire-extinguisher"></i>
-                  <?php endif; ?>
-                </div>
-              <?php endif; ?>
+              <?php $thumb = has_post_thumbnail() ? get_the_post_thumbnail_url( null, 'medium' ) : rfp_truck_img_url(); ?>
+              <a href="<?php the_permalink(); ?>" class="blog-card__img" style="background-image: url('<?php echo esc_url( $thumb ); ?>'); background-size: cover; background-position: center; display: block;"></a>
               <div class="blog-card__body">
                 <span class="blog-tag"><?php echo esc_html( ucfirst( get_post_type() ) ); ?></span>
                 <h2 style="font-size: 1.1rem;"><?php the_title(); ?></h2>

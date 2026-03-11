@@ -6,17 +6,14 @@
 
         <div class="footer-brand">
           <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="nav-logo footer-logo">
-            <div class="logo-shield logo-shield--sm">
-              <svg viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
-                <path d="M50 5 L88 22 L88 58 Q88 88 50 105 Q12 88 12 58 L12 22 Z" fill="white" opacity="0.12"/>
-                <path d="M50 5 L88 22 L88 58 Q88 88 50 105 Q12 88 12 58 L12 22 Z" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
-                <text x="50" y="68" text-anchor="middle" font-family="Oswald,sans-serif" font-size="52" font-weight="700" fill="#C41230">R</text>
-              </svg>
-            </div>
-            <div class="logo-wordmark logo-wordmark--light">
-              <span class="logo-name">RICHARDSON</span>
-              <span class="logo-sub">— FIRE PROTECTION —</span>
-            </div>
+            <img
+              src="<?php echo esc_url( rfp_logo_url() ); ?>"
+              alt="Richardson Fire Protection"
+              class="nav-logo__img"
+              width="200"
+              height="48"
+              loading="lazy"
+            />
           </a>
           <p>Protection for your family &amp; investment. Licensed, bonded, and insured fire protection services across Sacramento and Northern California.</p>
           <a href="tel:+19168496441" class="footer-phone">

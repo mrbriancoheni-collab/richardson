@@ -85,6 +85,26 @@ function rfp_enqueue_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'rfp_enqueue_assets' );
 
+// ─── Site Image URLs ─────────────────────────────────────────────────────────
+
+/**
+ * Logo — white version for dark backgrounds (nav, footer).
+ * Change the path here if the upload location ever changes.
+ */
+function rfp_logo_url() {
+    return site_url( '/wp-content/uploads/2026/02/cropped-richardson-fire-protection-logo-w-small.png' );
+}
+
+/** Hero / parallax background — full-width section backdrop. */
+function rfp_bg_img_url() {
+    return site_url( '/wp-content/uploads/2026/02/richardson-fire-protection-paralax.jpg' );
+}
+
+/** Truck / team photo — About sections and blog post fallback. */
+function rfp_truck_img_url() {
+    return site_url( '/wp-content/uploads/2026/02/richardson-truck.jpg' );
+}
+
 // ─── Navigation ──────────────────────────────────────────────────────────────
 
 /**

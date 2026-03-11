@@ -9,7 +9,7 @@ get_header();
   <main class="site-main">
 
     <section class="hero" style="min-height: 70vh; display: flex; align-items: center;">
-      <div class="hero-bg">
+      <div class="hero-bg" style="background-image: url('<?php echo esc_url( rfp_bg_img_url() ); ?>'); background-size: cover; background-position: center;">
         <div class="hero-overlay"></div>
         <div class="hero-pattern"></div>
       </div>
