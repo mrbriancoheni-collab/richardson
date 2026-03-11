@@ -41,7 +41,9 @@ add_action( 'after_setup_theme', 'rfp_setup' );
 // ─── Enqueue Styles & Scripts ────────────────────────────────────────────────
 
 function rfp_enqueue_assets() {
-    $ver = wp_get_theme()->get( 'Version' );
+    // filemtime() versions — any file save immediately busts browser/CDN cache.
+    $css_ver = filemtime( get_template_directory() . '/css/style.css' );
+    $js_ver  = filemtime( get_template_directory() . '/js/main.js' );
 
     // Google Fonts
     wp_enqueue_style(
@@ -64,7 +66,7 @@ function rfp_enqueue_assets() {
         'rfp-style',
         get_template_directory_uri() . '/css/style.css',
         [ 'rfp-google-fonts', 'rfp-font-awesome' ],
-        $ver
+        $css_ver
     );
 
     // Main JavaScript (footer)
@@ -72,7 +74,7 @@ function rfp_enqueue_assets() {
         'rfp-main',
         get_template_directory_uri() . '/js/main.js',
         [],
-        $ver,
+        $js_ver,
         true
     );
 
