@@ -42,11 +42,8 @@ get_header();
           <?php while ( have_posts() ) : the_post(); ?>
 
             <article id="post-<?php the_ID(); ?>" <?php post_class( 'blog-card' ); ?>>
-              <?php if ( has_post_thumbnail() ) : ?>
-                <a href="<?php the_permalink(); ?>" class="blog-card__img" style="background-image: url('<?php the_post_thumbnail_url( 'medium' ); ?>'); background-size: cover; background-position: center; display: block;"></a>
-              <?php else : ?>
-                <div class="blog-card__img"><i class="fa-solid fa-fire-extinguisher"></i></div>
-              <?php endif; ?>
+              <?php $thumb = has_post_thumbnail() ? get_the_post_thumbnail_url( null, 'medium' ) : rfp_truck_img_url(); ?>
+              <a href="<?php the_permalink(); ?>" class="blog-card__img" style="background-image: url('<?php echo esc_url( $thumb ); ?>'); background-size: cover; background-position: center; display: block;"></a>
               <div class="blog-card__body">
                 <?php
                 $cats     = get_the_category();
