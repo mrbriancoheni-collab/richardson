@@ -262,6 +262,20 @@ p  { line-height: 1.75; }
   flex-shrink: 0;
 }
 
+/* Real logo <img> — height-constrained so it never stretches */
+.nav-logo__img {
+  height: 48px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+/* Footer sits on white now, so invert the white-version logo to dark */
+.footer-logo .nav-logo__img {
+  height: 42px;
+  filter: brightness(0);      /* white logo → black silhouette on light bg */
+}
+
 .logo-shield { display: flex; align-items: center; }
 .logo-svg    { width: 56px; height: 62px; }
 .logo-shield--sm .logo-svg { width: 42px; height: 46px; }
@@ -986,7 +1000,7 @@ p  { line-height: 1.75; }
 /* ============================================================
    FOOTER
    ============================================================ */
-.footer { background: var(--c-black); border-top: 3px solid var(--c-red); }
+.footer { background: #ffffff; border-top: 3px solid var(--c-red); }
 .footer-top { padding: 4.5rem 0; }
 .footer-top-container {
   display: grid; grid-template-columns: 1.8fr 1fr 1fr 1.5fr;
@@ -994,7 +1008,7 @@ p  { line-height: 1.75; }
 }
 
 .footer-brand p {
-  font-size: 0.87rem; color: var(--c-text-muted);
+  font-size: 0.87rem; color: #6b7280;
   line-height: 1.7; margin: 1rem 0 1.5rem; max-width: 280px;
 }
 .footer-logo { margin-bottom: 0.25rem; }
@@ -1002,45 +1016,45 @@ p  { line-height: 1.75; }
 .footer-phone {
   display: inline-flex; align-items: center; gap: 0.5rem;
   font-size: 1.1rem; font-weight: 700;
-  color: var(--c-red-light);
+  color: var(--c-red);
   transition: color var(--t-fast);
 }
-.footer-phone:hover { color: #fff; }
+.footer-phone:hover { color: var(--c-red-dark); }
 
 .footer-links-group h4 {
   font-size: 0.72rem; font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--c-white); margin-bottom: 1.25rem;
+  color: var(--c-black); margin-bottom: 1.25rem;
 }
 .footer-links-group ul { display: flex; flex-direction: column; gap: 0.65rem; }
 .footer-links-group a {
-  font-size: 0.86rem; color: var(--c-text-muted);
+  font-size: 0.86rem; color: #6b7280;
   transition: color var(--t-fast);
 }
-.footer-links-group a:hover { color: var(--c-red-light); }
+.footer-links-group a:hover { color: var(--c-red); }
 
 .footer-newsletter h4 {
   font-size: 0.72rem; font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--c-white); margin-bottom: 0.75rem;
+  color: var(--c-black); margin-bottom: 0.75rem;
 }
 .footer-newsletter p {
-  font-size: 0.84rem; color: var(--c-text-muted);
+  font-size: 0.84rem; color: #6b7280;
   line-height: 1.6; margin-bottom: 1.25rem;
 }
 
 .newsletter-form {
   display: flex; gap: 0;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid #e5e7eb;
   border-radius: var(--r-md); overflow: hidden;
-  background: var(--c-surface); margin-bottom: 1.5rem;
+  background: #f9fafb; margin-bottom: 1.5rem;
 }
 .newsletter-form input {
   flex: 1; background: transparent; border: none;
-  padding: 0.75rem 1rem; color: var(--c-white);
+  padding: 0.75rem 1rem; color: var(--c-black);
   font-size: 0.87rem; font-family: inherit; outline: none;
 }
-.newsletter-form input::placeholder { color: var(--c-text-faint); }
+.newsletter-form input::placeholder { color: #9ca3af; }
 .newsletter-form button {
   background: var(--c-red); color: #fff;
   width: 44px;
@@ -1054,25 +1068,25 @@ p  { line-height: 1.75; }
 }
 .footer-licenses span {
   display: flex; align-items: center; gap: 0.4rem;
-  font-size: 0.75rem; color: var(--c-text-faint);
+  font-size: 0.75rem; color: #6b7280;
 }
 .footer-licenses i { color: var(--c-red); font-size: 0.65rem; }
 
 .footer-bottom {
   padding: 1.25rem 0;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid #e5e7eb;
 }
 .footer-bottom-container {
   display: flex; align-items: center; justify-content: space-between;
   flex-wrap: wrap; gap: 1rem;
 }
-.footer-bottom p { font-size: 0.8rem; color: var(--c-text-faint); }
+.footer-bottom p { font-size: 0.8rem; color: #6b7280; }
 .footer-legal { display: flex; gap: 1.5rem; }
 .footer-legal a {
-  font-size: 0.8rem; color: var(--c-text-faint);
+  font-size: 0.8rem; color: #9ca3af;
   transition: color var(--t-fast);
 }
-.footer-legal a:hover { color: var(--c-red-light); }
+.footer-legal a:hover { color: var(--c-red); }
 
 /* ============================================================
    BACK TO TOP

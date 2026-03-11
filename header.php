@@ -15,9 +15,7 @@
         <img
           src="<?php echo esc_url( rfp_logo_url() ); ?>"
           alt="Richardson Fire Protection"
-          width="160"
-          height="38"
-          style="filter: brightness(0) invert(1);"
+          style="height: 38px; width: auto; filter: brightness(0) invert(1);"
         />
       </div>
       <div class="preloader-bar"><span></span></div>
@@ -34,8 +32,6 @@
           src="<?php echo esc_url( rfp_logo_url() ); ?>"
           alt="Richardson Fire Protection"
           class="nav-logo__img"
-          width="220"
-          height="52"
           loading="eager"
         />
       </a>
