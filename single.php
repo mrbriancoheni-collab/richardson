@@ -75,6 +75,9 @@ get_header();
           <div><?php next_post_link( '%link', '%title <i class="fa-solid fa-arrow-right"></i>' ); ?></div>
         </nav>
 
+        <!-- Comments -->
+        <?php comments_template(); ?>
+
       </div>
 
     <?php endwhile; ?>

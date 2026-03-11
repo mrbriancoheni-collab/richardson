@@ -145,6 +145,50 @@ function rfp_widgets_init() {
 }
 add_action( 'widgets_init', 'rfp_widgets_init' );
 
+// ─── Comment Callback ────────────────────────────────────────────────────────
+
+/**
+ * Custom comment template used by comments.php.
+ * Renders each comment with branded avatar and styling.
+ *
+ * @param WP_Comment $comment
+ * @param array      $args
+ * @param int        $depth
+ */
+function rfp_comment( $comment, $args, $depth ) {
+    $initials = strtoupper( substr( $comment->comment_author, 0, 2 ) );
+    ?>
+    <li id="comment-<?php comment_ID(); ?>" <?php comment_class( 'rfp-comment' ); ?>>
+      <article style="display: flex; gap: 1.25rem; padding: 1.5rem 0; border-bottom: 1px solid #f0f0f0;">
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: #1a1a1a; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0;">
+          <?php echo esc_html( $initials ); ?>
+        </div>
+        <div style="flex: 1;">
+          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; flex-wrap: wrap;">
+            <strong style="font-size: 0.95rem;"><?php echo esc_html( $comment->comment_author ); ?></strong>
+            <time style="font-size: 0.8rem; color: #9ca3af;" datetime="<?php comment_date( 'c' ); ?>">
+              <?php comment_date( 'F j, Y' ); ?>
+            </time>
+            <?php comment_reply_link( array_merge( $args, [
+                'reply_text' => '<i class="fa-solid fa-reply"></i> Reply',
+                'depth'      => $depth,
+                'max_depth'  => $args['max_depth'],
+            ] ) ); ?>
+          </div>
+          <?php if ( '0' === $comment->comment_approved ) : ?>
+            <p style="font-size: 0.8rem; color: #f59e0b; background: #fef3c7; padding: 0.35rem 0.75rem; border-radius: 4px; display: inline-block; margin-bottom: 0.5rem;">
+              <i class="fa-solid fa-clock"></i> Your comment is awaiting moderation.
+            </p>
+          <?php endif; ?>
+          <div style="font-size: 0.95rem; color: #374151; line-height: 1.65;">
+            <?php comment_text(); ?>
+          </div>
+        </div>
+      </article>
+    </li>
+    <?php
+}
+
 // ─── AJAX: Contact Form Handler ──────────────────────────────────────────────
 
 function rfp_handle_contact() {
