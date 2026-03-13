@@ -448,7 +448,7 @@ p  { line-height: 1.75; }
 
 .hero-desc {
   font-size: clamp(1rem, 1.8vw, 1.15rem);
-  color: var(--c-text-muted);
+  color: rgba(255, 255, 255, 0.88);
   max-width: 580px;
   margin-bottom: 2.5rem;
   line-height: 1.8;

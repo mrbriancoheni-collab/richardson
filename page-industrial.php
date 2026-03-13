@@ -19,13 +19,13 @@ get_header();
       <div class="container hero-container" style="align-items: flex-start; padding-top: 4rem;">
         <div class="hero-badge reveal-up">
           <span class="badge-dot"></span>
-          NFPA 13 · NFPA 30 · High-Piled Storage · Special Hazards
+          Industrial Fire Sprinkler Sub for GCs &amp; Industrial Developers — Sacramento
         </div>
         <h1 class="hero-title reveal-up">
-          Industrial Fire <span class="hero-title--accent">Systems</span>
+          Industrial Fire <span class="hero-title--accent">Sprinkler Systems</span>
         </h1>
         <p class="hero-desc reveal-up" style="max-width: 640px;">
-          Heavy-duty fire suppression and detection systems engineered for warehouses, manufacturing plants, cold storage, high-piled storage operations, and hazardous materials environments.
+          GCs and industrial developers building high-bay warehouse, cold storage, or manufacturing facilities in Sacramento rely on us for in-rack sprinklers, ESFR systems, and special hazard suppression. We handle the complexity so your project keeps moving.
         </p>
         <div class="hero-actions reveal-up">
           <a href="tel:+19168496441" class="btn btn--primary btn--lg">

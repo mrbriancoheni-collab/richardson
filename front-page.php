@@ -9,14 +9,14 @@
     <div class="container hero-container">
       <div class="hero-badge reveal-up">
         <span class="badge-dot"></span>
-        Sacramento's Commercial &amp; Industrial Fire Protection Specialists
+        Sacramento's Fire Sprinkler Sub for Developers &amp; General Contractors
       </div>
       <h1 class="hero-title reveal-up">
-        Built for Business.<br />
-        <span class="hero-title--accent">Engineered for Industry.</span>
+        On Schedule.<br />
+        <span class="hero-title--accent">Code Compliant. Every Job.</span>
       </h1>
       <p class="hero-desc reveal-up">
-        Richardson Fire Protection designs, installs, inspects, and maintains fire suppression and alarm systems for commercial facilities, industrial operations, and multifamily properties across Sacramento and Northern California.
+        Richardson Fire Protection is the fire sprinkler contractor Sacramento developers and GCs rely on for new construction, tenant improvements, and multifamily projects. We handle design, permits, AHJ coordination, and installation — so your schedule stays intact.
       </p>
       <div class="hero-actions reveal-up">
         <a href="tel:+19168496441" class="btn btn--primary btn--lg">
@@ -96,28 +96,28 @@
       <div class="about-content reveal-right">
         <div class="section-badge">About Richardson</div>
         <h2 class="section-title">Serious Fire Protection<br /><span class="text-accent">For Serious Operations</span></h2>
-        <p class="about-lead">For over 30 years, Richardson Fire Protection has been the go-to contractor for commercial property owners, general contractors, and industrial operators across Sacramento and Northern California.</p>
-        <p class="about-body">We are a family-owned fire protection company with deep roots in this region. Our licensed technicians design, install, test, and maintain fire suppression and alarm systems for office buildings, retail centers, warehouses, manufacturing plants, and multifamily complexes — all engineered to exceed code and built to last.</p>
+        <p class="about-lead">Richardson Fire Protection is Sacramento's go-to fire sprinkler sub for developers and general contractors who need a reliable, schedule-driven trade partner — not another headache on the job.</p>
+        <p class="about-body">We're a family-owned fire protection company based in Antelope, CA with decades of experience on ground-up commercial, industrial, and multifamily projects. Our team handles design-build, permits, AHJ coordination, rough-in, and final certification — one sub, one point of contact, zero surprises on inspection day.</p>
         <div class="about-pillars">
           <div class="pillar">
-            <div class="pillar-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+            <div class="pillar-icon"><i class="fa-solid fa-drafting-compass"></i></div>
             <div class="pillar-content">
-              <strong>Built to Code. Built to Last.</strong>
-              <span>Every system we engineer meets or exceeds NFPA standards and local AHJ requirements — no shortcuts, no exceptions.</span>
+              <strong>Design-Build. Permits Included.</strong>
+              <span>We engineer your system, pull the permits, and coordinate the AHJ — you stay focused on your critical path.</span>
             </div>
           </div>
           <div class="pillar">
-            <div class="pillar-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div class="pillar-icon"><i class="fa-solid fa-calendar-check"></i></div>
             <div class="pillar-content">
-              <strong>24/7 Emergency Response</strong>
-              <span>Fire emergencies don't follow business hours. Neither do we.</span>
+              <strong>Schedule-Driven Crews</strong>
+              <span>We show up when we say we will. Rough-in, above-ceiling, and final on time — every phase, every project.</span>
             </div>
           </div>
           <div class="pillar">
             <div class="pillar-icon"><i class="fa-solid fa-clipboard-check"></i></div>
             <div class="pillar-content">
-              <strong>Code Compliant, Always</strong>
-              <span>We stay current with all NFPA, state, and local fire codes so you never have to worry.</span>
+              <strong>Clean Inspections. Every Time.</strong>
+              <span>Our systems pass AHJ final on the first attempt. No punch list surprises, no certificate delays holding up your CO.</span>
             </div>
           </div>
         </div>
@@ -340,40 +340,40 @@
     <div class="container">
       <div class="section-header reveal-up">
         <div class="section-badge">How We Work</div>
-        <h2 class="section-title">Simple, Stress-Free <span class="text-accent">Process</span></h2>
-        <p class="section-desc">We handle everything from permits to final inspection so you can focus on your business.</p>
+        <h2 class="section-title">Built for Your <span class="text-accent">Project Schedule</span></h2>
+        <p class="section-desc">From pre-construction bid through certificate of completion — we move at the pace your schedule demands.</p>
       </div>
       <div class="process-steps">
         <div class="process-step reveal-up" data-delay="0">
           <div class="step-number">01</div>
-          <div class="step-icon"><i class="fa-solid fa-phone"></i></div>
-          <h3 class="step-title">Free Consultation</h3>
-          <p class="step-desc">Call us or request a quote online. A certified specialist will assess your needs and walk you through your options — no obligation.</p>
-          <div class="step-duration"><i class="fa-regular fa-clock"></i> Same-day response</div>
+          <div class="step-icon"><i class="fa-solid fa-file-lines"></i></div>
+          <h3 class="step-title">Bid &amp; Plan Review</h3>
+          <p class="step-desc">Send us your plans and we turn around a complete, competitive bid. We flag code issues early — before they become RFIs on-site.</p>
+          <div class="step-duration"><i class="fa-regular fa-clock"></i> 24–48 hr turnaround</div>
         </div>
         <div class="process-connector reveal-up" data-delay="50"><i class="fa-solid fa-arrow-right"></i></div>
         <div class="process-step reveal-up" data-delay="100">
           <div class="step-number">02</div>
           <div class="step-icon"><i class="fa-solid fa-drafting-compass"></i></div>
-          <h3 class="step-title">Custom Design &amp; Permit</h3>
-          <p class="step-desc">Our engineers design your system and pull all required permits from the local AHJ — we handle the paperwork so you don't have to.</p>
+          <h3 class="step-title">Design, Engineer &amp; Permit</h3>
+          <p class="step-desc">We produce stamped hydraulic calculations, shop drawings, and handle all permit submittals to the AHJ — no extra sub-consultant needed.</p>
           <div class="step-duration"><i class="fa-regular fa-clock"></i> 1–2 weeks</div>
         </div>
         <div class="process-connector reveal-up" data-delay="150"><i class="fa-solid fa-arrow-right"></i></div>
         <div class="process-step reveal-up" data-delay="200">
           <div class="step-number">03</div>
           <div class="step-icon"><i class="fa-solid fa-hard-hat"></i></div>
-          <h3 class="step-title">Professional Installation</h3>
-          <p class="step-desc">Our licensed field crews install your system with minimal disruption to your operations. All work is inspected and documented.</p>
-          <div class="step-duration"><i class="fa-regular fa-clock"></i> Varies by scope</div>
+          <h3 class="step-title">Phased Field Installation</h3>
+          <p class="step-desc">Our crews show up on your schedule — underground, rough-in, above-ceiling, and trim-out coordinated with your super so nothing waits on us.</p>
+          <div class="step-duration"><i class="fa-regular fa-clock"></i> Per project phase</div>
         </div>
         <div class="process-connector reveal-up" data-delay="250"><i class="fa-solid fa-arrow-right"></i></div>
         <div class="process-step reveal-up" data-delay="300">
           <div class="step-number">04</div>
           <div class="step-icon"><i class="fa-solid fa-circle-check"></i></div>
-          <h3 class="step-title">Test, Certify &amp; Maintain</h3>
-          <p class="step-desc">Full system testing, AHJ final inspection coordination, and an ongoing maintenance plan to keep you protected and compliant year after year.</p>
-          <div class="step-duration"><i class="fa-regular fa-clock"></i> Ongoing</div>
+          <h3 class="step-title">Test, AHJ Final &amp; Cert</h3>
+          <p class="step-desc">We coordinate the AHJ final inspection, conduct full system testing, and deliver the certificate of completion — no delays to your CO.</p>
+          <div class="step-duration"><i class="fa-regular fa-clock"></i> First-pass approval</div>
         </div>
       </div>
     </div>
@@ -521,8 +521,8 @@
     <div class="container contact-container">
       <div class="contact-info reveal-left">
         <div class="section-badge">Get in Touch</div>
-        <h2 class="section-title">Ready to Protect <span class="text-accent">Your Property?</span></h2>
-        <p class="contact-lead">Call us or fill out the form for a free consultation. We respond to all inquiries within one business day — and immediately for emergencies.</p>
+        <h2 class="section-title">Bid a Project or <span class="text-accent">Request a Consultation?</span></h2>
+        <p class="contact-lead">We respond to all bid requests and pre-construction consultations within one business day. Send us your plans or call to talk through scope — we work fast so your schedule doesn't slip.</p>
         <div class="contact-details">
           <div class="contact-item">
             <div class="contact-item__icon"><i class="fa-solid fa-phone"></i></div>
@@ -535,14 +535,14 @@
             <div class="contact-item__icon"><i class="fa-solid fa-envelope"></i></div>
             <div class="contact-item__content">
               <strong>Email</strong>
-              <a href="mailto:info@richardsonfire.com">info@richardsonfire.com</a>
+              <a href="mailto:Chris@Richardsonfirepro.com">Chris@Richardsonfirepro.com</a>
             </div>
           </div>
           <div class="contact-item">
             <div class="contact-item__icon"><i class="fa-solid fa-location-dot"></i></div>
             <div class="contact-item__content">
-              <strong>Service Area</strong>
-              <span>Sacramento &amp; Northern California</span>
+              <strong>Office</strong>
+              <span>3599 Scotland Drive, Antelope, CA 95843</span>
             </div>
           </div>
           <div class="contact-item contact-item--emergency">
@@ -604,7 +604,7 @@
           </button>
           <div class="form-success" id="formSuccess" hidden>
             <i class="fa-solid fa-circle-check"></i>
-            <strong>Message received!</strong> We'll contact you within one business day. For emergencies call (916) 849-6441.
+            <strong>Message received!</strong> We'll follow up within one business day. For urgent project needs call (916) 849-6441.
           </div>
         </form>
       </div>
