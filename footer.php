@@ -13,7 +13,7 @@
               loading="lazy"
             />
           </a>
-          <p>Protection for your family &amp; investment. Licensed, bonded, and insured fire protection services across Sacramento and Northern California.</p>
+          <p>Sacramento's fire sprinkler sub for developers and general contractors. Design-build, permits, AHJ coordination, and on-schedule installation across Northern California.</p>
           <a href="tel:+19168496441" class="footer-phone">
             <i class="fa-solid fa-phone"></i> (916) 849-6441
           </a>

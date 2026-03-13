@@ -22,10 +22,10 @@ get_header();
           Same-Day Response — 24/7 Emergency Line Available
         </div>
         <h1 class="hero-title reveal-up">
-          Let's Talk <span class="hero-title--accent">Fire Protection</span>
+          Start a Bid or <span class="hero-title--accent">Pre-Con Consultation</span>
         </h1>
         <p class="hero-desc reveal-up" style="max-width: 600px;">
-          Whether you need a quote, an inspection, or an emergency technician on-site tonight — we're here. Fill out the form or call us directly.
+          Send us your plans or reach out directly. We turn around competitive bids in 24–48 hours and are available for pre-construction meetings, plan reviews, and scope calls.
         </p>
       </div>
     </section>
@@ -37,7 +37,7 @@ get_header();
         <!-- Info Column -->
         <div class="contact-info reveal-left">
           <div class="section-badge">Contact Info</div>
-          <h2 class="section-title">Get in Touch <span class="text-accent">Any Time</span></h2>
+          <h2 class="section-title">Reach <span class="text-accent">Our Team</span></h2>
 
           <div class="contact-details">
             <div class="contact-item">
@@ -50,15 +50,15 @@ get_header();
             <div class="contact-item">
               <div class="contact-item__icon"><i class="fa-solid fa-envelope"></i></div>
               <div class="contact-item__content">
-                <strong>Email Us</strong>
-                <a href="mailto:info@richardsonfire.com">info@richardsonfire.com</a>
+                <strong>Email</strong>
+                <a href="mailto:Chris@Richardsonfirepro.com">Chris@Richardsonfirepro.com</a>
               </div>
             </div>
             <div class="contact-item">
               <div class="contact-item__icon"><i class="fa-solid fa-location-dot"></i></div>
               <div class="contact-item__content">
-                <strong>Service Area</strong>
-                <span>Sacramento &amp; Northern California</span>
+                <strong>Office</strong>
+                <span>3599 Scotland Drive, Antelope, CA 95843</span>
               </div>
             </div>
             <div class="contact-item contact-item--emergency">
@@ -155,7 +155,7 @@ get_header();
             </button>
             <div class="form-success" id="formSuccess" hidden>
               <i class="fa-solid fa-circle-check"></i>
-              <strong>Message received!</strong> We'll be in touch within one business day. For emergencies call (916) 849-6441.
+            <strong>Message received!</strong> We'll follow up within one business day. For urgent project needs call (916) 849-6441.
             </div>
           </form>
         </div>
@@ -168,17 +168,17 @@ get_header();
       <div class="container">
         <div class="section-header" style="margin-bottom: 2.5rem;">
           <div class="section-badge">Why Richardson</div>
-          <h2 class="section-title" style="color: #fff;">Why Property Owners <span class="text-accent">Choose Us</span></h2>
+          <h2 class="section-title" style="color: #fff;">Why GCs &amp; Developers <span class="text-accent">Work With Us</span></h2>
         </div>
         <div class="services-grid services-grid--6 reveal-up">
           <?php
           $reasons = [
-            [ 'fa-solid fa-phone', 'Fast Response',      'We respond to all quote requests the same business day — and to emergencies within the hour.' ],
-            [ 'fa-solid fa-file-contract', 'Turnkey',    'Design, permits, installation, testing, and final inspection — one contractor, one point of contact.' ],
-            [ 'fa-solid fa-award', '30+ Years',          'Sacramento\'s most experienced fire protection contractor. We\'ve seen it all.' ],
-            [ 'fa-solid fa-dollar-sign', 'Fair Pricing', 'Straightforward quotes with no hidden fees. We stand behind our estimates.' ],
-            [ 'fa-solid fa-truck-fast', '24/7 Service',  'Emergency response available around the clock, every day of the year.' ],
-            [ 'fa-solid fa-handshake', 'Local & Accountable', 'Family-owned — not a franchise. We put our name on every job.' ],
+            [ 'fa-solid fa-file-lines',    'Fast Bid Turnaround',   'Send us your plans — we return a complete, detailed bid in 24–48 hours so you can close your budget.' ],
+            [ 'fa-solid fa-file-contract', 'Design-Build Turnkey',  'We own the scope from hydraulic design and permit submittal through AHJ final — one sub, zero gaps.' ],
+            [ 'fa-solid fa-calendar-check','Schedule-Driven',       'Our crews hit rough-in, above-ceiling, and trim-out milestones on your schedule — not theirs.' ],
+            [ 'fa-solid fa-circle-check',  'Clean Inspections',     'We pass AHJ final on the first attempt. No re-inspections, no certificate delays, no CO hold-ups.' ],
+            [ 'fa-solid fa-handshake',     'True Sub Partner',      'Family-owned. We give every GC a direct line to the owner — not a dispatcher, not a call center.' ],
+            [ 'fa-solid fa-award',         '30+ Years on the Job',  'Decades of Sacramento-area experience means we know every local AHJ and what they expect to see.' ],
           ];
           foreach ( $reasons as $r ) : ?>
             <div class="service-card service-card--sm" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); color: #fff;">

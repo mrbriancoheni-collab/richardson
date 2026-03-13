@@ -10,21 +10,21 @@ function rfp_business_data() {
     return [
         'name'          => 'Richardson Fire Protection',
         'legal_name'    => 'Richardson Fire Protection Inc.',
-        'description'   => 'Sacramento\'s trusted commercial, industrial, and residential fire sprinkler contractor. Licensed, CSFM-certified, serving the greater Sacramento Valley since 1985.',
+        'description'   => 'Fire sprinkler contractor serving developers and general contractors across Sacramento and Northern California. New construction, tenant improvements, and multifamily. CSFM-certified, NICET licensed.',
         'url'           => home_url('/'),
-        'phone'         => '+1-916-395-1800',
-        'phone_display' => '(916) 395-1800',
-        'email'         => 'info@richardsonfireprotection.com',
+        'phone'         => '+1-916-849-6441',
+        'phone_display' => '(916) 849-6441',
+        'email'         => 'Chris@Richardsonfirepro.com',
         'address'       => [
-            'street'   => '4840 Roseville Road, Suite 100',
-            'city'     => 'Sacramento',
+            'street'   => '3599 Scotland Drive',
+            'city'     => 'Antelope',
             'region'   => 'CA',
-            'postal'   => '95660',
+            'postal'   => '95843',
             'country'  => 'US',
         ],
         'geo'           => [
-            'lat' => 38.6527,
-            'lng' => -121.3714,
+            'lat' => 38.7074,
+            'lng' => -121.3653,
         ],
         'hours'         => [
             [ 'days' => [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday' ], 'open' => '07:00', 'close' => '17:00' ],
@@ -61,8 +61,8 @@ function rfp_get_page_seo() {
     ];
 
     if ( is_front_page() ) {
-        $seo['title']       = 'Richardson Fire Protection | Sacramento\'s #1 Fire Sprinkler Contractor';
-        $seo['description'] = 'Licensed fire sprinkler installation, inspection & repair for commercial, industrial, and residential properties in Sacramento, CA. CSFM certified. Call (916) 395-1800.';
+        $seo['title']       = 'Richardson Fire Protection | Fire Sprinkler Contractor for Developers & GCs — Sacramento';
+        $seo['description'] = 'Preferred fire sprinkler sub for developers and general contractors in Sacramento. New construction, TI, and multifamily. CSFM-certified. Clean submittals, on-schedule installs. Call (916) 849-6441.';
         $seo['schema_type'] = 'home';
 
     } elseif ( is_singular() ) {
@@ -72,35 +72,35 @@ function rfp_get_page_seo() {
         switch ( $slug ) {
             case 'commercial':
             case 'commercial-fire-protection':
-                $seo['title']       = 'Commercial Fire Protection in Sacramento, CA | Richardson Fire Protection';
-                $seo['description'] = 'Expert commercial fire sprinkler design, installation, and inspection for offices, retail, restaurants, and warehouses in Sacramento. NFPA 13 compliant. Free estimates.';
+                $seo['title']       = 'Commercial Fire Sprinkler Contractor in Sacramento | Richardson Fire Protection';
+                $seo['description'] = 'Fire sprinkler design-build for GCs and developers on office, retail, mixed-use, and warehouse projects in Sacramento. NFPA 13 compliant. We pull permits, coordinate the AHJ, and hit your schedule.';
                 $seo['schema_type'] = 'service_commercial';
                 break;
 
             case 'industrial':
             case 'industrial-fire-protection':
-                $seo['title']       = 'Industrial Fire Protection in Sacramento, CA | Richardson Fire Protection';
-                $seo['description'] = 'High-piled storage, special hazard, and industrial fire suppression systems for Sacramento-area manufacturing, warehousing, and processing facilities. Call today.';
+                $seo['title']       = 'Industrial Fire Protection Contractor — Sacramento | Richardson Fire Protection';
+                $seo['description'] = 'Industrial fire suppression for high-bay warehouse, cold storage, and manufacturing projects in Sacramento. In-rack sprinklers, ESFR, special hazard. Trusted by GCs and industrial developers.';
                 $seo['schema_type'] = 'service_industrial';
                 break;
 
             case 'residential':
             case 'multifamily':
             case 'residential-fire-protection':
-                $seo['title']       = 'Residential Fire Sprinkler Systems in Sacramento | Richardson Fire Protection';
-                $seo['description'] = 'NFPA 13R and 13D residential fire sprinkler installation for apartments, condos, and single-family homes in Sacramento and surrounding areas. Licensed contractor.';
+                $seo['title']       = 'Multifamily Fire Sprinkler Contractor in Sacramento | Richardson Fire Protection';
+                $seo['description'] = 'NFPA 13R fire sprinkler design-build for multifamily developers and GCs in Sacramento. Apartments, condos, mixed-use. We handle permits, AHJ coordination, and rough-in through final cert.';
                 $seo['schema_type'] = 'service_residential';
                 break;
 
             case 'about':
-                $seo['title']       = 'About Richardson Fire Protection | Sacramento Fire Sprinkler Experts Since 1985';
-                $seo['description'] = 'Family-owned Sacramento fire protection company with over 35 years of experience. CSFM certified, fully licensed and insured. Serving the Sacramento Valley.';
+                $seo['title']       = 'About Richardson Fire Protection | Sacramento\'s Preferred Fire Sprinkler Sub';
+                $seo['description'] = 'Richardson Fire Protection is a family-owned fire sprinkler contractor in Antelope, CA. Trusted by Sacramento developers and GCs for on-schedule, code-compliant fire protection since 1994.';
                 $seo['schema_type'] = 'about';
                 break;
 
             case 'contact':
-                $seo['title']       = 'Contact Us | Richardson Fire Protection — Sacramento, CA';
-                $seo['description'] = 'Contact Richardson Fire Protection for fire sprinkler installation, inspection, or repair estimates in Sacramento, CA. Call (916) 395-1800 or fill out our form.';
+                $seo['title']       = 'Contact Richardson Fire Protection | Sacramento Fire Sprinkler Contractor';
+                $seo['description'] = 'Reach Richardson Fire Protection for bid requests, plan reviews, or project consultations. Serving Sacramento-area developers and general contractors. Call (916) 849-6441.';
                 $seo['schema_type'] = 'contact';
                 break;
 
@@ -120,13 +120,13 @@ function rfp_get_page_seo() {
         }
 
     } elseif ( is_home() || is_archive() ) {
-        $seo['title']       = 'Fire Protection Blog & News | Richardson Fire Protection';
-        $seo['description'] = 'Fire sprinkler tips, code updates, industry news, and project spotlights from Richardson Fire Protection in Sacramento, CA.';
+        $seo['title']       = 'Fire Protection Resources for Developers & GCs | Richardson Fire Protection';
+        $seo['description'] = 'Fire code updates, NFPA compliance guides, and project insights for Sacramento developers and general contractors — from Richardson Fire Protection.';
         $seo['schema_type'] = 'blog';
 
     } elseif ( is_search() ) {
         $seo['title']       = 'Search Results | Richardson Fire Protection';
-        $seo['description'] = 'Search results from Richardson Fire Protection, Sacramento\'s trusted fire sprinkler contractor.';
+        $seo['description'] = 'Search results from Richardson Fire Protection, Sacramento\'s preferred fire sprinkler contractor for developers and GCs.';
 
     } elseif ( is_404() ) {
         $seo['title']       = 'Page Not Found | Richardson Fire Protection';
@@ -187,7 +187,7 @@ function rfp_seo_meta() {
     $lat = $biz['geo']['lat'];
     $lng = $biz['geo']['lng'];
     echo "<meta name=\"geo.region\" content=\"US-CA\" />\n";
-    echo "<meta name=\"geo.placename\" content=\"Sacramento, California\" />\n";
+    echo "<meta name=\"geo.placename\" content=\"Antelope, California\" />\n";
     echo "<meta name=\"geo.position\" content=\"{$lat};{$lng}\" />\n";
     echo "<meta name=\"ICBM\" content=\"{$lat}, {$lng}\" />\n";
 

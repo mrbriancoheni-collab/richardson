@@ -19,13 +19,13 @@ get_header();
       <div class="container hero-container" style="align-items: flex-start; padding-top: 4rem;">
         <div class="hero-badge reveal-up">
           <span class="badge-dot"></span>
-          NFPA 13R · NFPA 13D · NFPA 72 · AHJ-Ready
+          NFPA 13R Fire Sprinkler Sub for Multifamily Developers &amp; GCs — Sacramento
         </div>
         <h1 class="hero-title reveal-up">
-          Multifamily &amp; Apartment <span class="hero-title--accent">Fire Protection</span>
+          Multifamily Fire <span class="hero-title--accent">Sprinkler Systems</span>
         </h1>
         <p class="hero-desc reveal-up" style="max-width: 640px;">
-          Code-compliant fire suppression and alarm systems for apartment complexes, condominiums, mixed-use developments, senior living communities, and HOA-managed properties across Northern California.
+          Building apartments, condos, or mixed-use in Sacramento? We're the fire sprinkler sub multifamily developers and GCs trust for NFPA 13R design-build, permit coordination, and phased installation that hits your construction schedule.
         </p>
         <div class="hero-actions reveal-up">
           <a href="tel:+19168496441" class="btn btn--primary btn--lg">

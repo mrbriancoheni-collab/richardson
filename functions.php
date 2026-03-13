@@ -7,6 +7,53 @@
 // ─── SEO Module ─────────────────────────────────────────────────────────────
 require get_template_directory() . '/inc/seo.php';
 
+// ─── Blog Categories (seed on after_switch_theme) ────────────────────────────
+// These categories target the GC / developer ICP reading the blog.
+add_action( 'after_switch_theme', 'rfp_seed_categories' );
+function rfp_seed_categories() {
+    $categories = [
+        [
+            'name'        => 'Code & Compliance',
+            'slug'        => 'code-compliance',
+            'description' => 'NFPA code updates, California Title 19 changes, AHJ bulletins, and what they mean for your next project.',
+        ],
+        [
+            'name'        => 'New Construction',
+            'slug'        => 'new-construction',
+            'description' => 'Fire sprinkler design and installation tips for ground-up commercial, industrial, and multifamily construction projects.',
+        ],
+        [
+            'name'        => 'Multifamily & Developers',
+            'slug'        => 'multifamily-developers',
+            'description' => 'NFPA 13R/13D guidance, development checklists, and fire protection considerations for apartment and condo developers.',
+        ],
+        [
+            'name'        => 'General Contractor Resources',
+            'slug'        => 'general-contractor-resources',
+            'description' => 'Scheduling guides, scope-of-work tips, pre-construction checklists, and sub coordination advice for GCs.',
+        ],
+        [
+            'name'        => 'Inspections & Maintenance',
+            'slug'        => 'inspections-maintenance',
+            'description' => 'Annual inspection requirements, NFPA 25 guidance, and maintenance best practices for building owners and property managers.',
+        ],
+        [
+            'name'        => 'Project Spotlights',
+            'slug'        => 'project-spotlights',
+            'description' => 'Behind-the-scenes look at completed commercial, industrial, and multifamily fire protection projects across Sacramento.',
+        ],
+    ];
+
+    foreach ( $categories as $cat ) {
+        if ( ! term_exists( $cat['slug'], 'category' ) ) {
+            wp_insert_term( $cat['name'], 'category', [
+                'slug'        => $cat['slug'],
+                'description' => $cat['description'],
+            ] );
+        }
+    }
+}
+
 // ─── Theme Setup ────────────────────────────────────────────────────────────
 
 function rfp_setup() {

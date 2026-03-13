@@ -19,13 +19,13 @@ get_header();
       <div class="container hero-container" style="align-items: flex-start; padding-top: 4rem;">
         <div class="hero-badge reveal-up">
           <span class="badge-dot"></span>
-          NFPA 13 · NFPA 72 · Title 19 Compliant
+          Design-Build Fire Sprinkler Sub for GCs &amp; Commercial Developers
         </div>
         <h1 class="hero-title reveal-up">
-          Commercial Fire <span class="hero-title--accent">Protection</span>
+          Commercial Fire <span class="hero-title--accent">Sprinkler Systems</span>
         </h1>
         <p class="hero-desc reveal-up" style="max-width: 640px;">
-          Full-service fire suppression and alarm systems for offices, retail centers, restaurants, hotels, schools, and multi-tenant buildings across Sacramento and Northern California.
+          We're the fire sprinkler sub that Sacramento GCs put on every commercial project — offices, retail, mixed-use, restaurants, and warehouses. We handle design, permits, AHJ coordination, and installation. NFPA 13 compliant from day one.
         </p>
         <div class="hero-actions reveal-up">
           <a href="tel:+19168496441" class="btn btn--primary btn--lg">

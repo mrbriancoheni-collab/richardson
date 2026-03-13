@@ -20,13 +20,13 @@ get_header();
       <div class="container hero-container" style="align-items: flex-start; padding-top: 4rem;">
         <div class="hero-badge reveal-up">
           <span class="badge-dot"></span>
-          Sacramento's Trusted Fire Protection Firm Since 1994
+          Sacramento's Preferred Fire Sprinkler Sub for Developers &amp; GCs
         </div>
         <h1 class="hero-title reveal-up">
           About <span class="hero-title--accent">Richardson</span><br />Fire Protection
         </h1>
         <p class="hero-desc reveal-up" style="max-width: 640px;">
-          Family-owned, deeply experienced, and completely committed to protecting the people and properties that make Northern California home.
+          Family-owned and Sacramento-based, Richardson Fire Protection has been the fire sprinkler sub general contractors and developers call first — because we show up, hit our phases, and pass inspection.
         </p>
         <div class="hero-actions reveal-up">
           <a href="tel:+19168496441" class="btn btn--primary btn--lg">
