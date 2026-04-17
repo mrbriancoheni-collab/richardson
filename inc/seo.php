@@ -60,6 +60,25 @@ function rfp_get_page_seo() {
         'schema_type' => 'home',
     ];
 
+    // ── City location pages: child of /locations/ ────────────────────
+    if ( is_singular('page') ) {
+        $post   = get_queried_object();
+        $slug   = $post->post_name ?? '';
+        $parent = get_post( $post->post_parent );
+        if ( $parent && 'locations' === $parent->post_name && function_exists('rfp_location_data') ) {
+            $loc = rfp_location_data( $slug );
+            if ( $loc ) {
+                $raw = 'Richardson Fire Protection serves GCs and developers in ' . $loc['name'] . '. NFPA 13 design-build, ' . $loc['ahj_name'] . ' permit coordination, and first-pass inspections. Bids in 24–48 hrs. Call (916) 849-6441.';
+                $seo['title']       = 'Fire Protection in ' . $loc['name'] . ', CA | ' . $loc['county'] . ' Fire Sprinkler Contractor';
+                $seo['description'] = substr( wp_strip_all_tags( $raw ), 0, 157 ) . '...';
+                $seo['schema_type'] = 'location_city';
+                $seo['location']    = $loc;
+                $seo['description'] = esc_attr( $seo['description'] );
+                return $seo;
+            }
+        }
+    }
+
     if ( is_front_page() ) {
         $seo['title']       = 'Richardson Fire Protection | Fire Sprinkler Contractor for Developers & GCs — Sacramento';
         $seo['description'] = 'Preferred fire sprinkler sub for developers and general contractors in Sacramento. New construction, TI, and multifamily. CSFM-certified. Clean submittals, on-schedule installs. Call (916) 849-6441.';
@@ -102,6 +121,12 @@ function rfp_get_page_seo() {
                 $seo['title']       = 'Contact Richardson Fire Protection | Sacramento Fire Sprinkler Contractor';
                 $seo['description'] = 'Reach Richardson Fire Protection for bid requests, plan reviews, or project consultations. Serving Sacramento-area developers and general contractors. Call (916) 849-6441.';
                 $seo['schema_type'] = 'contact';
+                break;
+
+            case 'locations':
+                $seo['title']       = 'Fire Protection Service Areas | Richardson Fire Protection — Sacramento Valley';
+                $seo['description'] = 'Richardson Fire Protection serves GCs and developers in Sacramento, Stockton, Roseville, Rocklin, Fairfield, Yuba City, and Davis. Design-build fire sprinkler contractor for Northern California.';
+                $seo['schema_type'] = 'locations_hub';
                 break;
 
             default:
@@ -322,8 +347,70 @@ function rfp_schema_markup() {
     ];
     $graphs[] = $local_business;
 
+    // ── Location City — city-specific pages ─────────────────────────
+    if ( $seo['schema_type'] === 'location_city' && ! empty( $seo['location'] ) ) {
+        $loc      = $seo['location'];
+        $city_url = home_url( '/locations/' . $loc['slug'] . '/' );
+
+        $graphs[] = [
+            '@type'            => 'Service',
+            '@id'              => $city_url . '#service',
+            'name'             => 'Fire Protection Services in ' . $loc['name'] . ', CA',
+            'description'      => 'NFPA 13 fire sprinkler design-build, permit coordination with ' . $loc['ahj_name'] . ', and installation for GCs and developers in ' . $loc['name'] . ', CA.',
+            'url'              => $city_url,
+            'provider'         => [ '@id' => home_url('/#localbusiness') ],
+            'areaServed'       => [
+                '@type'          => 'City',
+                'name'           => $loc['name'] . ', CA',
+                'addressRegion'  => 'CA',
+                'addressCountry' => 'US',
+                'geo'            => [
+                    '@type'     => 'GeoCoordinates',
+                    'latitude'  => $loc['lat'],
+                    'longitude' => $loc['lng'],
+                ],
+            ],
+            'serviceType'      => 'Fire Sprinkler Contractor',
+            'availableChannel' => [
+                '@type'        => 'ServiceChannel',
+                'serviceUrl'   => $city_url,
+                'servicePhone' => $biz['phone'],
+            ],
+        ];
+
+        if ( ! empty( $loc['faqs'] ) ) {
+            $faq_entities = [];
+            foreach ( $loc['faqs'] as $faq ) {
+                $faq_entities[] = [
+                    '@type'          => 'Question',
+                    'name'           => $faq['q'],
+                    'acceptedAnswer' => [
+                        '@type' => 'Answer',
+                        'text'  => $faq['a'],
+                    ],
+                ];
+            }
+            $graphs[] = [
+                '@type'      => 'FAQPage',
+                '@id'        => $city_url . '#faq',
+                'url'        => $city_url,
+                'mainEntity' => $faq_entities,
+            ];
+        }
+
+        $graphs[] = [
+            '@type'           => 'BreadcrumbList',
+            '@id'             => $city_url . '#breadcrumb',
+            'itemListElement' => [
+                [ '@type' => 'ListItem', 'position' => 1, 'name' => 'Home',       'item' => home_url('/') ],
+                [ '@type' => 'ListItem', 'position' => 2, 'name' => 'Locations',  'item' => home_url('/locations/') ],
+                [ '@type' => 'ListItem', 'position' => 3, 'name' => $loc['name'], 'item' => $city_url ],
+            ],
+        ];
+    }
+
     // ── BreadcrumbList — non-home pages ────────────────────────────
-    if ( ! is_front_page() ) {
+    if ( ! is_front_page() && $seo['schema_type'] !== 'location_city' ) {
         $crumbs = [
             [
                 '@type'    => 'ListItem',

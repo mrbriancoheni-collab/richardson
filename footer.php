@@ -42,6 +42,25 @@
           </ul>
         </div>
 
+        <div class="footer-links-group">
+          <h4>Service Areas</h4>
+          <ul>
+            <?php
+            $rfp_footer_cities = [
+                [ 'Sacramento', 'sacramento' ],
+                [ 'Stockton',   'stockton'   ],
+                [ 'Roseville',  'roseville'  ],
+                [ 'Rocklin',    'rocklin'     ],
+                [ 'Fairfield',  'fairfield'  ],
+                [ 'Yuba City',  'yuba-city'  ],
+                [ 'Davis',      'davis'      ],
+            ];
+            foreach ( $rfp_footer_cities as $fc ) : ?>
+              <li><a href="<?php echo esc_url( home_url( '/locations/' . $fc[1] . '/' ) ); ?>"><?php echo esc_html( $fc[0] ); ?></a></li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+
         <div class="footer-newsletter">
           <h4>Fire Safety Newsletter</h4>
           <p>Code updates, maintenance tips, and safety reminders — delivered monthly.</p>
