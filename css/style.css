@@ -998,6 +998,12 @@ p  { line-height: 1.75; }
 }
 .form-success i { font-size: 1.2rem; flex-shrink: 0; }
 
+.form-error {
+  padding: 1rem 1.25rem;
+  background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.35);
+  border-radius: var(--r-md); color: #f87171; font-size: 0.9rem;
+}
+
 /* ============================================================
    FOOTER
    ============================================================ */
