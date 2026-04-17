@@ -221,3 +221,90 @@ function rfp_all_locations() {
                 ],
             ],
         ],
+
+        // ── YUBA CITY ────────────────────────────────────────────────────────
+        'yuba-city' => [
+            'name'          => 'Yuba City',
+            'slug'          => 'yuba-city',
+            'county'        => 'Sutter County',
+            'lat'           => 39.1404,
+            'lng'           => -121.6169,
+            'population'    => 70117,
+            'intro'         => 'Yuba City and Sutter County are experiencing steady growth in agricultural processing, healthcare, and residential development. Richardson Fire Protection serves GCs and developers in the Yuba-Sutter market with full-service fire protection design-build, including cold-storage and food-processing fire suppression systems and NFPA 13R multifamily installations coordinated through Yuba City Fire.',
+            'building_types' => [
+                'Agricultural Processing & Cold Storage',
+                'Healthcare & Medical Office',
+                'Multifamily & Affordable Housing',
+                'Retail & Commercial Strip',
+            ],
+            'ahj_name'      => 'Yuba City Fire Department',
+            'nearby_cities' => [ 'sacramento', 'roseville', 'rocklin', 'davis' ],
+            'services_note' => 'Yuba City Fire Department often coordinates with Sutter County on projects at the city-county boundary. Richardson manages both jurisdictions to ensure correct permit routing from the start.',
+            'faqs'          => [
+                [
+                    'q' => 'Does Yuba City require fire sprinklers in multifamily housing?',
+                    'a' => 'Yes. California Building Code requires sprinklers in all new multifamily construction. Projects in Yuba City fall under NFPA 13R for buildings up to four stories. Richardson designs and installs 13R systems from permit application through certificate of completion.',
+                ],
+                [
+                    'q' => 'What fire protection is required for agricultural cold-storage facilities in Yuba City?',
+                    'a' => 'Cold-storage and agricultural processing facilities require dry-pipe or pre-action sprinkler systems to operate reliably in low-temperature environments. Richardson designs these systems to NFPA 13 including freeze protection and double-interlock pre-action where required.',
+                ],
+                [
+                    'q' => 'Can Richardson handle healthcare fire protection in Yuba City?',
+                    'a' => 'Yes. Healthcare occupancies (Group I-2) have specific NFPA 13 quick-response sprinkler requirements and NFPA 72 emergency voice evacuation requirements. Richardson has installed compliant systems in medical facilities throughout Northern California, coordinating with local AHJs including Yuba City FD.',
+                ],
+                [
+                    'q' => 'How does permitting work for projects on the Yuba City / Sutter County boundary?',
+                    'a' => 'Jurisdiction depends on whether the parcel falls within city limits or unincorporated Sutter County. We confirm the correct AHJ at project kickoff and submit to the appropriate fire authority to avoid routing errors that delay permit approval.',
+                ],
+                [
+                    'q' => 'What is the drive time from Richardson\'s office to Yuba City job sites?',
+                    'a' => 'Richardson\'s office is in Antelope, approximately 35–45 minutes from Yuba City via Highway 99. Our crews are regularly on-site in the Yuba-Sutter area, and emergency response is available 24/7 at (916) 849-6441.',
+                ],
+            ],
+        ],
+
+        // ── DAVIS ─────────────────────────────────────────────────────────────
+        'davis' => [
+            'name'          => 'Davis',
+            'slug'          => 'davis',
+            'county'        => 'Yolo County',
+            'lat'           => 38.5449,
+            'lng'           => -121.7405,
+            'population'    => 68464,
+            'intro'         => 'Davis is a university city with a growing biotech and research corridor anchored by UC Davis, driving consistent demand for specialized laboratory, research, and mixed-use fire protection scopes. Richardson Fire Protection works with GCs and developers on Davis projects that require close coordination with the Davis Fire Department and — on campus-adjacent projects — with UC Davis Office of Environmental Health and Safety.',
+            'building_types' => [
+                'Research Laboratory & Biotech',
+                'University-Adjacent Mixed-Use',
+                'Multifamily & Student Housing',
+                'Retail & Community Commercial',
+            ],
+            'ahj_name'      => 'Davis Fire Department',
+            'nearby_cities' => [ 'sacramento', 'fairfield', 'roseville', 'yuba-city' ],
+            'services_note' => 'Davis Fire Department and UC Davis EH&S sometimes have parallel review requirements on campus-adjacent projects. Richardson manages both review tracks simultaneously to prevent schedule conflicts during plan check.',
+            'faqs'          => [
+                [
+                    'q' => 'What fire protection does a laboratory building in Davis require?',
+                    'a' => 'Laboratory occupancies are typically classified as Group B or H depending on chemical storage levels, triggering specific NFPA 13 suppression requirements including deluge or pre-action systems for high-hazard areas. Richardson designs systems that satisfy both Davis FD and UC Davis EH&S requirements.',
+                ],
+                [
+                    'q' => 'Does Davis Fire Department require fire sprinklers in student housing?',
+                    'a' => 'Yes. New student housing in Davis is subject to California Residential Code R313 and California Building Code, requiring NFPA 13 or 13R systems depending on building type and height. Richardson installs these systems for student housing developers and GCs in the Davis market.',
+                ],
+                [
+                    'q' => 'How does Richardson handle fire protection for mixed-use buildings near UC Davis?',
+                    'a' => 'Mixed-use buildings have multiple occupancy classifications on different floors, each with different NFPA 13 hazard classifications. Richardson engineers a single integrated system that addresses each occupancy correctly and submits a consolidated package to Davis FD for plan review.',
+                ],
+                [
+                    'q' => 'Can Richardson bid research and lab projects before full design documents are available?',
+                    'a' => 'Yes. We provide preliminary budget estimates and scope assessments based on schematic drawings or program documents and update the bid as design progresses. This is standard for research lab projects where the GC needs early MEP cost data.',
+                ],
+                [
+                    'q' => 'What is the typical fire sprinkler permit timeline for a Davis project?',
+                    'a' => 'Davis Fire Department typically reviews commercial submittals in 3–5 weeks. Richardson submits complete permit packages — including stamped hydraulic calculations, shop drawings, and all required documentation — to minimize the risk of correction cycles.',
+                ],
+            ],
+        ],
+
+    ]; // end rfp_all_locations()
+}

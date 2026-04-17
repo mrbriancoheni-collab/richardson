@@ -4,8 +4,23 @@
  * Theme setup, asset enqueueing, nav menus, and helpers.
  */
 
+// ─── Location Data ───────────────────────────────────────────────────────────
+require get_template_directory() . '/inc/location-data.php';
+
 // ─── SEO Module ─────────────────────────────────────────────────────────────
 require get_template_directory() . '/inc/seo.php';
+
+// ─── Auto-route city pages to page-location.php ──────────────────────────────
+add_filter( 'template_include', function( $template ) {
+    if ( ! is_singular( 'page' ) ) return $template;
+    $post   = get_queried_object();
+    $parent = get_post( $post->post_parent );
+    if ( $parent && 'locations' === $parent->post_name ) {
+        $city_tpl = get_template_directory() . '/page-location.php';
+        if ( file_exists( $city_tpl ) ) return $city_tpl;
+    }
+    return $template;
+} );
 
 // ─── Blog Categories (seed on after_switch_theme) ────────────────────────────
 // These categories target the GC / developer ICP reading the blog.
