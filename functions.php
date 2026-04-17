@@ -4,8 +4,23 @@
  * Theme setup, asset enqueueing, nav menus, and helpers.
  */
 
+// ─── Location Data ───────────────────────────────────────────────────────────
+require get_template_directory() . '/inc/location-data.php';
+
 // ─── SEO Module ─────────────────────────────────────────────────────────────
 require get_template_directory() . '/inc/seo.php';
+
+// ─── Auto-route city pages to page-location.php ──────────────────────────────
+add_filter( 'template_include', function( $template ) {
+    if ( ! is_singular( 'page' ) ) return $template;
+    $post   = get_queried_object();
+    $parent = get_post( $post->post_parent );
+    if ( $parent && 'locations' === $parent->post_name ) {
+        $city_tpl = get_template_directory() . '/page-location.php';
+        if ( file_exists( $city_tpl ) ) return $city_tpl;
+    }
+    return $template;
+} );
 
 // ─── Blog Categories (seed on after_switch_theme) ────────────────────────────
 // These categories target the GC / developer ICP reading the blog.
@@ -264,14 +279,15 @@ function rfp_comment( $comment, $args, $depth ) {
 // ─── AJAX: Contact Form Handler ──────────────────────────────────────────────
 
 function rfp_handle_contact() {
-    check_ajax_referer( 'rfp_contact', 'nonce' );
+    check_ajax_referer( 'rfp_contact', 'rfp_nonce' );
 
-    $first_name   = sanitize_text_field( $_POST['firstName']   ?? '' );
-    $last_name    = sanitize_text_field( $_POST['lastName']    ?? '' );
-    $email        = sanitize_email(      $_POST['email']       ?? '' );
-    $phone        = sanitize_text_field( $_POST['phone']       ?? '' );
-    $service_type = sanitize_text_field( $_POST['serviceType'] ?? '' );
-    $message      = sanitize_textarea_field( $_POST['message'] ?? '' );
+    $first_name   = sanitize_text_field(    $_POST['firstName']     ?? '' );
+    $last_name    = sanitize_text_field(    $_POST['lastName']      ?? '' );
+    $email        = sanitize_email(         $_POST['email']         ?? '' );
+    $phone        = sanitize_text_field(    $_POST['phone']         ?? '' );
+    $service_type = sanitize_text_field(    $_POST['serviceType']   ?? '' );
+    $message      = sanitize_textarea_field($_POST['message']       ?? '' );
+    $city         = sanitize_text_field(    $_POST['location_city'] ?? '' );
 
     if ( empty( $first_name ) || empty( $last_name ) || empty( $email ) || empty( $service_type ) ) {
         wp_send_json_error( [ 'message' => 'Please fill in all required fields.' ] );
@@ -281,11 +297,12 @@ function rfp_handle_contact() {
         wp_send_json_error( [ 'message' => 'Please enter a valid email address.' ] );
     }
 
-    $to      = get_option( 'admin_email' );
+    $to      = 'Chris@Richardsonfirepro.com';
     $subject = 'New Quote Request — Richardson Fire Protection';
+    $city_line = $city ? "City: {$city}\n" : '';
     $body    = sprintf(
-        "Name: %s %s\nEmail: %s\nPhone: %s\nService: %s\n\nMessage:\n%s",
-        $first_name, $last_name, $email, $phone, $service_type, $message
+        "Name: %s %s\nEmail: %s\nPhone: %s\nService: %s\n%s\nMessage:\n%s",
+        $first_name, $last_name, $email, $phone, $service_type, $city_line, $message
     );
     $headers = [
         'Content-Type: text/plain; charset=UTF-8',

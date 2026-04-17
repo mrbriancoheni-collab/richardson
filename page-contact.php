@@ -155,8 +155,9 @@ get_header();
             </button>
             <div class="form-success" id="formSuccess" hidden>
               <i class="fa-solid fa-circle-check"></i>
-            <strong>Message received!</strong> We'll follow up within one business day. For urgent project needs call (916) 849-6441.
+              <strong>Message received!</strong> We'll follow up within one business day. For urgent project needs call (916) 849-6441.
             </div>
+            <div class="form-error" id="formError" hidden></div>
           </form>
         </div>
 
@@ -192,5 +193,7 @@ get_header();
     </section>
 
   </main>
+
+<?php get_template_part( 'template-parts/locations-strip' ); ?>
 
 <?php get_footer(); ?>

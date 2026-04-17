@@ -222,42 +222,60 @@ function initFAQ() {
 function initContactForm() {
   const form    = $('#contactForm');
   const success = $('#formSuccess');
+  const errorEl = $('#formError');
   if (!form) return;
 
   on(form, 'submit', e => {
     e.preventDefault();
 
-    // Basic validation
+    // Client-side validation
     let valid = true;
     $$('[required]', form).forEach(field => {
       const isEmpty = field.type === 'checkbox' ? !field.checked : !field.value.trim();
       field.style.borderColor = isEmpty ? '#ef4444' : '';
       if (isEmpty) valid = false;
     });
-
     if (!valid) return;
 
-    // Simulate async submission
-    const btn = $('[type="submit"]', form);
+    const btn  = $('[type="submit"]', form);
     const text = $('.btn-text', btn);
     text.textContent = 'Sending...';
     btn.disabled = true;
+    if (errorEl) errorEl.hidden = true;
 
-    setTimeout(() => {
-      form.style.opacity = '0';
-      setTimeout(() => {
-        form.hidden = true;
-        success.hidden = false;
-        success.style.opacity = '0';
-        requestAnimationFrame(() => {
-          success.style.transition = 'opacity 0.4s ease';
-          success.style.opacity = '1';
-        });
-      }, 300);
-    }, 1200);
+    const data = new FormData(form);
+    data.append('action', 'rfp_contact');
+
+    fetch(rfpData.ajaxUrl, { method: 'POST', credentials: 'same-origin', body: data })
+      .then(r => r.json())
+      .then(res => {
+        if (res.success) {
+          form.style.transition = 'opacity 0.3s ease';
+          form.style.opacity = '0';
+          setTimeout(() => {
+            form.hidden = true;
+            success.hidden = false;
+            success.style.opacity = '0';
+            requestAnimationFrame(() => {
+              success.style.transition = 'opacity 0.4s ease';
+              success.style.opacity = '1';
+            });
+          }, 300);
+        } else {
+          const msg = (res.data && res.data.message) || 'Something went wrong. Please call us directly.';
+          if (errorEl) { errorEl.textContent = msg; errorEl.hidden = false; }
+          text.textContent = 'Send My Request';
+          btn.disabled = false;
+        }
+      })
+      .catch(() => {
+        if (errorEl) { errorEl.textContent = 'Network error. Please call (916) 849-6441.'; errorEl.hidden = false; }
+        text.textContent = 'Send My Request';
+        btn.disabled = false;
+      });
   });
 
-  // Clear error state on input
+  // Clear validation state on input
   $$('[required]', form).forEach(field => {
     on(field, 'input', () => { field.style.borderColor = ''; });
   });

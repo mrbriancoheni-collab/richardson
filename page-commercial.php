@@ -225,4 +225,6 @@ get_header();
 
   </main>
 
+<?php get_template_part( 'template-parts/locations-strip' ); ?>
+
 <?php get_footer(); ?>
