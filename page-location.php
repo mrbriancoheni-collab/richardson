@@ -177,6 +177,70 @@ $all_locs  = rfp_all_locations();
       </div>
     </section>
 
+    <!-- ========== SERVICE AREA MAP ========== -->
+    <section class="section location-map-section">
+      <div class="container">
+        <div class="location-map-wrap reveal-up">
+          <div class="location-map-content">
+            <div class="section-badge">Service Area</div>
+            <h2 class="section-title">
+              Serving <span class="text-accent"><?php echo esc_html( $name ); ?></span> &amp; Surrounding Areas
+            </h2>
+            <p style="color: var(--c-text-muted); line-height: 1.75; margin-bottom: 1.5rem;">
+              Richardson Fire Protection covers <?php echo esc_html( $name ); ?> and all of <?php echo esc_html( $county ); ?>. Our crews are familiar with local building departments, permit offices, and <?php echo esc_html( $ahj ); ?> review requirements across the region.
+            </p>
+            <div class="location-map-meta">
+              <div class="location-map-meta__item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <strong>Office</strong>
+                  <span>3599 Scotland Drive, Antelope, CA 95843</span>
+                </div>
+              </div>
+              <div class="location-map-meta__item">
+                <i class="fa-solid fa-building-shield"></i>
+                <div>
+                  <strong>Authority Having Jurisdiction</strong>
+                  <span><?php echo esc_html( $ahj ); ?></span>
+                </div>
+              </div>
+              <div class="location-map-meta__item">
+                <i class="fa-solid fa-clock"></i>
+                <div>
+                  <strong>Bid Turnaround</strong>
+                  <span>Complete bids returned in 24–48 hours</span>
+                </div>
+              </div>
+            </div>
+            <a href="#contact-<?php echo esc_attr( $slug ); ?>" class="btn btn--primary" style="margin-top: 1.75rem; display: inline-flex;">
+              <i class="fa-solid fa-file-lines"></i> Get a Bid for <?php echo esc_html( $name ); ?>
+            </a>
+          </div>
+          <div class="location-map-embed">
+            <?php
+            $lat     = floatval( $loc['lat'] );
+            $lng     = floatval( $loc['lng'] );
+            $bbox    = round( $lng - 0.06, 6 ) . ',' . round( $lat - 0.045, 6 ) . ',' . round( $lng + 0.06, 6 ) . ',' . round( $lat + 0.045, 6 );
+            $map_url = 'https://www.openstreetmap.org/export/embed.html?bbox=' . $bbox . '&amp;layer=mapnik&amp;marker=' . $lat . '%2C' . $lng;
+            ?>
+            <iframe
+              src="<?php echo esc_url( rawurldecode( $map_url ) ); ?>"
+              width="100%"
+              height="420"
+              loading="lazy"
+              title="<?php echo esc_attr( $name ); ?> fire protection service area"
+            ></iframe>
+            <a
+              href="https://www.openstreetmap.org/?mlat=<?php echo esc_attr( $lat ); ?>&mlon=<?php echo esc_attr( $lng ); ?>#map=13/<?php echo esc_attr( $lat ); ?>/<?php echo esc_attr( $lng ); ?>"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="location-map-credit"
+            >View larger map</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== FAQ (AEO) ========== -->
     <section class="section faq" id="faq-<?php echo esc_attr( $slug ); ?>">
       <div class="container" style="max-width: 800px;">
