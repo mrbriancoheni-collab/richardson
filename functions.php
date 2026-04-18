@@ -13,7 +13,8 @@ require get_template_directory() . '/inc/seo.php';
 // ─── Auto-route city pages to page-location.php ──────────────────────────────
 add_filter( 'template_include', function( $template ) {
     if ( ! is_singular( 'page' ) ) return $template;
-    $post   = get_queried_object();
+    $post = get_queried_object();
+    if ( empty( $post->post_parent ) ) return $template;
     $parent = get_post( $post->post_parent );
     if ( $parent && 'locations' === $parent->post_name ) {
         $city_tpl = get_template_directory() . '/page-location.php';
