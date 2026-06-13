@@ -53,7 +53,7 @@ get_header();
             <h3 class="service-card__title">CSLB C-16 License</h3>
             <p class="service-card__desc">California State License Board Fire Protection Contractor license — required for all fire sprinkler installation and service work in California.</p>
             <ul class="service-card__features">
-              <li><i class="fa-solid fa-check"></i> License #: <strong><!-- TODO: insert real CSLB # --></strong></li>
+              <li><i class="fa-solid fa-check"></i> License #: <strong>1053506</strong></li>
               <li><i class="fa-solid fa-check"></i> Active &amp; Current</li>
               <li><i class="fa-solid fa-check"></i> Verify at cslb.ca.gov</li>
             </ul>

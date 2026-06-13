@@ -69,7 +69,7 @@
             <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
           </form>
           <div class="footer-licenses">
-            <span><i class="fa-solid fa-certificate"></i> CSLB Lic. #000000</span>
+            <span><i class="fa-solid fa-certificate"></i> CSLB Lic. #1053506</span>
             <span><i class="fa-solid fa-shield-halved"></i> NICET Certified</span>
           </div>
         </div>

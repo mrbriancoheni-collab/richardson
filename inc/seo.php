@@ -38,7 +38,7 @@ function rfp_business_data() {
             'https://www.facebook.com/richardsonfireprotection',
             'https://www.linkedin.com/company/richardson-fire-protection',
         ],
-        'license'       => 'CSLB #TODO_REPLACE | CSFM Certified', // TODO: replace with real CSLB license number
+        'license'       => 'CSLB #1053506 | CSFM Certified',
         'founding_year' => '1985',
         'price_range'   => '$$',
         'logo_url'      => rfp_logo_url(),
