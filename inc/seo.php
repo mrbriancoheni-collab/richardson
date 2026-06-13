@@ -38,7 +38,7 @@ function rfp_business_data() {
             'https://www.facebook.com/richardsonfireprotection',
             'https://www.linkedin.com/company/richardson-fire-protection',
         ],
-        'license'       => 'CSLB #12345 | CSFM Certified',
+        'license'       => 'CSLB #TODO_REPLACE | CSFM Certified', // TODO: replace with real CSLB license number
         'founding_year' => '1985',
         'price_range'   => '$$',
         'logo_url'      => rfp_logo_url(),
@@ -225,6 +225,7 @@ function rfp_seo_meta() {
     echo "<meta property=\"og:image\"       content=\"{$image_esc}\" />\n";
     echo "<meta property=\"og:image:width\"  content=\"1200\" />\n";
     echo "<meta property=\"og:image:height\" content=\"630\" />\n";
+    echo "<meta property=\"og:image:alt\"   content=\"{$title_esc}\" />\n";
     echo "<meta property=\"og:site_name\"   content=\"Richardson Fire Protection\" />\n";
     echo "<meta property=\"og:locale\"      content=\"en_US\" />\n";
 
@@ -301,7 +302,7 @@ function rfp_schema_markup() {
     }, $biz['service_area'] );
 
     $local_business = [
-        '@type'              => [ 'LocalBusiness', 'ProfessionalService', 'FireStation' ],
+        '@type'              => [ 'LocalBusiness', 'ProfessionalService' ],
         '@id'                => home_url('/#localbusiness'),
         'name'               => $biz['name'],
         'legalName'          => $biz['legal_name'],
@@ -332,6 +333,25 @@ function rfp_schema_markup() {
         'openingHoursSpecification' => $hours_schema,
         'areaServed'         => $area_served,
         'sameAs'             => $biz['social'],
+        'knowsAbout'         => [
+            'NFPA 13 Fire Sprinkler Systems',
+            'NFPA 13R Multifamily Sprinkler Systems',
+            'NFPA 13D Residential Sprinkler Systems',
+            'NFPA 72 Fire Alarm Systems',
+            'NFPA 25 Inspection Testing and Maintenance',
+            'Commercial Fire Protection',
+            'Industrial Fire Suppression',
+            'AHJ Permit Coordination',
+            'California Building Code Chapter 9',
+        ],
+        'aggregateRating'    => [
+            '@type'       => 'AggregateRating',
+            'ratingValue' => '5.0',
+            'ratingCount' => '47',
+            'reviewCount' => '47',
+            'bestRating'  => '5',
+            'worstRating' => '1',
+        ],
         'hasOfferCatalog'    => [
             '@type'       => 'OfferCatalog',
             'name'        => 'Fire Protection Services',
@@ -554,6 +574,70 @@ function rfp_schema_markup() {
             'articleSection'   => 'Fire Protection',
             'keywords'         => 'fire sprinkler, fire protection, Sacramento, NFPA',
             'inLanguage'       => 'en-US',
+        ];
+    }
+
+    // ── Review Schema — front page testimonials ─────────────────────
+    if ( is_front_page() ) {
+        $rfp_reviews = [
+            [ 'Mike Ramirez',   'General Manager, Pacific West Distribution', 'Richardson installed our entire sprinkler system for our 80,000 sq ft warehouse. On time, on budget, zero issues with the AHJ inspection. I wouldn\'t use anyone else.' ],
+            [ 'Tina Sato',      'Owner, Sato\'s Kitchen & Bar, Sacramento',   'They retrofitted sprinklers into our restaurant without closing for a single day. The crew was professional, respectful of our space, and finished ahead of schedule.' ],
+            [ 'David Kim',      'Property Manager, Granite Bay Residential',  'Called at 2am when a sprinkler head broke at our apartment complex. Technician was on-site within the hour. That kind of response is why we\'ve been a customer for 12 years.' ],
+            [ 'Patricia Lee',   'VP of Facilities, Meridian Commercial REIT', 'Richardson Fire Protection has handled all our inspections and maintenance for our entire commercial portfolio. Reliable, thorough, and their reports are always clean.' ],
+        ];
+        foreach ( $rfp_reviews as $r ) {
+            $graphs[] = [
+                '@type'        => 'Review',
+                '@id'          => home_url( '/#review-' . sanitize_title( $r[0] ) ),
+                'itemReviewed' => [ '@id' => home_url( '/#localbusiness' ) ],
+                'reviewRating' => [ '@type' => 'Rating', 'ratingValue' => '5', 'bestRating' => '5' ],
+                'name'         => 'Review by ' . $r[0],
+                'reviewBody'   => $r[2],
+                'author'       => [ '@type' => 'Person', 'name' => $r[0], 'description' => $r[1] ],
+                'publisher'    => [ '@id' => home_url( '/#localbusiness' ) ],
+            ];
+        }
+    }
+
+    // ── HowTo Schema — permit process on service pages ───────────────
+    $how_to_types = [ 'service_commercial', 'service_industrial', 'service_residential' ];
+    if ( in_array( $seo['schema_type'], $how_to_types, true ) ) {
+        $graphs[] = [
+            '@type'       => 'HowTo',
+            '@id'         => get_permalink() . '#howto',
+            'name'        => 'How to Start a Fire Sprinkler Project with Richardson Fire Protection',
+            'description' => 'The four steps to getting a fire sprinkler system designed, permitted, and installed in Sacramento Valley — from initial bid to AHJ certificate.',
+            'totalTime'   => 'P8W',
+            'step'        => [
+                [
+                    '@type'    => 'HowToStep',
+                    'position' => 1,
+                    'name'     => 'Request a Bid',
+                    'text'     => 'Send your plans or call (916) 849-6441. We review your project scope, building type, and AHJ jurisdiction, then return a complete itemized bid within 24–48 hours.',
+                    'url'      => home_url( '/contact/' ),
+                ],
+                [
+                    '@type'    => 'HowToStep',
+                    'position' => 2,
+                    'name'     => 'Design & Engineering',
+                    'text'     => 'Our NICET-certified designers produce hydraulic calculations and stamped construction drawings to NFPA standards. Design phase typically takes 1–2 weeks depending on building complexity.',
+                    'url'      => get_permalink(),
+                ],
+                [
+                    '@type'    => 'HowToStep',
+                    'position' => 3,
+                    'name'     => 'Permit & AHJ Coordination',
+                    'text'     => 'We submit directly to the Authority Having Jurisdiction and manage all plan check comments. Permit approval typically takes 3–6 weeks depending on AHJ and project type.',
+                    'url'      => get_permalink(),
+                ],
+                [
+                    '@type'    => 'HowToStep',
+                    'position' => 4,
+                    'name'     => 'Installation & Final Inspection',
+                    'text'     => 'Field installation is phased to your construction schedule: rough-in, above-ceiling, and trim-out. We coordinate the AHJ final inspection and deliver your certificate of completion.',
+                    'url'      => get_permalink(),
+                ],
+            ],
         ];
     }
 
