@@ -267,6 +267,29 @@ $all_locs  = rfp_all_locations();
       </div>
     </section>
 
+    <!-- ========== NEIGHBORHOODS ========== -->
+    <?php if ( ! empty( $loc['neighborhoods'] ) ) : ?>
+    <section class="section" style="background: var(--c-surface); padding-top: 2.5rem; padding-bottom: 2.5rem;">
+      <div class="container">
+        <div class="section-header reveal-up" style="margin-bottom: 1.5rem;">
+          <div class="section-badge">Areas We Serve</div>
+          <h2 class="section-title"><?php echo esc_html( $name ); ?> <span class="text-accent">Neighborhoods &amp; Districts</span></h2>
+          <p class="section-desc">Richardson Fire Protection serves GCs and developers across <?php echo esc_html( $name ); ?> — from major development corridors to neighborhood infill projects.</p>
+        </div>
+        <ul class="locations-strip__list reveal-up" style="justify-content: flex-start;">
+          <?php foreach ( $loc['neighborhoods'] as $n ) : ?>
+            <li>
+              <span class="locations-strip__link" style="cursor: default;">
+                <i class="fa-solid fa-map-pin"></i>
+                <?php echo esc_html( $n ); ?>
+              </span>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+      </div>
+    </section>
+    <?php endif; ?>
+
     <!-- ========== NEARBY SERVICE AREAS ========== -->
     <section class="section" style="background: var(--c-surface); padding-top: 3rem; padding-bottom: 3rem;">
       <div class="container">
