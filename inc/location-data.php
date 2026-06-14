@@ -29,8 +29,9 @@ function rfp_all_locations() {
             ],
             'ahj_name'      => 'Sacramento City Fire Department',
             'nearby_cities' => [ 'roseville', 'rocklin', 'davis', 'stockton' ],
-            'services_note' => 'SCFD Fire Prevention Division handles plan review. Richardson submits stamped hydraulic calculations and shop drawings directly and coordinates all required pre-final walkthroughs.',
-            'faqs'          => [
+            'services_note'  => 'SCFD Fire Prevention Division handles plan review. Richardson submits stamped hydraulic calculations and shop drawings directly and coordinates all required pre-final walkthroughs.',
+            'neighborhoods'  => [ 'Natomas', 'Midtown', 'Central City', 'Downtown Sacramento', 'East Sacramento', 'Rancho Cordova', 'West Sacramento', 'Oak Park', 'Arden-Arcade' ],
+            'faqs'           => [
                 [
                     'q' => 'What fire protection standards does the Sacramento City Fire Department enforce?',
                     'a' => 'SCFD enforces NFPA 13 for commercial sprinklers, NFPA 72 for fire alarm, and NFPA 25 for inspections — consistent with California Fire Code (Title 19, CCR). Richardson submits stamped hydraulic calculations and shop drawings directly to SCFD Fire Prevention and coordinates all required pre-final walkthroughs.',
@@ -50,6 +51,18 @@ function rfp_all_locations() {
                 [
                     'q' => 'What is the typical timeline for fire sprinkler permit approval in Sacramento?',
                     'a' => 'SCFD Fire Prevention Division typically reviews submittals in 4–6 weeks for standard commercial projects. We submit complete, well-organized packages the first time to avoid correction cycles that delay your critical path.',
+                ],
+                [
+                    'q' => 'What happens if Sacramento City Fire Department requests plan revisions after first submittal?',
+                    'a' => 'Correction cycles add 2–4 weeks per round. Richardson minimizes this risk by submitting complete, coordinated packages — stamped calcs, shop drawings, and NFPA code analysis — on the first attempt. When corrections do occur, we respond within 3–5 business days.',
+                ],
+                [
+                    'q' => 'Does Richardson serve the Natomas and Midtown development corridors?',
+                    'a' => 'Yes. Natomas is one of Sacramento\'s most active multifamily and mixed-use corridors. Richardson has completed projects across Natomas, Midtown, and Central City, and is familiar with SCFD\'s preferences for these high-volume development zones.',
+                ],
+                [
+                    'q' => 'What is the ballpark cost for fire sprinkler installation in a Sacramento commercial building?',
+                    'a' => 'Costs vary significantly by building type, size, and occupancy. As a general benchmark: light commercial runs $2–$4 per sq ft, ordinary hazard occupancies $3–$5, and high-hazard or high-rise systems $6–$10+. Call (916) 849-6441 for a project-specific estimate.',
                 ],
             ],
         ],
@@ -71,8 +84,9 @@ function rfp_all_locations() {
             ],
             'ahj_name'      => 'Stockton Fire Department',
             'nearby_cities' => [ 'sacramento', 'fairfield', 'davis', 'roseville' ],
-            'services_note' => 'Stockton Fire Department requires commodity classification documentation for high-piled storage projects. Richardson provides complete storage analysis and ESFR design packages that clear SFD plan check without corrections.',
-            'faqs'          => [
+            'services_note'  => 'Stockton Fire Department requires commodity classification documentation for high-piled storage projects. Richardson provides complete storage analysis and ESFR design packages that clear SFD plan check without corrections.',
+            'neighborhoods'  => [ 'Port Industrial Corridor', 'North Stockton', 'March Lane Corridor', 'I-5 Logistics Park', 'Downtown Stockton', 'South Stockton Industrial', 'Weston Ranch', 'Morada' ],
+            'faqs'           => [
                 [
                     'q' => 'What fire suppression system does a Stockton warehouse require?',
                     'a' => 'Most high-bay warehouses in Stockton require ESFR ceiling sprinklers or in-rack systems depending on commodity class, storage height, and building height. Richardson performs complete storage analysis and designs the system to NFPA 13 and FM Global standards as applicable.',
@@ -92,6 +106,14 @@ function rfp_all_locations() {
                 [
                     'q' => 'Does Richardson work with San Joaquin County on unincorporated industrial sites near Stockton?',
                     'a' => 'Yes. Unincorporated San Joaquin County fire protection permitting goes through the County Fire Department. Richardson is experienced with both City of Stockton and County SJC permitting and AHJ coordination.',
+                ],
+                [
+                    'q' => 'How does Richardson handle ESFR design for e-commerce fulfillment centers in Stockton?',
+                    'a' => 'E-commerce fulfillment centers typically involve high-piled mixed-commodity storage that changes over time. Richardson designs ESFR systems to accommodate the worst-case commodity scenario, so your facility can adapt operations without triggering a redesign.',
+                ],
+                [
+                    'q' => 'What does fire sprinkler installation cost for a Stockton warehouse?',
+                    'a' => 'High-bay warehouse ESFR systems in Stockton typically run $3–$6 per sq ft depending on ceiling height, commodity class, and rack configuration. In-rack systems add cost but allow lighter ceiling-only coverage. Call (916) 849-6441 for a detailed estimate.',
                 ],
             ],
         ],
@@ -113,8 +135,9 @@ function rfp_all_locations() {
             ],
             'ahj_name'      => 'Roseville Fire Department',
             'nearby_cities' => [ 'rocklin', 'sacramento', 'yuba-city', 'davis' ],
-            'services_note' => 'Roseville Fire Department plan review currently runs 3–4 weeks for commercial projects. Richardson submits complete permit packages including hydraulic calculations and CAD shop drawings to minimize correction cycles.',
-            'faqs'          => [
+            'services_note'  => 'Roseville Fire Department plan review currently runs 3–4 weeks for commercial projects. Richardson submits complete permit packages including hydraulic calculations and CAD shop drawings to minimize correction cycles.',
+            'neighborhoods'  => [ 'Blue Oaks Corridor', 'Douglas Boulevard', 'Galleria Area', 'East Roseville Parkway', 'West Roseville', 'Historic Roseville', 'Fiddyment Farm', 'Olympus Pointe' ],
+            'faqs'           => [
                 [
                     'q' => 'How does fire sprinkler permitting work in Roseville?',
                     'a' => 'The Roseville Fire Department handles all fire protection plan review and permit issuance for projects within city limits. Richardson submits stamped hydraulic calculations, shop drawings, and a complete permit application. Current plan review turnaround is approximately 3–4 weeks for standard commercial projects.',
@@ -134,6 +157,14 @@ function rfp_all_locations() {
                 [
                     'q' => 'How quickly can we get a bid for a Roseville commercial project?',
                     'a' => 'Send us your plans and we return a complete, detailed bid within 24–48 hours. We\'re also available for pre-construction scope calls and budget estimates without full drawings.',
+                ],
+                [
+                    'q' => 'Does Roseville Fire offer an expedited plan review option?',
+                    'a' => 'Roseville Fire Department does offer an expedited review track for an additional fee. Richardson can guide you through the expedited submittal process and ensure your package meets the higher documentation standard required for fast-track review.',
+                ],
+                [
+                    'q' => 'What makes fire protection on the Blue Oaks Corridor different from other Roseville projects?',
+                    'a' => 'The Blue Oaks Corridor hosts a mix of high-density multifamily, lifestyle retail, and medical office that often requires mixed-occupancy NFPA 13 designs. Richardson engineers these combined-occupancy systems so the GC gets a single permit package covering the full building.',
                 ],
             ],
         ],
@@ -155,8 +186,9 @@ function rfp_all_locations() {
             ],
             'ahj_name'      => 'Rocklin Fire Department',
             'nearby_cities' => [ 'roseville', 'sacramento', 'yuba-city', 'davis' ],
-            'services_note' => 'Rocklin Fire Department plan review is handled through Placer County for projects in unincorporated areas. Richardson navigates both City of Rocklin and Placer County permitting depending on project location.',
-            'faqs'          => [
+            'services_note'  => 'Rocklin Fire Department plan review is handled through Placer County for projects in unincorporated areas. Richardson navigates both City of Rocklin and Placer County permitting depending on project location.',
+            'neighborhoods'  => [ 'Stanford Ranch', 'Whitney Ranch', 'Sunset Whitney', 'I-80 Corridor', 'Old Town Rocklin', 'Granite Bay Adjacent', 'Loomis Adjacent' ],
+            'faqs'           => [
                 [
                     'q' => 'What fire protection does a self-storage facility in Rocklin require?',
                     'a' => 'Self-storage facilities are typically classified as Group S-1 occupancy. Depending on building height and construction type, NFPA 13 wet-pipe sprinklers may be required. Richardson has installed systems in Rocklin self-storage projects and coordinates with Rocklin Fire on occupancy-specific design questions.',
@@ -176,6 +208,14 @@ function rfp_all_locations() {
                 [
                     'q' => 'What is Richardson\'s experience with tech office fire protection in Rocklin?',
                     'a' => 'Tech campuses include specialized suppression needs: clean agent systems for server rooms, pre-action systems for data centers, and standard NFPA 13 for office areas. Richardson designs and installs all of these under a single scope, reducing the number of subs your GC has to manage.',
+                ],
+                [
+                    'q' => 'Can Richardson bid Rocklin and Roseville projects together for the same developer?',
+                    'a' => 'Yes. We regularly cover multiple Placer County projects for the same GC or developer under coordinated contracts. This simplifies procurement, keeps bid packages consistent, and allows schedule coordination across sites.',
+                ],
+                [
+                    'q' => 'What is the permit timeline comparison between Rocklin Fire and Placer County Fire?',
+                    'a' => 'Rocklin Fire typically runs 3–4 weeks for plan review within city limits. Placer County Fire review for unincorporated areas is similar — 3–5 weeks. Richardson confirms the correct jurisdiction first, so you don\'t lose time re-submitting to the wrong authority.',
                 ],
             ],
         ],
@@ -197,8 +237,9 @@ function rfp_all_locations() {
             ],
             'ahj_name'      => 'Fairfield Fire Department',
             'nearby_cities' => [ 'sacramento', 'stockton', 'davis', 'roseville' ],
-            'services_note' => 'Fairfield Fire Department has specific requirements for projects within proximity to Travis AFB that may involve coordination with base fire protection officers. Richardson has navigated this dual-AHJ process on prior Solano County projects.',
-            'faqs'          => [
+            'services_note'  => 'Fairfield Fire Department has specific requirements for projects within proximity to Travis AFB that may involve coordination with base fire protection officers. Richardson has navigated this dual-AHJ process on prior Solano County projects.',
+            'neighborhoods'  => [ 'Travis AFB Adjacent', 'North Fairfield Industrial', 'Cordelia Junction', 'Solano Mall Area', 'Downtown Fairfield', 'Green Valley', 'Business Park Drive Corridor' ],
+            'faqs'           => [
                 [
                     'q' => 'Does Fairfield Fire Department have special requirements for industrial facilities?',
                     'a' => 'Fairfield FD enforces California Fire Code and NFPA 13 for all industrial occupancies. For facilities adjacent to or supplying Travis Air Force Base, additional coordination with base fire protection staff may be required. Richardson has experience managing this dual-AHJ process.',
@@ -218,6 +259,14 @@ function rfp_all_locations() {
                 [
                     'q' => 'Does Richardson handle fire alarm coordination in Fairfield alongside sprinkler work?',
                     'a' => 'Yes. We install NFPA 72 fire alarm systems and coordinate sprinkler-alarm integration so that the GC has a single point of contact for the full fire life safety scope, eliminating interface coordination risk between multiple subs.',
+                ],
+                [
+                    'q' => 'What are the dual-AHJ coordination requirements for projects near Travis AFB in Fairfield?',
+                    'a' => 'Projects near or supplying Travis Air Force Base may require parallel review by Fairfield FD and the base Fire Protection Engineer. Richardson manages both tracks — submitting to the correct authorities simultaneously and tracking each review independently to prevent schedule conflicts.',
+                ],
+                [
+                    'q' => 'How does Solano County compare to Fairfield Fire for industrial permitting?',
+                    'a' => 'City of Fairfield permits go through Fairfield FD; unincorporated Solano County sites use Solano County Fire. Review timelines are comparable at 4–6 weeks. Richardson confirms jurisdiction at project kickoff — a critical step since the two boundaries can be unclear in industrial park zones.',
                 ],
             ],
         ],
@@ -239,8 +288,9 @@ function rfp_all_locations() {
             ],
             'ahj_name'      => 'Yuba City Fire Department',
             'nearby_cities' => [ 'sacramento', 'roseville', 'rocklin', 'davis' ],
-            'services_note' => 'Yuba City Fire Department often coordinates with Sutter County on projects at the city-county boundary. Richardson manages both jurisdictions to ensure correct permit routing from the start.',
-            'faqs'          => [
+            'services_note'  => 'Yuba City Fire Department often coordinates with Sutter County on projects at the city-county boundary. Richardson manages both jurisdictions to ensure correct permit routing from the start.',
+            'neighborhoods'  => [ 'Highway 99 Corridor', 'Bridge Street Commercial', 'Plumas Lake', 'Industrial Way', 'Downtown Yuba City', 'Live Oak Adjacent', 'Marysville Adjacent' ],
+            'faqs'           => [
                 [
                     'q' => 'Does Yuba City require fire sprinklers in multifamily housing?',
                     'a' => 'Yes. California Building Code requires sprinklers in all new multifamily construction. Projects in Yuba City fall under NFPA 13R for buildings up to four stories. Richardson designs and installs 13R systems from permit application through certificate of completion.',
@@ -260,6 +310,14 @@ function rfp_all_locations() {
                 [
                     'q' => 'What is the drive time from Richardson\'s office to Yuba City job sites?',
                     'a' => 'Richardson\'s office is in Antelope, approximately 35–45 minutes from Yuba City via Highway 99. Our crews are regularly on-site in the Yuba-Sutter area, and emergency response is available 24/7 at (916) 849-6441.',
+                ],
+                [
+                    'q' => 'What fire suppression is required for an agricultural packing facility in Yuba City?',
+                    'a' => 'Agricultural packing and processing facilities are typically Group F-1 or H occupancies depending on the materials handled. NFPA 13 systems are required, and cold-chain or refrigerated areas may need dry-pipe or pre-action systems. Richardson evaluates the full occupancy mix and designs a system that meets all applicable hazard classifications.',
+                ],
+                [
+                    'q' => 'What is the permit timeline for a healthcare project in Yuba City?',
+                    'a' => 'Healthcare and medical office projects in Yuba City go through Yuba City Fire and may require additional state review under OSHPD (now known as HCAI) for certain occupancy types. Richardson is familiar with this dual-review track and manages both simultaneously. Total permit approval typically runs 6–10 weeks for HCAI-regulated projects.',
                 ],
             ],
         ],
@@ -281,8 +339,9 @@ function rfp_all_locations() {
             ],
             'ahj_name'      => 'Davis Fire Department',
             'nearby_cities' => [ 'sacramento', 'fairfield', 'roseville', 'yuba-city' ],
-            'services_note' => 'Davis Fire Department and UC Davis EH&S sometimes have parallel review requirements on campus-adjacent projects. Richardson manages both review tracks simultaneously to prevent schedule conflicts during plan check.',
-            'faqs'          => [
+            'services_note'  => 'Davis Fire Department and UC Davis EH&S sometimes have parallel review requirements on campus-adjacent projects. Richardson manages both review tracks simultaneously to prevent schedule conflicts during plan check.',
+            'neighborhoods'  => [ 'UC Davis Campus Adjacent', 'Downtown Davis', 'Mace Ranch', 'Cannery District', 'East Davis Research Park', 'South Davis', 'Oeste Ranch', 'Chiles Ranch' ],
+            'faqs'           => [
                 [
                     'q' => 'What fire protection does a laboratory building in Davis require?',
                     'a' => 'Laboratory occupancies are typically classified as Group B or H depending on chemical storage levels, triggering specific NFPA 13 suppression requirements including deluge or pre-action systems for high-hazard areas. Richardson designs systems that satisfy both Davis FD and UC Davis EH&S requirements.',
@@ -302,6 +361,14 @@ function rfp_all_locations() {
                 [
                     'q' => 'What is the typical fire sprinkler permit timeline for a Davis project?',
                     'a' => 'Davis Fire Department typically reviews commercial submittals in 3–5 weeks. Richardson submits complete permit packages — including stamped hydraulic calculations, shop drawings, and all required documentation — to minimize the risk of correction cycles.',
+                ],
+                [
+                    'q' => 'How does UC Davis EH&S review differ from the Davis Fire Department permit process?',
+                    'a' => 'UC Davis EH&S (Environmental Health and Safety) reviews fire protection systems on campus-owned or campus-adjacent facilities as a parallel track alongside Davis FD. Richardson submits to both simultaneously, managing comments from each reviewer independently to keep the schedule intact.',
+                ],
+                [
+                    'q' => 'What does fire sprinkler installation cost for a Davis biotech or lab building?',
+                    'a' => 'Laboratory and research occupancies typically cost more than standard commercial due to special hazard areas, pre-action systems, and clean agent suppression. Budget $5–$10 per sq ft for standard lab areas and $15–$25 for high-hazard or clean-agent zones. Call (916) 849-6441 for a detailed estimate based on your program.',
                 ],
             ],
         ],

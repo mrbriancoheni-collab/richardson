@@ -93,7 +93,7 @@ get_header();
           <!-- Licenses -->
           <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
             <span style="background: #1a1a1a; color: #fff; font-size: 0.75rem; font-weight: 600; padding: 0.4rem 0.9rem; border-radius: 20px;">
-              <i class="fa-solid fa-certificate"></i> CSLB Lic. #000000
+              <i class="fa-solid fa-certificate"></i> CSLB Lic. #1053506
             </span>
             <span style="background: #1a1a1a; color: #fff; font-size: 0.75rem; font-weight: 600; padding: 0.4rem 0.9rem; border-radius: 20px;">
               <i class="fa-solid fa-shield-halved"></i> NICET Certified

@@ -9,14 +9,14 @@
     <div class="container hero-container">
       <div class="hero-badge reveal-up">
         <span class="badge-dot"></span>
-        Sacramento's Fire Sprinkler Sub for Developers &amp; General Contractors
+        Based in Antelope, CA — Serving Sacramento Valley Developers &amp; GCs
       </div>
       <h1 class="hero-title reveal-up">
         On Schedule.<br />
         <span class="hero-title--accent">Code Compliant. Every Job.</span>
       </h1>
       <p class="hero-desc reveal-up">
-        Richardson Fire Protection is the fire sprinkler contractor Sacramento developers and GCs rely on for new construction, tenant improvements, and multifamily projects. We handle design, permits, AHJ coordination, and installation — so your schedule stays intact.
+        Richardson Fire Protection is based in Antelope, CA and serves developers and GCs across Sacramento, Stockton, Roseville, Rocklin, Fairfield, Yuba City, and Davis. We handle design, permits, AHJ coordination, and installation — so your schedule stays intact.
       </p>
       <div class="hero-actions reveal-up">
         <a href="tel:+19168496441" class="btn btn--primary btn--lg">
