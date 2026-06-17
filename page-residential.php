@@ -200,6 +200,45 @@ get_header();
       </div>
     </section>
 
+    <!-- ========== FAQ ========== -->
+    <section class="section faq" id="faq-residential">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-header reveal-up">
+          <div class="section-badge">Multifamily FAQ</div>
+          <h2 class="section-title">Multifamily Fire Protection <span class="text-accent">Questions</span></h2>
+          <p class="section-desc">Common questions from multifamily developers, property managers, and HOAs on fire sprinkler requirements in California.</p>
+        </div>
+        <div class="faq-list reveal-up">
+          <?php
+          $residential_faqs = [
+            [ 'q' => 'Does my apartment complex in California require fire sprinklers?',
+              'a' => 'Yes, in virtually all cases. California adopted a mandatory residential fire sprinkler requirement for new multifamily construction in 2011. Under the 2022 California Fire Code and California Building Code Section 903, all new apartment buildings (Group R-2 occupancies) regardless of size require automatic fire sprinkler systems. The applicable standard — NFPA 13 or NFPA 13R — depends on building height: four stories or fewer qualify for NFPA 13R; five stories and above require full NFPA 13.' ],
+            [ 'q' => 'What is the difference between NFPA 13, 13R, and 13D?',
+              'a' => 'NFPA 13 is the full commercial standard — it covers every space in a building including attics and closets and has the most rigorous design requirements. It is required for apartment buildings five stories or taller and mixed-use buildings. NFPA 13R is the reduced standard for low-rise residential up to four stories — it allows omission of sprinklers in some spaces and uses simplified hydraulic design, resulting in lower installed cost. NFPA 13D is the most basic standard for one- and two-family homes and manufactured homes — the simplest and lowest-cost system, often tied to the domestic water supply.' ],
+            [ 'q' => 'How much does a multifamily fire sprinkler system cost per unit?',
+              'a' => 'Multifamily NFPA 13R sprinkler systems in Sacramento Valley typically cost $2.50–$4.50 per square foot installed, which translates to roughly $3,000–$8,000 per unit depending on unit size, building density, and AHJ requirements. Higher-density buildings tend to be more cost-efficient per unit. NFPA 13D systems for single-family homes typically run $1.50–$3.00 per square foot. Call (916) 849-6441 for a unit-by-unit cost estimate — typically returned within 24 hours of receiving floor plans.' ],
+            [ 'q' => 'Can fire sprinklers be installed in an occupied apartment building?',
+              'a' => 'Yes, and Richardson has extensive experience with occupied retrofits. The key challenges are access coordination with tenants, minimizing disruption to water service, and working within occupied units. Richardson approaches occupied retrofits in phases — completing one floor or wing at a time, scheduling work during daytime hours, and providing advance notice to residents. The AHJ requires temporary fire watch or partial system acceptance during phased installation. Occupied retrofits typically add 20–30% to project cost versus vacant-building installation.' ],
+            [ 'q' => 'What is required for a fire sprinkler inspection on a multifamily property?',
+              'a' => 'Under NFPA 25, multifamily fire sprinkler systems require annual inspection and testing — including water flow alarm test, inspector test valve operation, visual head inspection, and system pressure check. Every 5 years, a full internal piping inspection is required. Every 50 years, or when heads show corrosion or paint, replacement or sample testing is required. California SB 1205 now requires multifamily property owners certify their system has been inspected. Richardson provides annual NFPA 25 inspections with digital compliance reports for SB 1205 documentation and lender requirements.' ],
+            [ 'q' => 'Does a new townhome or single-family home in California need fire sprinklers?',
+              'a' => 'Yes. California has required automatic fire sprinklers in all new single-family homes and townhomes since January 1, 2011, per California Residential Code Section R313. The applicable standard is NFPA 13D, which typically connects to the home domestic water supply. Some local jurisdictions — including Roseville and Davis — have adopted stricter requirements, mandating sprinklers in additions, ADUs, or guest houses above certain thresholds. Richardson installs NFPA 13D systems throughout Placer, Sacramento, Yolo, and Solano counties.' ],
+          ];
+          foreach ( $residential_faqs as $faq ) : ?>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <?php echo esc_html( $faq['q'] ); ?>
+                <i class="fa-solid fa-chevron-down faq-icon"></i>
+              </button>
+              <div class="faq-answer">
+                <p><?php echo esc_html( $faq['a'] ); ?></p>
+              </div>
+            </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== CTA ========== -->
     <section style="background: #C41230; color: #fff; text-align: center; padding: 4rem 1.5rem;">
       <div class="container" style="max-width: 640px;">

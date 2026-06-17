@@ -65,6 +65,70 @@ function rfp_all_locations() {
                     'a' => 'Costs vary significantly by building type, size, and occupancy. As a general benchmark: light commercial runs $2–$4 per sq ft, ordinary hazard occupancies $3–$5, and high-hazard or high-rise systems $6–$10+. Call (916) 849-6441 for a project-specific estimate.',
                 ],
             ],
+            'primary_services' => [
+                [
+                    'icon'     => 'fa-solid fa-building',
+                    'tag'      => 'Commercial',
+                    'title'    => 'Commercial & Mixed-Use',
+                    'desc'     => 'NFPA 13 design-build for Sacramento\'s active mixed-use, office, and adaptive-reuse pipeline from Midtown to Natomas.',
+                    'features' => [ 'Wet & dry pipe systems', 'High-rise compliance (CBC 403)', 'Tenant improvement retrofit' ],
+                    'link'     => '/commercial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-warehouse',
+                    'tag'      => 'Industrial',
+                    'title'    => 'Warehouse & Distribution',
+                    'desc'     => 'ESFR and in-rack systems for Natomas and North Sacramento\'s growing logistics and e-commerce distribution corridor.',
+                    'features' => [ 'ESFR high-bay systems', 'High-piled storage compliance', 'SacMetro FD coordination' ],
+                    'link'     => '/industrial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-city',
+                    'tag'      => 'Multifamily',
+                    'title'    => 'Multifamily & Residential',
+                    'desc'     => 'NFPA 13R systems for Sacramento\'s dense infill apartment and condo pipeline, from Oak Park to the Central City.',
+                    'features' => [ 'NFPA 13R apartment systems', 'NFPA 13D single-family', 'Occupied building retrofits' ],
+                    'link'     => '/residential/',
+                ],
+            ],
+            'local_regulations' => [
+                [
+                    'code'      => 'Sacramento City Code Title 16',
+                    'authority' => 'Sacramento City Fire Prevention Bureau',
+                    'summary'   => 'Adopts the 2022 California Fire Code with local amendments. Requires automatic sprinklers in all new commercial occupancies over 3,000 sq ft and all new Group R (residential) buildings of any size.',
+                ],
+                [
+                    'code'      => 'Sacramento Metro Fire District Ordinance',
+                    'authority' => 'Sacramento Metropolitan Fire District',
+                    'summary'   => 'Covers unincorporated Sacramento County. Enforces CFC compliance plus additional requirements for hazardous materials storage. Separate permit process from Sacramento City FD.',
+                ],
+                [
+                    'code'      => 'California Fire Code (CFC) 2022',
+                    'authority' => 'California State Fire Marshal',
+                    'summary'   => 'State baseline adopted by Sacramento City and SacMetro FD. Governs all fire protection system design, installation, inspection, and contractor licensing via Title 19 CCR.',
+                ],
+                [
+                    'code'      => 'CBC Section 403 — High-Rise',
+                    'authority' => 'Sacramento City Building Department',
+                    'summary'   => 'Buildings 75 ft or more above the lowest fire department access level require fully sprinklered systems, smoke control, and fire command centers under the California Building Code.',
+                ],
+                [
+                    'code'      => 'SB 1205 (2018)',
+                    'authority' => 'California State Fire Marshal / SCFD',
+                    'summary'   => 'Requires fire protection system owners to submit inspection certification records to the State Fire Marshal. Sacramento City FD enforces compliance. Non-certified systems are subject to enforcement action.',
+                ],
+                [
+                    'code'      => 'California Health & Safety Code §13100',
+                    'authority' => 'California State Fire Marshal',
+                    'summary'   => 'Governs fire protection contractor licensing. All fire sprinkler work in Sacramento requires a CSLB C-16 license and CSFM registration — Richardson holds both.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
+            ],
         ],
 
         // ── STOCKTON ─────────────────────────────────────────────────────────
@@ -115,6 +179,70 @@ function rfp_all_locations() {
                     'q' => 'What does fire sprinkler installation cost for a Stockton warehouse?',
                     'a' => 'High-bay warehouse ESFR systems in Stockton typically run $3–$6 per sq ft depending on ceiling height, commodity class, and rack configuration. In-rack systems add cost but allow lighter ceiling-only coverage. Call (916) 849-6441 for a detailed estimate.',
                 ],
+            ],
+            'primary_services' => [
+                [
+                    'icon'     => 'fa-solid fa-warehouse',
+                    'tag'      => 'Industrial',
+                    'title'    => 'Warehouse & Logistics',
+                    'desc'     => 'ESFR, in-rack, and cold-storage fire suppression for Stockton\'s I-5 and Highway 99 distribution corridors and Port-adjacent facilities.',
+                    'features' => [ 'ESFR & in-rack systems', 'Commodity classification analysis', 'Cold storage dry-pipe' ],
+                    'link'     => '/industrial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-building',
+                    'tag'      => 'Commercial',
+                    'title'    => 'Commercial & Restaurant',
+                    'desc'     => 'NFPA 13 commercial systems for Stockton\'s downtown retail, restaurant, and mixed-use projects. Hood suppression and alarm coordination included.',
+                    'features' => [ 'Restaurant hood suppression', 'Retail ordinary hazard', 'SFD plan coordination' ],
+                    'link'     => '/commercial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-city',
+                    'tag'      => 'Multifamily',
+                    'title'    => 'Multifamily & Workforce Housing',
+                    'desc'     => 'NFPA 13R systems for Stockton\'s expanding workforce housing and downtown residential conversion pipeline.',
+                    'features' => [ 'NFPA 13R apartment systems', 'San Joaquin County permitting', 'Occupied retrofits' ],
+                    'link'     => '/residential/',
+                ],
+            ],
+            'local_regulations' => [
+                [
+                    'code'      => 'Stockton Municipal Code Chapter 15.30',
+                    'authority' => 'Stockton Fire Department',
+                    'summary'   => 'Adopts the 2022 California Fire Code with local amendments. Requires sprinklers in all new commercial buildings and mixed-use occupancies within city limits. SFD strictly enforces high-piled storage permitting.',
+                ],
+                [
+                    'code'      => 'San Joaquin County Fire Ordinance',
+                    'authority' => 'San Joaquin County Fire District',
+                    'summary'   => 'Governs unincorporated San Joaquin County areas (Tracy, Lodi unincorporated). A separate permit is required for county-jurisdiction projects — critical to verify before submittal.',
+                ],
+                [
+                    'code'      => 'NFPA 13 High-Piled Storage (SFD Enforcement)',
+                    'authority' => 'Stockton Fire Department',
+                    'summary'   => 'SFD strictly enforces commodity classification and in-rack or overhead sprinkler requirements for all warehouses storing goods over 12 ft. Pre-application meetings are required for facilities over 100,000 sq ft.',
+                ],
+                [
+                    'code'      => 'Port of Stockton Fire Requirements',
+                    'authority' => 'Port of Stockton Fire Authority',
+                    'summary'   => 'Industrial and maritime projects within Port jurisdiction require additional review by Port of Stockton Fire. NFPA 30 flammable liquids storage rules are strictly enforced for Port-adjacent facilities.',
+                ],
+                [
+                    'code'      => 'California Title 19 Article 3',
+                    'authority' => 'California State Fire Marshal',
+                    'summary'   => 'State Fire Marshal rules for fire suppression systems apply to all licensed occupancies in Stockton. CSFM registration required for all fire protection contractors operating in the city.',
+                ],
+                [
+                    'code'      => 'SB 1205 (2018)',
+                    'authority' => 'California State Fire Marshal / Stockton FD',
+                    'summary'   => 'Requires fire protection system owners to certify inspection records with the State Fire Marshal annually. Stockton FD enforces for all commercial and industrial properties within city limits.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
             ],
         ],
 
@@ -167,6 +295,65 @@ function rfp_all_locations() {
                     'a' => 'The Blue Oaks Corridor hosts a mix of high-density multifamily, lifestyle retail, and medical office that often requires mixed-occupancy NFPA 13 designs. Richardson engineers these combined-occupancy systems so the GC gets a single permit package covering the full building.',
                 ],
             ],
+            'primary_services' => [
+                [
+                    'icon'     => 'fa-solid fa-building',
+                    'tag'      => 'Commercial',
+                    'title'    => 'Commercial & Medical Office',
+                    'desc'     => 'NFPA 13 systems for Roseville\'s Galleria retail corridor, medical office parks, and East Roseville Parkway commercial development.',
+                    'features' => [ 'Medical office quick-response heads', 'Retail ordinary hazard', 'HCAI coordination' ],
+                    'link'     => '/commercial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-city',
+                    'tag'      => 'Residential',
+                    'title'    => 'Residential & Master-Planned',
+                    'desc'     => 'NFPA 13D systems for Roseville\'s active new home construction — required by local ordinance for all new single-family homes and townhomes.',
+                    'features' => [ 'NFPA 13D required by Roseville code', 'NFPA 13R multifamily', 'WUI fire hardening compliance' ],
+                    'link'     => '/residential/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-industry',
+                    'tag'      => 'Industrial',
+                    'title'    => 'Light Industrial & Storage',
+                    'desc'     => 'NFPA 13 systems for Roseville\'s Blue Oaks business parks, light manufacturing, and self-storage facilities along the I-80 corridor.',
+                    'features' => [ 'Light hazard systems', 'Self-storage protection', 'Placer County coordination' ],
+                    'link'     => '/industrial/',
+                ],
+            ],
+            'local_regulations' => [
+                [
+                    'code'      => 'Roseville Municipal Code Title 10, Chapter 10.12',
+                    'authority' => 'Roseville Fire Department',
+                    'summary'   => 'Adopts the 2022 CFC. Roseville requires NFPA 13D fire sprinklers in ALL new single-family homes and townhomes — stricter than the California state minimum. Applies to all new construction and certain additions.',
+                ],
+                [
+                    'code'      => 'Placer County Fire Code',
+                    'authority' => 'Placer County Fire District',
+                    'summary'   => 'Governs unincorporated Placer County areas (Granite Bay, Loomis, Lincoln unincorporated). Separate permit authority and process from Roseville FD — critical to verify jurisdiction before submittal.',
+                ],
+                [
+                    'code'      => 'AB 38 (2019) — Fire Hardening Law',
+                    'authority' => 'California Department of Forestry / Placer County',
+                    'summary'   => 'Placer County contains extensive Tier 2 and Tier 3 Fire Hazard Severity Zones. Properties in these zones require fire hardening measures that interact with sprinkler system design and access routes.',
+                ],
+                [
+                    'code'      => 'California WUI Code (CCR Title 14)',
+                    'authority' => 'CAL FIRE / Placer County',
+                    'summary'   => 'Applicable to Roseville\'s eastern hillside and foothill developments. Affects exterior construction standards and fire protection access design for new construction in Wildland-Urban Interface zones.',
+                ],
+                [
+                    'code'      => 'HCAI (Health Care Access and Information)',
+                    'authority' => 'California HCAI (formerly OSHPD)',
+                    'summary'   => 'Medical facilities within Roseville require HCAI plan review and approval in addition to Roseville FD review. HCAI adds 6–10 weeks to the plan review timeline for licensed healthcare occupancies.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
+            ],
         ],
 
         // ── ROCKLIN ──────────────────────────────────────────────────────────
@@ -217,6 +404,65 @@ function rfp_all_locations() {
                     'q' => 'What is the permit timeline comparison between Rocklin Fire and Placer County Fire?',
                     'a' => 'Rocklin Fire typically runs 3–4 weeks for plan review within city limits. Placer County Fire review for unincorporated areas is similar — 3–5 weeks. Richardson confirms the correct jurisdiction first, so you don\'t lose time re-submitting to the wrong authority.',
                 ],
+            ],
+            'primary_services' => [
+                [
+                    'icon'     => 'fa-solid fa-building',
+                    'tag'      => 'Commercial',
+                    'title'    => 'Tech Office & Business Parks',
+                    'desc'     => 'NFPA 13 systems for Rocklin\'s Stanford Ranch tech office parks, medical offices, and I-80 corridor commercial developments.',
+                    'features' => [ 'Tech office wet-pipe systems', 'Server room pre-action', 'Light hazard design' ],
+                    'link'     => '/commercial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-city',
+                    'tag'      => 'Residential',
+                    'title'    => 'Residential & Multifamily',
+                    'desc'     => 'NFPA 13D systems for Rocklin\'s active Whitney Ranch and new-construction residential pipeline. Rocklin FD and Placer County permitting both served.',
+                    'features' => [ 'NFPA 13D required new homes', 'NFPA 13R multifamily', 'Rocklin FD & Placer County coordination' ],
+                    'link'     => '/residential/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-warehouse',
+                    'tag'      => 'Industrial',
+                    'title'    => 'Self-Storage & Light Industrial',
+                    'desc'     => 'NFPA 13 systems for Rocklin\'s I-80 corridor self-storage facilities and light industrial parks, with jurisdiction verification for Granite Bay-adjacent projects.',
+                    'features' => [ 'Self-storage NFPA 13 systems', 'Light industrial protection', 'Granite Bay jurisdiction verification' ],
+                    'link'     => '/industrial/',
+                ],
+            ],
+            'local_regulations' => [
+                [
+                    'code'      => 'Rocklin Municipal Code Chapter 15.04',
+                    'authority' => 'Rocklin Fire Department',
+                    'summary'   => 'Adopts the 2022 CFC. Rocklin requires fire sprinklers in all new residential construction per State Fire Marshal mandate and local policy. CSLB C-16 license required for all fire sprinkler work.',
+                ],
+                [
+                    'code'      => 'Placer County Fire District Jurisdiction',
+                    'authority' => 'Placer County Fire District',
+                    'summary'   => 'Granite Bay and unincorporated areas adjacent to Rocklin fall under Placer County Fire, not Rocklin FD. Verifying jurisdiction before permit submittal is critical — the wrong AHJ will reject the submittal.',
+                ],
+                [
+                    'code'      => 'AB 38 — Fire Hardening (Placer County)',
+                    'authority' => 'CAL FIRE / Placer County',
+                    'summary'   => 'Portions of Rocklin — particularly eastern hills and Granite Bay-adjacent areas — fall within State Responsibility Areas subject to fire hardening requirements. Affects exterior construction and defensible space.',
+                ],
+                [
+                    'code'      => 'CFC Chapter 31 & 57 — Storage & Flammable Liquids',
+                    'authority' => 'Rocklin Fire Department',
+                    'summary'   => 'Light industrial and self-storage facilities along the I-80 corridor must comply with CFC Chapter 31 (storage) and Chapter 57 (flammable and combustible liquids). Richardson reviews these requirements during the bid phase.',
+                ],
+                [
+                    'code'      => 'Multiphase Construction Requirements',
+                    'authority' => 'Rocklin Fire Department',
+                    'summary'   => 'Rocklin\'s active residential construction zones require phased fire protection installation. Temporary water supply and partial system acceptance processes per CFC Section 901 are coordinated directly by Richardson.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
             ],
         ],
 
@@ -269,6 +515,70 @@ function rfp_all_locations() {
                     'a' => 'City of Fairfield permits go through Fairfield FD; unincorporated Solano County sites use Solano County Fire. Review timelines are comparable at 4–6 weeks. Richardson confirms jurisdiction at project kickoff — a critical step since the two boundaries can be unclear in industrial park zones.',
                 ],
             ],
+            'primary_services' => [
+                [
+                    'icon'     => 'fa-solid fa-warehouse',
+                    'tag'      => 'Industrial',
+                    'title'    => 'Logistics & Defense Manufacturing',
+                    'desc'     => 'High-bay ESFR, special hazard, and defense-grade fire suppression for Fairfield\'s Cordelia, North Industrial, and Travis Boulevard logistics and manufacturing corridor.',
+                    'features' => [ 'High-bay ESFR systems', 'Hazardous materials suppression', 'Travis AFB dual-AHJ coordination' ],
+                    'link'     => '/industrial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-building',
+                    'tag'      => 'Commercial',
+                    'title'    => 'Commercial & Manufacturing',
+                    'desc'     => 'NFPA 13 commercial systems for Fairfield\'s defense contractors, retail centers, restaurants, and paint booth or spray-finishing facilities.',
+                    'features' => [ 'Defense manufacturing suppression', 'Retail sprinklers', 'Paint booth & spray finishing (NFPA 33)' ],
+                    'link'     => '/commercial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-city',
+                    'tag'      => 'Multifamily',
+                    'title'    => 'Multifamily & Workforce Housing',
+                    'desc'     => 'NFPA 13R systems for Fairfield\'s growing workforce housing pipeline, including Suisun City-adjacent projects and Green Valley hillside developments.',
+                    'features' => [ 'NFPA 13R systems', 'Fairfield-Suisun FD permitting', 'WUI compliance (Green Valley)' ],
+                    'link'     => '/residential/',
+                ],
+            ],
+            'local_regulations' => [
+                [
+                    'code'      => 'Fairfield Municipal Code Title 19',
+                    'authority' => 'Fairfield-Suisun Fire Department',
+                    'summary'   => 'Adopts the 2022 CFC. Administered by the Fairfield-Suisun Fire Department, a joint agency serving both Fairfield and Suisun City. All fire sprinkler permits are submitted to this single joint authority.',
+                ],
+                [
+                    'code'      => 'Solano County Fire and Life Safety Division',
+                    'authority' => 'Solano County',
+                    'summary'   => 'Governs unincorporated Solano County. A separate permit authority from Fairfield-Suisun FD for projects outside city limits. Richardson verifies jurisdiction before every submittal in the Fairfield area.',
+                ],
+                [
+                    'code'      => 'Travis AFB Fire Requirements (DoD)',
+                    'authority' => '60th Civil Engineer Squadron Fire Prevention Office',
+                    'summary'   => 'Projects within Travis AFB boundaries require review by the DoD Fire Prevention Office — not CFC. Civilian projects near the base perimeter may require coordination with AFB fire authority. Richardson has experience managing dual-AHJ projects in this area.',
+                ],
+                [
+                    'code'      => 'AB 38 & Solano County SRA',
+                    'authority' => 'CAL FIRE / Solano County',
+                    'summary'   => 'Eastern Fairfield hillside areas (Green Valley) fall within State Responsibility Areas. Fire hardening and defensible space requirements affect construction design, access routes, and fire protection system specifications.',
+                ],
+                [
+                    'code'      => 'California Title 19 Article 6 — Pre-Engineered Systems',
+                    'authority' => 'California State Fire Marshal',
+                    'summary'   => 'Pre-engineered suppression systems (kitchen hoods, paint booths) require CSFM listing and separate installation certification. Common for Fairfield\'s manufacturing and food processing sector.',
+                ],
+                [
+                    'code'      => 'Solano County Hazardous Materials Area Plan',
+                    'authority' => 'Solano County Environmental Health',
+                    'summary'   => 'Industrial facilities handling hazardous materials in Fairfield\'s Cordelia and Travis Blvd corridors require coordination with Solano County Environmental Health. Fire suppression systems for hazmat storage must satisfy both CFC and environmental requirements.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
+            ],
         ],
 
         // ── YUBA CITY ────────────────────────────────────────────────────────
@@ -320,6 +630,70 @@ function rfp_all_locations() {
                     'a' => 'Healthcare and medical office projects in Yuba City go through Yuba City Fire and may require additional state review under OSHPD (now known as HCAI) for certain occupancy types. Richardson is familiar with this dual-review track and manages both simultaneously. Total permit approval typically runs 6–10 weeks for HCAI-regulated projects.',
                 ],
             ],
+            'primary_services' => [
+                [
+                    'icon'     => 'fa-solid fa-industry',
+                    'tag'      => 'Industrial',
+                    'title'    => 'Agricultural Processing & Cold Storage',
+                    'desc'     => 'Specialized fire suppression for Yuba City\'s agricultural processing, packing, and cold-storage facilities along the Highway 99 corridor.',
+                    'features' => [ 'Agricultural cold storage systems', 'Ammonia refrigeration suppression', 'CDFA compliance' ],
+                    'link'     => '/industrial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-hospital',
+                    'tag'      => 'Commercial',
+                    'title'    => 'Healthcare & Medical Office',
+                    'desc'     => 'HCAI-coordinated fire protection for Yuba City\'s healthcare facilities, medical offices, and outpatient clinics in the downtown medical district.',
+                    'features' => [ 'HCAI-coordinated healthcare systems', 'Medical office quick-response heads', 'Clinic suppression' ],
+                    'link'     => '/commercial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-city',
+                    'tag'      => 'Multifamily',
+                    'title'    => 'Multifamily & Residential Growth',
+                    'desc'     => 'NFPA 13R systems for Yuba City\'s expanding residential pipeline, including Plumas Lake and city-county boundary projects in Sutter County.',
+                    'features' => [ 'NFPA 13R apartment systems', 'Sutter County permitting', 'City/county boundary projects' ],
+                    'link'     => '/residential/',
+                ],
+            ],
+            'local_regulations' => [
+                [
+                    'code'      => 'Yuba City Municipal Code Chapter 15',
+                    'authority' => 'Yuba City Fire Department',
+                    'summary'   => 'Adopts the 2022 CFC with local amendments. Yuba City FD has authority within city limits. Some response coverage areas overlap with Sutter County for projects near the city boundary.',
+                ],
+                [
+                    'code'      => 'Sutter County Fire Safe Ordinance',
+                    'authority' => 'Sutter County Fire District',
+                    'summary'   => 'Governs unincorporated Sutter County. Separate permit process from Yuba City FD. Projects near the city-county boundary must confirm AHJ jurisdiction before submittal — Richardson verifies this on every Yuba-Sutter project.',
+                ],
+                [
+                    'code'      => 'HCAI (Health Care Access and Information)',
+                    'authority' => 'California HCAI (formerly OSHPD)',
+                    'summary'   => 'Licensed healthcare facilities in the Yuba-Sutter area require HCAI plan review and approval in addition to local AHJ review. HCAI adds 6–10 weeks to the plan review timeline. Richardson manages dual-track submissions.',
+                ],
+                [
+                    'code'      => 'California Department of Food and Agriculture (CDFA)',
+                    'authority' => 'CDFA / Yuba City FD',
+                    'summary'   => 'Licensed food processing and packing facilities must comply with CDFA fire safety requirements, enforced in conjunction with CFC. Specific requirements apply to ammonia refrigeration systems and grain handling dust suppression.',
+                ],
+                [
+                    'code'      => 'California Title 19 Article 11 — Spray Finishing',
+                    'authority' => 'California State Fire Marshal',
+                    'summary'   => 'Fire protection requirements for spray finishing operations apply to agricultural equipment manufacturing and finishing facilities in the Yuba City industrial corridor.',
+                ],
+                [
+                    'code'      => 'Yuba-Sutter Air Quality Management District',
+                    'authority' => 'YSAQMD',
+                    'summary'   => 'Suppression system agents (Halon alternatives, CO2) for large-scale industrial applications require AQMD review. Affects clean agent selection for agricultural cold storage and processing facilities.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
+            ],
         ],
 
         // ── DAVIS ─────────────────────────────────────────────────────────────
@@ -370,6 +744,70 @@ function rfp_all_locations() {
                     'q' => 'What does fire sprinkler installation cost for a Davis biotech or lab building?',
                     'a' => 'Laboratory and research occupancies typically cost more than standard commercial due to special hazard areas, pre-action systems, and clean agent suppression. Budget $5–$10 per sq ft for standard lab areas and $15–$25 for high-hazard or clean-agent zones. Call (916) 849-6441 for a detailed estimate based on your program.',
                 ],
+            ],
+            'primary_services' => [
+                [
+                    'icon'     => 'fa-solid fa-flask',
+                    'tag'      => 'Research & Lab',
+                    'title'    => 'Research Laboratory & Biotech',
+                    'desc'     => 'Pre-action, clean agent, and NFPA 13 systems for UC Davis-adjacent research labs, biotech facilities, and the East Davis Research Park.',
+                    'features' => [ 'Lab pre-action systems', 'Clean agent suppression (FM-200/Novec)', 'UC Davis EH&S coordination' ],
+                    'link'     => '/commercial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-city',
+                    'tag'      => 'Multifamily',
+                    'title'    => 'Student Housing & Multifamily',
+                    'desc'     => 'NFPA 13R and NFPA 13 systems for Davis\' campus-adjacent student housing, high-density multifamily, and mixed-use residential developments.',
+                    'features' => [ 'NFPA 13R student housing', 'CSFM state-building review', 'High-density occupancy design' ],
+                    'link'     => '/residential/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-store',
+                    'tag'      => 'Commercial',
+                    'title'    => 'Downtown & Neighborhood Retail',
+                    'desc'     => 'NFPA 13 commercial systems for Davis\' downtown retail corridor, restaurant row, and neighborhood mixed-use infill projects.',
+                    'features' => [ 'Downtown retrofit systems', 'Restaurant hood suppression', 'Light hazard commercial' ],
+                    'link'     => '/commercial/',
+                ],
+            ],
+            'local_regulations' => [
+                [
+                    'code'      => 'Davis Municipal Code Chapter 26',
+                    'authority' => 'Davis Fire Department',
+                    'summary'   => 'Adopts the 2022 CFC with strict local amendments. Davis requires fire sprinklers in more residential building types than the state minimum, including certain accessory dwelling units (ADUs) above thresholds set by local ordinance.',
+                ],
+                [
+                    'code'      => 'Yolo County Fire and Life Safety',
+                    'authority' => 'Yolo County Fire District',
+                    'summary'   => 'Governs unincorporated Yolo County, including the UC Davis Research Park areas outside city limits. Separate permit authority from Davis FD for projects outside the city boundary.',
+                ],
+                [
+                    'code'      => 'UC Davis EH&S Fire Safety Program',
+                    'authority' => 'UC Davis Environmental Health & Safety',
+                    'summary'   => 'All construction on the UC Davis campus requires EH&S review and approval independent of — and in addition to — Davis FD or CSFM review. UC campus buildings are state-owned; CSFM is the primary AHJ, not the City of Davis.',
+                ],
+                [
+                    'code'      => 'CSFM — State-Owned Buildings',
+                    'authority' => 'California State Fire Marshal',
+                    'summary'   => 'Buildings owned by UC Davis and other state agencies use CSFM as the AHJ, not the local city fire department. This creates a separate plan review track with different submittal requirements and longer timelines.',
+                ],
+                [
+                    'code'      => 'Davis Sustainability & Green Building Code',
+                    'authority' => 'City of Davis',
+                    'summary'   => 'Davis has adopted aggressive green building standards that affect material selection for fire suppression systems. Certain pipe materials and suppression agents require environmental compatibility review per Davis Municipal Code.',
+                ],
+                [
+                    'code'      => 'HCAI for Licensed Healthcare Facilities',
+                    'authority' => 'California HCAI',
+                    'summary'   => 'Any Davis satellite clinics licensed as healthcare facilities require HCAI plan review in addition to local AHJ review. Richardson manages dual-track submissions and tracks both review timelines simultaneously.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
             ],
         ],
 
