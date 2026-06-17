@@ -186,6 +186,45 @@ get_header();
       </div>
     </section>
 
+    <!-- ========== FAQ ========== -->
+    <section class="section faq" id="faq-industrial">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-header reveal-up">
+          <div class="section-badge">Industrial FAQ</div>
+          <h2 class="section-title">Industrial Fire Protection <span class="text-accent">Questions</span></h2>
+          <p class="section-desc">Common questions from warehouse owners, developers, and GCs on industrial fire suppression projects.</p>
+        </div>
+        <div class="faq-list reveal-up">
+          <?php
+          $industrial_faqs = [
+            [ 'q' => 'Does my warehouse need ESFR or in-rack sprinklers?',
+              'a' => 'The answer depends on building height, commodity classification, and storage configuration. ESFR ceiling-only systems are typically used for high-bay warehouses storing Class I–IV commodities up to 40 ft in height. In-rack systems are required when storage height, commodity type, or aisle configuration exceeds ESFR design limits — common for high-piled storage of Group A plastics, idle pallets, or rubber tires. Many modern distribution centers use a combination: ceiling ESFR plus in-rack at upper levels. Richardson performs the commodity analysis and hydraulic modeling to determine the right system for your specific inventory and racking configuration.' ],
+            [ 'q' => 'What is a commodity classification and why does it matter?',
+              'a' => 'A commodity classification assesses how quickly and intensely your stored materials will burn — it determines the required sprinkler system design density. The four main classes are Class I (non-combustible products in cardboard), Class II (non-combustible in wood or paper packaging), Class III (combustible products in wood or paper packaging), and Class IV (limited plastics). Group A, B, and C plastics are the most demanding and require significantly more suppression capacity. Richardson performs formal commodity classification reviews documented for AHJ submittal.' ],
+            [ 'q' => 'Does cold storage require a different fire sprinkler system than a standard warehouse?',
+              'a' => 'Yes. Cold storage and freezer spaces require dry-pipe or pre-action systems because wet-pipe systems would freeze. Pre-action systems add an electronic detection layer before water enters the pipe — useful in freezers where false activations cause significant damage. Refrigerated spaces below 40 degrees Fahrenheit always require dry-pipe or pre-action. The design must account for ice buildup on sprinkler heads, special thermal ratings, and drainage. Richardson has designed and installed systems in cold storage and food processing facilities throughout Sacramento Valley.' ],
+            [ 'q' => 'What NFPA standard applies to my industrial facility?',
+              'a' => 'Most industrial occupancies fall under NFPA 13. Design criteria depend on your occupancy hazard classification: Light Hazard (offices within the facility), Ordinary Hazard Group 1 (light manufacturing), Ordinary Hazard Group 2 (woodworking, metal fabrication), or Extra Hazard Group 1–2 (flammable liquids, chemical processes). High-piled storage areas are governed by NFPA 13 Chapter 20 and California Fire Code Chapter 32. Fire alarm systems follow NFPA 72. Special suppression systems have their own standards: NFPA 11, 2001, and 12.' ],
+            [ 'q' => 'How does FM Global design criteria differ from standard NFPA 13?',
+              'a' => 'FM Global publishes loss prevention data sheets that are generally more stringent than NFPA 13 — FM-insured properties typically require higher design densities, additional water supply margins, and more rigorous head spacing. FM Global is the insurer, not the AHJ, so their requirements layer on top of CFC and NFPA 13. Richardson designs to both NFPA 13 and FM Global criteria simultaneously — critical for large distribution facilities whose lease agreements require FM compliance.' ],
+            [ 'q' => 'How often does an industrial fire sprinkler system need inspection?',
+              'a' => 'NFPA 25 governs inspection frequency. For a typical industrial wet-pipe system: visual inspection of heads quarterly; alarm valves and water flow tested annually; full internal inspection every 5 years. Dry-pipe and pre-action systems require more frequent testing — internal inspections annually and full trip tests every 3 years. California SB 1205 requires inspection records be submitted to the State Fire Marshal. Richardson provides NFPA 25 inspection and testing with digital compliance records delivered after every visit.' ],
+          ];
+          foreach ( $industrial_faqs as $faq ) : ?>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <?php echo esc_html( $faq['q'] ); ?>
+                <i class="fa-solid fa-chevron-down faq-icon"></i>
+              </button>
+              <div class="faq-answer">
+                <p><?php echo esc_html( $faq['a'] ); ?></p>
+              </div>
+            </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== CTA ========== -->
     <section style="background: #C41230; color: #fff; text-align: center; padding: 4rem 1.5rem;">
       <div class="container" style="max-width: 640px;">

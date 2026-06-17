@@ -47,7 +47,7 @@
   <section class="stats-ticker">
     <div class="ticker-track">
       <div class="ticker-items" id="tickerItems">
-        <div class="ticker-item"><span class="ticker-num" data-target="30">0</span><span>+</span><span class="ticker-label">Years Experience</span></div>
+        <div class="ticker-item"><span class="ticker-num" data-target="30">0</span><span>+</span><span class="ticker-label">Years Combined Exp.</span></div>
         <div class="ticker-sep"><i class="fa-solid fa-fire"></i></div>
         <div class="ticker-item"><span class="ticker-num" data-target="5000">0</span><span>+</span><span class="ticker-label">Systems Installed</span></div>
         <div class="ticker-sep"><i class="fa-solid fa-fire"></i></div>
@@ -611,6 +611,43 @@
       </div>
     </div>
   </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="section faq" id="faq">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-header reveal-up">
+          <div class="section-badge">Common Questions</div>
+          <h2 class="section-title">Frequently Asked <span class="text-accent">Questions</span></h2>
+          <p class="section-desc">Answers to the questions developers and GCs ask most when evaluating Richardson Fire Protection.</p>
+        </div>
+        <div class="faq-list reveal-up">
+          <?php
+          $home_faqs = [
+            [ 'q' => 'What areas does Richardson Fire Protection serve?',
+              'a' => 'Richardson Fire Protection serves the greater Sacramento Valley region, including Sacramento, Stockton, Roseville, Rocklin, Fairfield, Yuba City, Davis, and surrounding communities across Sacramento, Placer, El Dorado, Yolo, Solano, San Joaquin, Sutter, and Yuba counties. We cover 15+ counties throughout Northern California for commercial, industrial, and multifamily fire protection projects.' ],
+            [ 'q' => 'How quickly can Richardson Fire Protection return a bid?',
+              'a' => 'Richardson returns complete bids within 24–48 hours of receiving plans. For preliminary budget estimates — no drawings required — we can return a verbal number within hours of a phone call. Final bids include hydraulic calculations, material specifications, and a full permit and installation fee breakdown.' ],
+            [ 'q' => 'Is Richardson Fire Protection licensed and insured in California?',
+              'a' => 'Yes. Richardson Fire Protection holds CSLB Contractor License #1053506 (C-16 Fire Protection), is registered with the California State Fire Marshal (CSFM), carries NICET-certified designers on staff, and maintains full general liability, workers\' compensation, and umbrella insurance. Certificates of insurance naming your company as additional insured are available within 24 hours.' ],
+            [ 'q' => 'What fire protection services does Richardson offer?',
+              'a' => 'Richardson provides complete design-build fire protection services: fire sprinkler system design and installation (NFPA 13, 13R, 13D), fire alarm systems (NFPA 72), special hazard suppression (clean agent, foam, dry chemical), NFPA 25 annual inspection and testing, system repair and maintenance, AHJ permit coordination, and 24/7 emergency service for commercial, industrial, and multifamily occupancies.' ],
+            [ 'q' => 'How does Richardson handle AHJ permit coordination?',
+              'a' => 'Richardson manages the entire permit process — hydraulic calculations, CAD shop drawings, equipment cut sheets, and code compliance analysis submitted directly to the AHJ. We maintain working relationships with plan reviewers at all seven major Sacramento Valley AHJs and our goal on every project is a first-pass permit approval and a first-pass AHJ final inspection.' ],
+          ];
+          foreach ( $home_faqs as $faq ) : ?>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <?php echo esc_html( $faq['q'] ); ?>
+                <i class="fa-solid fa-chevron-down faq-icon"></i>
+              </button>
+              <div class="faq-answer">
+                <p><?php echo esc_html( $faq['a'] ); ?></p>
+              </div>
+            </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    </section>
 
 <?php get_template_part( 'template-parts/locations-strip' ); ?>
 

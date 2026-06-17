@@ -83,48 +83,22 @@ $all_locs  = rfp_all_locations();
           <h2 class="section-title">What We Do in <span class="text-accent"><?php echo esc_html( $name ); ?></span></h2>
         </div>
         <div class="services-grid reveal-up">
+          <?php foreach ( $loc['primary_services'] as $svc ) : ?>
           <div class="service-card">
-            <div class="service-card__icon"><i class="fa-solid fa-building"></i></div>
-            <div class="service-card__tag">Commercial</div>
-            <h3 class="service-card__title">Commercial Fire Protection</h3>
-            <p class="service-card__desc">NFPA 13 design-build for offices, retail, restaurants, and mixed-use projects in <?php echo esc_html( $name ); ?>.</p>
+            <div class="service-card__icon"><i class="<?php echo esc_attr( $svc['icon'] ); ?>"></i></div>
+            <div class="service-card__tag"><?php echo esc_html( $svc['tag'] ); ?></div>
+            <h3 class="service-card__title"><?php echo esc_html( $svc['title'] ); ?></h3>
+            <p class="service-card__desc"><?php echo esc_html( $svc['desc'] ); ?></p>
             <ul class="service-card__features">
-              <li><i class="fa-solid fa-check"></i> Wet &amp; dry pipe systems</li>
-              <li><i class="fa-solid fa-check"></i> Fire alarm (NFPA 72)</li>
-              <li><i class="fa-solid fa-check"></i> <?php echo esc_html( $ahj ); ?> permit coordination</li>
+              <?php foreach ( $svc['features'] as $feat ) : ?>
+              <li><i class="fa-solid fa-check"></i> <?php echo esc_html( $feat ); ?></li>
+              <?php endforeach; ?>
             </ul>
-            <a href="<?php echo esc_url( home_url( '/commercial/' ) ); ?>" class="service-card__link">
-              Commercial Services <i class="fa-solid fa-arrow-right"></i>
+            <a href="<?php echo esc_url( home_url( $svc['link'] ) ); ?>" class="service-card__link">
+              Learn More <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
-          <div class="service-card">
-            <div class="service-card__icon"><i class="fa-solid fa-warehouse"></i></div>
-            <div class="service-card__tag">Industrial</div>
-            <h3 class="service-card__title">Industrial Fire Suppression</h3>
-            <p class="service-card__desc">ESFR, in-rack, and special hazard systems for warehouses and manufacturing in <?php echo esc_html( $county ); ?>.</p>
-            <ul class="service-card__features">
-              <li><i class="fa-solid fa-check"></i> ESFR &amp; in-rack sprinklers</li>
-              <li><i class="fa-solid fa-check"></i> Special hazard suppression</li>
-              <li><i class="fa-solid fa-check"></i> Storage commodity analysis</li>
-            </ul>
-            <a href="<?php echo esc_url( home_url( '/industrial/' ) ); ?>" class="service-card__link">
-              Industrial Services <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-          <div class="service-card">
-            <div class="service-card__icon"><i class="fa-solid fa-building-user"></i></div>
-            <div class="service-card__tag">Multifamily</div>
-            <h3 class="service-card__title">Multifamily &amp; Residential</h3>
-            <p class="service-card__desc">NFPA 13R and 13D systems for apartments, condos, and townhomes in <?php echo esc_html( $name ); ?>.</p>
-            <ul class="service-card__features">
-              <li><i class="fa-solid fa-check"></i> NFPA 13R apartment systems</li>
-              <li><i class="fa-solid fa-check"></i> Single-family NFPA 13D</li>
-              <li><i class="fa-solid fa-check"></i> Rough-in through final cert</li>
-            </ul>
-            <a href="<?php echo esc_url( home_url( '/residential/' ) ); ?>" class="service-card__link">
-              Residential Services <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
+          <?php endforeach; ?>
         </div>
       </div>
     </section>
@@ -240,6 +214,29 @@ $all_locs  = rfp_all_locations();
         </div>
       </div>
     </section>
+
+    <!-- ========== LOCAL REGULATIONS ========== -->
+    <?php if ( ! empty( $loc['local_regulations'] ) ) : ?>
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-badge">Code &amp; Compliance</div>
+          <h2 class="section-title">Local Fire Code in <span class="text-accent"><?php echo esc_html( $name ); ?></span></h2>
+          <p class="section-desc">Key regulations and laws that govern fire protection system design, permitting, and inspection in <?php echo esc_html( $name ); ?> and <?php echo esc_html( $county ); ?>. Richardson is fully compliant with all applicable codes.</p>
+        </div>
+        <div class="services-grid services-grid--6 reveal-up">
+          <?php foreach ( $loc['local_regulations'] as $reg ) : ?>
+          <div class="service-card service-card--sm">
+            <div class="service-card__icon"><i class="fa-solid fa-scale-balanced"></i></div>
+            <h3 class="service-card__title" style="font-size: 0.9rem;"><?php echo esc_html( $reg['code'] ); ?></h3>
+            <p style="font-size: 0.75rem; color: var(--c-red); font-weight: 600; margin-bottom: 0.5rem;"><?php echo esc_html( $reg['authority'] ); ?></p>
+            <p class="service-card__desc" style="font-size: 0.82rem;"><?php echo esc_html( $reg['summary'] ); ?></p>
+          </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    </section>
+    <?php endif; ?>
 
     <!-- ========== FAQ (AEO) ========== -->
     <section class="section faq" id="faq-<?php echo esc_attr( $slug ); ?>">
