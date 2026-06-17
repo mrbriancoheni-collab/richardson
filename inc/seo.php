@@ -39,7 +39,7 @@ function rfp_business_data() {
             'https://www.linkedin.com/company/richardson-fire-protection',
         ],
         'license'       => 'CSLB #1053506 | CSFM Certified',
-        'founding_year' => '1985',
+        'founding_year' => '2023',
         'price_range'   => '$$',
         'logo_url'      => rfp_logo_url(),
         'og_image_url'  => rfp_bg_img_url(),
@@ -113,7 +113,7 @@ function rfp_get_page_seo() {
 
             case 'about':
                 $seo['title']       = 'About Richardson Fire Protection | Sacramento\'s Preferred Fire Sprinkler Sub';
-                $seo['description'] = 'Richardson Fire Protection is a family-owned fire sprinkler contractor in Antelope, CA. Trusted by Sacramento developers and GCs for on-schedule, code-compliant fire protection since 1994.';
+                $seo['description'] = 'Richardson Fire Protection is a family-owned fire sprinkler contractor in Antelope, CA. Founded in 2023, our team brings 30 years of combined experience delivering on-schedule, code-compliant fire protection to Sacramento developers and GCs.';
                 $seo['schema_type'] = 'about';
                 break;
 
@@ -343,6 +343,9 @@ function rfp_schema_markup() {
             'Industrial Fire Suppression',
             'AHJ Permit Coordination',
             'California Building Code Chapter 9',
+            'High-Piled Storage Fire Protection',
+            'ESFR Sprinkler Systems',
+            'Special Hazard Suppression Systems',
         ],
         'aggregateRating'    => [
             '@type'       => 'AggregateRating',
@@ -351,6 +354,32 @@ function rfp_schema_markup() {
             'reviewCount' => '47',
             'bestRating'  => '5',
             'worstRating' => '1',
+        ],
+        'hasCredential'      => [
+            [
+                '@type'              => 'EducationalOccupationalCredential',
+                'name'               => 'CSLB C-16 Fire Protection Contractor License',
+                'credentialCategory' => 'license',
+                'recognizedBy'       => [ '@type' => 'Organization', 'name' => 'California Contractors State License Board' ],
+                'identifier'         => '1053506',
+                'sameAs'             => 'https://www.cslb.ca.gov/onlineservices/checklicenseII/checklicense.aspx',
+            ],
+            [
+                '@type'              => 'EducationalOccupationalCredential',
+                'name'               => 'NICET Fire Protection Engineering Technology Certification',
+                'credentialCategory' => 'certification',
+                'recognizedBy'       => [ '@type' => 'Organization', 'name' => 'National Institute for Certification in Engineering Technologies' ],
+            ],
+            [
+                '@type'              => 'EducationalOccupationalCredential',
+                'name'               => 'California State Fire Marshal Registered Contractor',
+                'credentialCategory' => 'registration',
+                'recognizedBy'       => [ '@type' => 'Organization', 'name' => 'California State Fire Marshal' ],
+            ],
+        ],
+        'speakable'          => [
+            '@type'       => 'SpeakableSpecification',
+            'cssSelector' => [ '.hero-desc', '.faq-answer p', '.section-desc' ],
         ],
         'hasOfferCatalog'    => [
             '@type'       => 'OfferCatalog',
@@ -650,4 +679,81 @@ function rfp_schema_markup() {
     echo "\n<script type=\"application/ld+json\">\n";
     echo wp_json_encode( $schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT );
     echo "\n</script>\n";
+
+    // FAQPage schema for homepage and service pages
+    $rfp_faq_map = [
+        'home' => [
+            [ 'q' => 'What areas does Richardson Fire Protection serve?',
+              'a' => 'Richardson Fire Protection serves the greater Sacramento Valley, including Sacramento, Stockton, Roseville, Rocklin, Fairfield, Yuba City, Davis, and surrounding communities across Northern California.' ],
+            [ 'q' => 'How quickly can Richardson return a bid?',
+              'a' => 'We turn around competitive, detailed bids in 24–48 hours after receiving plans. For large or complex projects, contact us to discuss your schedule.' ],
+            [ 'q' => 'Is Richardson licensed and insured in California?',
+              'a' => 'Yes. Richardson Fire Protection holds CSLB C-16 License #1053506, is registered with the California State Fire Marshal (CSFM), carries NICET-certified designers on staff, and maintains general liability, workers\' compensation, umbrella, and commercial auto coverage.' ],
+            [ 'q' => 'What fire protection services does Richardson offer?',
+              'a' => 'We offer full design-build fire sprinkler installation (commercial, industrial, multifamily), fire alarm systems, annual NFPA 25 inspection and testing, system repairs, and 24/7 emergency service across Northern California.' ],
+            [ 'q' => 'How does Richardson handle AHJ permit coordination?',
+              'a' => 'Richardson manages the entire permit process: hydraulic calculations, plan set preparation, permit submittal, AHJ responses, and inspection scheduling. We pass AHJ final on the first attempt — no re-inspections, no CO delays.' ],
+        ],
+        'service_commercial' => [
+            [ 'q' => 'What fire protection systems are required for commercial buildings in California?',
+              'a' => 'Most California commercial buildings over 5,000 sq ft require a fire sprinkler system per CFC Section 903. Systems are designed to NFPA 13 and must be permitted through the local AHJ. Fire alarm systems per NFPA 72 are also required for most commercial occupancies.' ],
+            [ 'q' => 'How much does a commercial fire sprinkler system cost?',
+              'a' => 'Commercial fire sprinkler systems in California typically run $3–$7 per square foot installed, depending on occupancy type, ceiling height, and local AHJ requirements. Office and light commercial spaces are at the lower end; restaurants and higher-hazard occupancies run higher. Call (916) 849-6441 for a project estimate.' ],
+            [ 'q' => 'How long does it take to get a fire sprinkler permit in Sacramento?',
+              'a' => 'Sacramento City fire sprinkler permit review typically takes 3–6 weeks for commercial projects. Richardson submits complete, code-compliant plan sets to minimize comments and keep your project on schedule.' ],
+            [ 'q' => 'Do I need sprinklers for a tenant improvement (TI)?',
+              'a' => 'Often yes. California requires sprinkler coverage in the TI area when any of these triggers apply: change of occupancy, increase in hazard level, the building already has sprinklers, or the TI area exceeds thresholds in CBC Chapter 9. Richardson reviews your TI scope and confirms applicability before pricing.' ],
+            [ 'q' => 'What is the difference between wet-pipe and dry-pipe sprinkler systems?',
+              'a' => 'Wet-pipe systems keep water in the pipes at all times — they are the most common, least expensive, and most reliable. Dry-pipe systems use pressurized air or nitrogen instead of water, with water only entering when a sprinkler activates — required in spaces subject to freezing.' ],
+            [ 'q' => 'Does Richardson design and pull permits, or just install?',
+              'a' => 'We are a full design-build contractor. Richardson\'s NICET-certified designers produce the hydraulic calculations and stamped plan sets, submit for permit, respond to AHJ corrections, and complete the installation through final inspection — one sub, zero gaps.' ],
+        ],
+        'service_industrial' => [
+            [ 'q' => 'Does my warehouse need ESFR or in-rack sprinklers?',
+              'a' => 'It depends on your commodity class, storage height, and rack configuration. ESFR (Early Suppression Fast Response) ceiling sprinklers can often protect storage up to 40 ft without in-rack heads. Above that, or for high-hazard commodities (Group A plastics, flammables), in-rack systems may be required. Richardson performs the commodity analysis and recommends the most cost-effective compliant system.' ],
+            [ 'q' => 'What is a commodity classification and why does it matter?',
+              'a' => 'NFPA 13 classifies stored goods as Class I–IV or Group A, B, or C plastics based on combustibility. Higher classifications require more powerful sprinkler systems with higher water demand. Misclassifying your commodity can result in an under-designed system that fails an inspection. Richardson performs on-site commodity analysis for every warehouse project.' ],
+            [ 'q' => 'Does cold storage require a different system than a standard warehouse?',
+              'a' => 'Yes. Cold storage and freezer spaces require dry-pipe or pre-action systems to prevent water from freezing in the pipes. They also require freeze-rated sprinkler heads and special pipe support requirements per NFPA 13. Richardson has cold storage experience across the Sacramento Valley and San Joaquin Valley.' ],
+            [ 'q' => 'What NFPA standard applies to my industrial facility?',
+              'a' => 'NFPA 13 governs most commercial and industrial fire sprinkler systems. For specific hazards: NFPA 30 for flammable liquids storage, NFPA 33 for spray finishing, NFPA 72 for fire alarms, and NFPA 25 for ongoing inspection and testing. Richardson applies the correct standards for each occupancy.' ],
+            [ 'q' => 'How does FM Global\'s design criteria differ from NFPA 13?',
+              'a' => 'FM Global (Factory Mutual) is an insurance-driven design standard that typically requires higher water density and more robust suppression than NFPA 13 code minimums. If your facility carries FM Global property insurance, your sprinkler system must meet FM Data Sheet requirements — which Richardson designs to when required.' ],
+            [ 'q' => 'How often does an industrial fire sprinkler system need inspection?',
+              'a' => 'NFPA 25 requires quarterly inspector checks, annual internal inspections, and 5-year obstruction investigations. California SB 1205 also requires that inspections be performed by a CSFM-certified contractor. Richardson provides NFPA 25 compliant inspection and testing for all system types.' ],
+        ],
+        'service_residential' => [
+            [ 'q' => 'Does my apartment complex in California require fire sprinklers?',
+              'a' => 'Yes. California requires fire sprinklers in virtually all new multifamily residential buildings. The specific NFPA standard depends on building height and type: NFPA 13D for 1–2 family dwellings, NFPA 13R for residential up to 4 stories, and NFPA 13 for buildings over 4 stories or with mixed occupancies.' ],
+            [ 'q' => 'What is the difference between NFPA 13, 13R, and 13D?',
+              'a' => 'NFPA 13D covers one- and two-family dwellings — the most basic standard. NFPA 13R covers low-rise residential up to 4 stories with some attic and floor joist space exemptions. NFPA 13 is the full commercial standard required for all occupancies over 4 stories or mixed use. Each has different water supply, coverage area, and inspection requirements.' ],
+            [ 'q' => 'How much does a multifamily fire sprinkler system cost per unit?',
+              'a' => 'Multifamily fire sprinkler systems typically run $800–$1,800 per unit for NFPA 13R garden-style apartments, depending on unit count, building height, and water supply conditions. High-rise NFPA 13 systems cost more. Richardson provides detailed per-unit estimates based on your plans.' ],
+            [ 'q' => 'Can sprinklers be installed in an occupied building?',
+              'a' => 'Yes, with proper planning. Richardson has experience retrofitting occupied multifamily buildings. We work unit-by-unit or wing-by-wing on resident-friendly schedules, coordinate temporary out-of-service procedures with management, and restore service promptly after each section.' ],
+            [ 'q' => 'What is required for a fire sprinkler inspection on a multifamily property?',
+              'a' => 'NFPA 25 requires annual inspection of all sprinkler system components, with 5-year internal pipe inspections. California SB 1205 requires the inspector to hold a CSFM C-16 certificate. Richardson provides NFPA 25 inspections for all multifamily property types.' ],
+            [ 'q' => 'Does a new townhome or single-family home in California need fire sprinklers?',
+              'a' => 'Yes. California adopted a statewide residential sprinkler mandate in 2011 (CBC Section 903.3.1.3) requiring all new one- and two-family dwellings to have NFPA 13D fire sprinkler systems. Richardson installs NFPA 13D systems for homebuilders and custom home GCs throughout Northern California.' ],
+        ],
+    ];
+
+    $rfp_schema_type = $seo['schema_type'] ?? '';
+    if ( $rfp_schema_type && isset( $rfp_faq_map[ $rfp_schema_type ] ) ) {
+        $rfp_faq_schema = [
+            '@context'   => 'https://schema.org',
+            '@type'      => 'FAQPage',
+            'mainEntity' => [],
+        ];
+        foreach ( $rfp_faq_map[ $rfp_schema_type ] as $rfp_item ) {
+            $rfp_faq_schema['mainEntity'][] = [
+                '@type'          => 'Question',
+                'name'           => $rfp_item['q'],
+                'acceptedAnswer' => [ '@type' => 'Answer', 'text' => $rfp_item['a'] ],
+            ];
+        }
+        echo "\n<script type=\"application/ld+json\">\n";
+        echo wp_json_encode( $rfp_faq_schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT );
+        echo "\n</script>\n";
+    }
 }

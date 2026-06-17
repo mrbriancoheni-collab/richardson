@@ -63,7 +63,7 @@ get_header();
             <div class="about-float-card">
               <div class="float-card-icon"><i class="fa-solid fa-award"></i></div>
               <div class="float-card-content">
-                <strong>Trusted Since 1994</strong>
+                <strong>Founded in 2023</strong>
                 <span>Sacramento's #1 fire protection firm</span>
               </div>
             </div>
@@ -71,13 +71,13 @@ get_header();
         </div>
         <div class="about-content reveal-right">
           <div class="section-badge">Our Story</div>
-          <h2 class="section-title">30 Years of Protecting <span class="text-accent">Northern California</span></h2>
+          <h2 class="section-title">30 Years of Combined <span class="text-accent">Fire Protection Experience</span></h2>
 
           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <?php if ( get_the_content() ) : ?>
               <div class="entry-content"><?php the_content(); ?></div>
             <?php else : ?>
-              <p class="about-lead">Richardson Fire Protection was founded in Sacramento in 1994 with one mission: deliver code-compliant, reliable fire protection for the businesses and residents of Northern California.</p>
+              <p class="about-lead">Richardson Fire Protection was founded in Sacramento in 2023 with one mission: deliver code-compliant, reliable fire protection for the businesses and residents of Northern California. Our team brings over 30 years of combined fire protection experience across Sacramento Valley's commercial, industrial, and multifamily sectors.</p>
               <p class="about-body">What started as a small installation crew has grown into one of the region's most trusted full-service fire protection contractors — handling everything from design and permitting to installation, inspection, and 24/7 emergency service. Today we serve commercial property owners, general contractors, industrial operators, and multifamily housing providers across Sacramento and 15+ surrounding counties.</p>
               <p class="about-body">We are still family-owned and operated. Every job gets the same level of attention whether it's a single-tenant retail suite or a 200,000 sq ft distribution center.</p>
             <?php endif; ?>
@@ -114,7 +114,7 @@ get_header();
     <section class="stats-ticker">
       <div class="ticker-track">
         <div class="ticker-items" id="tickerItems">
-          <div class="ticker-item"><span class="ticker-num" data-target="30">0</span><span>+</span><span class="ticker-label">Years Experience</span></div>
+          <div class="ticker-item"><span class="ticker-num" data-target="30">0</span><span>+</span><span class="ticker-label">Years Combined Exp.</span></div>
           <div class="ticker-sep"><i class="fa-solid fa-fire"></i></div>
           <div class="ticker-item"><span class="ticker-num" data-target="5000">0</span><span>+</span><span class="ticker-label">Systems Installed</span></div>
           <div class="ticker-sep"><i class="fa-solid fa-fire"></i></div>
