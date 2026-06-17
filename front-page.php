@@ -87,7 +87,7 @@
           <div class="about-float-card">
             <div class="float-card-icon"><i class="fa-solid fa-award"></i></div>
             <div class="float-card-content">
-              <strong>Trusted Since 1994</strong>
+              <strong>Founded in 2023</strong>
               <span>Sacramento's #1 fire protection firm</span>
             </div>
           </div>
