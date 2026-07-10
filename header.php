@@ -6,6 +6,9 @@
   <meta name="theme-color" content="#C41230" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <?php if ( ! is_admin() ) : ?>
+  <link rel="preload" as="image" href="<?php echo esc_url( rfp_bg_img_url() ); ?>" fetchpriority="high" />
+  <?php endif; ?>
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

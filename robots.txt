@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://richardsonfirepro.com/sitemap.xml
+
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /?s=
+Disallow: /search/
