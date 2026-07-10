@@ -10,6 +10,9 @@ require get_template_directory() . '/inc/location-data.php';
 // ─── SEO Module ─────────────────────────────────────────────────────────────
 require get_template_directory() . '/inc/seo.php';
 
+// ─── Sitemap ─────────────────────────────────────────────────────────────────
+require get_template_directory() . '/inc/sitemap.php';
+
 // ─── Auto-route city pages to page-location.php ──────────────────────────────
 add_filter( 'template_include', function( $template ) {
     if ( ! is_singular( 'page' ) ) return $template;

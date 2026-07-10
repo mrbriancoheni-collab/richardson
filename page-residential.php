@@ -198,6 +198,16 @@ get_header();
           </a>
         </div>
       </div>
+      <p class="section-desc reveal-up" style="text-align:center; margin-top:1.5rem; padding: 0 1.5rem;">
+        We serve multifamily and residential projects across the Sacramento Valley — including
+        <a href="<?php echo esc_url( home_url( '/locations/sacramento/' ) ); ?>">Sacramento</a>,
+        <a href="<?php echo esc_url( home_url( '/locations/roseville/' ) ); ?>">Roseville</a>,
+        <a href="<?php echo esc_url( home_url( '/locations/rocklin/' ) ); ?>">Rocklin</a>,
+        <a href="<?php echo esc_url( home_url( '/locations/stockton/' ) ); ?>">Stockton</a>,
+        <a href="<?php echo esc_url( home_url( '/locations/fairfield/' ) ); ?>">Fairfield</a>,
+        <a href="<?php echo esc_url( home_url( '/locations/yuba-city/' ) ); ?>">Yuba City</a>, and
+        <a href="<?php echo esc_url( home_url( '/locations/davis/' ) ); ?>">Davis</a>.
+      </p>
     </section>
 
     <!-- ========== FAQ ========== -->
