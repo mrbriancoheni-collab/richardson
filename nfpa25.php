@@ -6,20 +6,6 @@
 get_header();
 ?>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "NFPA 25: The Complete Guide to Fire Sprinkler Inspections in California",
-  "description": "Everything California property owners and facility managers need to know about NFPA 25 inspection requirements, frequencies, and what to expect during an annual fire sprinkler inspection.",
-  "author": { "@type": "Organization", "name": "Richardson Fire Protection" },
-  "publisher": { "@type": "Organization", "name": "Richardson Fire Protection" },
-  "datePublished": "2024-01-15",
-  "dateModified": "2024-01-15",
-  "mainEntityOfPage": { "@type": "WebPage" }
-}
-</script>
-
   <main class="site-main">
 
     <!-- ========== HERO ========== -->
