@@ -24,7 +24,10 @@ add_filter( 'template_include', function( $template ) {
 
         // City + Service pages: parent is a city slug, child is a service slug
         $city_slugs    = array_keys( rfp_all_locations() );
-        $service_slugs = [ 'commercial', 'industrial', 'residential' ];
+        $service_slugs = [
+            'commercial', 'industrial', 'residential',
+            'fire-pump-design', 'fire-pump-installation', 'fire-pump-repair', 'fire-pump-testing',
+        ];
         if ( in_array( $parent_slug, $city_slugs, true ) && in_array( $post->post_name, $service_slugs, true ) ) {
             $tpl = get_template_directory() . '/page-city-service.php';
             if ( file_exists( $tpl ) ) return $tpl;
@@ -43,6 +46,7 @@ add_filter( 'template_include', function( $template ) {
         'commercial'  => 'page-commercial.php',
         'industrial'  => 'page-industrial.php',
         'residential' => 'page-residential.php',
+        'fire-pump'   => 'page-fire-pump.php',
     ];
     if ( isset( $slug_map[ $post->post_name ] ) ) {
         $tpl = get_template_directory() . '/' . $slug_map[ $post->post_name ];
@@ -62,9 +66,13 @@ function rfp_maybe_create_city_service_pages() {
     if ( ! current_user_can( 'manage_options' ) ) return;
 
     $service_titles = [
-        'commercial'  => 'Commercial Fire Protection in %s',
-        'industrial'  => 'Industrial Fire Protection in %s',
-        'residential' => 'Multifamily Fire Protection in %s',
+        'commercial'             => 'Commercial Fire Protection in %s',
+        'industrial'             => 'Industrial Fire Protection in %s',
+        'residential'            => 'Multifamily Fire Protection in %s',
+        'fire-pump-design'       => 'Fire Pump Design in %s',
+        'fire-pump-installation' => 'Fire Pump Installation in %s',
+        'fire-pump-repair'       => 'Fire Pump Repair in %s',
+        'fire-pump-testing'      => 'Fire Pump Testing in %s',
     ];
 
     $created = 0;

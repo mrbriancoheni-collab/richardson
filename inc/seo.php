@@ -81,18 +81,25 @@ function rfp_get_page_seo() {
         }
 
         // Child of a city page with service slug → city_service
-        $service_slugs = [ 'commercial', 'industrial', 'residential' ];
+        $service_slugs = [
+            'commercial', 'industrial', 'residential',
+            'fire-pump-design', 'fire-pump-installation', 'fire-pump-repair', 'fire-pump-testing',
+        ];
         if ( $parent && function_exists( 'rfp_all_locations' ) && in_array( $slug, $service_slugs, true ) ) {
             $city_slugs = array_keys( rfp_all_locations() );
             if ( in_array( $parent->post_name, $city_slugs, true ) ) {
                 $loc = rfp_location_data( $parent->post_name );
                 if ( $loc ) {
                     $svc_labels = [
-                        'commercial'  => 'Commercial Fire Protection',
-                        'industrial'  => 'Industrial Fire Protection',
-                        'residential' => 'Multifamily Fire Protection',
+                        'commercial'             => 'Commercial Fire Protection',
+                        'industrial'             => 'Industrial Fire Protection',
+                        'residential'            => 'Multifamily Fire Protection',
+                        'fire-pump-design'       => 'Fire Pump Design',
+                        'fire-pump-installation' => 'Fire Pump Installation',
+                        'fire-pump-repair'       => 'Fire Pump Repair',
+                        'fire-pump-testing'      => 'Fire Pump Testing',
                     ];
-                    $svc_label = $svc_labels[ $slug ];
+                    $svc_label = $svc_labels[ $slug ] ?? 'Fire Protection';
                     $seo['title']        = $svc_label . ' in ' . $loc['name'] . ', CA | Richardson Fire Protection';
                     $seo['description']  = esc_attr( substr( $svc_label . ' for GCs and developers in ' . $loc['name'] . ', CA. ' . $loc['ahj_name'] . ' coordination, design-build. Bids in 24–48 hrs. Call (916) 849-6441.', 0, 157 ) . '...' );
                     $seo['schema_type']  = 'city_service';
@@ -159,6 +166,12 @@ function rfp_get_page_seo() {
                 $seo['title']       = 'Fire Protection Services — Sacramento Valley | Richardson Fire Protection';
                 $seo['description'] = 'Complete fire sprinkler services for commercial, industrial, and residential projects in Sacramento Valley. Design, installation, inspection, and 24/7 emergency service. Call (916) 849-6441.';
                 $seo['schema_type'] = 'services_hub';
+                break;
+
+            case 'fire-pump':
+                $seo['title']       = 'Fire Pump Services Sacramento Valley — Design, Install, Repair & Testing | Richardson';
+                $seo['description'] = 'NFPA 20 fire pump design, installation, repair, and NFPA 25 annual testing across Sacramento Valley. 24/7 emergency repair. Richardson Fire Protection — (916) 849-6441.';
+                $seo['schema_type'] = 'fire_pump_hub';
                 break;
 
             case 'ahj-comparison':
@@ -774,14 +787,22 @@ function rfp_schema_markup() {
         $city_url = $par_obj ? get_permalink( $par_obj->ID ) : home_url('/');
 
         $svc_labels = [
-            'commercial'  => 'Commercial Fire Protection',
-            'industrial'  => 'Industrial Fire Protection',
-            'residential' => 'Multifamily Fire Protection',
+            'commercial'             => 'Commercial Fire Protection',
+            'industrial'             => 'Industrial Fire Protection',
+            'residential'            => 'Multifamily Fire Protection',
+            'fire-pump-design'       => 'Fire Pump Design',
+            'fire-pump-installation' => 'Fire Pump Installation',
+            'fire-pump-repair'       => 'Fire Pump Repair',
+            'fire-pump-testing'      => 'Fire Pump Testing',
         ];
         $svc_types = [
-            'commercial'  => 'NFPA 13 Fire Sprinkler Contractor',
-            'industrial'  => 'NFPA 13 Industrial Fire Suppression',
-            'residential' => 'NFPA 13R/13D Residential Fire Sprinkler Contractor',
+            'commercial'             => 'NFPA 13 Fire Sprinkler Contractor',
+            'industrial'             => 'NFPA 13 Industrial Fire Suppression',
+            'residential'            => 'NFPA 13R/13D Residential Fire Sprinkler Contractor',
+            'fire-pump-design'       => 'NFPA 20 Fire Pump Design Engineer',
+            'fire-pump-installation' => 'NFPA 20 Fire Pump Installation Contractor',
+            'fire-pump-repair'       => 'Fire Pump Repair & Emergency Service',
+            'fire-pump-testing'      => 'NFPA 25 Fire Pump Testing & Inspection',
         ];
         $svc_label = $svc_labels[ $svc_slug ] ?? 'Fire Protection';
         $svc_type  = $svc_types[ $svc_slug ] ?? 'Fire Sprinkler Contractor';
@@ -855,7 +876,7 @@ function rfp_schema_markup() {
     }
 
     // ── WebPage + Speakable for hub / guide pages ────────────────────
-    $speakable_page_types = [ 'services_hub', 'ahj_comparison', 'cost_guide' ];
+    $speakable_page_types = [ 'services_hub', 'ahj_comparison', 'cost_guide', 'fire_pump_hub' ];
     if ( in_array( $seo['schema_type'], $speakable_page_types, true ) && is_singular() ) {
         $page_url = get_permalink();
         $graphs[] = [
@@ -982,6 +1003,18 @@ function rfp_schema_markup() {
               'a' => 'Common plan check corrections include: insufficient water supply documentation, missing or incorrect hydraulic calculation basis of design, non-compliant sprinkler head spacing or coverage, missing seismic bracing calculations, incorrect occupancy or commodity classification, and missing code compliance notes. Richardson\'s NICET-certified design team produces first-pass-compliant submittals to minimize corrections.' ],
             [ 'q' => 'How do I find out which AHJ has jurisdiction over my project?',
               'a' => 'Fire sprinkler permit jurisdiction follows the local fire department or fire prevention division of the city or county where the project is located. Unincorporated areas of Sacramento County fall under Sacramento County Fire; incorporated cities use their own fire departments. For projects on state-regulated facilities (schools, hospitals), the California State Fire Marshal (CSFM) may have concurrent jurisdiction.' ],
+        ],
+        'fire_pump_hub' => [
+            [ 'q' => 'When does a building require a fire pump?',
+              'a' => 'A fire pump is required by NFPA 13 when the available municipal water supply — pressure, flow, or both — is insufficient to meet the hydraulic demand of the fire sprinkler system. This is common in multi-story buildings where static pressure drops significantly at upper floors, large warehouses with high water demand, and sites where municipal mains cannot provide the required flow. Richardson performs a water supply analysis on every project to determine whether a fire pump is needed.' ],
+            [ 'q' => 'What types of fire pumps does Richardson install?',
+              'a' => 'Richardson installs electric motor-driven fire pumps (horizontal split-case, end-suction, and vertical in-line), diesel engine-driven fire pumps, and vertical turbine pumps (VTPs) for underground water supply. All installations comply with NFPA 20 and are submitted to the local AHJ — Sacramento City Fire Department, Roseville Fire, Stockton Fire, and all other Sacramento Valley jurisdictions we serve.' ],
+            [ 'q' => 'How often does a fire pump need to be tested in California?',
+              'a' => 'NFPA 25 requires weekly churn tests (no-flow test), monthly inspection of all components, and an annual full-flow performance test. The annual test produces a certified pump curve at churn, rated, and peak flow that must be documented and kept on file for the AHJ and property insurer. California SB 1205 requires all NFPA 25 testing to be performed by a CSLB C-16 licensed contractor — Richardson meets that requirement.' ],
+            [ 'q' => 'What causes fire pump failures and how are they repaired?',
+              'a' => 'Common fire pump failures include: mechanical seal leaks (wear from inadequate weekly testing), impeller wear (reduces pump output below rated capacity), controller malfunctions (pressure switch drift, contactor failure, transfer switch faults), and suction or discharge piping issues. Richardson\'s technicians diagnose the root cause, perform the repair, and document corrections with a written report accepted by the AHJ and insurer. We respond 24/7 to pump failures because an impaired fire pump triggers a required fire watch.' ],
+            [ 'q' => 'How long does fire pump installation take?',
+              'a' => 'A standard electric-drive fire pump installation — concrete pad, suction and discharge piping, controller, and commissioning — typically takes 2–4 weeks from permit issuance for a commercial project. Diesel-drive installations add 1–2 weeks for fuel tank coordination and exhaust routing. Richardson coordinates the installation with your construction schedule and performs the NFPA 20 acceptance test before turning over to the AHJ for final inspection.' ],
         ],
         'cost_guide' => [
             [ 'q' => 'How much does a commercial fire sprinkler system cost in California?',

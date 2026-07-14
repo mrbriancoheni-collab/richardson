@@ -12,13 +12,15 @@
 get_header();
 
 $post         = get_queried_object();
-$service_slug = $post->post_name; // commercial | industrial | residential
+$service_slug = $post->post_name;
 $parent       = get_post( $post->post_parent );
 $city_slug    = $parent ? $parent->post_name : '';
 $loc          = rfp_location_data( $city_slug );
 
+$valid_slugs = [ 'commercial', 'industrial', 'residential', 'fire-pump-design', 'fire-pump-installation', 'fire-pump-repair', 'fire-pump-testing' ];
+
 // Graceful fallback if data is missing
-if ( ! $loc || ! in_array( $service_slug, [ 'commercial', 'industrial', 'residential' ], true ) ) {
+if ( ! $loc || ! in_array( $service_slug, $valid_slugs, true ) ) {
     wp_redirect( home_url( '/services/' ) );
     exit;
 }
@@ -77,11 +79,91 @@ $services = [
             [ 'fa-solid fa-wrench',        'Occupied Retrofits',     'Retrofit sprinkler systems into occupied apartment buildings — phased work plans, off-hours scheduling, and minimal tenant disruption.' ],
         ],
     ],
+    'fire-pump-design' => [
+        'label'      => 'Fire Pump Design',
+        'icon'       => 'fa-solid fa-drafting-compass',
+        'h1_mid'     => 'Fire Pump <span class="hero-title--accent">Design</span>',
+        'badge'      => 'Fire Pump Design Specialists',
+        'tagline'    => 'NFPA 20 hydraulic analysis, pump sizing, and engineered specifications for new construction and system upgrades in ' . $name . '.',
+        'page_url'   => '/fire-pump/',
+        'page_label' => 'Fire Pump Services',
+        'code'       => 'NFPA 20',
+        'features'   => [
+            [ 'fa-solid fa-calculator',   'Hydraulic Demand Analysis', 'We calculate system water demand to right-size the pump for your building\'s fire protection needs and available municipal supply.' ],
+            [ 'fa-solid fa-sliders',      'Pump Sizing & Selection',   'Electric-drive or diesel-drive; horizontal split-case, vertical turbine, or end-suction — we specify the correct pump type and rating.' ],
+            [ 'fa-solid fa-bolt',         'Electric / Diesel Drive',   'NFPA 20-compliant design for both electric motor-driven and diesel engine-driven fire pump assemblies, including jockey pump sizing.' ],
+            [ 'fa-solid fa-gauge-high',   'Controller & Alarm Specs',  'Fire pump controller specifications, transfer switch coordination, alarm wiring diagrams, and weekly test timer requirements per NFPA 20.' ],
+        ],
+    ],
+    'fire-pump-installation' => [
+        'label'      => 'Fire Pump Installation',
+        'icon'       => 'fa-solid fa-screwdriver-wrench',
+        'h1_mid'     => 'Fire Pump <span class="hero-title--accent">Installation</span>',
+        'badge'      => 'Fire Pump Installation Contractor',
+        'tagline'    => 'Complete NFPA 20 fire pump assembly installation — electric-drive, diesel engine-drive, and vertical turbine pumps — coordinated with ' . $ahj . '.',
+        'page_url'   => '/fire-pump/',
+        'page_label' => 'Fire Pump Services',
+        'code'       => 'NFPA 20',
+        'features'   => [
+            [ 'fa-solid fa-bolt',              'Electric-Drive Pump Sets',  'Electric motor-driven fire pump assemblies — horizontal split-case and end-suction — fully listed, NFPA 20 compliant, and AHJ-submitted.' ],
+            [ 'fa-solid fa-oil-can',           'Diesel Engine-Drive Pumps', 'Diesel-engine fire pump installations for facilities requiring a secondary power source independent of utility power.' ],
+            [ 'fa-solid fa-arrow-up-from-water','Vertical Turbine Pumps',   'VTP installations for sites drawing from underground cisterns, ponds, or tanks where submersible pump placement is required.' ],
+            [ 'fa-solid fa-microchip',         'Controller & Commissioning','Controller installation, ATS coordination, supervisory alarm wiring, and full commissioning tests per NFPA 20 Section 14.' ],
+        ],
+    ],
+    'fire-pump-repair' => [
+        'label'      => 'Fire Pump Repair',
+        'icon'       => 'fa-solid fa-toolbox',
+        'h1_mid'     => 'Fire Pump <span class="hero-title--accent">Repair</span>',
+        'badge'      => 'Fire Pump Repair & Emergency Service',
+        'tagline'    => '24/7 emergency and scheduled fire pump repair in ' . $name . ' — impeller, seal, controller, and piping — with written reports for ' . $ahj . ' and your insurer.',
+        'page_url'   => '/fire-pump/',
+        'page_label' => 'Fire Pump Services',
+        'code'       => 'NFPA 25',
+        'features'   => [
+            [ 'fa-solid fa-gear',         'Impeller & Seal Replacement', 'Impeller wear-ring replacement, mechanical seal repair, and bearing replacement to restore rated pump performance and NFPA 25 compliance.' ],
+            [ 'fa-solid fa-microchip',    'Controller Troubleshooting',  'Diagnose and repair controller failures, pressure switch faults, transfer switch malfunctions, and supervisory alarm faults.' ],
+            [ 'fa-solid fa-pipe-section', 'Suction & Discharge Piping',  'Repair or replace suction and discharge piping, isolation valves, check valves, and pressure relief valves per NFPA 20 specifications.' ],
+            [ 'fa-solid fa-phone-volume', '24/7 Emergency Response',     'Pump failures trigger AHJ notification and fire watch requirements. Richardson responds around the clock to restore your system.' ],
+        ],
+    ],
+    'fire-pump-testing' => [
+        'label'      => 'Fire Pump Testing',
+        'icon'       => 'fa-solid fa-gauge-high',
+        'h1_mid'     => 'Fire Pump <span class="hero-title--accent">Testing</span>',
+        'badge'      => 'NFPA 25 Fire Pump Testing',
+        'tagline'    => 'Annual NFPA 25 fire pump performance tests, acceptance tests, and certified flow curves — accepted by ' . $ahj . ' and your property insurer.',
+        'page_url'   => '/fire-pump/',
+        'page_label' => 'Fire Pump Services',
+        'code'       => 'NFPA 25',
+        'features'   => [
+            [ 'fa-solid fa-chart-line',  'Annual Performance Testing', 'Full NFPA 25 Chapter 8 annual test — churn, rated flow, and peak load — producing a certified pump curve and written test report.' ],
+            [ 'fa-solid fa-circle-check','Acceptance Testing',         'New installation acceptance tests per NFPA 20: full-flow performance, controller verification, and transfer switch test.' ],
+            [ 'fa-solid fa-chart-area',  'Pressure Flow Curves',       'Electronic pump curve documentation showing churn pressure, rated capacity, and shut-off — required by FM Global and most insurers.' ],
+            [ 'fa-solid fa-file-lines',  'Written NFPA 25 Reports',    'Detailed written reports accepted by ' . $ahj . ', insurance carriers, and FM Global — delivered within 5 business days of test.' ],
+        ],
+    ],
 ];
 
 $svc        = $services[ $service_slug ];
-$other_svcs = array_filter( $services, fn( $k ) => $k !== $service_slug, ARRAY_FILTER_USE_KEY );
 $all_locs   = rfp_all_locations();
+
+// Split services into two groups for the "Other Services" section.
+$sector_slugs = [ 'commercial', 'industrial', 'residential' ];
+$fp_slugs     = [ 'fire-pump-design', 'fire-pump-installation', 'fire-pump-repair', 'fire-pump-testing' ];
+$is_fp_page   = in_array( $service_slug, $fp_slugs, true );
+
+// Sibling services = same group minus current
+$sibling_svcs = array_filter(
+    $services,
+    function( $k ) use ( $service_slug, $is_fp_page, $sector_slugs, $fp_slugs ) {
+        if ( $k === $service_slug ) return false;
+        return $is_fp_page
+            ? in_array( $k, $fp_slugs, true )
+            : in_array( $k, $sector_slugs, true );
+    },
+    ARRAY_FILTER_USE_KEY
+);
 ?>
 
   <main class="site-main">
@@ -213,20 +295,45 @@ $all_locs   = rfp_all_locations();
       <div class="container">
         <div class="section-header reveal-up">
           <div class="section-badge">More in <?php echo esc_html( $name ); ?></div>
-          <h2 class="section-title">Other Fire Protection Services in <span class="text-accent"><?php echo esc_html( $name ); ?></span></h2>
+          <h2 class="section-title">
+            <?php echo $is_fp_page ? 'Other Fire Pump Services in' : 'Other Services in'; ?>
+            <span class="text-accent"><?php echo esc_html( $name ); ?></span>
+          </h2>
         </div>
         <div class="services-grid reveal-up">
-          <?php foreach ( $other_svcs as $slug => $s ) : ?>
+          <?php foreach ( $sibling_svcs as $slug => $s ) : ?>
           <div class="service-card">
             <div class="service-card__icon"><i class="<?php echo esc_attr( $s['icon'] ); ?>"></i></div>
             <div class="service-card__tag"><?php echo esc_html( $s['label'] ); ?></div>
-            <h3 class="service-card__title"><?php echo esc_html( $s['label'] ); ?> Fire Protection in <?php echo esc_html( $name ); ?></h3>
+            <h3 class="service-card__title"><?php echo esc_html( $s['label'] ); ?> in <?php echo esc_html( $name ); ?></h3>
             <p class="service-card__desc"><?php echo esc_html( $s['tagline'] ); ?></p>
             <a href="<?php echo esc_url( get_permalink( $parent->ID ) . $slug . '/' ); ?>" class="service-card__link">
               <?php echo esc_html( $s['label'] ); ?> in <?php echo esc_html( $name ); ?> <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
           <?php endforeach; ?>
+
+          <?php if ( $is_fp_page ) : ?>
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="service-card__tag">All Sectors</div>
+            <h3 class="service-card__title">Sprinkler Systems in <?php echo esc_html( $name ); ?></h3>
+            <p class="service-card__desc">Richardson also installs NFPA 13 commercial, ESFR industrial, and NFPA 13R multifamily sprinkler systems throughout <?php echo esc_html( $name ); ?>.</p>
+            <a href="<?php echo esc_url( get_permalink( $parent->ID ) ); ?>" class="service-card__link">
+              All <?php echo esc_html( $name ); ?> Services <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <?php else : ?>
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-droplet"></i></div>
+            <div class="service-card__tag">Fire Pump Services</div>
+            <h3 class="service-card__title">Fire Pump Services in <?php echo esc_html( $name ); ?></h3>
+            <p class="service-card__desc">Richardson also provides NFPA 20 fire pump design, installation, 24/7 repair, and annual NFPA 25 performance testing in <?php echo esc_html( $name ); ?>.</p>
+            <a href="<?php echo esc_url( get_permalink( $parent->ID ) . 'fire-pump-design/' ); ?>" class="service-card__link">
+              Fire Pump Services in <?php echo esc_html( $name ); ?> <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <?php endif; ?>
         </div>
         <p style="text-align: center; margin-top: 1.5rem;">
           <a href="<?php echo esc_url( get_permalink( $parent->ID ) ); ?>" class="btn btn--ghost">
@@ -353,9 +460,13 @@ $all_locs   = rfp_all_locations();
               <label for="serviceType">Service Needed *</label>
               <select id="serviceType" name="serviceType" required>
                 <option value="">Select a service...</option>
-                <option value="commercial"  <?php selected( $service_slug, 'commercial' ); ?>>Commercial Fire Protection</option>
-                <option value="industrial"  <?php selected( $service_slug, 'industrial' ); ?>>Industrial Systems</option>
-                <option value="residential" <?php selected( $service_slug, 'residential' ); ?>>Multifamily / Apartment Complex</option>
+                <option value="commercial"             <?php selected( $service_slug, 'commercial' ); ?>>Commercial Fire Protection</option>
+                <option value="industrial"             <?php selected( $service_slug, 'industrial' ); ?>>Industrial Systems</option>
+                <option value="residential"            <?php selected( $service_slug, 'residential' ); ?>>Multifamily / Apartment Complex</option>
+                <option value="fire-pump-design"       <?php selected( $service_slug, 'fire-pump-design' ); ?>>Fire Pump Design</option>
+                <option value="fire-pump-installation" <?php selected( $service_slug, 'fire-pump-installation' ); ?>>Fire Pump Installation</option>
+                <option value="fire-pump-repair"       <?php selected( $service_slug, 'fire-pump-repair' ); ?>>Fire Pump Repair</option>
+                <option value="fire-pump-testing"      <?php selected( $service_slug, 'fire-pump-testing' ); ?>>Fire Pump Testing (NFPA 25)</option>
                 <option value="inspection">Inspection &amp; Testing</option>
                 <option value="emergency">Emergency Service</option>
                 <option value="other">Other / Not Sure</option>
