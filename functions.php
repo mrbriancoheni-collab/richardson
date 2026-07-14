@@ -18,16 +18,26 @@ add_filter( 'template_include', function( $template ) {
     if ( ! is_singular( 'page' ) ) return $template;
     $post = get_queried_object();
 
-    // City pages: children of the "locations" page → page-location.php
     if ( ! empty( $post->post_parent ) ) {
-        $parent = get_post( $post->post_parent );
-        if ( $parent && 'locations' === $parent->post_name ) {
+        $parent      = get_post( $post->post_parent );
+        $parent_slug = $parent ? $parent->post_name : '';
+
+        // City + Service pages: parent is a city slug, child is a service slug
+        $city_slugs    = array_keys( rfp_all_locations() );
+        $service_slugs = [ 'commercial', 'industrial', 'residential' ];
+        if ( in_array( $parent_slug, $city_slugs, true ) && in_array( $post->post_name, $service_slugs, true ) ) {
+            $tpl = get_template_directory() . '/page-city-service.php';
+            if ( file_exists( $tpl ) ) return $tpl;
+        }
+
+        // City pages under the /locations/ hub → page-location.php
+        if ( 'locations' === $parent_slug ) {
             $city_tpl = get_template_directory() . '/page-location.php';
             if ( file_exists( $city_tpl ) ) return $city_tpl;
         }
     }
 
-    // Top-level slug → template map
+    // Top-level slug → template map (only when page has no city parent)
     $slug_map = [
         'services'    => 'page-services.php',
         'commercial'  => 'page-commercial.php',
