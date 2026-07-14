@@ -60,11 +60,13 @@ function rfp_get_page_seo() {
         'schema_type' => 'home',
     ];
 
-    // ── City location pages: child of /locations/ ────────────────────
+    // ── City location pages and city+service pages ───────────────────
     if ( is_singular('page') ) {
         $post   = get_queried_object();
         $slug   = $post->post_name ?? '';
         $parent = get_post( $post->post_parent );
+
+        // Child of /locations/ hub → location_city
         if ( $parent && 'locations' === $parent->post_name && function_exists('rfp_location_data') ) {
             $loc = rfp_location_data( $slug );
             if ( $loc ) {
@@ -75,6 +77,30 @@ function rfp_get_page_seo() {
                 $seo['location']    = $loc;
                 $seo['description'] = esc_attr( $seo['description'] );
                 return $seo;
+            }
+        }
+
+        // Child of a city page with service slug → city_service
+        $service_slugs = [ 'commercial', 'industrial', 'residential' ];
+        if ( $parent && function_exists( 'rfp_all_locations' ) && in_array( $slug, $service_slugs, true ) ) {
+            $city_slugs = array_keys( rfp_all_locations() );
+            if ( in_array( $parent->post_name, $city_slugs, true ) ) {
+                $loc = rfp_location_data( $parent->post_name );
+                if ( $loc ) {
+                    $svc_labels = [
+                        'commercial'  => 'Commercial Fire Protection',
+                        'industrial'  => 'Industrial Fire Protection',
+                        'residential' => 'Multifamily Fire Protection',
+                    ];
+                    $svc_label = $svc_labels[ $slug ];
+                    $seo['title']        = $svc_label . ' in ' . $loc['name'] . ', CA | Richardson Fire Protection';
+                    $seo['description']  = esc_attr( substr( $svc_label . ' for GCs and developers in ' . $loc['name'] . ', CA. ' . $loc['ahj_name'] . ' coordination, design-build. Bids in 24–48 hrs. Call (916) 849-6441.', 0, 157 ) . '...' );
+                    $seo['schema_type']  = 'city_service';
+                    $seo['city_slug']    = $parent->post_name;
+                    $seo['service_slug'] = $slug;
+                    $seo['location']     = $loc;
+                    return $seo;
+                }
             }
         }
     }
@@ -127,6 +153,74 @@ function rfp_get_page_seo() {
                 $seo['title']       = 'Fire Protection Service Areas | Richardson Fire Protection — Sacramento Valley';
                 $seo['description'] = 'Richardson Fire Protection serves GCs and developers in Sacramento, Stockton, Roseville, Rocklin, Fairfield, Yuba City, and Davis. Design-build fire sprinkler contractor for Northern California.';
                 $seo['schema_type'] = 'locations_hub';
+                break;
+
+            case 'services':
+                $seo['title']       = 'Fire Protection Services — Sacramento Valley | Richardson Fire Protection';
+                $seo['description'] = 'Complete fire sprinkler services for commercial, industrial, and residential projects in Sacramento Valley. Design, installation, inspection, and 24/7 emergency service. Call (916) 849-6441.';
+                $seo['schema_type'] = 'services_hub';
+                break;
+
+            case 'ahj-comparison':
+                $seo['title']       = 'AHJ Permit Timelines Compared — Sacramento Valley Fire Departments | Richardson';
+                $seo['description'] = 'Compare fire sprinkler plan check timelines at Sacramento City, Roseville, Rocklin, Stockton, Fairfield, Yuba City, and Davis. Based on Richardson\'s direct project experience.';
+                $seo['schema_type'] = 'ahj_comparison';
+                break;
+
+            case 'cost-guide':
+            case 'fire-sprinkler-cost-guide':
+                $seo['title']       = 'Fire Sprinkler Cost Guide 2025 — California Pricing by Building Type | Richardson';
+                $seo['description'] = 'Fire sprinkler installation cost estimates by building type in California — office, retail, warehouse, multifamily, and more. 2025 pricing data from Richardson Fire Protection, Sacramento.';
+                $seo['schema_type'] = 'cost_guide';
+                break;
+
+            case 'nfpa-25-inspection-guide':
+                $seo['title']       = 'NFPA 25 Fire Sprinkler Inspection Guide California 2025 | Richardson Fire Protection';
+                $seo['description'] = 'Complete NFPA 25 inspection guide for California — inspection frequencies, SB 1205 requirements, what inspectors check, and how to choose a certified fire sprinkler inspector.';
+                $seo['schema_type'] = 'article_tech';
+                $seo['type']        = 'article';
+                break;
+
+            case 'nfpa-13r-vs-13-apartment-sprinklers':
+                $seo['title']       = 'NFPA 13R vs NFPA 13: Which Standard Applies to Your California Building? | Richardson';
+                $seo['description'] = 'When California requires NFPA 13R vs. NFPA 13 for multifamily projects — design differences, cost comparison, and California-specific code considerations for developers and GCs.';
+                $seo['schema_type'] = 'article_tech';
+                $seo['type']        = 'article';
+                break;
+
+            case 'high-piled-storage-fire-code':
+                $seo['title']       = 'High-Piled Storage Fire Code California: Complete Warehouse Guide | Richardson';
+                $seo['description'] = 'CFC Chapter 32, commodity classification, ESFR vs. in-rack sprinklers, and the complete permit process for California high-piled storage. Richardson Fire Protection Sacramento.';
+                $seo['schema_type'] = 'article_tech';
+                $seo['type']        = 'article';
+                break;
+
+            case 'ca-fire-code-2025':
+                $seo['title']       = 'California Fire Code 2025: Key Changes for Sacramento Valley Contractors | Richardson';
+                $seo['description'] = '2025 California Fire Code updates — sprinkler thresholds, WUI expansion, NFPA 13 2022 references, and AHJ adoption status for Sacramento, Roseville, Stockton, and more.';
+                $seo['schema_type'] = 'article_tech';
+                $seo['type']        = 'article';
+                break;
+
+            case 'wui-sprinklers':
+                $seo['title']       = 'WUI Fire Sprinkler Requirements California 2025: Builders\' Guide | Richardson';
+                $seo['description'] = 'California WUI fire sprinkler requirements — SRA/LRA zones, CBC Chapter 7A, NFPA 13D mandates, and local WUI requirements in Placer and Sacramento Counties. 2025 update.';
+                $seo['schema_type'] = 'article_tech';
+                $seo['type']        = 'article';
+                break;
+
+            case 'permit-guide-sacramento':
+                $seo['title']       = 'Fire Sprinkler Permit Process in Sacramento 2025: Step-by-Step Guide | Richardson';
+                $seo['description'] = 'How to get a fire sprinkler permit in Sacramento — SCFD plan check, Accela digital submittal, typical timelines, common corrections, and how Richardson streamlines the process.';
+                $seo['schema_type'] = 'article_tech';
+                $seo['type']        = 'article';
+                break;
+
+            case 'esfr-vs-in-rack':
+                $seo['title']       = 'ESFR vs In-Rack Sprinklers: Which Does Your California Warehouse Need? | Richardson';
+                $seo['description'] = 'ESFR vs. in-rack sprinkler comparison — K-factors, ceiling height, commodity classification, cost differences, and when NFPA 13 requires each system type. California guide.';
+                $seo['schema_type'] = 'article_tech';
+                $seo['type']        = 'article';
                 break;
 
             default:
@@ -379,7 +473,7 @@ function rfp_schema_markup() {
         ],
         'speakable'          => [
             '@type'       => 'SpeakableSpecification',
-            'cssSelector' => [ '.hero-desc', '.faq-answer p', '.section-desc' ],
+            'cssSelector' => [ '.hero-title', '.hero-desc', '.section-title', '.section-desc', '.faq-answer p', '.service-card__title', '.service-card__desc', '.contact-lead' ],
         ],
         'hasOfferCatalog'    => [
             '@type'       => 'OfferCatalog',
@@ -670,6 +764,149 @@ function rfp_schema_markup() {
         ];
     }
 
+    // ── City + Service pages ─────────────────────────────────────────
+    if ( $seo['schema_type'] === 'city_service' && ! empty( $seo['location'] ) ) {
+        $loc      = $seo['location'];
+        $svc_slug = $seo['service_slug'] ?? '';
+        $page_url = is_singular() ? get_permalink() : get_pagenum_link();
+        $post_obj = get_queried_object();
+        $par_obj  = $post_obj ? get_post( $post_obj->post_parent ) : null;
+        $city_url = $par_obj ? get_permalink( $par_obj->ID ) : home_url('/');
+
+        $svc_labels = [
+            'commercial'  => 'Commercial Fire Protection',
+            'industrial'  => 'Industrial Fire Protection',
+            'residential' => 'Multifamily Fire Protection',
+        ];
+        $svc_types = [
+            'commercial'  => 'NFPA 13 Fire Sprinkler Contractor',
+            'industrial'  => 'NFPA 13 Industrial Fire Suppression',
+            'residential' => 'NFPA 13R/13D Residential Fire Sprinkler Contractor',
+        ];
+        $svc_label = $svc_labels[ $svc_slug ] ?? 'Fire Protection';
+        $svc_type  = $svc_types[ $svc_slug ] ?? 'Fire Sprinkler Contractor';
+
+        $graphs[] = [
+            '@type'            => 'Service',
+            '@id'              => $page_url . '#service',
+            'name'             => $svc_label . ' in ' . $loc['name'] . ', CA',
+            'description'      => $svc_label . ' for GCs and developers in ' . $loc['name'] . ', ' . $loc['county'] . '. ' . $loc['ahj_name'] . ' coordination, design-build, and installation.',
+            'url'              => $page_url,
+            'provider'         => [ '@id' => home_url('/#localbusiness') ],
+            'areaServed'       => [
+                '@type'          => 'City',
+                'name'           => $loc['name'] . ', CA',
+                'addressRegion'  => 'CA',
+                'addressCountry' => 'US',
+                'geo'            => [
+                    '@type'     => 'GeoCoordinates',
+                    'latitude'  => $loc['lat'],
+                    'longitude' => $loc['lng'],
+                ],
+            ],
+            'serviceType'      => $svc_type,
+            'availableChannel' => [
+                '@type'        => 'ServiceChannel',
+                'serviceUrl'   => $page_url,
+                'servicePhone' => $biz['phone'],
+            ],
+        ];
+
+        if ( ! empty( $loc['faqs'] ) ) {
+            $faq_entities = [];
+            foreach ( array_slice( $loc['faqs'], 0, 5 ) as $faq ) {
+                $faq_entities[] = [
+                    '@type'          => 'Question',
+                    'name'           => $faq['q'],
+                    'acceptedAnswer' => [ '@type' => 'Answer', 'text' => $faq['a'] ],
+                ];
+            }
+            $graphs[] = [
+                '@type'      => 'FAQPage',
+                '@id'        => $page_url . '#faq',
+                'url'        => $page_url,
+                'mainEntity' => $faq_entities,
+            ];
+        }
+
+        $graphs[] = [
+            '@type'           => 'BreadcrumbList',
+            '@id'             => $page_url . '#breadcrumb',
+            'itemListElement' => [
+                [ '@type' => 'ListItem', 'position' => 1, 'name' => 'Home',       'item' => home_url('/') ],
+                [ '@type' => 'ListItem', 'position' => 2, 'name' => $loc['name'], 'item' => $city_url ],
+                [ '@type' => 'ListItem', 'position' => 3, 'name' => $svc_label,   'item' => $page_url ],
+            ],
+        ];
+
+        $graphs[] = [
+            '@type'       => 'HowTo',
+            '@id'         => $page_url . '#howto',
+            'name'        => 'How to Start a ' . $svc_label . ' Project in ' . $loc['name'],
+            'description' => 'The four steps to getting a fire sprinkler system designed, permitted by ' . $loc['ahj_name'] . ', and installed in ' . $loc['name'] . '.',
+            'totalTime'   => 'P8W',
+            'step'        => [
+                [ '@type' => 'HowToStep', 'position' => 1, 'name' => 'Request a Bid',               'text' => 'Send your plans or call (916) 849-6441. We return a complete bid in 24–48 hours.', 'url' => home_url('/contact/') ],
+                [ '@type' => 'HowToStep', 'position' => 2, 'name' => 'Design & Engineering',        'text' => 'NICET-certified designers produce hydraulic calculations and stamped drawings to ' . $svc_type . ' standards.', 'url' => $page_url ],
+                [ '@type' => 'HowToStep', 'position' => 3, 'name' => 'Permit & AHJ Coordination',   'text' => 'We submit to ' . $loc['ahj_name'] . ' and manage all plan check comments through permit issuance.', 'url' => $page_url ],
+                [ '@type' => 'HowToStep', 'position' => 4, 'name' => 'Installation & Final Inspection', 'text' => 'Field installation phased to your schedule. We coordinate the ' . $loc['ahj_name'] . ' final inspection.', 'url' => $page_url ],
+            ],
+        ];
+    }
+
+    // ── WebPage + Speakable for hub / guide pages ────────────────────
+    $speakable_page_types = [ 'services_hub', 'ahj_comparison', 'cost_guide' ];
+    if ( in_array( $seo['schema_type'], $speakable_page_types, true ) && is_singular() ) {
+        $page_url = get_permalink();
+        $graphs[] = [
+            '@type'     => 'WebPage',
+            '@id'       => $page_url . '#webpage',
+            'url'       => $page_url,
+            'name'      => get_the_title(),
+            'speakable' => [
+                '@type'       => 'SpeakableSpecification',
+                'cssSelector' => [ '.hero-title', '.hero-desc', '.section-title', '.section-desc', '.faq-answer p', '.service-card__title' ],
+            ],
+        ];
+    }
+
+    // ── TechArticle for static article page templates ────────────────
+    if ( $seo['schema_type'] === 'article_tech' && is_singular('page') ) {
+        $page_url = get_permalink();
+        $pid      = get_queried_object_id();
+        $graphs[] = [
+            '@type'            => 'TechArticle',
+            '@id'              => $page_url . '#article',
+            'headline'         => get_the_title(),
+            'description'      => $seo['description'],
+            'url'              => $page_url,
+            'datePublished'    => get_post_field( 'post_date', $pid ),
+            'dateModified'     => get_post_field( 'post_modified', $pid ),
+            'author'           => [
+                '@type'    => 'Person',
+                'name'     => 'Chris Richardson',
+                'jobTitle' => 'Fire Protection Engineer',
+                'worksFor' => [ '@id' => home_url('/#localbusiness') ],
+            ],
+            'publisher'        => [ '@id' => home_url('/#localbusiness') ],
+            'image'            => [
+                '@type' => 'ImageObject',
+                'url'   => $biz['og_image_url'],
+            ],
+            'mainEntityOfPage' => [
+                '@type' => 'WebPage',
+                '@id'   => $page_url,
+            ],
+            'speakable'        => [
+                '@type'       => 'SpeakableSpecification',
+                'cssSelector' => [ '.hero-desc', '.section-desc', '.faq-answer p', '.section-title' ],
+            ],
+            'articleSection'   => 'Fire Protection',
+            'inLanguage'       => 'en-US',
+            'about'            => [ '@id' => home_url('/#localbusiness') ],
+        ];
+    }
+
     // ── Output ──────────────────────────────────────────────────────
     $schema = [
         '@context' => 'https://schema.org',
@@ -721,6 +958,44 @@ function rfp_schema_markup() {
               'a' => 'FM Global (Factory Mutual) is an insurance-driven design standard that typically requires higher water density and more robust suppression than NFPA 13 code minimums. If your facility carries FM Global property insurance, your sprinkler system must meet FM Data Sheet requirements — which Richardson designs to when required.' ],
             [ 'q' => 'How often does an industrial fire sprinkler system need inspection?',
               'a' => 'NFPA 25 requires quarterly inspector checks, annual internal inspections, and 5-year obstruction investigations. California SB 1205 also requires that inspections be performed by a CSFM-certified contractor. Richardson provides NFPA 25 compliant inspection and testing for all system types.' ],
+        ],
+        'services_hub' => [
+            [ 'q' => 'What fire protection services does Richardson offer?',
+              'a' => 'Richardson Fire Protection provides commercial, industrial, and multifamily fire sprinkler design-build, annual NFPA 25 inspection and testing, system repairs, and 24/7 emergency service across the Sacramento Valley and Northern California.' ],
+            [ 'q' => 'Does Richardson handle both new construction and tenant improvements?',
+              'a' => 'Yes. We work on ground-up new construction, tenant improvement retrofits, change-of-occupancy upgrades, and system expansions. Our NICET-certified design team handles all project types from a single office TI to a 500,000 sq ft warehouse.' ],
+            [ 'q' => 'How is commercial fire protection different from industrial fire protection?',
+              'a' => 'Commercial fire protection typically covers NFPA 13 wet-pipe systems for offices, retail, restaurants, and hotels. Industrial fire protection addresses higher-hazard occupancies — high-piled storage, manufacturing, and cold storage — and may involve ESFR ceiling sprinklers, in-rack systems, dry-pipe systems, and special hazard suppression. Richardson designs both.' ],
+            [ 'q' => 'Does Richardson manage the permit process end-to-end?',
+              'a' => 'Yes. Richardson is a full design-build contractor. We prepare hydraulic calculations and stamped construction drawings, submit to the AHJ, respond to plan check comments, pull the permit, complete installation, and coordinate the final inspection — one sub, no gaps.' ],
+            [ 'q' => 'How quickly can Richardson return a bid?',
+              'a' => 'We return itemized bids within 24–48 hours of receiving your plans or project scope. For large or phased projects, call (916) 849-6441 to discuss your schedule and we will prioritize accordingly.' ],
+        ],
+        'ahj_comparison' => [
+            [ 'q' => 'Which Sacramento-area fire department has the fastest plan check turnaround?',
+              'a' => 'Based on Richardson\'s project experience, Roseville Fire Department and Davis Fire Department typically complete fire sprinkler plan check in 2–4 weeks. Sacramento City Fire Department usually runs 4–8 weeks for commercial projects. Stockton Fire Department and Fairfield Fire Department are typically 3–5 weeks, while Yuba City runs 2–4 weeks and Rocklin runs 3–6 weeks depending on project complexity.' ],
+            [ 'q' => 'What documents do I need to submit for fire sprinkler plan check?',
+              'a' => 'A standard fire sprinkler plan check submittal includes: stamped construction drawings with scaled floor plans, hydraulic calculations, a cut sheet package (sprinkler heads, pipe, fittings, hangers), a water supply test report (flow test), and a completed permit application. Some AHJs also require a contractor license verification form and proof of insurance.' ],
+            [ 'q' => 'Does Sacramento City Fire Department accept digital plan submittals?',
+              'a' => 'Yes. Sacramento City Fire Department uses Accela for permit applications and accepts digital plan submittals via their online portal. Richardson submits digitally to SCFD for faster processing and easier tracking of plan check status.' ],
+            [ 'q' => 'What causes fire sprinkler plan check corrections?',
+              'a' => 'Common plan check corrections include: insufficient water supply documentation, missing or incorrect hydraulic calculation basis of design, non-compliant sprinkler head spacing or coverage, missing seismic bracing calculations, incorrect occupancy or commodity classification, and missing code compliance notes. Richardson\'s NICET-certified design team produces first-pass-compliant submittals to minimize corrections.' ],
+            [ 'q' => 'How do I find out which AHJ has jurisdiction over my project?',
+              'a' => 'Fire sprinkler permit jurisdiction follows the local fire department or fire prevention division of the city or county where the project is located. Unincorporated areas of Sacramento County fall under Sacramento County Fire; incorporated cities use their own fire departments. For projects on state-regulated facilities (schools, hospitals), the California State Fire Marshal (CSFM) may have concurrent jurisdiction.' ],
+        ],
+        'cost_guide' => [
+            [ 'q' => 'How much does a commercial fire sprinkler system cost in California?',
+              'a' => 'Commercial fire sprinkler systems in California typically run $3.50–$8.00 per square foot installed for most occupancies. Light commercial (office, retail under 10,000 sq ft) runs $4–$7/sf; restaurants and higher-hazard occupancies run $6–$10/sf; warehouses run $2.50–$5/sf depending on commodity and system type. These ranges include design, materials, installation, and permit fees but vary by AHJ, water supply conditions, and building complexity.' ],
+            [ 'q' => 'What factors affect fire sprinkler installation cost the most?',
+              'a' => 'The biggest cost drivers are: (1) occupancy type and hazard classification — higher hazard requires higher density systems; (2) ceiling height — taller spaces need more pipe and larger heads; (3) water supply — insufficient municipal supply may require a fire pump, adding $15,000–$45,000; (4) building construction type — exposed steel vs. finished ceilings changes labor significantly; (5) AHJ — plan check fees and correction cycle length vary by jurisdiction.' ],
+            [ 'q' => 'Is it cheaper to install fire sprinklers during new construction or retrofit?',
+              'a' => 'New construction is significantly cheaper — typically 30–50% less per square foot than a retrofit. In new construction, sprinkler pipe is installed before drywall and can be coordinated with other trades. Retrofit requires cutting walls and ceilings, patching, and working around occupied spaces. If you are planning a renovation that triggers a sprinkler requirement, budget for the retrofit premium.' ],
+            [ 'q' => 'Does the cost estimate include permits and AHJ plan check fees?',
+              'a' => 'Richardson\'s bids include all design, engineering, materials, installation labor, permit application fees, and inspection coordination. AHJ plan check fees vary by jurisdiction and project valuation — for Sacramento City, fire sprinkler plan check fees typically run $800–$3,500 for commercial projects. We itemize permit fees separately so you see the full cost.' ],
+            [ 'q' => 'How do I get an accurate fire sprinkler estimate for my project?',
+              'a' => 'Send us your architectural floor plans and we will return a detailed, itemized bid within 24–48 hours. For projects still in design, we can provide a preliminary range estimate from square footage and occupancy type. Call (916) 849-6441 or submit your plans through our contact form.' ],
+            [ 'q' => 'What is the cost of a fire sprinkler inspection in California?',
+              'a' => 'NFPA 25 annual inspections in California typically cost $250–$500 for small commercial properties (under 5,000 sq ft), $500–$1,200 for mid-size commercial, $1,200–$3,500 for large warehouses, and $400–$1,000 per building for multifamily. The 5-year internal pipe inspection adds $800–$2,500 depending on system size. Richardson provides itemized inspection quotes with no hidden fees.' ],
         ],
         'service_residential' => [
             [ 'q' => 'Does my apartment complex in California require fire sprinklers?',
