@@ -153,6 +153,11 @@ $sector_slugs = [ 'commercial', 'industrial', 'residential' ];
 $fp_slugs     = [ 'fire-pump-design', 'fire-pump-installation', 'fire-pump-repair', 'fire-pump-testing' ];
 $is_fp_page   = in_array( $service_slug, $fp_slugs, true );
 
+// Append city-specific AHJ coordination note as a 5th feature card on fire pump pages.
+if ( $is_fp_page && ! empty( $loc['fire_pump_note'] ) ) {
+    $svc['features'][] = [ 'fa-solid fa-building-shield', esc_html( $loc['ahj_name'] ) . ' Coordination', $loc['fire_pump_note'] ];
+}
+
 // Sibling services = same group minus current
 $sibling_svcs = array_filter(
     $services,
@@ -390,8 +395,8 @@ $sibling_svcs = array_filter(
         </div>
         <div class="faq-list reveal-up">
           <?php
-          // Pull city FAQs and filter for service-relevant ones; fall back to all FAQs
-          $faqs = $loc['faqs'];
+          // Use fire-pump-specific FAQs on pump pages; fall back to general city FAQs on sector pages.
+          $faqs = ( $is_fp_page && ! empty( $loc['fire_pump_faqs'] ) ) ? $loc['fire_pump_faqs'] : $loc['faqs'];
           foreach ( array_slice( $faqs, 0, 5 ) as $faq ) : ?>
             <div class="faq-item">
               <button class="faq-question" aria-expanded="false">
