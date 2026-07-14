@@ -6,20 +6,6 @@
 get_header();
 ?>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "High-Piled Storage Fire Code: What California Warehouse Owners Must Know",
-  "description": "CFC Chapter 32, commodity classification, ESFR vs. in-rack sprinklers, and the permit process for California high-piled storage facilities.",
-  "author": { "@type": "Organization", "name": "Richardson Fire Protection" },
-  "publisher": { "@type": "Organization", "name": "Richardson Fire Protection" },
-  "datePublished": "2024-03-01",
-  "dateModified": "2024-03-01",
-  "mainEntityOfPage": { "@type": "WebPage" }
-}
-</script>
-
   <main class="site-main">
 
     <!-- ========== HERO ========== -->

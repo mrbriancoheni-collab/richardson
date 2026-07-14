@@ -6,20 +6,6 @@
 get_header();
 ?>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "NFPA 13R vs. NFPA 13: Which Standard Applies to Your California Multifamily Project?",
-  "description": "A practical guide for developers, architects, and GCs — when California requires NFPA 13R vs. full NFPA 13 sprinkler systems in residential and mixed-use projects.",
-  "author": { "@type": "Organization", "name": "Richardson Fire Protection" },
-  "publisher": { "@type": "Organization", "name": "Richardson Fire Protection" },
-  "datePublished": "2024-02-01",
-  "dateModified": "2024-02-01",
-  "mainEntityOfPage": { "@type": "WebPage" }
-}
-</script>
-
   <main class="site-main">
 
     <!-- ========== HERO ========== -->

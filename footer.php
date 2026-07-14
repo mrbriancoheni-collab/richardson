@@ -22,12 +22,12 @@
         <div class="footer-links-group">
           <h4>Services</h4>
           <ul>
-            <li><a href="<?php echo esc_url( home_url( '/#commercial' ) ); ?>">Commercial</a></li>
-            <li><a href="<?php echo esc_url( home_url( '/#industrial' ) ); ?>">Industrial</a></li>
-            <li><a href="<?php echo esc_url( home_url( '/#residential' ) ); ?>">Residential</a></li>
-            <li><a href="<?php echo esc_url( home_url( '/#services' ) ); ?>">Inspections</a></li>
-            <li><a href="<?php echo esc_url( home_url( '/#services' ) ); ?>">Emergency Service</a></li>
-            <li><a href="<?php echo esc_url( home_url( '/#services' ) ); ?>">System Repairs</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/services/' ) ); ?>">All Services</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/commercial/' ) ); ?>">Commercial</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/industrial/' ) ); ?>">Industrial</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/residential/' ) ); ?>">Residential</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Inspections</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Emergency Service</a></li>
           </ul>
         </div>
 

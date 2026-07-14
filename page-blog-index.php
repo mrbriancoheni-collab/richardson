@@ -68,6 +68,46 @@ get_header();
             </a>
           </div>
 
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-book-open"></i></div>
+            <div class="service-card__tag">Code Update 2025</div>
+            <h3 class="service-card__title">California Fire Code 2025: Key Changes for Sacramento Valley Contractors</h3>
+            <p class="service-card__desc">The 2022 CFC is in effect statewide — AHJ adoption varies. What changed for fire sprinklers, WUI construction, and warehouse protection.</p>
+            <a href="<?php echo esc_url( home_url( '/ca-fire-code-2025/' ) ); ?>" class="service-card__link">
+              Read Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-fire"></i></div>
+            <div class="service-card__tag">Wildfire Zone Requirements</div>
+            <h3 class="service-card__title">WUI Fire Sprinkler Requirements in California: Builders' Guide (2025)</h3>
+            <p class="service-card__desc">SRA/LRA designation, CalFire Chapter 12, CBC Chapter 7A, and what builders and developers need to know about fire sprinklers in wildfire hazard zones.</p>
+            <a href="<?php echo esc_url( home_url( '/wui-sprinklers/' ) ); ?>" class="service-card__link">
+              Read Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-file-signature"></i></div>
+            <div class="service-card__tag">Sacramento Permit Process</div>
+            <h3 class="service-card__title">How to Get a Fire Sprinkler Permit in Sacramento: Step-by-Step (2025)</h3>
+            <p class="service-card__desc">The SCFD Accela process, plan check timelines, common corrections, and how Richardson manages the entire permit process end-to-end.</p>
+            <a href="<?php echo esc_url( home_url( '/permit-guide-sacramento/' ) ); ?>" class="service-card__link">
+              Read Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-droplet"></i></div>
+            <div class="service-card__tag">Warehouse Fire Protection</div>
+            <h3 class="service-card__title">ESFR vs. In-Rack Sprinklers: Which Does Your California Warehouse Need?</h3>
+            <p class="service-card__desc">K-factors, ceiling height requirements, commodity classification, cost comparison, and when NFPA 13 requires in-rack heads vs. ESFR ceiling-only systems.</p>
+            <a href="<?php echo esc_url( home_url( '/esfr-vs-in-rack/' ) ); ?>" class="service-card__link">
+              Read Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
         </div>
       </div>
     </section>

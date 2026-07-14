@@ -13,18 +13,98 @@ require get_template_directory() . '/inc/seo.php';
 // ─── Sitemap ─────────────────────────────────────────────────────────────────
 require get_template_directory() . '/inc/sitemap.php';
 
-// ─── Auto-route city pages to page-location.php ──────────────────────────────
+// ─── Auto-route pages to custom templates by slug ────────────────────────────
 add_filter( 'template_include', function( $template ) {
     if ( ! is_singular( 'page' ) ) return $template;
     $post = get_queried_object();
-    if ( empty( $post->post_parent ) ) return $template;
-    $parent = get_post( $post->post_parent );
-    if ( $parent && 'locations' === $parent->post_name ) {
-        $city_tpl = get_template_directory() . '/page-location.php';
-        if ( file_exists( $city_tpl ) ) return $city_tpl;
+
+    if ( ! empty( $post->post_parent ) ) {
+        $parent      = get_post( $post->post_parent );
+        $parent_slug = $parent ? $parent->post_name : '';
+
+        // City + Service pages: parent is a city slug, child is a service slug
+        $city_slugs    = array_keys( rfp_all_locations() );
+        $service_slugs = [ 'commercial', 'industrial', 'residential' ];
+        if ( in_array( $parent_slug, $city_slugs, true ) && in_array( $post->post_name, $service_slugs, true ) ) {
+            $tpl = get_template_directory() . '/page-city-service.php';
+            if ( file_exists( $tpl ) ) return $tpl;
+        }
+
+        // City pages under the /locations/ hub → page-location.php
+        if ( 'locations' === $parent_slug ) {
+            $city_tpl = get_template_directory() . '/page-location.php';
+            if ( file_exists( $city_tpl ) ) return $city_tpl;
+        }
     }
+
+    // Top-level slug → template map (only when page has no city parent)
+    $slug_map = [
+        'services'    => 'page-services.php',
+        'commercial'  => 'page-commercial.php',
+        'industrial'  => 'page-industrial.php',
+        'residential' => 'page-residential.php',
+    ];
+    if ( isset( $slug_map[ $post->post_name ] ) ) {
+        $tpl = get_template_directory() . '/' . $slug_map[ $post->post_name ];
+        if ( file_exists( $tpl ) ) return $tpl;
+    }
+
     return $template;
 } );
+
+// ─── Admin Trigger: Bulk-create city+service pages via browser ───────────────
+// Visit /?rfp_create_pages=1 as a logged-in admin to create all 21 pages.
+
+add_action( 'init', 'rfp_maybe_create_city_service_pages' );
+
+function rfp_maybe_create_city_service_pages() {
+    if ( ! isset( $_GET['rfp_create_pages'] ) || '1' !== $_GET['rfp_create_pages'] ) return;
+    if ( ! current_user_can( 'manage_options' ) ) return;
+
+    $service_titles = [
+        'commercial'  => 'Commercial Fire Protection in %s',
+        'industrial'  => 'Industrial Fire Protection in %s',
+        'residential' => 'Multifamily Fire Protection in %s',
+    ];
+
+    $created = 0;
+    $skipped = 0;
+    $errors  = [];
+
+    foreach ( rfp_all_locations() as $city_slug => $loc ) {
+        $city_name = $loc['name'];
+        $city_page = get_page_by_path( $city_slug );
+        if ( ! $city_page ) {
+            $errors[] = "City page not found for slug: {$city_slug}";
+            continue;
+        }
+        foreach ( $service_titles as $svc_slug => $title_pattern ) {
+            $existing = get_page_by_path( $city_slug . '/' . $svc_slug );
+            if ( $existing && $existing->post_parent === $city_page->ID ) {
+                $skipped++;
+                continue;
+            }
+            $page_id = wp_insert_post( [
+                'post_title'  => sprintf( $title_pattern, $city_name ),
+                'post_name'   => $svc_slug,
+                'post_status' => 'publish',
+                'post_type'   => 'page',
+                'post_parent' => $city_page->ID,
+                'post_content'=> '',
+                'post_author' => 1,
+            ], true );
+            if ( is_wp_error( $page_id ) ) {
+                $errors[] = "Error creating {$city_slug}/{$svc_slug}: " . $page_id->get_error_message();
+            } else {
+                $created++;
+            }
+        }
+    }
+
+    $msg = "rfp_pages_created={$created}&rfp_skipped={$skipped}&rfp_errors=" . count( $errors );
+    wp_safe_redirect( admin_url( 'edit.php?post_type=page&' . $msg ) );
+    exit;
+}
 
 // ─── Blog Categories (seed on after_switch_theme) ────────────────────────────
 // These categories target the GC / developer ICP reading the blog.
@@ -197,12 +277,12 @@ function rfp_fallback_nav() {
     $home = home_url( '/' );
     ?>
     <ul id="navLinks" class="nav-links">
-        <li><a href="<?php echo esc_url( $home . '#about' );       ?>" class="nav-link">About</a></li>
-        <li><a href="<?php echo esc_url( $home . '#commercial' );  ?>" class="nav-link">Commercial</a></li>
-        <li><a href="<?php echo esc_url( $home . '#industrial' );  ?>" class="nav-link">Industrial</a></li>
-        <li><a href="<?php echo esc_url( $home . '#residential' ); ?>" class="nav-link">Residential</a></li>
-        <li><a href="<?php echo esc_url( $home . '#services' );    ?>" class="nav-link">Services</a></li>
-        <li><a href="<?php echo esc_url( $home . '#blog' );        ?>" class="nav-link">Blog</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/services/' ) );    ?>" class="nav-link">Services</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/commercial/' ) );  ?>" class="nav-link">Commercial</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/industrial/' ) );  ?>" class="nav-link">Industrial</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/residential/' ) ); ?>" class="nav-link">Residential</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/locations/' ) );   ?>" class="nav-link">Locations</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/contact/' ) );     ?>" class="nav-link">Contact</a></li>
     </ul>
     <?php
 }
