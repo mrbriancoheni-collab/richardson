@@ -13,16 +13,32 @@ require get_template_directory() . '/inc/seo.php';
 // ─── Sitemap ─────────────────────────────────────────────────────────────────
 require get_template_directory() . '/inc/sitemap.php';
 
-// ─── Auto-route city pages to page-location.php ──────────────────────────────
+// ─── Auto-route pages to custom templates by slug ────────────────────────────
 add_filter( 'template_include', function( $template ) {
     if ( ! is_singular( 'page' ) ) return $template;
     $post = get_queried_object();
-    if ( empty( $post->post_parent ) ) return $template;
-    $parent = get_post( $post->post_parent );
-    if ( $parent && 'locations' === $parent->post_name ) {
-        $city_tpl = get_template_directory() . '/page-location.php';
-        if ( file_exists( $city_tpl ) ) return $city_tpl;
+
+    // City pages: children of the "locations" page → page-location.php
+    if ( ! empty( $post->post_parent ) ) {
+        $parent = get_post( $post->post_parent );
+        if ( $parent && 'locations' === $parent->post_name ) {
+            $city_tpl = get_template_directory() . '/page-location.php';
+            if ( file_exists( $city_tpl ) ) return $city_tpl;
+        }
     }
+
+    // Top-level slug → template map
+    $slug_map = [
+        'services'    => 'page-services.php',
+        'commercial'  => 'page-commercial.php',
+        'industrial'  => 'page-industrial.php',
+        'residential' => 'page-residential.php',
+    ];
+    if ( isset( $slug_map[ $post->post_name ] ) ) {
+        $tpl = get_template_directory() . '/' . $slug_map[ $post->post_name ];
+        if ( file_exists( $tpl ) ) return $tpl;
+    }
+
     return $template;
 } );
 
@@ -197,12 +213,12 @@ function rfp_fallback_nav() {
     $home = home_url( '/' );
     ?>
     <ul id="navLinks" class="nav-links">
-        <li><a href="<?php echo esc_url( $home . '#about' );       ?>" class="nav-link">About</a></li>
-        <li><a href="<?php echo esc_url( $home . '#commercial' );  ?>" class="nav-link">Commercial</a></li>
-        <li><a href="<?php echo esc_url( $home . '#industrial' );  ?>" class="nav-link">Industrial</a></li>
-        <li><a href="<?php echo esc_url( $home . '#residential' ); ?>" class="nav-link">Residential</a></li>
-        <li><a href="<?php echo esc_url( $home . '#services' );    ?>" class="nav-link">Services</a></li>
-        <li><a href="<?php echo esc_url( $home . '#blog' );        ?>" class="nav-link">Blog</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/services/' ) );    ?>" class="nav-link">Services</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/commercial/' ) );  ?>" class="nav-link">Commercial</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/industrial/' ) );  ?>" class="nav-link">Industrial</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/residential/' ) ); ?>" class="nav-link">Residential</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/locations/' ) );   ?>" class="nav-link">Locations</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/contact/' ) );     ?>" class="nav-link">Contact</a></li>
     </ul>
     <?php
 }

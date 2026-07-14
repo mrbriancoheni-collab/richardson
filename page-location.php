@@ -75,6 +75,61 @@ $all_locs  = rfp_all_locations();
       </div>
     </section>
 
+    <!-- ========== SECTOR INTERLINKING ========== -->
+    <section class="section" style="padding-top: 3.5rem; padding-bottom: 3.5rem;">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <div class="section-badge"><?php echo esc_html( $name ); ?> Fire Protection</div>
+          <h2 class="section-title">Services We Provide in <span class="text-accent"><?php echo esc_html( $name ); ?></span></h2>
+          <p class="section-desc">Richardson Fire Protection handles all three major sectors in <?php echo esc_html( $name ); ?> — from office buildings and retail to industrial warehouses and apartment complexes.</p>
+        </div>
+        <div class="services-grid reveal-up">
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-building"></i></div>
+            <div class="service-card__tag">Commercial</div>
+            <h3 class="service-card__title">Commercial Fire Protection in <?php echo esc_html( $name ); ?></h3>
+            <p class="service-card__desc">NFPA 13 sprinkler systems for offices, retail, restaurants, and mixed-use developments in <?php echo esc_html( $name ); ?>. Full design-build from permit to CO.</p>
+            <ul class="service-card__features">
+              <li><i class="fa-solid fa-check"></i> Wet &amp; dry pipe systems</li>
+              <li><i class="fa-solid fa-check"></i> Tenant improvement retrofits</li>
+              <li><i class="fa-solid fa-check"></i> <?php echo esc_html( $ahj ); ?> coordination</li>
+            </ul>
+            <a href="<?php echo esc_url( home_url( '/commercial/' ) ); ?>" class="service-card__link">
+              Commercial Fire Protection <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-warehouse"></i></div>
+            <div class="service-card__tag">Industrial</div>
+            <h3 class="service-card__title">Industrial Fire Protection in <?php echo esc_html( $name ); ?></h3>
+            <p class="service-card__desc">ESFR and high-piled storage systems for warehouses, distribution centers, and manufacturing facilities in <?php echo esc_html( $county ); ?>.</p>
+            <ul class="service-card__features">
+              <li><i class="fa-solid fa-check"></i> ESFR high-bay systems</li>
+              <li><i class="fa-solid fa-check"></i> High-piled storage compliance</li>
+              <li><i class="fa-solid fa-check"></i> Cold storage dry-pipe</li>
+            </ul>
+            <a href="<?php echo esc_url( home_url( '/industrial/' ) ); ?>" class="service-card__link">
+              Industrial Fire Protection <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-building-user"></i></div>
+            <div class="service-card__tag">Residential</div>
+            <h3 class="service-card__title">Multifamily Fire Protection in <?php echo esc_html( $name ); ?></h3>
+            <p class="service-card__desc">NFPA 13R and NFPA 13D systems for apartment complexes, condos, and townhomes throughout <?php echo esc_html( $name ); ?> and <?php echo esc_html( $county ); ?>.</p>
+            <ul class="service-card__features">
+              <li><i class="fa-solid fa-check"></i> NFPA 13R apartment systems</li>
+              <li><i class="fa-solid fa-check"></i> NFPA 13D single-family</li>
+              <li><i class="fa-solid fa-check"></i> Occupied building retrofits</li>
+            </ul>
+            <a href="<?php echo esc_url( home_url( '/residential/' ) ); ?>" class="service-card__link">
+              Residential Fire Protection <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== SERVICES ========== -->
     <section class="section" style="background: var(--c-surface); padding-top: 3.5rem; padding-bottom: 3.5rem;">
       <div class="container">
@@ -95,7 +150,7 @@ $all_locs  = rfp_all_locations();
               <?php endforeach; ?>
             </ul>
             <a href="<?php echo esc_url( home_url( $svc['link'] ) ); ?>" class="service-card__link">
-              Learn More <i class="fa-solid fa-arrow-right"></i>
+              <?php echo esc_html( $svc['title'] ); ?> in <?php echo esc_html( $name ); ?> <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
           <?php endforeach; ?>
@@ -110,10 +165,20 @@ $all_locs  = rfp_all_locations();
           <div class="section-badge">Project Types</div>
           <h2 class="section-title">Buildings We Protect in <span class="text-accent"><?php echo esc_html( $name ); ?></span></h2>
         </div>
+        <?php
+        $rfp_building_icons = [
+          'fa-solid fa-building',
+          'fa-solid fa-warehouse',
+          'fa-solid fa-building-user',
+          'fa-solid fa-hospital',
+          'fa-solid fa-school',
+          'fa-solid fa-store',
+        ];
+        ?>
         <div class="services-grid services-grid--6 reveal-up">
           <?php foreach ( $loc['building_types'] as $i => $type ) : ?>
-            <div class="service-card service-card--sm" data-delay="<?php echo $i * 80; ?>">
-              <div class="service-card__icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+            <div class="service-card service-card--sm" data-delay="<?php echo esc_attr( $i * 80 ); ?>">
+              <div class="service-card__icon"><i class="<?php echo esc_attr( $rfp_building_icons[ $i % count( $rfp_building_icons ) ] ); ?>"></i></div>
               <h3 class="service-card__title" style="font-size: 0.95rem;"><?php echo esc_html( $type ); ?></h3>
             </div>
           <?php endforeach; ?>
@@ -273,11 +338,11 @@ $all_locs  = rfp_all_locations();
           <h2 class="section-title"><?php echo esc_html( $name ); ?> <span class="text-accent">Neighborhoods &amp; Districts</span></h2>
           <p class="section-desc">Richardson Fire Protection serves GCs and developers across <?php echo esc_html( $name ); ?> — from major development corridors to neighborhood infill projects.</p>
         </div>
-        <ul class="locations-strip__list reveal-up" style="justify-content: flex-start;">
+        <ul class="locations-strip__list reveal-up" style="justify-content: flex-start; flex-wrap: wrap; gap: 0.5rem;">
           <?php foreach ( $loc['neighborhoods'] as $n ) : ?>
             <li>
-              <span class="locations-strip__link" style="cursor: default;">
-                <i class="fa-solid fa-map-pin"></i>
+              <span style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.35rem 0.85rem; background: var(--c-surface); border: 1px solid var(--c-border); border-radius: 999px; font-size: 0.82rem; color: var(--c-text-muted);">
+                <i class="fa-solid fa-map-pin" style="color: var(--c-red); font-size: 0.7rem;"></i>
                 <?php echo esc_html( $n ); ?>
               </span>
             </li>
