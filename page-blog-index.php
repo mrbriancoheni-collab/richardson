@@ -108,6 +108,46 @@ get_header();
             </a>
           </div>
 
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-book"></i></div>
+            <div class="service-card__tag">NFPA Standards</div>
+            <h3 class="service-card__title">What is NFPA 13? The Complete 2025 Guide</h3>
+            <p class="service-card__desc">NFPA 13 governs commercial fire sprinkler design and installation across California. This guide explains requirements, occupancy classifications, hydraulic design, and how California AHJs adopt and amend it.</p>
+            <a href="<?php echo esc_url( home_url( '/nfpa-13-fire-sprinkler-guide/' ) ); ?>" class="service-card__link">
+              Read Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-water"></i></div>
+            <div class="service-card__tag">System Fundamentals</div>
+            <h3 class="service-card__title">How Does a Fire Sprinkler System Work?</h3>
+            <p class="service-card__desc">The real answer — each head activates independently based on heat, not smoke. This guide explains how glass bulbs trigger activation, wet vs. dry pipe systems, water supply requirements, and NFPA 13 testing.</p>
+            <a href="<?php echo esc_url( home_url( '/how-fire-sprinklers-work/' ) ); ?>" class="service-card__link">
+              Read Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <div class="service-card__tag">Fire Pump Systems</div>
+            <h3 class="service-card__title">Fire Pump Installation Guide: Sizing, Costs &amp; NFPA 20</h3>
+            <p class="service-card__desc">When does a building require a fire pump? This guide covers NFPA 20 requirements, electric vs. diesel drivers, hydraulic sizing methodology, cost ranges, and Sacramento Valley AHJ permit timelines.</p>
+            <a href="<?php echo esc_url( home_url( '/fire-pump-installation-guide/' ) ); ?>" class="service-card__link">
+              Read Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-calendar-check"></i></div>
+            <div class="service-card__tag">Project Planning</div>
+            <h3 class="service-card__title">How Long Does Fire Sprinkler Installation Take?</h3>
+            <p class="service-card__desc">From design to AHJ final inspection: real timelines for Sacramento, Roseville, Stockton, and every AHJ in our service area. Includes the permit review schedule, rough-in durations, and the most common causes of delay.</p>
+            <a href="<?php echo esc_url( home_url( '/fire-sprinkler-installation-timeline/' ) ); ?>" class="service-card__link">
+              Read Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
         </div>
       </div>
     </section>

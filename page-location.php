@@ -81,7 +81,7 @@ $all_locs  = rfp_all_locations();
         <div class="section-header reveal-up">
           <div class="section-badge"><?php echo esc_html( $name ); ?> Fire Protection</div>
           <h2 class="section-title">Services We Provide in <span class="text-accent"><?php echo esc_html( $name ); ?></span></h2>
-          <p class="section-desc">Richardson Fire Protection handles all three major sectors in <?php echo esc_html( $name ); ?> — from office buildings and retail to industrial warehouses and apartment complexes.</p>
+          <p class="section-desc">Richardson Fire Protection handles commercial, industrial, and multifamily fire sprinkler systems in <?php echo esc_html( $name ); ?>, plus NFPA 20 fire pump design, installation, repair, and testing.</p>
         </div>
         <div class="services-grid reveal-up">
           <div class="service-card">
@@ -124,6 +124,20 @@ $all_locs  = rfp_all_locations();
             </ul>
             <a href="<?php echo esc_url( home_url( '/residential/' ) ); ?>" class="service-card__link">
               Residential Fire Protection <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-droplet"></i></div>
+            <div class="service-card__tag">Fire Pump Services</div>
+            <h3 class="service-card__title">Fire Pump Services in <?php echo esc_html( $name ); ?></h3>
+            <p class="service-card__desc">NFPA 20 fire pump design, installation, 24/7 repair, and annual NFPA 25 performance testing for buildings in <?php echo esc_html( $name ); ?> that require supplemental water pressure.</p>
+            <ul class="service-card__features">
+              <li><i class="fa-solid fa-check"></i> Design, install &amp; repair</li>
+              <li><i class="fa-solid fa-check"></i> Annual NFPA 25 testing</li>
+              <li><i class="fa-solid fa-check"></i> 24/7 emergency response</li>
+            </ul>
+            <a href="<?php echo esc_url( get_permalink() . 'fire-pump-design/' ); ?>" class="service-card__link">
+              Fire Pump Services in <?php echo esc_html( $name ); ?> <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
         </div>

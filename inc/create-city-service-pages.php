@@ -1,6 +1,6 @@
 <?php
 /**
- * Bulk-create 21 city + service pages (7 cities × 3 services).
+ * Bulk-create 49 city + service pages (7 cities × 7 services).
  *
  * Run via WP-CLI:
  *   wp eval-file wp-content/themes/richardson/inc/create-city-service-pages.php
@@ -33,9 +33,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $service_titles = [
-    'commercial'  => 'Commercial Fire Protection in %s',
-    'industrial'  => 'Industrial Fire Protection in %s',
-    'residential' => 'Multifamily Fire Protection in %s',
+    'commercial'             => 'Commercial Fire Protection in %s',
+    'industrial'             => 'Industrial Fire Protection in %s',
+    'residential'            => 'Multifamily Fire Protection in %s',
+    'fire-pump-design'       => 'Fire Pump Design in %s',
+    'fire-pump-installation' => 'Fire Pump Installation in %s',
+    'fire-pump-repair'       => 'Fire Pump Repair in %s',
+    'fire-pump-testing'      => 'Fire Pump Testing in %s',
 ];
 
 $all_locs = rfp_all_locations();

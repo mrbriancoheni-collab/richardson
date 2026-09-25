@@ -123,6 +123,29 @@ function rfp_all_locations() {
                     'summary'   => 'Governs fire protection contractor licensing. All fire sprinkler work in Sacramento requires a CSLB C-16 license and CSFM registration — Richardson holds both.',
                 ],
             ],
+            'fire_pump_note' => 'Richardson submits fire pump permit packages directly to SCFD Fire Prevention through the Accela portal — stamped NFPA 20 hydraulic calculations, pump data sheets, and controller wiring diagrams on the first submittal to avoid correction cycles.',
+            'fire_pump_faqs' => [
+                [
+                    'q' => 'When does a Sacramento building require a fire pump under NFPA 13?',
+                    'a' => 'A fire pump is required when available water supply pressure cannot meet the hydraulic demand of the sprinkler system. In Sacramento, this most commonly applies to high-rise buildings in the Central City and Natomas, multi-story mixed-use projects where supply pressure drops below system demand, and large warehouse distribution facilities with ESFR systems. SCFD Fire Prevention reviews the hydraulic analysis during plan check.',
+                ],
+                [
+                    'q' => 'What does SCFD require in a fire pump room for a Sacramento commercial project?',
+                    'a' => 'SCFD enforces NFPA 20 for pump room design: minimum clearances around the assembly, a dedicated electrical service, heat and ventilation (40°F minimum), a floor drain, and a test header stubbed outside the building. On high-rise projects in the Central City corridor, the pump room must also satisfy CBC high-rise fire command requirements.',
+                ],
+                [
+                    'q' => 'How often must fire pumps be tested under NFPA 25 in Sacramento?',
+                    'a' => 'NFPA 25 requires weekly churn (no-flow) tests, annual flow tests with pump performance curves, and internal inspection every five years for electric-drive pumps. Sacramento City FD enforces SB 1205, which requires inspection certification records to be submitted to the State Fire Marshal annually. Richardson provides annual testing and delivers the written reports required for SCFD compliance.',
+                ],
+                [
+                    'q' => 'What are the most common fire pump failures in Sacramento\'s mixed-use and warehouse buildings?',
+                    'a' => 'The most frequent issues we see are impeller wear from poor water quality in older Sacramento supply mains, controller faults due to power quality issues, and suction-pipe air entrainment in buildings with undersized water mains. Richardson\'s technicians diagnose and repair all of these — call (916) 849-6441 for 24/7 emergency service in Sacramento County.',
+                ],
+                [
+                    'q' => 'Can Richardson install a fire pump during an occupied tenant improvement in Sacramento?',
+                    'a' => 'Yes. We coordinate pump room construction with the GC to minimize downtime on the existing system. When the existing sprinkler system must be temporarily offline, we notify SCFD and schedule a fire watch per CFC Section 901.7 — a process we manage on behalf of the building owner for Natomas, Midtown, and Central City TI projects.',
+                ],
+            ],
             'testimonial' => [
                 'quote'   => '',
                 'author'  => '',
@@ -238,6 +261,29 @@ function rfp_all_locations() {
                     'summary'   => 'Requires fire protection system owners to certify inspection records with the State Fire Marshal annually. Stockton FD enforces for all commercial and industrial properties within city limits.',
                 ],
             ],
+            'fire_pump_note' => 'Stockton Fire Department requires complete commodity classification documentation alongside fire pump submittals for warehouse projects — Richardson packages the NFPA 20 pump design with the storage analysis to clear SFD plan check in a single submittal.',
+            'fire_pump_faqs' => [
+                [
+                    'q' => 'Do high-bay warehouses in Stockton typically require a fire pump?',
+                    'a' => 'Many Stockton warehouses require fire pumps. ESFR sprinkler systems have high hydraulic demands that frequently exceed available pressure from San Joaquin County water mains — particularly in the I-5 and Highway 99 logistics corridors where multiple large facilities share supply infrastructure. Richardson performs a water supply analysis before every ESFR design to confirm whether a pump is needed.',
+                ],
+                [
+                    'q' => 'What fire pump type is best for cold-storage facilities in San Joaquin County?',
+                    'a' => 'Vertical turbine fire pumps are often used for cold-storage and refrigerated distribution facilities in the Stockton area when pump room space is limited or the water supply connection is below grade. Electric-drive pumps are preferred for facilities with reliable utility power; diesel-drive pumps serve as backup where grid supply reliability is a concern. Richardson designs to NFPA 20 for all configurations.',
+                ],
+                [
+                    'q' => 'How does NFPA 25 testing apply to fire pumps at Port of Stockton industrial facilities?',
+                    'a' => 'Fire pumps at Port-jurisdiction facilities follow NFPA 25 annual testing requirements — performance curves, flow tests, and churn tests — enforced by the Port of Stockton Fire Authority rather than Stockton FD. Richardson performs NFPA 25 testing at both City and Port-jurisdiction facilities and provides the written test reports required under SB 1205.',
+                ],
+                [
+                    'q' => 'What causes fire pump failures in Stockton\'s industrial facilities?',
+                    'a' => 'The most common failures in San Joaquin County industrial facilities are bearing wear from infrequent cycling, seal leaks caused by vibration in high-traffic industrial environments, and controller faults from electrical surges common during summer peak demand. Diesel-drive pumps in cold-storage settings also have fuel degradation issues if not run on schedule. Richardson provides preventive maintenance contracts to catch these before they become emergencies.',
+                ],
+                [
+                    'q' => 'How does Richardson submit fire pump permits to Stockton Fire Department?',
+                    'a' => 'Richardson submits complete NFPA 20 design packages directly to SFD Fire Prevention — hydraulic calculations, pump data sheets, controller specifications, and commodity classification documentation for warehouse projects. Current SFD plan review for fire pump submittals runs 4–6 weeks. We submit complete, coordinated packages on the first attempt to avoid correction cycles.',
+                ],
+            ],
             'testimonial' => [
                 'quote'   => '',
                 'author'  => '',
@@ -348,6 +394,29 @@ function rfp_all_locations() {
                     'summary'   => 'Medical facilities within Roseville require HCAI plan review and approval in addition to Roseville FD review. HCAI adds 6–10 weeks to the plan review timeline for licensed healthcare occupancies.',
                 ],
             ],
+            'fire_pump_note' => 'Roseville Fire Department\'s 3–4 week plan review timeline applies to fire pump permits — Richardson submits complete NFPA 20 packages including hydraulic calculations, pump data sheets, and controller wiring diagrams on the first attempt to keep Placer County project schedules intact.',
+            'fire_pump_faqs' => [
+                [
+                    'q' => 'Does a medical office building in Roseville require a fire pump?',
+                    'a' => 'Healthcare occupancies classified as Group I-2 (outpatient surgery, dialysis) often require fire pumps when the building footprint and sprinkler demand exceed available supply pressure. HCAI-regulated facilities require fire pump designs to be included in the HCAI review package, which runs parallel to Roseville FD plan review. Richardson coordinates both tracks simultaneously to prevent schedule conflicts.',
+                ],
+                [
+                    'q' => 'What NFPA 20 requirements does Roseville Fire Department enforce for fire pump rooms?',
+                    'a' => 'Roseville FD enforces NFPA 20 in full: dedicated electrical service, 40°F minimum ambient temperature, floor drain, adequate pump clearances, and a test header routed outside the building. For healthcare occupancies in Roseville, HCAI adds requirements for emergency power transfer to the Life Safety Branch within 10 seconds of a utility outage.',
+                ],
+                [
+                    'q' => 'How often are fire pumps tested in Placer County under NFPA 25?',
+                    'a' => 'NFPA 25 mandates weekly no-flow (churn) tests, monthly visual inspection, and annual flow performance tests. Placer County\'s SB 1205 enforcement means written test records must be available for Roseville Fire inspection at any time. Richardson provides annual testing contracts and delivers signed performance reports that satisfy both Roseville FD and State Fire Marshal certification requirements.',
+                ],
+                [
+                    'q' => 'What fire pump design applies to Roseville\'s retail centers and lifestyle districts?',
+                    'a' => 'Large retail centers on Douglas Boulevard and the Galleria corridor may require fire pumps when the combined NFPA 13 demand for the full retail footprint exceeds local supply pressure. Richardson performs a water supply analysis with the water district at bid phase so that pump requirements — and the associated cost — are known before construction documents are issued.',
+                ],
+                [
+                    'q' => 'Can Richardson coordinate fire pump installation alongside HCAI-regulated healthcare construction in Roseville?',
+                    'a' => 'Yes. Healthcare projects in Roseville face dual review — Roseville FD and HCAI. Richardson submits the fire pump package to both simultaneously and manages comment cycles from each reviewer independently. We are experienced with HCAI\'s fire pump documentation requirements, which are more detailed than standard CFC submittals and include seismic restraint calculations and listed equipment submittals.',
+                ],
+            ],
             'testimonial' => [
                 'quote'   => '',
                 'author'  => '',
@@ -456,6 +525,29 @@ function rfp_all_locations() {
                     'code'      => 'Multiphase Construction Requirements',
                     'authority' => 'Rocklin Fire Department',
                     'summary'   => 'Rocklin\'s active residential construction zones require phased fire protection installation. Temporary water supply and partial system acceptance processes per CFC Section 901 are coordinated directly by Richardson.',
+                ],
+            ],
+            'fire_pump_note' => 'Rocklin Fire handles fire pump permits inside city limits; Stanford Ranch and Granite Bay-adjacent projects in unincorporated Placer County route to Placer County Fire — Richardson confirms the correct AHJ at project kickoff to prevent a submittal to the wrong authority.',
+            'fire_pump_faqs' => [
+                [
+                    'q' => 'Do tech office campuses in Rocklin\'s Stanford Ranch corridor require fire pumps?',
+                    'a' => 'Tech campuses and corporate offices in Stanford Ranch can require fire pumps when multi-story buildings with large floor plates push sprinkler demand above available supply pressure. Server room pre-action and suppression systems add hydraulic demand that can push a project over the pump threshold. Richardson performs supply analysis early in design so pump requirements are known before the structural bid is issued.',
+                ],
+                [
+                    'q' => 'Which AHJ handles fire pump permits for projects near the Rocklin / Placer County line?',
+                    'a' => 'Rocklin Fire Department handles fire pump permits for parcels inside city limits; Placer County Fire handles unincorporated areas including portions of Granite Bay adjacent to Rocklin. Richardson verifies the correct jurisdiction before every submittal — submitting to the wrong AHJ means starting over and losing 3–4 weeks on your certificate of occupancy schedule.',
+                ],
+                [
+                    'q' => 'What NFPA 25 maintenance does a fire pump require to stay compliant in Rocklin?',
+                    'a' => 'NFPA 25 requires weekly churn tests, annual flow tests, and written performance documentation. Richardson provides annual testing contracts for corporate campuses and self-storage operators in Rocklin, delivering signed test reports that satisfy Rocklin FD inspection and California SB 1205 certification requirements. We also handle impeller inspection, seal service, and controller testing.',
+                ],
+                [
+                    'q' => 'How does fire pump design differ for Rocklin self-storage vs. tech office buildings?',
+                    'a' => 'Self-storage facilities are typically low-rise with moderate NFPA 13 demand, so fire pumps are less common unless the building is large or supply pressure is marginal. Tech campus buildings with server room suppression, data center pre-action, and multistory office floors combine higher demand with taller sprinkler risers, making pumps more likely. Richardson scopes each project individually rather than assuming a pump is or isn\'t needed.',
+                ],
+                [
+                    'q' => 'Can Richardson service existing fire pumps on corporate campuses in Rocklin?',
+                    'a' => 'Yes. We service all major fire pump brands — Aurora, Peerless, Patterson, Bell & Gossett — for Rocklin\'s existing commercial portfolio. Our NFPA 25 preventive maintenance program covers impeller inspection, packing or mechanical seal service, controller testing, and annual flow performance tests with written reports delivered for Rocklin FD compliance.',
                 ],
             ],
             'testimonial' => [
@@ -573,6 +665,29 @@ function rfp_all_locations() {
                     'summary'   => 'Industrial facilities handling hazardous materials in Fairfield\'s Cordelia and Travis Blvd corridors require coordination with Solano County Environmental Health. Fire suppression systems for hazmat storage must satisfy both CFC and environmental requirements.',
                 ],
             ],
+            'fire_pump_note' => 'Fire pump permits for Fairfield projects route through Fairfield-Suisun Fire Department — a joint agency serving both Fairfield and Suisun City. Defense projects near Travis AFB may also require fire pump documentation submitted to the base Fire Protection Engineer alongside the Fairfield-Suisun package.',
+            'fire_pump_faqs' => [
+                [
+                    'q' => 'Do Fairfield distribution centers and logistics parks require fire pumps?',
+                    'a' => 'Yes — frequently. The Cordelia Junction and North Fairfield industrial corridors have large distribution facilities with ESFR ceiling sprinkler systems whose hydraulic demands often exceed local water supply pressure. Richardson performs a water supply analysis with Fairfield-Suisun utility contacts at bid phase to confirm pump requirements before construction documents are issued.',
+                ],
+                [
+                    'q' => 'Does Travis AFB proximity affect fire pump permit requirements in Fairfield?',
+                    'a' => 'Projects within Travis Air Force Base boundaries use the DoD fire protection review process — not the California Fire Code — and require fire pump documentation submitted to the 60th Civil Engineer Squadron Fire Prevention Office. Projects just outside AFB boundaries may still require coordination with base staff if they affect shared water supplies. Richardson has managed this dual-track process on prior Solano County projects.',
+                ],
+                [
+                    'q' => 'How does NFPA 25 annual testing work for fire pumps in Solano County industrial facilities?',
+                    'a' => 'NFPA 25 requires weekly churn tests, monthly visual checks, and an annual flow test with a performance curve. Solano County and Fairfield-Suisun FD enforce SB 1205 certification record requirements annually. Richardson performs NFPA 25 fire pump testing throughout the Cordelia and North Fairfield industrial corridors and provides the written reports required for AHJ compliance.',
+                ],
+                [
+                    'q' => 'What fire pump types does Richardson install for defense manufacturing in Fairfield?',
+                    'a' => 'For defense manufacturing and aerospace facilities near Travis Boulevard, Richardson installs electric-drive and diesel-drive fire pump assemblies to NFPA 20. Diesel-drive pumps are specified in facilities where DoD continuity-of-operations requirements mandate independent fire protection power or where utility reliability is a concern in the Cordelia Junction area.',
+                ],
+                [
+                    'q' => 'Who issues fire pump permits for the Cordelia Junction industrial corridor in Fairfield?',
+                    'a' => 'Fire pump permits in the Cordelia corridor go through Fairfield-Suisun Fire Department for parcels inside Fairfield city limits, and through Solano County Fire for unincorporated parcels. The boundary runs through active industrial park zones, so Richardson verifies the correct AHJ before every submittal — a critical step that prevents losing 4–6 weeks to a jurisdiction routing error.',
+                ],
+            ],
             'testimonial' => [
                 'quote'   => '',
                 'author'  => '',
@@ -688,6 +803,29 @@ function rfp_all_locations() {
                     'summary'   => 'Suppression system agents (Halon alternatives, CO2) for large-scale industrial applications require AQMD review. Affects clean agent selection for agricultural cold storage and processing facilities.',
                 ],
             ],
+            'fire_pump_note' => 'Yuba City Fire Department coordinates with Sutter County Fire on boundary projects — Richardson confirms the correct permitting authority for fire pump submittals before design begins, preventing routing errors that can delay agricultural and healthcare projects by 4–6 weeks.',
+            'fire_pump_faqs' => [
+                [
+                    'q' => 'Do cold-storage agricultural facilities in Yuba City require fire pumps?',
+                    'a' => 'Many of Yuba City\'s larger cold-storage and agricultural processing facilities along the Highway 99 corridor require fire pumps because NFPA 13 system demand exceeds available supply pressure. Dry-pipe and pre-action systems — common in refrigerated facilities — have higher pressure losses than wet-pipe systems, increasing the likelihood that a pump is needed. Richardson performs supply analysis for every cold-storage design in the Yuba-Sutter market.',
+                ],
+                [
+                    'q' => 'What fire pump considerations apply to the Yuba City / Sutter County boundary area?',
+                    'a' => 'Projects inside Yuba City limits use Yuba City Fire for fire pump permitting; unincorporated Sutter County projects use Sutter County Fire District. The boundary runs through active development zones near Highway 99 and Industrial Way. Richardson confirms jurisdiction at project kickoff — submitting to the wrong AHJ restarts the permit clock and delays agricultural and healthcare projects that typically have strict opening schedules.',
+                ],
+                [
+                    'q' => 'How does NFPA 25 testing for fire pumps work in Sutter County agricultural facilities?',
+                    'a' => 'NFPA 25 requires weekly churn tests, annual flow tests, and written performance documentation. For CDFA-regulated food processing facilities in the Yuba City area, fire pump test records are typically required alongside CDFA fire safety inspections. Richardson performs NFPA 25 annual testing and provides written reports for both Yuba City FD compliance and CDFA coordination.',
+                ],
+                [
+                    'q' => 'Can Richardson repair an existing fire pump at a healthcare facility in Yuba City?',
+                    'a' => 'Yes. Healthcare facilities in the Yuba City medical district have fire pumps that require NFPA 25 maintenance and periodic repair. Richardson repairs all major pump brands, replaces impellers and mechanical seals, and services fire pump controllers. For HCAI-regulated facilities, repair work may require HCAI notification — we manage that coordination and maintain documentation to the HCAI standard.',
+                ],
+                [
+                    'q' => 'What causes fire pump problems in Yuba City\'s agricultural cold-storage facilities?',
+                    'a' => 'The most common issues we see in Sutter County agricultural facilities are seal failure from intermittent dry-running when cold-storage dry-pipe systems cycle during testing, bearing wear from the high humidity inside pump rooms in refrigerated environments, and controller faults from temperature swings. Diesel-drive pumps in cold-storage settings also develop fuel degradation issues if not run on schedule. Richardson offers preventive maintenance contracts and 24/7 emergency response at (916) 849-6441.',
+                ],
+            ],
             'testimonial' => [
                 'quote'   => '',
                 'author'  => '',
@@ -801,6 +939,29 @@ function rfp_all_locations() {
                     'code'      => 'HCAI for Licensed Healthcare Facilities',
                     'authority' => 'California HCAI',
                     'summary'   => 'Any Davis satellite clinics licensed as healthcare facilities require HCAI plan review in addition to local AHJ review. Richardson manages dual-track submissions and tracks both review timelines simultaneously.',
+                ],
+            ],
+            'fire_pump_note' => 'Campus-adjacent Davis projects may require fire pump submittals to Davis Fire Department and UC Davis EH&S simultaneously; state-owned UC buildings use CSFM as the primary AHJ instead of Davis FD — Richardson identifies the correct review track at project kickoff to prevent schedule-damaging misrouting.',
+            'fire_pump_faqs' => [
+                [
+                    'q' => 'Do research labs and biotech facilities near UC Davis require fire pumps?',
+                    'a' => 'Research laboratory and biotech buildings are among the most pump-requiring building types in the Davis market. High-hazard lab areas may require deluge or pre-action systems with large hydraulic demands, and multi-story biotech buildings place sprinkler risers well above ground-floor water supply. Richardson performs supply analysis for every Davis lab project at the schematic design phase — before structural documents are issued.',
+                ],
+                [
+                    'q' => 'How does fire pump permitting work for state-owned UC Davis buildings — CSFM vs. Davis FD?',
+                    'a' => 'State-owned UC Davis buildings use the California State Fire Marshal (CSFM) as the AHJ — not Davis Fire Department. Fire pump submittals go to CSFM, which has separate submittal requirements and longer review timelines (8–12 weeks vs. 3–5 weeks for Davis FD). Campus-adjacent private buildings use Davis FD with an optional UC Davis EH&S advisory review. Richardson identifies the correct AHJ at project kickoff every time.',
+                ],
+                [
+                    'q' => 'How often are fire pumps tested in Yolo County under NFPA 25?',
+                    'a' => 'NFPA 25 requires weekly churn tests, annual flow tests, and written performance documentation — enforced in Yolo County under SB 1205. For state-owned UC Davis facilities, CSFM enforces inspection record certification. Richardson provides NFPA 25 testing contracts and delivers written reports for both Davis FD and CSFM compliance.',
+                ],
+                [
+                    'q' => 'Can Richardson repair fire pumps in active laboratory environments at UC Davis-adjacent buildings?',
+                    'a' => 'Yes, and we understand the sensitivities of working inside research environments — we coordinate system isolation windows with building operations staff, maintain air quality during repair work, and restore systems to full service before leaving. For UC Davis-regulated buildings, we notify the EH&S contact and document the repair to CSFM record-keeping standards.',
+                ],
+                [
+                    'q' => 'Does Davis\'s green building code affect fire pump material selection or suppression agent choice?',
+                    'a' => 'Davis\'s sustainability code adds environmental review for certain fire suppression agents, particularly HFC-based clean agents used near pump control panels or server rooms in biotech facilities. Richardson selects agents compatible with the Davis Municipal Code environmental ordinance. Standard fire pump components — steel pipe, cast iron pump housing, bronze fittings — are not affected by the green building code.',
                 ],
             ],
             'testimonial' => [
