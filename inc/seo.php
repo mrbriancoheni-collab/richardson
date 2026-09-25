@@ -71,7 +71,21 @@ function rfp_get_page_seo() {
             $loc = rfp_location_data( $slug );
             if ( $loc ) {
                 $raw = 'Richardson Fire Protection serves GCs and developers in ' . $loc['name'] . '. NFPA 13 design-build, ' . $loc['ahj_name'] . ' permit coordination, and first-pass inspections. Bids in 24–48 hrs. Call (916) 849-6441.';
-                $seo['title']       = 'Fire Protection in ' . $loc['name'] . ', CA | ' . $loc['county'] . ' Fire Sprinkler Contractor';
+                $seo['title']       = 'Fire Protection ' . $loc['name'] . ', CA | ' . $loc['county'] . ' Fire Sprinkler Contractor';
+                $seo['description'] = substr( wp_strip_all_tags( $raw ), 0, 157 ) . '...';
+                $seo['schema_type'] = 'location_city';
+                $seo['location']    = $loc;
+                $seo['description'] = esc_attr( $seo['description'] );
+                return $seo;
+            }
+        }
+
+        // Top-level direct city pages (e.g. /sacramento/) not under /locations/
+        if ( function_exists('rfp_location_data') && ! $post->post_parent ) {
+            $loc = rfp_location_data( $slug );
+            if ( $loc ) {
+                $raw = 'Richardson Fire Protection is ' . $loc['name'] . '\'s preferred fire sprinkler sub for GCs and developers — NFPA 13 design-build, ' . $loc['ahj_name'] . ' permit coordination, and 24/7 ITM service. C-16 #1053506.';
+                $seo['title']       = 'Fire Protection ' . $loc['name'] . ', CA | NFPA 13 Design & Installation | Richardson';
                 $seo['description'] = substr( wp_strip_all_tags( $raw ), 0, 157 ) . '...';
                 $seo['schema_type'] = 'location_city';
                 $seo['location']    = $loc;
@@ -131,8 +145,8 @@ function rfp_get_page_seo() {
 
             case 'industrial':
             case 'industrial-fire-protection':
-                $seo['title']       = 'Industrial Fire Protection Contractor — Sacramento | Richardson Fire Protection';
-                $seo['description'] = 'Industrial fire suppression for high-bay warehouse, cold storage, and manufacturing projects in Sacramento. In-rack sprinklers, ESFR, special hazard. Trusted by GCs and industrial developers.';
+                $seo['title']       = 'Industrial Fire Sprinkler Systems | ESFR, In-Rack & NFPA 13 Warehouse Protection | Richardson';
+                $seo['description'] = 'Industrial fire sprinkler design-build for high-bay warehouses, cold storage, and manufacturing in Sacramento Valley. ESFR, in-rack, and special hazard systems. CSLB C-16 #1053506.';
                 $seo['schema_type'] = 'service_industrial';
                 break;
 
@@ -232,6 +246,51 @@ function rfp_get_page_seo() {
             case 'esfr-vs-in-rack':
                 $seo['title']       = 'ESFR vs In-Rack Sprinklers: Which Does Your California Warehouse Need? | Richardson';
                 $seo['description'] = 'ESFR vs. in-rack sprinkler comparison — K-factors, ceiling height, commodity classification, cost differences, and when NFPA 13 requires each system type. California guide.';
+                $seo['schema_type'] = 'article_tech';
+                $seo['type']        = 'article';
+                break;
+
+            case 'emergency-repair':
+            case 'emergency-fire-sprinkler-repair':
+                $seo['title']       = 'Emergency Fire Sprinkler Repair | 24/7 Service — Sacramento Valley | Richardson';
+                $seo['description'] = '24/7 emergency fire sprinkler repair in Sacramento, Roseville, Stockton, and Northern California. Leaks, burst heads, controller failures. CSLB C-16 #1053506. Call (916) 849-6441 now.';
+                $seo['schema_type'] = 'emergency_repair';
+                break;
+
+            case 'inspection-testing':
+            case 'nfpa-25-inspection':
+            case 'fire-sprinkler-inspection':
+                $seo['title']       = 'Fire Sprinkler Inspection & Testing (NFPA 25) | Sacramento Valley | Richardson';
+                $seo['description'] = 'NFPA 25 fire sprinkler inspection, testing, and ITM services for commercial buildings in Sacramento Valley. SB 1205 certified reports. Annual testing, deficiency documentation. Call (916) 849-6441.';
+                $seo['schema_type'] = 'inspection_testing';
+                break;
+
+            case 'nfpa-13-fire-sprinkler-guide':
+            case 'nfpa-13-guide':
+                $seo['title']       = 'What is NFPA 13? The Complete 2025 Guide for Building Owners & GCs | Richardson';
+                $seo['description'] = 'NFPA 13 explained: what it covers, which buildings must comply, key requirements for sprinkler system design, and how California adopts and amends the standard. Written by a C-16 licensed contractor.';
+                $seo['schema_type'] = 'article_tech';
+                $seo['type']        = 'article';
+                break;
+
+            case 'how-fire-sprinklers-work':
+                $seo['title']       = 'How Does a Fire Sprinkler System Work? The Complete Explanation | Richardson';
+                $seo['description'] = 'How fire sprinklers activate, why only the head nearest the fire opens, wet-pipe vs. dry-pipe differences, and how the water supply and fire pump connect. Written by C-16 licensed contractor Chris Richardson.';
+                $seo['schema_type'] = 'article_tech';
+                $seo['type']        = 'article';
+                break;
+
+            case 'fire-pump-installation-guide':
+            case 'fire-pump-guide':
+                $seo['title']       = 'Fire Pump Installation Guide: Sizing, Costs & NFPA 20 Requirements | Richardson';
+                $seo['description'] = 'When does a building require a fire pump? NFPA 20 pump room requirements, electric vs. diesel vs. vertical turbine options, installation timeline in Sacramento Valley, and cost ranges. C-16 licensed guide.';
+                $seo['schema_type'] = 'article_tech';
+                $seo['type']        = 'article';
+                break;
+
+            case 'fire-sprinkler-installation-timeline':
+                $seo['title']       = 'How Long Does Fire Sprinkler Installation Take? Phase-by-Phase Timeline | Richardson';
+                $seo['description'] = 'Fire sprinkler installation timeline broken down by phase — design, permit review, rough-in, trim-out, and final inspection. AHJ timelines by city in Sacramento Valley. Written by C-16 licensed contractor.';
                 $seo['schema_type'] = 'article_tech';
                 $seo['type']        = 'article';
                 break;
@@ -876,7 +935,7 @@ function rfp_schema_markup() {
     }
 
     // ── WebPage + Speakable for hub / guide pages ────────────────────
-    $speakable_page_types = [ 'services_hub', 'ahj_comparison', 'cost_guide', 'fire_pump_hub' ];
+    $speakable_page_types = [ 'services_hub', 'ahj_comparison', 'cost_guide', 'fire_pump_hub', 'emergency_repair', 'inspection_testing' ];
     if ( in_array( $seo['schema_type'], $speakable_page_types, true ) && is_singular() ) {
         $page_url = get_permalink();
         $graphs[] = [
@@ -1043,6 +1102,30 @@ function rfp_schema_markup() {
               'a' => 'NFPA 25 requires annual inspection of all sprinkler system components, with 5-year internal pipe inspections. California SB 1205 requires the inspector to hold a CSFM C-16 certificate. Richardson provides NFPA 25 inspections for all multifamily property types.' ],
             [ 'q' => 'Does a new townhome or single-family home in California need fire sprinklers?',
               'a' => 'Yes. California adopted a statewide residential sprinkler mandate in 2011 (CBC Section 903.3.1.3) requiring all new one- and two-family dwellings to have NFPA 13D fire sprinkler systems. Richardson installs NFPA 13D systems for homebuilders and custom home GCs throughout Northern California.' ],
+        ],
+        'emergency_repair' => [
+            [ 'q' => 'Is a leaking or burst fire sprinkler head an emergency?',
+              'a' => 'Yes. A flowing sprinkler head will discharge 10–25 gallons per minute, causing immediate property damage. The system must be taken offline at the main control valve, the head replaced, and the system restored and tested before the building can reoccupy without a fire watch. Call Richardson 24/7 at (916) 849-6441 for same-day response in Sacramento Valley.' ],
+            [ 'q' => 'Can I shut off just one sprinkler head without turning off the whole system?',
+              'a' => 'Yes — a sprinkler stop (wedge tool) can temporarily stop discharge at a single flowing head without shutting down the main system. However, CFC Section 901.7 requires a fire watch anytime any portion of the system is impaired. Richardson carries all necessary repair parts and restores full service on the same call.' ],
+            [ 'q' => 'Does my insurance cover emergency fire sprinkler repair?',
+              'a' => 'Most commercial property policies cover sudden and accidental discharge from a sprinkler system, including property damage from the water and the cost of system repair. Richardson provides documented repair records, cause-of-failure reports, and before/after photos to support your insurance claim.' ],
+            [ 'q' => 'How long does emergency fire sprinkler repair take?',
+              'a' => 'Most emergency repairs — burst heads, leaking fittings, mechanical damage — can be completed in 2–4 hours. Complex repairs involving significant pipe damage, controller replacement, or coordination with the AHJ may require a same-day or next-day return visit. Richardson aims to restore full system service the same day we are called.' ],
+            [ 'q' => 'Do I need to notify SCFD or my AHJ when my sprinkler system is offline for repair?',
+              'a' => 'Yes. California Fire Code Section 901.7 requires the AHJ to be notified when a fire protection system is out of service for more than 4 hours. Richardson notifies the appropriate AHJ on your behalf and can coordinate a fire watch if required by the fire department during extended repairs.' ],
+        ],
+        'inspection_testing' => [
+            [ 'q' => 'How often is fire sprinkler inspection required in California under NFPA 25?',
+              'a' => 'NFPA 25 requires: weekly no-flow (churn) test for fire pumps; monthly visual inspection of sprinkler heads, gauges, and alarm valves; quarterly inspection of antifreeze systems and dry-pipe valves; annual flow tests and comprehensive inspection; and 5-year internal pipe inspection. California SB 1205 requires annual certification records submitted to the State Fire Marshal.' ],
+            [ 'q' => 'What happens if my building fails NFPA 25 inspection?',
+              'a' => 'Deficiencies are documented in a written report. Minor deficiencies — impaired sprinkler heads, missing escutcheons, corroded components — must be corrected within 30 days. Critical deficiencies that impair system function require immediate corrective action and may trigger AHJ enforcement. Richardson schedules deficiency corrections at the same time as the inspection when possible.' ],
+            [ 'q' => 'Do I need to notify my fire department before annual sprinkler testing?',
+              'a' => 'Many AHJs in Sacramento Valley — including SCFD and Roseville Fire — require advance notification before annual flow tests that will activate the fire alarm system. Richardson handles AHJ notification as part of every inspection and testing contract, so building owners never miss this step.' ],
+            [ 'q' => 'How much does fire sprinkler inspection cost in Sacramento?',
+              'a' => 'Annual NFPA 25 inspection for a commercial building in Sacramento typically costs $200–$600 for a basic wet-pipe system. Buildings with dry-pipe, pre-action, or fire pump systems cost more due to additional testing procedures. Richardson provides flat-rate inspection contracts with no hidden fees and delivers written NFPA 25 reports upon completion.' ],
+            [ 'q' => 'What is SB 1205 and does it apply to my Sacramento building?',
+              'a' => 'SB 1205 (2018) requires all commercial and multi-family residential building owners in California to certify annual fire protection system inspections with the State Fire Marshal. Failure to certify can result in enforcement action by your local AHJ. Richardson provides SB 1205-compliant inspection reports submitted directly to the California State Fire Marshal database.' ],
         ],
     ];
 

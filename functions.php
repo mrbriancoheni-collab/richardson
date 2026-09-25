@@ -42,11 +42,17 @@ add_filter( 'template_include', function( $template ) {
 
     // Top-level slug → template map (only when page has no city parent)
     $slug_map = [
-        'services'    => 'page-services.php',
-        'commercial'  => 'page-commercial.php',
-        'industrial'  => 'page-industrial.php',
-        'residential' => 'page-residential.php',
-        'fire-pump'   => 'page-fire-pump.php',
+        'services'                          => 'page-services.php',
+        'commercial'                        => 'page-commercial.php',
+        'industrial'                        => 'page-industrial.php',
+        'residential'                       => 'page-residential.php',
+        'fire-pump'                         => 'page-fire-pump.php',
+        'emergency-repair'                  => 'page-emergency-repair.php',
+        'inspection-testing'                => 'page-inspection-testing.php',
+        'nfpa-13-fire-sprinkler-guide'      => 'nfpa13-guide.php',
+        'how-fire-sprinklers-work'          => 'how-fire-sprinklers-work.php',
+        'fire-pump-installation-guide'      => 'fire-pump-guide.php',
+        'fire-sprinkler-installation-timeline' => 'fire-sprinkler-installation-timeline.php',
     ];
     if ( isset( $slug_map[ $post->post_name ] ) ) {
         $tpl = get_template_directory() . '/' . $slug_map[ $post->post_name ];

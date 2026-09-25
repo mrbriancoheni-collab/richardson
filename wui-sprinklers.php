@@ -141,6 +141,8 @@ get_header();
       </div>
     </section>
 
+<?php get_template_part( 'template-parts/author-bio' ); ?>
+
     <!-- ========== CTA ========== -->
     <section style="background: var(--c-red); color: #fff; text-align: center; padding: 4rem 1.5rem;">
       <div class="container" style="max-width: 640px;">
