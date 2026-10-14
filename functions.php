@@ -52,7 +52,14 @@ add_filter( 'template_include', function( $template ) {
         'nfpa-13-fire-sprinkler-guide'      => 'nfpa13-guide.php',
         'how-fire-sprinklers-work'          => 'how-fire-sprinklers-work.php',
         'fire-pump-installation-guide'      => 'fire-pump-guide.php',
-        'fire-sprinkler-installation-timeline' => 'fire-sprinkler-installation-timeline.php',
+        'fire-sprinkler-installation-timeline'  => 'fire-sprinkler-installation-timeline.php',
+        'nfpa-25-inspection-guide'              => 'nfpa25.php',
+        'nfpa-13r-vs-13-apartment-sprinklers'   => '13r-vs-13.php',
+        'high-piled-storage-fire-code'          => 'high-piled.php',
+        'ca-fire-code-2025'                     => 'ca-fire-code-2025.php',
+        'wui-sprinklers'                        => 'wui-sprinklers.php',
+        'permit-guide-sacramento'               => 'permit-guide-sacramento.php',
+        'esfr-vs-in-rack'                       => 'esfr-vs-in-rack.php',
     ];
     if ( isset( $slug_map[ $post->post_name ] ) ) {
         $tpl = get_template_directory() . '/' . $slug_map[ $post->post_name ];

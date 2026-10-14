@@ -204,49 +204,49 @@ function rfp_get_page_seo() {
             case 'nfpa-25-inspection-guide':
                 $seo['title']       = 'NFPA 25 Fire Sprinkler Inspection Guide California 2026 | Richardson Fire Protection';
                 $seo['description'] = 'Complete NFPA 25 inspection guide for California — inspection frequencies, SB 1205 requirements, what inspectors check, and how to choose a certified fire sprinkler inspector.';
-                $seo['schema_type'] = 'article_tech';
+                $seo['schema_type'] = 'nfpa25_guide';
                 $seo['type']        = 'article';
                 break;
 
             case 'nfpa-13r-vs-13-apartment-sprinklers':
                 $seo['title']       = 'NFPA 13R vs NFPA 13: Which Standard Applies to Your California Building? | Richardson';
                 $seo['description'] = 'When California requires NFPA 13R vs. NFPA 13 for multifamily projects — design differences, cost comparison, and California-specific code considerations for developers and GCs.';
-                $seo['schema_type'] = 'article_tech';
+                $seo['schema_type'] = 'article_13r_vs_13';
                 $seo['type']        = 'article';
                 break;
 
             case 'high-piled-storage-fire-code':
                 $seo['title']       = 'High-Piled Storage Fire Code California: Complete Warehouse Guide | Richardson';
                 $seo['description'] = 'CFC Chapter 32, commodity classification, ESFR vs. in-rack sprinklers, and the complete permit process for California high-piled storage. Richardson Fire Protection Sacramento.';
-                $seo['schema_type'] = 'article_tech';
+                $seo['schema_type'] = 'high_piled_guide';
                 $seo['type']        = 'article';
                 break;
 
             case 'ca-fire-code-2025':
                 $seo['title']       = 'California Fire Code 2025: Key Changes for Sacramento Valley Contractors | Richardson';
                 $seo['description'] = '2025 California Fire Code updates — sprinkler thresholds, WUI expansion, NFPA 13 2022 references, and AHJ adoption status for Sacramento, Roseville, Stockton, and more.';
-                $seo['schema_type'] = 'article_tech';
+                $seo['schema_type'] = 'ca_fire_code_guide';
                 $seo['type']        = 'article';
                 break;
 
             case 'wui-sprinklers':
                 $seo['title']       = 'WUI Fire Sprinkler Requirements California 2026: Builders\' Guide | Richardson';
                 $seo['description'] = 'California WUI fire sprinkler requirements — SRA/LRA zones, CBC Chapter 7A, NFPA 13D mandates, and local WUI requirements in Placer and Sacramento Counties. 2026 update.';
-                $seo['schema_type'] = 'article_tech';
+                $seo['schema_type'] = 'wui_guide';
                 $seo['type']        = 'article';
                 break;
 
             case 'permit-guide-sacramento':
                 $seo['title']       = 'Fire Sprinkler Permit Process in Sacramento 2026: Step-by-Step Guide | Richardson';
                 $seo['description'] = 'How to get a fire sprinkler permit in Sacramento — SCFD plan check, Accela digital submittal, typical timelines, common corrections, and how Richardson streamlines the process.';
-                $seo['schema_type'] = 'article_tech';
+                $seo['schema_type'] = 'permit_guide';
                 $seo['type']        = 'article';
                 break;
 
             case 'esfr-vs-in-rack':
                 $seo['title']       = 'ESFR vs In-Rack Sprinklers: Which Does Your California Warehouse Need? | Richardson';
                 $seo['description'] = 'ESFR vs. in-rack sprinkler comparison — K-factors, ceiling height, commodity classification, cost differences, and when NFPA 13 requires each system type. California guide.';
-                $seo['schema_type'] = 'article_tech';
+                $seo['schema_type'] = 'esfr_guide';
                 $seo['type']        = 'article';
                 break;
 
@@ -295,6 +295,27 @@ function rfp_get_page_seo() {
                 $seo['type']        = 'article';
                 break;
 
+            case 'portfolio':
+                $seo['title']       = 'Project Portfolio | Richardson Fire Protection — Sacramento Valley';
+                $seo['description'] = 'Fire sprinkler projects completed by Richardson Fire Protection — commercial, industrial, and multifamily. Sacramento Valley and Northern California. CSLB C-16 #1053506.';
+                $seo['schema_type'] = 'portfolio';
+                break;
+
+            case 'licenses':
+            case 'about-licenses':
+                $seo['title']       = 'Licenses & Certifications | Richardson Fire Protection — CSLB C-16 #1053506';
+                $seo['description'] = 'Richardson Fire Protection holds CSLB C-16 License #1053506, CSFM Contractor Registration, and NICET-certified design staff. Fully licensed and insured in California.';
+                $seo['schema_type'] = 'licenses';
+                break;
+
+            case 'resources':
+            case 'blog':
+            case 'fire-protection-resources':
+                $seo['title']       = 'Fire Protection Resources for GCs & Developers | Richardson Fire Protection';
+                $seo['description'] = 'NFPA compliance guides, fire code updates, and technical articles for Sacramento Valley general contractors and developers. Written by Richardson\'s C-16 licensed team.';
+                $seo['schema_type'] = 'resources_hub';
+                break;
+
             default:
                 if ( is_singular('post') ) {
                     $seo['title']       = get_the_title() . ' | Richardson Fire Protection';
@@ -307,6 +328,7 @@ function rfp_get_page_seo() {
                 } else {
                     $seo['title']       = get_the_title() . ' | Richardson Fire Protection';
                     $seo['description'] = wp_strip_all_tags( wp_trim_words( get_the_content(), 30 ) );
+                    $seo['schema_type'] = 'page_generic';
                 }
         }
 
@@ -437,6 +459,14 @@ function rfp_schema_markup() {
     $biz    = rfp_business_data();
     $seo    = rfp_get_page_seo();
     $graphs = [];
+
+    // Article schema types — defined here so BreadcrumbList and TechArticle blocks both see it
+    $rfp_article_schema_types = [
+        'article_tech',
+        'nfpa25_guide', 'article_13r_vs_13', 'high_piled_guide',
+        'ca_fire_code_guide', 'wui_guide', 'permit_guide', 'esfr_guide',
+        'nfpa13_guide', 'how_sprinklers_work', 'fire_pump_guide', 'installation_timeline',
+    ];
 
     // ── WebSite (sitelinks searchbox) — all pages ───────────────────
     $graphs[] = [
@@ -964,8 +994,42 @@ function rfp_schema_markup() {
         ];
     }
 
+    // ── Person Schema — about page ───────────────────────────────────
+    if ( $seo['schema_type'] === 'about' && is_singular() ) {
+        $graphs[] = [
+            '@type'         => 'Person',
+            '@id'           => home_url('/#founder'),
+            'name'          => 'Chris Richardson',
+            'jobTitle'      => 'Owner and Fire Protection Contractor',
+            'worksFor'      => [ '@id' => home_url('/#localbusiness') ],
+            'description'   => 'Chris Richardson is the owner of Richardson Fire Protection Inc., a CSLB C-16 licensed fire sprinkler contractor serving Sacramento Valley with 20+ years of Northern California fire protection experience.',
+            'url'           => home_url('/about/'),
+            'knowsAbout'    => [ 'NFPA 13', 'NFPA 13R', 'NFPA 20', 'NFPA 25', 'NFPA 72', 'California Fire Code', 'AHJ Permit Coordination', 'Hydraulic Calculations', 'Fire Pump Design', 'High-Piled Storage Fire Protection' ],
+            'hasCredential' => [
+                [
+                    '@type'              => 'EducationalOccupationalCredential',
+                    'name'               => 'CSLB C-16 Fire Protection Contractor License #1053506',
+                    'credentialCategory' => 'license',
+                    'recognizedBy'       => [ '@type' => 'Organization', 'name' => 'California Contractors State License Board' ],
+                ],
+                [
+                    '@type'              => 'EducationalOccupationalCredential',
+                    'name'               => 'NICET Level II Fire Protection Engineering Technology',
+                    'credentialCategory' => 'certification',
+                    'recognizedBy'       => [ '@type' => 'Organization', 'name' => 'National Institute for Certification in Engineering Technologies' ],
+                ],
+                [
+                    '@type'              => 'EducationalOccupationalCredential',
+                    'name'               => 'California State Fire Marshal Contractor Registration',
+                    'credentialCategory' => 'registration',
+                    'recognizedBy'       => [ '@type' => 'Organization', 'name' => 'California State Fire Marshal' ],
+                ],
+            ],
+        ];
+    }
+
     // ── WebPage + Speakable for hub / guide pages ────────────────────
-    $speakable_page_types = [ 'services_hub', 'ahj_comparison', 'cost_guide', 'fire_pump_hub', 'emergency_repair', 'inspection_testing' ];
+    $speakable_page_types = [ 'services_hub', 'ahj_comparison', 'cost_guide', 'fire_pump_hub', 'emergency_repair', 'inspection_testing', 'locations_hub' ];
     if ( in_array( $seo['schema_type'], $speakable_page_types, true ) && is_singular() ) {
         $page_url = get_permalink();
         $graphs[] = [
@@ -981,7 +1045,6 @@ function rfp_schema_markup() {
     }
 
     // ── TechArticle for static article page templates ────────────────
-    $rfp_article_schema_types = [ 'article_tech', 'nfpa13_guide', 'how_sprinklers_work', 'fire_pump_guide', 'installation_timeline' ];
     if ( in_array( $seo['schema_type'], $rfp_article_schema_types, true ) && is_singular('page') ) {
         $page_url = get_permalink();
         $pid      = get_queried_object_id();
@@ -1213,6 +1276,98 @@ function rfp_schema_markup() {
               'a' => 'A typical commercial TI takes 4–8 weeks from design start to AHJ final inspection: 1–2 weeks for design, 2–4 weeks for plan check (over-the-counter review when available), 2–5 days for rough-in and trim-out, and 1–2 weeks to schedule the final inspection. The GC\'s ceiling finish schedule is often the critical path, not the sprinkler work.' ],
             [ 'q' => 'What is the fastest way to get a fire sprinkler permit in Sacramento Valley?',
               'a' => 'The fastest path is: engage the sprinkler contractor early before CDs are finalized; submit a complete first package with all required AHJ-specific forms, stamped calculations, and material submittals to avoid correction cycles; use over-the-counter review when available for small TIs; and in jurisdictions like Roseville or Lodi, direct communication with the fire marshal can resolve minor issues in hours instead of weeks.' ],
+        ],
+        'nfpa25_guide' => [
+            [ 'q' => 'What is NFPA 25 and why does it matter?',
+              'a' => 'NFPA 25 is the Standard for the Inspection, Testing, and Maintenance of Water-Based Fire Protection Systems. It establishes legally enforceable minimum frequencies for inspecting and testing fire sprinklers, standpipes, fire pumps, and backflow preventers. California AHJs reference NFPA 25 in enforcement actions, and California SB 1205 (2018) requires CSFM-certified annual inspection records for all commercial and multifamily buildings.' ],
+            [ 'q' => 'Is NFPA 25 inspection required in California?',
+              'a' => 'Yes. California Fire Code Section 901.6 requires all fire protection systems to be maintained per NFPA 25. SB 1205 adds a state-level requirement that annual inspection records be submitted to the California State Fire Marshal (CSFM). Building owners who cannot produce current inspection records face enforcement action from their local AHJ.' ],
+            [ 'q' => 'What does an NFPA 25 annual inspection include?',
+              'a' => 'A full NFPA 25 annual inspection covers: visual inspection of all sprinkler heads for corrosion, paint, and damage; control valve position and tamper switch testing; waterflow alarm testing; main drain test; inspection of hangers, pipe supports, and signage; gauge inspection; and for systems with fire pumps, annual pump performance testing. The inspector delivers a written report documenting any deficiencies.' ],
+            [ 'q' => 'Can a building owner perform their own NFPA 25 inspection in California?',
+              'a' => 'No. California requires that fire protection system inspections be performed by a CSLB C-16 licensed contractor with a CSFM contractor registration. Self-inspection does not satisfy SB 1205 and will not produce the required certification record. Richardson holds CSLB C-16 #1053506 and is CSFM-registered to provide compliant NFPA 25 inspections throughout Sacramento Valley.' ],
+            [ 'q' => 'How long does an NFPA 25 inspection take?',
+              'a' => 'For a typical commercial wet-pipe system, an annual NFPA 25 inspection takes 2–4 hours on-site. Buildings with dry-pipe valves, fire pumps, or standpipes take longer — often a half-day or full day — because these components require additional testing procedures. Richardson coordinates AHJ notification and schedules inspections to minimize disruption to your building operations.' ],
+        ],
+        'article_13r_vs_13' => [
+            [ 'q' => 'Do California apartments require NFPA 13 or NFPA 13R?',
+              'a' => 'It depends on building height and type. California Building Code requires NFPA 13R for residential buildings up to 4 stories, and full NFPA 13 for buildings taller than 4 stories or with non-residential occupancies. Podium mixed-use buildings — retail or parking at the ground floor with residential above — often require full NFPA 13 because of the mixed occupancy.' ],
+            [ 'q' => 'What is the main difference between NFPA 13 and NFPA 13R?',
+              'a' => 'NFPA 13 requires complete sprinkler coverage throughout a building — every floor, every attic, every concealed combustible space. NFPA 13R allows sprinkler omissions in certain attic spaces, floor joist cavities, and small closets in residential buildings. This reduces materials and labor, lowering the installation cost. However, NFPA 13R is only available for residential occupancies up to 4 stories.' ],
+            [ 'q' => 'How much cheaper is NFPA 13R compared to NFPA 13 for apartment buildings?',
+              'a' => 'NFPA 13R can reduce fire sprinkler installation costs by 15–25% per unit compared to full NFPA 13 on a comparable building, primarily because attic and floor cavity sprinklers are omitted. For a 50-unit garden-style apartment, that savings can be $40,000–$80,000. Richardson can model both options for your project to show the actual cost difference.' ],
+            [ 'q' => 'What is the maximum building height for NFPA 13R in California?',
+              'a' => 'NFPA 13R applies to residential buildings up to and including 4 stories above grade. California Building Code also limits NFPA 13R to occupancies classified as R (residential) — R-1 hotels and motels, R-2 apartments, and similar. A 5-story apartment building must use full NFPA 13, which requires complete coverage including all attic and concealed spaces.' ],
+        ],
+        'high_piled_guide' => [
+            [ 'q' => 'What storage height triggers high-piled storage requirements in California?',
+              'a' => 'California Fire Code Chapter 32 defines high-piled storage as solid-piled, palletized, rack, bin box, or shelf storage exceeding 12 feet in height. For Group A plastics (the most hazardous commodity class), the threshold drops to 6 feet. Once triggered, the building owner must comply with CFC Chapter 32 requirements including a high-piled storage permit and an approved fire protection plan.' ],
+            [ 'q' => 'Do I need ESFR or in-rack sprinklers for my warehouse?',
+              'a' => 'ESFR (Early Suppression Fast Response) ceiling sprinklers can protect most palletized and rack storage commodities up to 40–45 feet of ceiling height when the commodity class and rack configuration fall within the K-25 or K-33 ESFR design criteria. In-rack sprinklers are required for high-pile storage that exceeds ESFR capacity — such as very high storage of Group A plastics — or where multiple levels of in-rack heads are needed. Richardson performs the commodity and design analysis to determine the right system.' ],
+            [ 'q' => 'What is a commodity classification and why does fire protection require one?',
+              'a' => 'A commodity classification is a formal analysis of stored goods based on combustibility, packaging, and configuration, assigning them to NFPA 13 classes (I–IV) or plastic groups (A, B, C). The classification determines the required sprinkler density and system design. Misclassifying stored goods — even inadvertently — can result in an under-designed system that fails to control a fire. Richardson performs commodity classification as part of every warehouse fire protection project.' ],
+            [ 'q' => 'Do I need a new fire protection permit if I change my warehouse racking layout?',
+              'a' => 'Yes, in most cases. CFC Chapter 32 requires AHJ approval for any change to storage height, commodity type, or rack configuration that affects the fire protection design. You must submit a revised high-piled storage plan showing the new layout and confirm your sprinkler system still meets NFPA 13 for the new storage scenario. Richardson handles revised plan submittals for warehouse reconfigurations throughout Sacramento Valley.' ],
+            [ 'q' => 'How long does a high-piled storage fire protection permit take in Sacramento Valley?',
+              'a' => 'High-piled storage plan check in Sacramento Valley typically takes 4–8 weeks, with Sacramento City FD and Stockton FD on the longer end for large industrial projects. Submitting a complete package — commodity classification analysis, rack layout drawings, hydraulic calculations, and cut sheets — on the first attempt is the best way to avoid correction cycles and delays.' ],
+        ],
+        'ca_fire_code_guide' => [
+            [ 'q' => 'How often does the California Fire Code change?',
+              'a' => 'California adopts a new fire code on a 3-year cycle, synchronized with the International Fire Code publication schedule. The 2025 California Fire Code (effective January 1, 2026) is the current enforced edition. California\'s adoption always lags 1–3 years behind the most recent NFPA editions, so there is often a gap between what NFPA publishes and what California enforces.' ],
+            [ 'q' => 'What are the key sprinkler-related changes in the 2025 California Fire Code?',
+              'a' => 'The 2025 CFC incorporates the 2022 edition of NFPA 13 by reference, which updates sprinkler coverage requirements for concealed spaces, modifies rack storage design criteria, and introduces new extended coverage sprinkler requirements. The 2025 CFC also expands WUI overlay zones in many Northern California counties and tightens SB 1205 reporting deadlines for commercial building owners.' ],
+            [ 'q' => 'Does Sacramento City enforce the 2025 California Fire Code?',
+              'a' => 'Yes. Sacramento City FD and most other Sacramento Valley AHJs adopted the 2025 CFC effective January 1, 2026. Some jurisdictions may have local amendments; Sacramento County and Stockton City have historically adopted the statewide CFC without significant local modifications. Richardson monitors AHJ adoption status so your project uses the correct code edition.' ],
+            [ 'q' => 'What changed for warehouse fire protection in the 2025 CFC?',
+              'a' => 'The 2025 CFC (via NFPA 13-2022) updated rack storage protection criteria for Group A plastics and clarified when ESFR systems can be used as an alternative to in-rack systems. It also introduced new requirements for automated storage and retrieval systems (ASRS) that were not addressed in prior editions. Buildings permitted before January 1, 2026 use the prior edition; new permits must comply with 2025 CFC.' ],
+            [ 'q' => 'Can local AHJs amend the California Fire Code?',
+              'a' => 'Yes. California Health & Safety Code allows local jurisdictions to adopt amendments to the statewide CFC that are at least as restrictive. Common local amendments include lower occupancy thresholds for sprinkler requirements and additional WUI construction measures. Richardson tracks local amendments for all seven Sacramento Valley AHJs we serve, ensuring every project meets the jurisdiction-specific requirements.' ],
+        ],
+        'wui_guide' => [
+            [ 'q' => 'What is a WUI zone in California and does my property fall in one?',
+              'a' => 'WUI stands for Wildland-Urban Interface — areas where structures and other human development meet or intermingle with undeveloped wildland vegetation. California\'s State Responsibility Area (SRA) designates lands where the state bears primary fire protection responsibility; Local Responsibility Area (LRA) Very High Fire Hazard Severity Zones (VHFHSZ) are declared by cities and counties. To find out if your property is in a WUI zone, check Cal Fire\'s online FHSZ viewer or contact your local fire department.' ],
+            [ 'q' => 'Does being in a WUI zone require fire sprinklers for new construction?',
+              'a' => 'CBC Chapter 7A requires fire-resistance and ignition-resistance measures for new construction in SRA and VHFHSZ zones, but does not by itself mandate fire sprinklers unless local amendments require them. However, many California cities — including areas of Placer and El Dorado Counties in the Sacramento Valley — have adopted local ordinances requiring NFPA 13D sprinklers in new single-family homes in designated WUI areas.' ],
+            [ 'q' => 'How do WUI zones affect fire sprinkler system design?',
+              'a' => 'In WUI areas, NFPA 13D systems may need to address exterior exposure hazards that are not typical in urban construction, including extended water supply duration (from a larger storage tank) and heads positioned to protect eaves and decks. Some California jurisdictions with WUI overlays require attic sprinklers under CBC Chapter 7A, which are not standard in NFPA 13D systems. Richardson designs WUI-compliant systems for Sacramento Valley foothills projects.' ],
+            [ 'q' => 'Does Rocklin or Placer County require fire sprinklers for WUI homes?',
+              'a' => 'Placer County has active WUI overlay zones in its unincorporated foothills areas. New construction in State Responsibility Areas (SRA) of Placer County is subject to CBC Chapter 7A ignition-resistant construction, and local amendment may require NFPA 13D sprinklers. Rocklin city limits fall in a Local Responsibility Area; check with Rocklin Fire Department for any VHFHSZ local amendments on your specific project.' ],
+            [ 'q' => 'How much do WUI requirements add to NFPA 13D system cost?',
+              'a' => 'WUI requirements add approximately 10–25% to a standard NFPA 13D residential system cost, depending on the specific local amendments and the presence of attic or exterior sprinklers. A standard NFPA 13D system for a 2,500 sq ft home in Sacramento runs $4,000–$9,000; WUI-enhanced systems run $5,500–$12,000. Richardson itemizes WUI-specific requirements in every bid so you understand what each line item is for.' ],
+        ],
+        'permit_guide' => [
+            [ 'q' => 'How long does fire sprinkler plan check take at Sacramento City Fire Department?',
+              'a' => 'Sacramento City FD (SCFD) typically takes 3–5 weeks for a first-submittal commercial fire sprinkler plan check. Projects with corrections require a re-submittal cycle of 2–3 additional weeks. Over-the-counter same-day review is available for small tenant improvements (under 2,500 sq ft with limited scope). Richardson designs to SCFD\'s standard plan check checklist to pass on the first attempt.' ],
+            [ 'q' => 'Can I submit fire sprinkler plans digitally to Sacramento City Fire Department?',
+              'a' => 'Yes. SCFD accepts digital plan submittals through the City\'s Accela online portal. All drawings, hydraulic calculations, cut sheet packages, and permit applications are submitted electronically. Richardson uses digital submittal for all Sacramento City projects to speed processing and track plan check status in real time.' ],
+            [ 'q' => 'What are the most common fire sprinkler plan check corrections in Sacramento?',
+              'a' => 'Common first-round corrections from Sacramento Valley AHJs include: missing or incomplete hydraulic calculation basis of design; flow test report older than 1 year; sprinkler head spacing exceeding coverage limits; missing seismic bracing calculations or details; incorrect occupancy or hazard classification; missing escutcheon and cover plate cut sheets; and incomplete valve schedule. Richardson\'s NICET-certified team produces first-pass-compliant submittals to avoid these delays.' ],
+            [ 'q' => 'Do I need a C-16 license to submit fire sprinkler plans in California?',
+              'a' => 'Yes. California Business & Professions Code requires a CSLB C-16 (Fire Protection Contractor) license for all fire sprinkler design, installation, and modification. Permit applications must list a licensed C-16 contractor. Additionally, plans must be prepared or reviewed by a CSFM-registered contractor. Richardson holds CSLB C-16 #1053506 and CSFM registration, satisfying both requirements.' ],
+            [ 'q' => 'Can Richardson handle the entire fire sprinkler permit process end-to-end?',
+              'a' => 'Yes. Richardson is a full design-build contractor. We produce the hydraulic calculations and stamped drawings, compile the complete submittal package, submit to the AHJ, respond to all plan check comments, pull the permit, install the system, and coordinate the final inspection. Building owners and GCs have a single point of contact from design through certificate of completion.' ],
+        ],
+        'esfr_guide' => [
+            [ 'q' => 'What is the minimum ceiling height required for ESFR sprinklers?',
+              'a' => 'ESFR systems require a minimum ceiling height of approximately 25 feet (generally measured at the sprinkler deflector) to develop the required suppression pattern. K-25 ESFR heads are designed for rack storage up to 40 feet below the ceiling, and K-33 heads extend that protection to approximately 45 feet of ceiling height. Low-bay warehouses under 25 feet should use a different system design approach.' ],
+            [ 'q' => 'When does NFPA 13 require in-rack sprinklers instead of ESFR?',
+              'a' => 'In-rack sprinklers are required when commodity class, storage height, or rack configuration exceeds what ESFR ceiling sprinklers can protect. Common scenarios include: Group A plastic storage in high-rise racks above 40 ft; multi-tier open-rack storage that exceeds ESFR K-factor tables; and any configuration where the storage arrangement creates a horizontal barrier that ESFR water cannot penetrate. Richardson reviews your storage design and prescribes the minimum-cost compliant solution.' ],
+            [ 'q' => 'How does commodity classification affect the choice between ESFR and in-rack systems?',
+              'a' => 'ESFR systems are specifically designed for certain commodity classes and storage configurations. K-25 ESFR heads (the most common) can protect Group A plastics on pallets and standard rack storage up to NFPA 13 table limits. Higher K-factor ESFR heads extend protection to more challenging scenarios. For truly high-hazard commodities — encapsulated Group A plastics, aerosols, or flammable liquids — in-rack sprinklers are typically the only compliant option regardless of ceiling height.' ],
+            [ 'q' => 'Can I switch from an in-rack system to ESFR if I raise my warehouse roof?',
+              'a' => 'Potentially yes, if the new ceiling height and commodity class fall within ESFR design criteria. However, this requires a new hydraulic calculation, a full NFPA 13 re-design, AHJ permit submittal, and an acceptance test of the new system. Richardson has managed ESFR conversion projects for Sacramento Valley warehouse owners and can evaluate the technical and cost feasibility of switching your system.' ],
+            [ 'q' => 'How much does ESFR sprinkler installation cost in California?',
+              'a' => 'ESFR installations in California warehouses typically run $2.50–$4.50 per square foot, compared to $1.80–$3.50 for standard wet-pipe systems in the same space. The premium reflects larger pipe sizes (driven by high flow demands), specialized K-25 or K-33 heads, and more robust seismic bracing. In-rack systems add $0.80–$2.00 per square foot on top of the ceiling system. Richardson provides itemized ESFR bids within 48 hours of receiving your plans.' ],
+        ],
+        'locations_hub' => [
+            [ 'q' => 'What cities does Richardson Fire Protection serve?',
+              'a' => 'Richardson Fire Protection serves the greater Sacramento Valley, including Sacramento, Elk Grove, Roseville, Rocklin, Stockton, Fairfield, Yuba City, Davis, Folsom, Rancho Cordova, Citrus Heights, West Sacramento, Woodland, Auburn, and Lincoln. We cover all seven AHJ jurisdictions in our service area for new construction, tenant improvements, inspection, and emergency repair.' ],
+            [ 'q' => 'Does Richardson serve both Sacramento City and Sacramento County?',
+              'a' => 'Yes. Richardson works under both Sacramento City Fire Department (SCFD) jurisdiction for projects within city limits, and Sacramento County Fire for unincorporated county areas. Each AHJ has its own plan check process and permit fees. Richardson\'s team is experienced with both jurisdictions and handles submittal and AHJ coordination for projects in either area.' ],
+            [ 'q' => 'Can Richardson coordinate permits with multiple AHJs on the same project or portfolio?',
+              'a' => 'Yes. Richardson regularly manages projects for clients with buildings in multiple Sacramento Valley cities — each with its own AHJ. We maintain relationships with plan check staff at all seven primary AHJs in our service area, submit to each jurisdiction in the correct format, and track permit status across multiple active submittals simultaneously.' ],
+            [ 'q' => 'How far does Richardson travel for fire sprinkler projects?',
+              'a' => 'Our primary service area is the greater Sacramento Valley — roughly a 60-mile radius from Antelope, CA. We regularly serve Sacramento, Stockton, Roseville, Rocklin, Fairfield, Yuba City, and Davis. For larger projects, we also work in the San Francisco Bay Area, Modesto, and other Northern California locations. Call (916) 849-6441 to discuss your project location.' ],
         ],
     ];
 
