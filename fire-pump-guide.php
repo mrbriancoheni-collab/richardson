@@ -45,7 +45,7 @@ $biz = rfp_business_data();
         <div class="reveal-up" style="margin-bottom: 3rem;">
           <h2 style="font-family: 'Oswald', sans-serif; font-size: 1.6rem; color: var(--c-white); margin-bottom: 1rem;">When Does a Building Require a Fire Pump?</h2>
           <p style="color: var(--c-text-secondary); line-height: 1.85;">
-            A fire pump is required whenever the available water supply — measured at the point of connection to the sprinkler system — cannot deliver both the required pressure and flow rate that the hydraulic calculation demands. NFPA 13 requires this comparison on every new system: the water supply curve (from a physical flow test) must envelope the system demand curve (from the hydraulic calculation). If the supply falls short, a fire pump must make up the difference.
+            A fire pump is required whenever the available water supply — measured at the point of connection to the sprinkler system — cannot deliver both the required pressure and flow rate that the hydraulic calculation demands. <a href="<?php echo esc_url( home_url( '/nfpa-13-fire-sprinkler-guide/' ) ); ?>" style="color: var(--c-red);">NFPA 13</a> requires this comparison on every new system: the water supply curve (from a physical flow test) must envelope the system demand curve (from the hydraulic calculation). If the supply falls short, a fire pump must make up the difference.
           </p>
           <p style="color: var(--c-text-secondary); line-height: 1.85;">
             The most common scenarios requiring a fire pump in Sacramento Valley include:
@@ -209,7 +209,7 @@ $biz = rfp_business_data();
         <div class="reveal-up" style="margin-bottom: 3rem;">
           <h2 style="font-family: 'Oswald', sans-serif; font-size: 1.6rem; color: var(--c-white); margin-bottom: 1rem;">NFPA 25 Annual Testing for Fire Pumps</h2>
           <p style="color: var(--c-text-secondary); line-height: 1.85;">
-            After installation, fire pumps enter the NFPA 25 inspection, testing, and maintenance (ITM) cycle. The testing requirements for fire pumps are more frequent than for the rest of the sprinkler system:
+            After installation, fire pumps enter the <a href="<?php echo esc_url( home_url( '/inspection-testing/' ) ); ?>" style="color: var(--c-red);">NFPA 25 inspection, testing, and maintenance (ITM) cycle</a>. The testing requirements for fire pumps are more frequent than for the rest of the sprinkler system:
           </p>
           <ul style="color: var(--c-text-secondary); line-height: 1.85; padding-left: 1.5rem; margin: 1rem 0; display: flex; flex-direction: column; gap: 0.6rem;">
             <li><strong style="color: var(--c-white);">Weekly no-flow (churn) test</strong> — The pump runs for a minimum of 10 minutes (electric) or 30 minutes (diesel) with no water discharged. Suction and discharge pressures are recorded and compared to the baseline established at acceptance testing.</li>

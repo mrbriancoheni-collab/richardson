@@ -20,7 +20,7 @@ $biz = rfp_business_data();
       <div class="container hero-container" style="align-items: flex-start; padding-top: 3rem;">
         <div class="hero-badge reveal-up">
           <span class="badge-dot"></span>
-          NFPA Technical Guide &mdash; Updated 2025
+          NFPA Technical Guide &mdash; Updated 2026
         </div>
         <h1 class="hero-title reveal-up">
           What is <span class="hero-title--accent">NFPA 13</span>?<br />The Complete Guide
@@ -48,7 +48,7 @@ $biz = rfp_business_data();
             NFPA 13, <em>Standard for the Installation of Sprinkler Systems</em>, is published by the National Fire Protection Association and is updated on a three-year code cycle. The current edition referenced by most California AHJs is the 2022 edition, which California adopted as part of the 2022 California Fire Code (effective January 1, 2023).
           </p>
           <p style="color: var(--c-text-secondary); line-height: 1.85;">
-            NFPA 13 covers everything from pipe material selection and system design methodology to water supply requirements, hydraulic calculation procedures, and final testing protocols. Every fire sprinkler contractor in California must hold a CSLB C-16 license to design, install, or modify a system governed by NFPA 13.
+            NFPA 13 covers everything from pipe material selection and system design methodology to water supply requirements, hydraulic calculation procedures, and final testing protocols. Every fire sprinkler contractor in California must hold a CSLB C-16 license to design, install, or modify a system governed by NFPA 13. Once installed, every system enters the <a href="<?php echo esc_url( home_url( '/nfpa-25-inspection-guide/' ) ); ?>" style="color: var(--c-red);">NFPA 25 inspection and testing cycle</a>.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ $biz = rfp_business_data();
             <li><strong style="color: var(--c-white);">Tenant improvements in sprinklered buildings</strong> — any TI that alters the ceiling plan must coordinate with the existing NFPA 13 system design.</li>
           </ul>
           <p style="color: var(--c-text-secondary); line-height: 1.85;">
-            NFPA 13 does <em>not</em> apply to residential buildings where NFPA 13R (up to 4 stories) or NFPA 13D (one- and two-family dwellings) is the appropriate standard.
+            NFPA 13 does <em>not</em> apply to residential buildings where NFPA 13R (up to 4 stories) or NFPA 13D (one- and two-family dwellings) is the appropriate standard. See our <a href="<?php echo esc_url( home_url( '/nfpa-13r-vs-13-apartment-sprinklers/' ) ); ?>" style="color: var(--c-red);">NFPA 13R vs. NFPA 13 comparison guide</a> for the full breakdown.
           </p>
         </div>
 
@@ -157,7 +157,7 @@ $biz = rfp_business_data();
             <li><strong style="color: var(--c-white);">SB 1205</strong> — Requires annual inspection certification records to be submitted to the State Fire Marshal for all commercial properties.</li>
           </ul>
           <p style="color: var(--c-text-secondary); line-height: 1.85;">
-            Richardson's designers verify the specific AHJ's adopted code on every project. Sacramento City FD, Roseville FD, Stockton FD, and the other AHJs in our service area each have specific requirements that affect design, submittal format, and inspection procedures.
+            Richardson's designers verify the specific AHJ's adopted code on every project. Sacramento City FD, Roseville FD, Stockton FD, and the other AHJs in our service area each have specific requirements that affect design, submittal format, and inspection procedures. See our <a href="<?php echo esc_url( home_url( '/ahj-comparison/' ) ); ?>" style="color: var(--c-red);">AHJ plan check timeline comparison</a> for permit review times by jurisdiction.
           </p>
         </div>
 

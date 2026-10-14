@@ -92,7 +92,7 @@ $phone = $biz['phone'] ?? '(916) 849-6441';
         <div class="section-header reveal-up">
           <div class="section-badge">What We Repair</div>
           <h2 class="section-title">Common <span class="text-accent">Emergency Repairs</span></h2>
-          <p class="section-desc">Every repair type stocked on our service trucks for same-day resolution.</p>
+          <p class="section-desc">Every repair type stocked on our service trucks for same-day resolution. Not an emergency? Schedule a <a href="<?php echo esc_url( home_url( '/inspection-testing/' ) ); ?>" style="color: var(--c-red);">routine NFPA 25 inspection</a> to catch issues before they become one.</p>
         </div>
         <div class="services-grid reveal-up">
           <?php

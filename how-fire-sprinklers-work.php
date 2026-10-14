@@ -161,13 +161,13 @@ $biz = rfp_business_data();
         <div class="reveal-up" style="margin-bottom: 3rem;">
           <h2 style="font-family: 'Oswald', sans-serif; font-size: 1.6rem; color: var(--c-white); margin-bottom: 1rem;">Water Supply and the Role of Fire Pumps</h2>
           <p style="color: var(--c-text-secondary); line-height: 1.85;">
-            A sprinkler system is only as effective as its water supply. NFPA 13 requires a hydraulic calculation — a computer-modeled analysis — to verify that the water supply can deliver the required water density (measured in gallons per minute per square foot) over the most hydraulically demanding design area in the building.
+            A sprinkler system is only as effective as its water supply. <a href="<?php echo esc_url( home_url( '/nfpa-13-fire-sprinkler-guide/' ) ); ?>" style="color: var(--c-red);">NFPA 13</a> requires a hydraulic calculation — a computer-modeled analysis — to verify that the water supply can deliver the required water density (measured in gallons per minute per square foot) over the most hydraulically demanding design area in the building.
           </p>
           <p style="color: var(--c-text-secondary); line-height: 1.85;">
             The water supply analysis starts with a physical flow test at the water main: static pressure (the pressure when no water is flowing), residual pressure (the pressure when flow is occurring), and pitot pressure (a measure of actual flow rate). These three values are plotted on a water supply curve and compared against the system demand curve produced by the hydraulic calculation.
           </p>
           <p style="color: var(--c-text-secondary); line-height: 1.85;">
-            When the public water supply cannot meet the system's demand — common in multi-story buildings, large warehouse occupancies, and buildings served by aging water mains — NFPA 13 requires a <strong style="color: var(--c-white);">fire pump</strong>, installed per NFPA 20. Fire pumps boost system pressure to ensure adequate flow at the most remote sprinkler heads, even under fire conditions when other demands on the water system are high.
+            When the public water supply cannot meet the system's demand — common in multi-story buildings, large warehouse occupancies, and buildings served by aging water mains — NFPA 13 requires a <strong style="color: var(--c-white);">fire pump</strong>, installed per NFPA 20. Fire pumps boost system pressure to ensure adequate flow at the most remote sprinkler heads, even under fire conditions when other demands on the water system are high. See our <a href="<?php echo esc_url( home_url( '/fire-pump-installation-guide/' ) ); ?>" style="color: var(--c-red);">fire pump installation guide</a> for sizing, cost, and NFPA 20 requirements.
           </p>
         </div>
 
@@ -199,7 +199,7 @@ $biz = rfp_business_data();
             <li><strong style="color: var(--c-white);">Dry-pipe trip test</strong> — On dry-pipe systems, the valve is tripped to verify that air pressure releases correctly and water fills the system within the required time.</li>
           </ul>
           <p style="color: var(--c-text-secondary); line-height: 1.85;">
-            After installation and acceptance, the system enters the NFPA 25 annual inspection and testing cycle. NFPA 25 requires progressively deeper inspections over a 5-year cycle, culminating in an internal pipe inspection (obstruction investigation) in year 5.
+            After installation and acceptance, the system enters the <a href="<?php echo esc_url( home_url( '/inspection-testing/' ) ); ?>" style="color: var(--c-red);">NFPA 25 annual inspection and testing cycle</a>. NFPA 25 requires progressively deeper inspections over a 5-year cycle, culminating in an internal pipe inspection (obstruction investigation) in year 5.
           </p>
         </div>
 

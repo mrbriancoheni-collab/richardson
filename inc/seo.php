@@ -196,13 +196,13 @@ function rfp_get_page_seo() {
 
             case 'cost-guide':
             case 'fire-sprinkler-cost-guide':
-                $seo['title']       = 'Fire Sprinkler Cost Guide 2025 — California Pricing by Building Type | Richardson';
-                $seo['description'] = 'Fire sprinkler installation cost estimates by building type in California — office, retail, warehouse, multifamily, and more. 2025 pricing data from Richardson Fire Protection, Sacramento.';
+                $seo['title']       = 'Fire Sprinkler Cost Guide 2026 — California Pricing by Building Type | Richardson';
+                $seo['description'] = 'Fire sprinkler installation cost estimates by building type in California — office, retail, warehouse, multifamily, and more. 2026 pricing data from Richardson Fire Protection, Sacramento.';
                 $seo['schema_type'] = 'cost_guide';
                 break;
 
             case 'nfpa-25-inspection-guide':
-                $seo['title']       = 'NFPA 25 Fire Sprinkler Inspection Guide California 2025 | Richardson Fire Protection';
+                $seo['title']       = 'NFPA 25 Fire Sprinkler Inspection Guide California 2026 | Richardson Fire Protection';
                 $seo['description'] = 'Complete NFPA 25 inspection guide for California — inspection frequencies, SB 1205 requirements, what inspectors check, and how to choose a certified fire sprinkler inspector.';
                 $seo['schema_type'] = 'article_tech';
                 $seo['type']        = 'article';
@@ -230,14 +230,14 @@ function rfp_get_page_seo() {
                 break;
 
             case 'wui-sprinklers':
-                $seo['title']       = 'WUI Fire Sprinkler Requirements California 2025: Builders\' Guide | Richardson';
-                $seo['description'] = 'California WUI fire sprinkler requirements — SRA/LRA zones, CBC Chapter 7A, NFPA 13D mandates, and local WUI requirements in Placer and Sacramento Counties. 2025 update.';
+                $seo['title']       = 'WUI Fire Sprinkler Requirements California 2026: Builders\' Guide | Richardson';
+                $seo['description'] = 'California WUI fire sprinkler requirements — SRA/LRA zones, CBC Chapter 7A, NFPA 13D mandates, and local WUI requirements in Placer and Sacramento Counties. 2026 update.';
                 $seo['schema_type'] = 'article_tech';
                 $seo['type']        = 'article';
                 break;
 
             case 'permit-guide-sacramento':
-                $seo['title']       = 'Fire Sprinkler Permit Process in Sacramento 2025: Step-by-Step Guide | Richardson';
+                $seo['title']       = 'Fire Sprinkler Permit Process in Sacramento 2026: Step-by-Step Guide | Richardson';
                 $seo['description'] = 'How to get a fire sprinkler permit in Sacramento — SCFD plan check, Accela digital submittal, typical timelines, common corrections, and how Richardson streamlines the process.';
                 $seo['schema_type'] = 'article_tech';
                 $seo['type']        = 'article';
@@ -267,16 +267,16 @@ function rfp_get_page_seo() {
 
             case 'nfpa-13-fire-sprinkler-guide':
             case 'nfpa-13-guide':
-                $seo['title']       = 'What is NFPA 13? The Complete 2025 Guide for Building Owners & GCs | Richardson';
+                $seo['title']       = 'What is NFPA 13? The Complete 2026 Guide for Building Owners & GCs | Richardson';
                 $seo['description'] = 'NFPA 13 explained: what it covers, which buildings must comply, key requirements for sprinkler system design, and how California adopts and amends the standard. Written by a C-16 licensed contractor.';
-                $seo['schema_type'] = 'article_tech';
+                $seo['schema_type'] = 'nfpa13_guide';
                 $seo['type']        = 'article';
                 break;
 
             case 'how-fire-sprinklers-work':
                 $seo['title']       = 'How Does a Fire Sprinkler System Work? The Complete Explanation | Richardson';
                 $seo['description'] = 'How fire sprinklers activate, why only the head nearest the fire opens, wet-pipe vs. dry-pipe differences, and how the water supply and fire pump connect. Written by C-16 licensed contractor Chris Richardson.';
-                $seo['schema_type'] = 'article_tech';
+                $seo['schema_type'] = 'how_sprinklers_work';
                 $seo['type']        = 'article';
                 break;
 
@@ -284,14 +284,14 @@ function rfp_get_page_seo() {
             case 'fire-pump-guide':
                 $seo['title']       = 'Fire Pump Installation Guide: Sizing, Costs & NFPA 20 Requirements | Richardson';
                 $seo['description'] = 'When does a building require a fire pump? NFPA 20 pump room requirements, electric vs. diesel vs. vertical turbine options, installation timeline in Sacramento Valley, and cost ranges. C-16 licensed guide.';
-                $seo['schema_type'] = 'article_tech';
+                $seo['schema_type'] = 'fire_pump_guide';
                 $seo['type']        = 'article';
                 break;
 
             case 'fire-sprinkler-installation-timeline':
                 $seo['title']       = 'How Long Does Fire Sprinkler Installation Take? Phase-by-Phase Timeline | Richardson';
                 $seo['description'] = 'Fire sprinkler installation timeline broken down by phase — design, permit review, rough-in, trim-out, and final inspection. AHJ timelines by city in Sacramento Valley. Written by C-16 licensed contractor.';
-                $seo['schema_type'] = 'article_tech';
+                $seo['schema_type'] = 'installation_timeline';
                 $seo['type']        = 'article';
                 break;
 
@@ -395,14 +395,22 @@ function rfp_seo_meta() {
     echo "<meta property=\"og:site_name\"   content=\"Richardson Fire Protection\" />\n";
     echo "<meta property=\"og:locale\"      content=\"en_US\" />\n";
 
-    if ( $seo['type'] === 'article' && is_singular('post') ) {
-        $pub  = esc_attr( get_the_date('c') );
-        $mod  = esc_attr( get_the_modified_date('c') );
-        $auth = esc_attr( get_the_author() );
+    if ( $seo['type'] === 'article' && ( is_singular('post') || is_singular('page') ) ) {
+        if ( is_singular('post') ) {
+            $pub  = esc_attr( get_the_date('c') );
+            $mod  = esc_attr( get_the_modified_date('c') );
+            $auth = esc_attr( get_the_author() );
+        } else {
+            $pid  = get_queried_object_id();
+            $pub  = esc_attr( get_post_field( 'post_date', $pid, 'raw' ) );
+            $mod  = esc_attr( get_post_field( 'post_modified', $pid, 'raw' ) );
+            $auth = 'Chris Richardson';
+        }
         echo "<meta property=\"article:published_time\" content=\"{$pub}\" />\n";
         echo "<meta property=\"article:modified_time\"  content=\"{$mod}\" />\n";
         echo "<meta property=\"article:author\"         content=\"{$auth}\" />\n";
         echo "<meta property=\"article:section\"        content=\"Fire Protection\" />\n";
+        echo "<meta property=\"article:tag\"            content=\"NFPA, fire sprinkler, Sacramento, California fire code\" />\n";
     }
 
     // ── Twitter Card ────────────────────────────────────────────────
@@ -503,14 +511,22 @@ function rfp_schema_markup() {
             'NFPA 13 Fire Sprinkler Systems',
             'NFPA 13R Multifamily Sprinkler Systems',
             'NFPA 13D Residential Sprinkler Systems',
-            'NFPA 72 Fire Alarm Systems',
+            'NFPA 20 Fire Pump Installation',
             'NFPA 25 Inspection Testing and Maintenance',
+            'NFPA 72 Fire Alarm Systems',
             'Commercial Fire Protection',
             'Industrial Fire Suppression',
+            'Emergency Fire Sprinkler Repair',
             'AHJ Permit Coordination',
             'California Building Code Chapter 9',
+            'California Fire Code',
+            'California SB 1205 Compliance',
             'High-Piled Storage Fire Protection',
             'ESFR Sprinkler Systems',
+            'In-Rack Sprinkler Systems',
+            'Seismic Sprinkler Bracing',
+            'Hydraulic Calculation and System Design',
+            'Fire Sprinkler Installation Timelines',
             'Special Hazard Suppression Systems',
         ],
         'aggregateRating'    => [
@@ -638,12 +654,26 @@ function rfp_schema_markup() {
         if ( is_singular() ) {
             $post = get_queried_object();
             if ( is_singular('post') ) {
-                // Blog post: Home > Blog > Post Title
+                // Blog post: Home > Resources & Guides > Post Title
                 $crumbs[] = [
                     '@type'    => 'ListItem',
                     'position' => 2,
-                    'name'     => 'Blog',
-                    'item'     => get_permalink( get_option('page_for_posts') ) ?: home_url('/?page_for_posts'),
+                    'name'     => 'Resources & Guides',
+                    'item'     => home_url('/resources/'),
+                ];
+                $crumbs[] = [
+                    '@type'    => 'ListItem',
+                    'position' => 3,
+                    'name'     => get_the_title(),
+                    'item'     => get_permalink(),
+                ];
+            } elseif ( is_singular('page') && in_array( $seo['schema_type'], $rfp_article_schema_types, true ) ) {
+                // Article page: Home > Resources & Guides > Article Title
+                $crumbs[] = [
+                    '@type'    => 'ListItem',
+                    'position' => 2,
+                    'name'     => 'Resources & Guides',
+                    'item'     => home_url('/resources/'),
                 ];
                 $crumbs[] = [
                     '@type'    => 'ListItem',
@@ -951,7 +981,8 @@ function rfp_schema_markup() {
     }
 
     // ── TechArticle for static article page templates ────────────────
-    if ( $seo['schema_type'] === 'article_tech' && is_singular('page') ) {
+    $rfp_article_schema_types = [ 'article_tech', 'nfpa13_guide', 'how_sprinklers_work', 'fire_pump_guide', 'installation_timeline' ];
+    if ( in_array( $seo['schema_type'], $rfp_article_schema_types, true ) && is_singular('page') ) {
         $page_url = get_permalink();
         $pid      = get_queried_object_id();
         $graphs[] = [
@@ -962,11 +993,18 @@ function rfp_schema_markup() {
             'url'              => $page_url,
             'datePublished'    => get_post_field( 'post_date', $pid ),
             'dateModified'     => get_post_field( 'post_modified', $pid ),
+            'lastReviewed'     => '2026-10-01',
             'author'           => [
-                '@type'    => 'Person',
-                'name'     => 'Chris Richardson',
-                'jobTitle' => 'Fire Protection Engineer',
-                'worksFor' => [ '@id' => home_url('/#localbusiness') ],
+                '@type'       => 'Person',
+                'name'        => 'Chris Richardson',
+                'jobTitle'    => 'Fire Protection Contractor, NICET Level II',
+                'worksFor'    => [ '@id' => home_url('/#localbusiness') ],
+                'knowsAbout'  => [ 'NFPA 13', 'NFPA 20', 'NFPA 25', 'NFPA 72', 'California Fire Code', 'AHJ Permit Coordination' ],
+                'hasCredential' => [
+                    '@type'              => 'EducationalOccupationalCredential',
+                    'name'               => 'CSLB C-16 Fire Protection Contractor License #1053506',
+                    'credentialCategory' => 'license',
+                ],
             ],
             'publisher'        => [ '@id' => home_url('/#localbusiness') ],
             'image'            => [
@@ -979,11 +1017,12 @@ function rfp_schema_markup() {
             ],
             'speakable'        => [
                 '@type'       => 'SpeakableSpecification',
-                'cssSelector' => [ '.hero-desc', '.section-desc', '.faq-answer p', '.section-title' ],
+                'cssSelector' => [ '.hero-title', '.hero-desc', '.faq-answer p', '.section-title', '.section-desc' ],
             ],
             'articleSection'   => 'Fire Protection',
             'inLanguage'       => 'en-US',
             'about'            => [ '@id' => home_url('/#localbusiness') ],
+            'mentions'         => [ '@id' => home_url('/#localbusiness') ],
         ];
     }
 
@@ -1126,6 +1165,54 @@ function rfp_schema_markup() {
               'a' => 'Annual NFPA 25 inspection for a commercial building in Sacramento typically costs $200–$600 for a basic wet-pipe system. Buildings with dry-pipe, pre-action, or fire pump systems cost more due to additional testing procedures. Richardson provides flat-rate inspection contracts with no hidden fees and delivers written NFPA 25 reports upon completion.' ],
             [ 'q' => 'What is SB 1205 and does it apply to my Sacramento building?',
               'a' => 'SB 1205 (2018) requires all commercial and multi-family residential building owners in California to certify annual fire protection system inspections with the State Fire Marshal. Failure to certify can result in enforcement action by your local AHJ. Richardson provides SB 1205-compliant inspection reports submitted directly to the California State Fire Marshal database.' ],
+        ],
+        'nfpa13_guide' => [
+            [ 'q' => 'Is NFPA 13 mandatory in California?',
+              'a' => 'Yes. California Building Code Section 903 and the California Fire Code together mandate fire sprinkler systems for most new commercial construction. Most California cities and counties have adopted requirements even stricter than the CFC. Once a fire sprinkler system is required, it must comply with NFPA 13 (or NFPA 13R/13D for residential) as adopted by the local AHJ.' ],
+            [ 'q' => 'What is a hydraulic calculation and why is it required for NFPA 13?',
+              'a' => 'A hydraulic calculation is a computer-modeled analysis of water flow through every pipe in the sprinkler system, demonstrating that the most demanding design area will receive the required water density. California AHJs require stamped hydraulic calculations from a licensed C-16 contractor as part of the permit submittal package.' ],
+            [ 'q' => 'How often does NFPA 13 change?',
+              'a' => 'NFPA publishes a new edition of NFPA 13 every three years. California\'s adoption lag means the currently enforced edition may be 3–6 years behind the most recent NFPA publication. As of 2026, most California AHJs are enforcing the 2022 edition. Always verify with your local AHJ which edition applies to your project.' ],
+            [ 'q' => 'Does every floor of a building need fire sprinklers under NFPA 13?',
+              'a' => 'Generally yes. NFPA 13 requires complete sprinkler coverage throughout the building, including basements, attics above 55 inches (with limited exceptions), elevator shafts, and concealed combustible spaces. Some exceptions exist for small closets and certain exterior architectural features, but these are narrowly defined.' ],
+            [ 'q' => 'Who can design an NFPA 13 sprinkler system in California?',
+              'a' => 'A California CSLB C-16 (Fire Protection Contractor) license is required for all fire sprinkler design, installation, and modification work in California. Additionally, a CSFM contractor registration is required. Richardson holds both — CSLB C-16 #1053506 — and our design staff holds NICET certification for hydraulic calculations.' ],
+        ],
+        'how_sprinklers_work' => [
+            [ 'q' => 'Do all fire sprinkler heads go off at once?',
+              'a' => 'No. Each sprinkler head activates independently based on the heat in its immediate vicinity. Only the heads above or near the fire, where ceiling temperatures have reached the head\'s activation threshold, will open. In the vast majority of fires, fewer than four heads control the incident. This is why a properly designed NFPA 13 system causes far less water damage than a fire hose.' ],
+            [ 'q' => 'Does smoke set off fire sprinklers?',
+              'a' => 'No. Sprinkler heads are activated by heat, not smoke. The glass bulb in the head must reach a specific temperature — typically 135°F for ordinary-rated heads — before it shatters and allows water to discharge. Smoke detectors and pull stations may trigger the fire alarm panel, but they have no direct connection to the sprinkler heads.' ],
+            [ 'q' => 'How much water does a fire sprinkler head discharge?',
+              'a' => 'A standard commercial sprinkler head discharges approximately 13–26 gallons per minute (GPM) depending on system pressure and the head\'s K-factor. By comparison, a fire hose used by the fire department flows 100–250 GPM. Fire sprinklers are far more effective at minimizing water damage than waiting for fire department response — they apply precisely targeted water at low volume while the fire is still small.' ],
+            [ 'q' => 'Can a sprinkler head be accidentally activated?',
+              'a' => 'Yes, but it is rare and almost always caused by physical damage or installation error. Accidental discharge from thermal activation requires temperatures well above normal building conditions — ordinary-rated heads require 135°F at the bulb. Pre-action systems are specifically designed to protect spaces where even accidental water discharge would be catastrophic.' ],
+            [ 'q' => 'What maintenance does a fire sprinkler system require?',
+              'a' => 'NFPA 25 mandates a formal inspection, testing, and maintenance (ITM) program: weekly fire pump churn tests, monthly visual inspection, quarterly alarm valve inspections, annual full-system inspection and flow tests, and a 5-year internal pipe obstruction investigation. California SB 1205 requires annual certification records submitted to the State Fire Marshal.' ],
+        ],
+        'fire_pump_guide' => [
+            [ 'q' => 'When is a fire pump required under NFPA 13?',
+              'a' => 'A fire pump is required when the available water supply — measured at the building\'s point of connection — cannot deliver the pressure and flow rate the hydraulic calculation demands. This is commonly triggered in multi-story buildings, large warehouses with high-piled storage, and buildings served by aging water infrastructure.' ],
+            [ 'q' => 'What is the difference between an electric-drive and diesel-drive fire pump?',
+              'a' => 'An electric-drive fire pump uses a dedicated electrical feeder from the utility service entrance. It is simpler to maintain, lower in operating cost, and preferred by most California AHJs for urban buildings with reliable utility power. A diesel-drive pump uses an on-board engine with its own fuel supply, providing full independence from the electrical grid — required where electric supply reliability is insufficient.' ],
+            [ 'q' => 'How long does it take to get a fire pump installation permitted in Sacramento?',
+              'a' => 'From design start to permit issuance, expect 8–12 weeks in most Sacramento Valley jurisdictions: 2–3 weeks for design and water supply testing, 1 week for submittal preparation, and 3–6 weeks for AHJ plan check. Sacramento City FD averages 4 weeks for fire pump plan check; Roseville and Stockton are often 2–4 weeks.' ],
+            [ 'q' => 'What does an annual fire pump flow test involve?',
+              'a' => 'The annual NFPA 25 fire pump flow test measures pump performance at three points: churn (no flow), rated flow (100%), and 150% of rated flow. Suction pressure, discharge pressure, and flow rate are recorded at each point and compared to the pump\'s acceptance test baseline. California SB 1205 requires annual certification records including fire pump test data.' ],
+            [ 'q' => 'Can a fire pump be installed as part of a tenant improvement?',
+              'a' => 'Yes, but it requires coordination between the building owner, the C-16 contractor, the electrical contractor, and the AHJ. The fire pump room must meet NFPA 20 construction requirements (2-hour fire-rated), a dedicated electrical feeder must be added, and the existing sprinkler riser must be modified. Richardson manages fire pump TI installations as design-build projects under a single contract.' ],
+        ],
+        'installation_timeline' => [
+            [ 'q' => 'How long does fire sprinkler installation take in California?',
+              'a' => 'From design start to AHJ final inspection, most new commercial projects in Sacramento Valley take 3–5 months. The biggest variable is AHJ plan check, which ranges from 2 weeks (small projects, fast-turnaround AHJs like Roseville) to 6+ weeks (Sacramento City FD on large industrial projects with corrections). The actual rough-in installation is usually 2–6 weeks depending on building size.' ],
+            [ 'q' => 'How long does fire sprinkler permit review take in Sacramento?',
+              'a' => 'Sacramento City FD typically takes 3–5 weeks for fire sprinkler plan check. Projects with corrections take an additional 2–3 weeks per correction cycle. Over-the-counter review is available for small tenant improvements. Submitting complete, code-compliant documents on the first submittal is the best way to avoid delays.' ],
+            [ 'q' => 'Can fire sprinklers be installed while the building is occupied?',
+              'a' => 'Yes, with proper planning. NFPA 13 and the CFC allow work in occupied buildings, but require the AHJ to be notified when the system is impaired, and a fire watch must be established during system shutdowns exceeding 4 hours. Most AHJs require an impairment permit. Richardson coordinates impairment notifications and fire watch scheduling for occupied TI projects.' ],
+            [ 'q' => 'How long does a fire sprinkler tenant improvement take?',
+              'a' => 'A typical commercial TI takes 4–8 weeks from design start to AHJ final inspection: 1–2 weeks for design, 2–4 weeks for plan check (over-the-counter review when available), 2–5 days for rough-in and trim-out, and 1–2 weeks to schedule the final inspection. The GC\'s ceiling finish schedule is often the critical path, not the sprinkler work.' ],
+            [ 'q' => 'What is the fastest way to get a fire sprinkler permit in Sacramento Valley?',
+              'a' => 'The fastest path is: engage the sprinkler contractor early before CDs are finalized; submit a complete first package with all required AHJ-specific forms, stamped calculations, and material submittals to avoid correction cycles; use over-the-counter review when available for small TIs; and in jurisdictions like Roseville or Lodi, direct communication with the fire marshal can resolve minor issues in hours instead of weeks.' ],
         ],
     ];
 

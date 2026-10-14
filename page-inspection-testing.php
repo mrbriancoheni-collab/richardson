@@ -47,7 +47,7 @@ $phone = $biz['phone'] ?? '(916) 849-6441';
         <div class="section-header reveal-up">
           <div class="section-badge">NFPA 25 Requirements</div>
           <h2 class="section-title">What <span class="text-accent">NFPA 25</span> Requires</h2>
-          <p class="section-desc">Inspection and testing frequencies mandated by NFPA 25 and enforced by California AHJs under SB 1205.</p>
+          <p class="section-desc">Inspection and testing frequencies mandated by NFPA 25 and enforced by California AHJs under SB 1205. <a href="<?php echo esc_url( home_url( '/nfpa-25-inspection-guide/' ) ); ?>" style="color: var(--c-red);">Read our complete NFPA 25 guide</a> for a deeper explanation of each requirement.</p>
         </div>
         <div class="cost-table-wrap reveal-up">
           <table class="cost-table" style="width: 100%;">

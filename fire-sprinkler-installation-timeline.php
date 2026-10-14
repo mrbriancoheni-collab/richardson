@@ -133,7 +133,7 @@ $biz = rfp_business_data();
             </table>
           </div>
           <p style="color: var(--c-text-secondary); line-height: 1.85;">
-            Plan check corrections — where the AHJ returns the submittal with required changes — typically add 2–3 weeks per correction cycle. Richardson's designers are familiar with each AHJ's specific preferences and submission requirements, and our first-submittal correction rate is low as a result.
+            Plan check corrections — where the AHJ returns the submittal with required changes — typically add 2–3 weeks per correction cycle. Richardson's designers are familiar with each AHJ's specific preferences and submission requirements, and our first-submittal correction rate is low as a result. See our <a href="<?php echo esc_url( home_url( '/permit-guide-sacramento/' ) ); ?>" style="color: var(--c-red);">step-by-step Sacramento permit guide</a> for the full Accela submittal process.
           </p>
           <p style="color: var(--c-text-secondary); line-height: 1.85;">
             <strong style="color: var(--c-white);">Important:</strong> California law prohibits starting fire sprinkler rough-in before the permit is issued. Scheduling the framing and rough-in crew before permit issuance is a common GC mistake — verify permit status before releasing trades.
@@ -152,7 +152,7 @@ $biz = rfp_business_data();
             <li><strong style="color: var(--c-white);">Trade coordination</strong> — Sprinkler contractors install above the ceiling alongside mechanical, electrical, and plumbing trades. Congested ceilings require coordination to avoid conflicts. BIM coordination on larger projects reduces field rework.</li>
           </ul>
           <p style="color: var(--c-text-secondary); line-height: 1.85;">
-            California also requires seismic bracing per NFPA 13 Chapter 9 and ASCE 7 — lateral and longitudinal braces at required intervals add material and labor compared to non-seismic states.
+            California also requires seismic bracing per <a href="<?php echo esc_url( home_url( '/nfpa-13-fire-sprinkler-guide/' ) ); ?>" style="color: var(--c-red);">NFPA 13</a> Chapter 9 and ASCE 7 — lateral and longitudinal braces at required intervals add material and labor compared to non-seismic states.
           </p>
         </div>
 
