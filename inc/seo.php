@@ -355,6 +355,15 @@ function rfp_get_page_seo() {
     return $seo;
 }
 
+// ─── Google Search Console Verification ─────────────────────────────────────
+// Set RFP_GSC_VERIFY in wp-config.php: define( 'RFP_GSC_VERIFY', 'your-token' );
+
+add_action( 'wp_head', function () {
+    if ( defined( 'RFP_GSC_VERIFY' ) && RFP_GSC_VERIFY ) {
+        echo '<meta name="google-site-verification" content="' . esc_attr( RFP_GSC_VERIFY ) . '" />' . "\n";
+    }
+}, 1 );
+
 // ─── Document Title Filter ───────────────────────────────────────────────────
 
 add_filter( 'document_title_parts', function( $title ) {

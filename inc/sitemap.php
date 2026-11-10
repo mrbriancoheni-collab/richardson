@@ -28,31 +28,82 @@ add_action( 'template_redirect', function () {
 
     $now = date( 'Y-m-d' );
 
+    // ── Core pages ───────────────────────────────────────────────────
     $urls = [
-        [ 'loc' => home_url( '/' ),               'priority' => '1.0', 'changefreq' => 'daily',   'lastmod' => $now ],
-        [ 'loc' => home_url( '/commercial/' ),     'priority' => '0.9', 'changefreq' => 'weekly',  'lastmod' => $now ],
-        [ 'loc' => home_url( '/industrial/' ),     'priority' => '0.9', 'changefreq' => 'weekly',  'lastmod' => $now ],
-        [ 'loc' => home_url( '/residential/' ),    'priority' => '0.9', 'changefreq' => 'weekly',  'lastmod' => $now ],
-        [ 'loc' => home_url( '/locations/' ),      'priority' => '0.7', 'changefreq' => 'weekly',  'lastmod' => $now ],
-        [ 'loc' => home_url( '/locations/sacramento/' ), 'priority' => '0.8', 'changefreq' => 'weekly',  'lastmod' => $now ],
-        [ 'loc' => home_url( '/locations/stockton/' ),   'priority' => '0.8', 'changefreq' => 'weekly',  'lastmod' => $now ],
-        [ 'loc' => home_url( '/locations/roseville/' ),  'priority' => '0.8', 'changefreq' => 'weekly',  'lastmod' => $now ],
-        [ 'loc' => home_url( '/locations/rocklin/' ),    'priority' => '0.8', 'changefreq' => 'weekly',  'lastmod' => $now ],
-        [ 'loc' => home_url( '/locations/fairfield/' ),  'priority' => '0.8', 'changefreq' => 'weekly',  'lastmod' => $now ],
-        [ 'loc' => home_url( '/locations/yuba-city/' ),  'priority' => '0.8', 'changefreq' => 'weekly',  'lastmod' => $now ],
-        [ 'loc' => home_url( '/locations/davis/' ),      'priority' => '0.8', 'changefreq' => 'weekly',  'lastmod' => $now ],
-        [ 'loc' => home_url( '/nfpa-25-inspection-guide/' ),            'priority' => '0.7', 'changefreq' => 'monthly', 'lastmod' => $now ],
-        [ 'loc' => home_url( '/nfpa-13r-vs-13-apartment-sprinklers/' ), 'priority' => '0.7', 'changefreq' => 'monthly', 'lastmod' => $now ],
-        [ 'loc' => home_url( '/high-piled-storage-fire-code/' ),        'priority' => '0.7', 'changefreq' => 'monthly', 'lastmod' => $now ],
-        [ 'loc' => home_url( '/about/' ),          'priority' => '0.6', 'changefreq' => 'monthly', 'lastmod' => $now ],
-        [ 'loc' => home_url( '/contact/' ),        'priority' => '0.6', 'changefreq' => 'monthly', 'lastmod' => $now ],
-        [ 'loc' => home_url( '/licenses/' ),       'priority' => '0.6', 'changefreq' => 'monthly', 'lastmod' => $now ],
-        [ 'loc' => home_url( '/cost-guide/' ),     'priority' => '0.6', 'changefreq' => 'monthly', 'lastmod' => $now ],
-        [ 'loc' => home_url( '/portfolio/' ),      'priority' => '0.6', 'changefreq' => 'monthly', 'lastmod' => $now ],
-        [ 'loc' => home_url( '/ahj-comparison/' ), 'priority' => '0.6', 'changefreq' => 'monthly', 'lastmod' => $now ],
-        [ 'loc' => home_url( '/blog/' ),           'priority' => '0.6', 'changefreq' => 'weekly',  'lastmod' => $now ],
+        [ 'loc' => home_url( '/' ),                              'priority' => '1.0', 'changefreq' => 'daily',   'lastmod' => $now ],
+
+        // Service hubs
+        [ 'loc' => home_url( '/services/' ),                     'priority' => '0.9', 'changefreq' => 'weekly',  'lastmod' => $now ],
+        [ 'loc' => home_url( '/commercial/' ),                   'priority' => '0.9', 'changefreq' => 'weekly',  'lastmod' => $now ],
+        [ 'loc' => home_url( '/industrial/' ),                   'priority' => '0.9', 'changefreq' => 'weekly',  'lastmod' => $now ],
+        [ 'loc' => home_url( '/residential/' ),                  'priority' => '0.9', 'changefreq' => 'weekly',  'lastmod' => $now ],
+        [ 'loc' => home_url( '/fire-pump/' ),                    'priority' => '0.9', 'changefreq' => 'weekly',  'lastmod' => $now ],
+        [ 'loc' => home_url( '/emergency-repair/' ),             'priority' => '0.9', 'changefreq' => 'weekly',  'lastmod' => $now ],
+        [ 'loc' => home_url( '/inspection-testing/' ),           'priority' => '0.9', 'changefreq' => 'weekly',  'lastmod' => $now ],
+
+        // Location hub
+        [ 'loc' => home_url( '/locations/' ),                    'priority' => '0.7', 'changefreq' => 'weekly',  'lastmod' => $now ],
+
+        // Authority / utility pages
+        [ 'loc' => home_url( '/about/' ),                        'priority' => '0.6', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/contact/' ),                      'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/licenses/' ),                     'priority' => '0.6', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/cost-guide/' ),                   'priority' => '0.7', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/portfolio/' ),                    'priority' => '0.6', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/ahj-comparison/' ),               'priority' => '0.7', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/blog/' ),                         'priority' => '0.6', 'changefreq' => 'weekly',  'lastmod' => $now ],
+
+        // Articles / guides
+        [ 'loc' => home_url( '/nfpa-25-inspection-guide/' ),             'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/nfpa-13r-vs-13-apartment-sprinklers/' ),  'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/high-piled-storage-fire-code/' ),         'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/ca-fire-code-2025/' ),                    'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/wui-sprinklers/' ),                       'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/permit-guide-sacramento/' ),              'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/esfr-vs-in-rack/' ),                      'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/nfpa-13-fire-sprinkler-guide/' ),         'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/how-fire-sprinklers-work/' ),             'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/fire-pump-installation-guide/' ),         'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/fire-sprinkler-installation-timeline/' ), 'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
     ];
 
+    // ── City pages (both /locations/{city}/ and direct /{city}/) ────
+    if ( function_exists( 'rfp_all_locations' ) ) {
+        $city_service_slugs = [
+            'commercial', 'industrial', 'residential',
+            'fire-pump-design', 'fire-pump-installation', 'fire-pump-repair', 'fire-pump-testing',
+        ];
+
+        foreach ( rfp_all_locations() as $city_slug => $loc ) {
+            // /locations/{city}/
+            $urls[] = [
+                'loc'        => home_url( '/locations/' . $city_slug . '/' ),
+                'priority'   => '0.8',
+                'changefreq' => 'weekly',
+                'lastmod'    => $now,
+            ];
+
+            // /{city}/ (direct top-level city page)
+            $urls[] = [
+                'loc'        => home_url( '/' . $city_slug . '/' ),
+                'priority'   => '0.8',
+                'changefreq' => 'weekly',
+                'lastmod'    => $now,
+            ];
+
+            // /{city}/{service}/ — 7 services × 7 cities = 49 pages
+            foreach ( $city_service_slugs as $svc ) {
+                $urls[] = [
+                    'loc'        => home_url( '/' . $city_slug . '/' . $svc . '/' ),
+                    'priority'   => '0.7',
+                    'changefreq' => 'monthly',
+                    'lastmod'    => $now,
+                ];
+            }
+        }
+    }
+
+    // ── Merge any published WP pages not already in the list ────────
     $existing = array_column( $urls, 'loc' );
 
     foreach ( get_pages( [ 'post_status' => 'publish' ] ) as $p ) {
