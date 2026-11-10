@@ -12,7 +12,7 @@ get_header();
 
     <!-- ========== HERO ========== -->
     <section class="hero" style="min-height: 42vh; padding-top: 7rem; padding-bottom: 3rem;">
-      <div class="hero-bg" style="background-image: url('<?php echo esc_url( rfp_bg_img_url() ); ?>'); background-size: cover; background-position: center; background-attachment: fixed;">
+      <div class="hero-bg" style="background-image: url('<?php echo esc_url( rfp_bg_img_url() ); ?>'); background-size: cover; background-position: center;">
         <div class="hero-overlay"></div>
         <div class="hero-pattern"></div>
       </div>
@@ -74,11 +74,15 @@ get_header();
           <div style="margin-top: 2.5rem; background: #f8f8f8; border-radius: 12px; padding: 1.5rem;">
             <h4 style="font-family: 'Oswald', sans-serif; font-size: 1rem; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1rem; color: #1a1a1a;">Business Hours</h4>
             <?php
-            $hours = [
-              'Monday – Friday'  => '7:00 AM – 5:30 PM',
-              'Saturday'         => '8:00 AM – 2:00 PM',
-              'Sunday'           => 'Emergency Service Only',
-            ];
+            $hours = [];
+            foreach ( $biz['hours'] as $slot ) {
+                $days    = $slot['days'];
+                $label   = count( $days ) > 1 ? $days[0] . ' – ' . end( $days ) : $days[0];
+                $t_open  = date( 'g:i A', strtotime( $slot['open'] ) );
+                $t_close = date( 'g:i A', strtotime( $slot['close'] ) );
+                $hours[ $label ] = $t_open . ' – ' . $t_close;
+            }
+            $hours['Sunday'] = 'Emergency Service Only';
             foreach ( $hours as $day => $time ) : ?>
               <div style="display: flex; justify-content: space-between; padding: 0.4rem 0; border-bottom: 1px solid #eee; font-size: 0.9rem;">
                 <span style="color: #4b5563;"><?php echo esc_html( $day ); ?></span>

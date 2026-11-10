@@ -8,14 +8,14 @@
  */
 get_header();
 $biz = rfp_business_data();
-$phone = $biz['phone'] ?? '(916) 849-6441';
+$phone = $biz['phone_display'] ?? '(916) 849-6441';
 ?>
 
   <main class="site-main">
 
     <!-- ========== HERO ========== -->
     <section class="hero" style="min-height: 55vh; padding-top: 7rem; padding-bottom: 4rem;">
-      <div class="hero-bg" style="background-image: url('<?php echo esc_url( rfp_bg_img_url() ); ?>'); background-size: cover; background-position: center; background-attachment: fixed;">
+      <div class="hero-bg" style="background-image: url('<?php echo esc_url( rfp_bg_img_url() ); ?>'); background-size: cover; background-position: center;">
         <div class="hero-overlay"></div>
         <div class="hero-pattern"></div>
       </div>

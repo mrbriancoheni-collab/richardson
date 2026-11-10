@@ -27,7 +27,8 @@ function rfp_business_data() {
             'lng' => -121.3653,
         ],
         'hours'         => [
-            [ 'days' => [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday' ], 'open' => '07:00', 'close' => '17:00' ],
+            [ 'days' => [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday' ], 'open' => '07:00', 'close' => '17:30' ],
+            [ 'days' => [ 'Saturday' ], 'open' => '08:00', 'close' => '14:00' ],
         ],
         'service_area'  => [
             'Sacramento', 'Elk Grove', 'Roseville', 'Folsom', 'Rancho Cordova',
@@ -471,7 +472,6 @@ function rfp_schema_markup() {
 
     // Article schema types — defined here so BreadcrumbList and TechArticle blocks both see it
     $rfp_article_schema_types = [
-        'article_tech',
         'nfpa25_guide', 'article_13r_vs_13', 'high_piled_guide',
         'ca_fire_code_guide', 'wui_guide', 'permit_guide', 'esfr_guide',
         'nfpa13_guide', 'how_sprinklers_work', 'fire_pump_guide', 'installation_timeline',
@@ -1377,6 +1377,26 @@ function rfp_schema_markup() {
               'a' => 'Yes. Richardson regularly manages projects for clients with buildings in multiple Sacramento Valley cities — each with its own AHJ. We maintain relationships with plan check staff at all seven primary AHJs in our service area, submit to each jurisdiction in the correct format, and track permit status across multiple active submittals simultaneously.' ],
             [ 'q' => 'How far does Richardson travel for fire sprinkler projects?',
               'a' => 'Our primary service area is the greater Sacramento Valley — roughly a 60-mile radius from Antelope, CA. We regularly serve Sacramento, Stockton, Roseville, Rocklin, Fairfield, Yuba City, and Davis. For larger projects, we also work in the San Francisco Bay Area, Modesto, and other Northern California locations. Call (916) 849-6441 to discuss your project location.' ],
+        ],
+        'about' => [
+            [ 'q' => 'Who is Richardson Fire Protection?',
+              'a' => 'Richardson Fire Protection Inc. is a family-owned fire sprinkler contractor based in Antelope, CA, serving developers, general contractors, and building owners throughout the Sacramento Valley. Founded in 2023 by Chris Richardson, we hold CSLB C-16 License #1053506, CSFM contractor registration, and NICET Level II certification. We specialize in NFPA 13 design-build, inspection, and 24/7 emergency repair.' ],
+            [ 'q' => 'Is Richardson Fire Protection licensed and insured in California?',
+              'a' => 'Yes. Richardson holds CSLB C-16 License #1053506, the state-required license for all fire sprinkler work in California. We are registered with the California State Fire Marshal (CSFM), carry NICET-certified designers on staff, and maintain general liability, workers\' compensation, umbrella, and commercial auto coverage. License status can be verified at cslb.ca.gov.' ],
+            [ 'q' => 'How is Richardson different from other fire sprinkler contractors?',
+              'a' => 'Richardson is a full design-build contractor — we produce the hydraulic calculations and stamped drawings, pull the permit, install the system, and hand you the certificate of occupancy. We handle design, AHJ coordination, installation, and inspection in-house, which is why GCs and developers get cleaner submittals, faster AHJ approvals, and fewer CO delays.' ],
+            [ 'q' => 'How quickly does Richardson respond to emergency calls?',
+              'a' => 'Richardson responds to emergency fire sprinkler calls 24 hours a day, 7 days a week, 365 days a year. For emergencies — flowing heads, burst pipes, system failures — we target on-site response within 1–2 hours in the Sacramento area. For non-emergency service calls, we schedule same-day or next-business-day response depending on your location.' ],
+        ],
+        'licenses' => [
+            [ 'q' => 'What is a CSLB C-16 fire protection contractor license?',
+              'a' => 'A C-16 Fire Protection Contractor license, issued by the California Contractors State License Board (CSLB), is the state-required license for all fire sprinkler system work in California — design, installation, modification, inspection, and repair. Only a licensed C-16 contractor may submit for fire sprinkler permits or perform fire protection work in California. Richardson holds C-16 License #1053506.' ],
+            [ 'q' => 'What is NICET certification and why does it matter for fire sprinkler design?',
+              'a' => 'NICET (National Institute for Certification in Engineering Technologies) certifies fire protection engineering technicians at four levels. NICET Level II certifies the ability to independently design fire sprinkler systems using hydraulic calculations. Many California AHJs require NICET-stamped hydraulic calculations as part of a plan check submittal. Richardson\'s design staff holds NICET Level II certification.' ],
+            [ 'q' => 'What does CSFM contractor registration mean?',
+              'a' => 'The California State Fire Marshal (CSFM) maintains a registration system for fire protection contractors that is separate from, and in addition to, the CSLB C-16 license. CSFM registration is required for California SB 1205 inspection certification and for work on state-regulated facilities. Richardson holds active CSFM contractor registration.' ],
+            [ 'q' => 'Can Richardson provide certificates of insurance?',
+              'a' => 'Yes. Richardson Fire Protection carries general liability, workers\' compensation, umbrella liability, and commercial auto insurance. Certificates of insurance naming a GC or owner as additional insured can be provided within 24 hours of request. Contact us at Chris@Richardsonfirepro.com.' ],
         ],
     ];
 

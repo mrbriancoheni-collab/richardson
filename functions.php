@@ -60,6 +60,18 @@ add_filter( 'template_include', function( $template ) {
         'wui-sprinklers'                        => 'wui-sprinklers.php',
         'permit-guide-sacramento'               => 'permit-guide-sacramento.php',
         'esfr-vs-in-rack'                       => 'esfr-vs-in-rack.php',
+        'about'                                 => 'page-about.php',
+        'contact'                               => 'page-contact.php',
+        'ahj-comparison'                        => 'page-ahj-comparison.php',
+        'blog'                                  => 'page-blog-index.php',
+        'resources'                             => 'page-blog-index.php',
+        'fire-protection-resources'             => 'page-blog-index.php',
+        'cost-guide'                            => 'page-cost-guide.php',
+        'fire-sprinkler-cost-guide'             => 'page-cost-guide.php',
+        'licenses'                              => 'page-licenses.php',
+        'about-licenses'                        => 'page-licenses.php',
+        'locations'                             => 'page-locations.php',
+        'portfolio'                             => 'page-portfolio.php',
     ];
     if ( isset( $slug_map[ $post->post_name ] ) ) {
         $tpl = get_template_directory() . '/' . $slug_map[ $post->post_name ];
@@ -256,6 +268,15 @@ function rfp_enqueue_assets() {
     ] );
 }
 add_action( 'wp_enqueue_scripts', 'rfp_enqueue_assets' );
+
+// ─── Non-blocking external CSS (Google Fonts + Font Awesome) ────────────────
+add_filter( 'style_loader_tag', function ( $html, $handle ) {
+    if ( ! in_array( $handle, [ 'rfp-google-fonts', 'rfp-font-awesome' ], true ) ) {
+        return $html;
+    }
+    $async = str_replace( "media='all'", "media='print' onload=\"this.media='all'\"", $html );
+    return $async . '<noscript>' . $html . '</noscript>' . "\n";
+}, 10, 2 );
 
 // ─── Site Image URLs ─────────────────────────────────────────────────────────
 

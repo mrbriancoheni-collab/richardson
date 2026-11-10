@@ -26,8 +26,8 @@
             <li><a href="<?php echo esc_url( home_url( '/commercial/' ) ); ?>">Commercial</a></li>
             <li><a href="<?php echo esc_url( home_url( '/industrial/' ) ); ?>">Industrial</a></li>
             <li><a href="<?php echo esc_url( home_url( '/residential/' ) ); ?>">Residential</a></li>
-            <li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Inspections</a></li>
-            <li><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Emergency Service</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/inspection-testing/' ) ); ?>">Inspections</a></li>
+            <li><a href="<?php echo esc_url( home_url( '/emergency-repair/' ) ); ?>">Emergency Service</a></li>
           </ul>
         </div>
 
