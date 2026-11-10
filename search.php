@@ -9,7 +9,7 @@ get_header();
   <main class="site-main">
 
     <!-- Search Hero -->
-    <div class="page-hero" style="background-image: url('<?php echo esc_url( rfp_bg_img_url() ); ?>'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <div class="page-hero" style="background-image: url('<?php echo esc_url( rfp_bg_img_url() ); ?>'); background-size: cover; background-position: center;">
       <div class="hero-overlay"></div>
       <div class="hero-pattern"></div>
       <div class="container" style="position: relative; z-index: 2; padding-top: 9rem; padding-bottom: 5rem;">

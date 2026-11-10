@@ -2,7 +2,7 @@
 
   <!-- ========== HERO ========== -->
   <section id="hero" class="hero">
-    <div class="hero-bg" style="background-image: url('<?php echo esc_url( rfp_bg_img_url() ); ?>'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <div class="hero-bg" style="background-image: url('<?php echo esc_url( rfp_bg_img_url() ); ?>'); background-size: cover; background-position: center;">
       <div class="hero-overlay"></div>
       <div class="hero-pattern"></div>
     </div>

@@ -14,7 +14,7 @@ $cities = rfp_all_locations();
 
     <!-- ========== HERO ========== -->
     <section class="hero" style="min-height: 42vh; padding-top: 7rem; padding-bottom: 3rem;">
-      <div class="hero-bg" style="background-image: url('<?php echo esc_url( rfp_bg_img_url() ); ?>'); background-size: cover; background-position: center; background-attachment: fixed;">
+      <div class="hero-bg" style="background-image: url('<?php echo esc_url( rfp_bg_img_url() ); ?>'); background-size: cover; background-position: center;">
         <div class="hero-overlay"></div>
         <div class="hero-pattern"></div>
       </div>

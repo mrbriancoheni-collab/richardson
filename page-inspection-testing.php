@@ -8,14 +8,14 @@
  */
 get_header();
 $biz = rfp_business_data();
-$phone = $biz['phone'] ?? '(916) 849-6441';
+$phone = $biz['phone_display'] ?? '(916) 849-6441';
 ?>
 
   <main class="site-main">
 
     <!-- ========== HERO ========== -->
     <section class="hero" style="min-height: 52vh; padding-top: 7rem; padding-bottom: 4rem;">
-      <div class="hero-bg" style="background-image: url('<?php echo esc_url( rfp_bg_img_url() ); ?>'); background-size: cover; background-position: center; background-attachment: fixed;">
+      <div class="hero-bg" style="background-image: url('<?php echo esc_url( rfp_bg_img_url() ); ?>'); background-size: cover; background-position: center;">
         <div class="hero-overlay"></div>
         <div class="hero-pattern"></div>
       </div>
@@ -47,7 +47,7 @@ $phone = $biz['phone'] ?? '(916) 849-6441';
         <div class="section-header reveal-up">
           <div class="section-badge">NFPA 25 Requirements</div>
           <h2 class="section-title">What <span class="text-accent">NFPA 25</span> Requires</h2>
-          <p class="section-desc">Inspection and testing frequencies mandated by NFPA 25 and enforced by California AHJs under SB 1205.</p>
+          <p class="section-desc">Inspection and testing frequencies mandated by NFPA 25 and enforced by California AHJs under SB 1205. <a href="<?php echo esc_url( home_url( '/nfpa-25-inspection-guide/' ) ); ?>" style="color: var(--c-red);">Read our complete NFPA 25 guide</a> for a deeper explanation of each requirement.</p>
         </div>
         <div class="cost-table-wrap reveal-up">
           <table class="cost-table" style="width: 100%;">
