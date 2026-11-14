@@ -65,6 +65,16 @@ add_action( 'template_redirect', function () {
         [ 'loc' => home_url( '/how-fire-sprinklers-work/' ),             'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
         [ 'loc' => home_url( '/fire-pump-installation-guide/' ),         'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
         [ 'loc' => home_url( '/fire-sprinkler-installation-timeline/' ), 'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/tenant-improvement-fire-sprinklers/' ),  'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/wet-pipe-vs-dry-pipe-sprinklers/' ),     'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/restaurant-fire-sprinkler-requirements/' ), 'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/mixed-use-fire-protection/' ),           'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/nfpa-13d-residential-fire-sprinklers/' ),'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/fire-sprinkler-inspection-cost/' ),      'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/fire-sprinkler-coordination-guide/' ),   'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/pre-action-fire-sprinkler-systems/' ),   'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/fire-sprinkler-backflow-preventer/' ),   'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/fire-sprinkler-shop-drawings/' ),        'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
     ];
 
     // ── City pages (both /locations/{city}/ and direct /{city}/) ────
