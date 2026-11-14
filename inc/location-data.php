@@ -972,5 +972,632 @@ function rfp_all_locations() {
             ],
         ],
 
+        // ── Bay Area ───────────────────────────────────────────────────────
+
+        'concord' => [
+            'name'       => 'Concord',
+            'slug'       => 'concord',
+            'county'     => 'Contra Costa County',
+            'lat'        => 37.9779,
+            'lng'        => -122.0311,
+            'population' => 129295,
+            'intro'      => 'Concord and the broader Contra Costa industrial corridor along I-680 and Highway 4 represent one of the Bay Area\'s most active logistics and mixed-use development markets. Richardson Fire Protection serves GCs and developers building in Concord, Martinez, Pleasant Hill, and surrounding ConFire jurisdictions — NFPA 13 design-build, ConFire permit coordination, and 24/7 ITM.',
+            'building_types' => [
+                'High-Bay Warehouse & Logistics',
+                'Mixed-Use & Commercial',
+                'Industrial Manufacturing',
+                'Multifamily Residential',
+            ],
+            'ahj_name'     => 'Contra Costa County Fire Protection District (ConFire)',
+            'nearby_cities' => [ 'oakland', 'fremont', 'napa', 'fairfield' ],
+            'services_note' => 'Contra Costa County Fire Protection District (ConFire) handles plan review for most of central Contra Costa County. Richardson submits complete NFPA 13 packages directly to ConFire Fire Prevention and coordinates all required pre-final walkthroughs.',
+            'neighborhoods' => [
+                'Downtown Concord',
+                'Monument Corridor',
+                'Todos Santos',
+                'Sun Valley',
+                'Contra Costa Centre',
+                'Pleasant Hill Road Corridor',
+                'Port Chicago Highway Industrial',
+                'Willow Pass',
+            ],
+            'faqs' => [
+                [
+                    'q' => 'Who is the AHJ for fire sprinkler permits in Concord?',
+                    'a' => 'The Contra Costa County Fire Protection District (ConFire) is the Authority Having Jurisdiction for fire protection system permits in Concord and most of central Contra Costa County. ConFire\'s Fire Prevention Bureau handles plan review and final inspection. Richardson submits NFPA 13 packages directly to ConFire and coordinates pre-final walkthrough scheduling.',
+                ],
+                [
+                    'q' => 'How long does ConFire plan check take for a new commercial fire sprinkler system?',
+                    'a' => 'ConFire plan check for a standard commercial NFPA 13 system typically runs 3–6 weeks on first submittal. Complex scopes — high-piled storage, ESFR, pre-action — may require 6–10 weeks. Richardson submits complete packages on first attempt to minimize back-and-forth cycles with ConFire Fire Prevention.',
+                ],
+                [
+                    'q' => 'Does Richardson install fire sprinkler systems in Concord warehouses and logistics facilities?',
+                    'a' => 'Yes. The Port Chicago Highway and Willow Pass industrial corridors have significant high-bay warehouse and distribution center activity. Richardson designs and installs ESFR and in-rack sprinkler systems for Concord warehouses, coordinating commodity classification documentation with ConFire for high-piled storage occupancies.',
+                ],
+                [
+                    'q' => 'Can Richardson do tenant improvement fire sprinkler work in occupied Concord commercial buildings?',
+                    'a' => 'Yes. TI sprinkler work in occupied buildings requires careful system isolation and notification to building occupants. Richardson coordinates with property management, sequences isolation windows to maintain protection to unaffected areas, and provides ConFire with the required notification documentation before any system impairment.',
+                ],
+                [
+                    'q' => 'What do fire sprinklers cost for a commercial building in Contra Costa County?',
+                    'a' => 'Commercial fire sprinkler costs in Contra Costa County typically range from $3.50–$6.00 per square foot for standard NFPA 13 systems, depending on occupancy hazard classification, ceiling height, and whether the project is new construction or a TI. High-bay warehouse ESFR systems run higher at $5–$9 per square foot. Contact Richardson for a scope-specific estimate.',
+                ],
+                [
+                    'q' => 'How far does Richardson travel from Sacramento to Concord?',
+                    'a' => 'Concord is approximately 90 miles from Richardson\'s Antelope base, typically a 1.5–2 hour drive via I-80 and I-680. We serve Concord and the broader Contra Costa County market as part of our Bay Area expansion and can commit to project schedules that reflect the drive time for inspections and service calls.',
+                ],
+            ],
+            'primary_services' => [
+                [
+                    'icon'     => '🏭',
+                    'tag'      => 'NFPA 13 Commercial',
+                    'title'    => 'Commercial Fire Sprinkler Systems',
+                    'desc'     => 'NFPA 13 design-build for retail, office, and mixed-use projects in Concord and central Contra Costa County. Full ConFire permit coordination.',
+                    'features' => [ 'NFPA 13 hydraulic calculations', 'ConFire permit submittal', 'Pre-final walkthrough coordination', 'NICET Level II stamped drawings' ],
+                    'link'     => '/commercial/',
+                ],
+                [
+                    'icon'     => '🏗️',
+                    'tag'      => 'Industrial / Warehouse',
+                    'title'    => 'Industrial & Warehouse Sprinklers',
+                    'desc'     => 'ESFR and in-rack sprinkler systems for high-bay warehouses and logistics facilities in the Port Chicago Highway and Willow Pass industrial corridors.',
+                    'features' => [ 'ESFR design & installation', 'High-piled storage commodity analysis', 'ConFire special hazard review', 'In-rack sprinkler systems' ],
+                    'link'     => '/industrial/',
+                ],
+                [
+                    'icon'     => '🔧',
+                    'tag'      => 'NFPA 25 Inspection',
+                    'title'    => 'Fire Sprinkler Inspection & Testing',
+                    'desc'     => 'NFPA 25 annual and quarterly inspection, testing, and maintenance for Concord commercial and industrial properties. SB 1205 compliant written reports.',
+                    'features' => [ 'Annual NFPA 25 flow tests', 'Quarterly alarm valve tests', 'Written ITM reports', 'SB 1205 compliance documentation' ],
+                    'link'     => '/inspection-testing/',
+                ],
+            ],
+            'local_regulations' => [
+                [
+                    'code'      => 'California Fire Code (CFC 2022)',
+                    'authority' => 'ConFire Fire Prevention',
+                    'summary'   => 'ConFire enforces the 2022 California Fire Code with Contra Costa County local amendments. All commercial fire protection systems require ConFire plan review prior to installation.',
+                ],
+                [
+                    'code'      => 'NFPA 13 (2019 Edition)',
+                    'authority' => 'ConFire Fire Prevention',
+                    'summary'   => 'ConFire references NFPA 13 2019 for sprinkler system design and installation standards. NICET-stamped hydraulic calculations are required for all new commercial systems.',
+                ],
+                [
+                    'code'      => 'SB 1205 — ITM Reporting',
+                    'authority' => 'State of California / ConFire',
+                    'summary'   => 'California SB 1205 requires written ITM reports to be submitted to the AHJ. ConFire enforces this for all commercial fire sprinkler systems in its jurisdiction.',
+                ],
+                [
+                    'code'      => 'High-Piled Storage — CFC Chapter 32',
+                    'authority' => 'ConFire Fire Prevention',
+                    'summary'   => 'Warehouses with high-piled storage exceeding 12 feet require a Commodity Classification letter and Fire Protection Plan. Richardson prepares both for ConFire submittal.',
+                ],
+            ],
+            'fire_pump_note' => 'High-rise and large-footprint industrial buildings along Concord\'s I-680 and Highway 4 corridors may require fire pump systems to maintain NFPA 13 design pressure. Richardson designs and installs electric- and diesel-driven fire pump packages coordinated with ConFire Fire Prevention and local utility providers.',
+            'fire_pump_faqs' => [
+                [
+                    'q' => 'When is a fire pump required for a Concord commercial building?',
+                    'a' => 'A fire pump is required when municipal water supply pressure is insufficient to meet NFPA 13 design demand — typically in multi-story buildings, large-footprint warehouses, or any building where the hydraulically most demanding sprinkler area cannot be supplied at the required residual pressure. Richardson performs water supply analysis against ConFire-approved hydraulic calculations to determine fire pump need.',
+                ],
+                [
+                    'q' => 'Does ConFire require a witness test for new fire pump installations in Concord?',
+                    'a' => 'Yes. ConFire Fire Prevention requires a witnessed acceptance test for all new fire pump installations per NFPA 20 Section 14. Richardson schedules the ConFire inspector and provides all required test instrumentation and documentation at the acceptance test.',
+                ],
+                [
+                    'q' => 'Can Richardson service existing fire pumps in Contra Costa County industrial facilities?',
+                    'a' => 'Yes. Richardson provides NFPA 25 annual fire pump flow testing, churn test documentation, and repair services for existing electric and diesel fire pump packages throughout Contra Costa County. We deliver written test reports for SB 1205 compliance.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
+            ],
+        ],
+
+        'oakland' => [
+            'name'       => 'Oakland',
+            'slug'       => 'oakland',
+            'county'     => 'Alameda County',
+            'lat'        => 37.8044,
+            'lng'        => -122.2712,
+            'population' => 440646,
+            'intro'      => 'Oakland\'s Port district, Jack London Square, and East Oakland industrial corridor generate significant demand for ESFR warehouse systems, mixed-use fire protection, and tenant improvement fire sprinkler work. Richardson Fire Protection serves GCs and industrial developers working in Oakland and the broader East Bay — NFPA 13 design-build, Oakland Fire Department coordination, and first-pass permit approval.',
+            'building_types' => [
+                'Port & Logistics Warehouses',
+                'Mixed-Use & Adaptive Reuse',
+                'Industrial & Manufacturing',
+                'Multifamily High-Rise',
+            ],
+            'ahj_name'     => 'Oakland Fire Department (OFD)',
+            'nearby_cities' => [ 'fremont', 'concord', 'san-jose', 'fairfield' ],
+            'services_note' => 'Oakland Fire Department has an active Fire Prevention Bureau with specific requirements for high-rise and adaptive reuse projects. Richardson coordinates pre-application meetings with OFD Fire Prevention for complex scopes and submits stamped packages through Oakland\'s permit portal.',
+            'neighborhoods' => [
+                'Jack London Square',
+                'West Oakland',
+                'Fruitvale',
+                'East Oakland Industrial',
+                'Brooklyn Basin',
+                'Coliseum Industrial',
+                'Uptown',
+                'Temescal',
+                'Rockridge',
+                'Grand Lake',
+            ],
+            'faqs' => [
+                [
+                    'q' => 'How long does Oakland Fire Department plan review take for a commercial fire sprinkler system?',
+                    'a' => 'OFD Fire Prevention typically reviews standard commercial NFPA 13 submittals in 4–8 weeks. High-rise, adaptive reuse, and complex industrial scopes can run 8–12 weeks. Pre-application meetings with OFD Fire Prevention are strongly recommended for projects over 50,000 square feet or any high-rise scope. Richardson coordinates these meetings and submits complete packages to minimize correction cycles.',
+                ],
+                [
+                    'q' => 'What fire protection is required for high-rise buildings in Oakland?',
+                    'a' => 'Oakland high-rise buildings (75+ feet above grade) require a full NFPA 13 sprinkler system on all floors, a Class I standpipe system, and fire pump systems where water pressure is insufficient. OFD requires a pre-application meeting for high-rise fire protection submittals. Richardson has NICET Level II stamped design capability and coordinates directly with OFD Fire Prevention for high-rise projects.',
+                ],
+                [
+                    'q' => 'Does Richardson install ESFR fire sprinkler systems in Oakland port and warehouse facilities?',
+                    'a' => 'Yes. The East Oakland Industrial and Coliseum Industrial corridors, as well as Port of Oakland-adjacent logistics facilities, frequently require ESFR fire sprinkler systems for high-bay storage. Richardson designs ESFR systems with commodity classification analysis and submits complete NFPA 13 packages to OFD Fire Prevention for plan review.',
+                ],
+                [
+                    'q' => 'How does adaptive reuse fire protection work in Oakland?',
+                    'a' => 'Oakland has significant adaptive reuse activity converting former industrial buildings to mixed-use, residential loft, and commercial office occupancies. These projects require OFD review of the change-of-occupancy and in many cases trigger full NFPA 13 sprinkler retrofits. Richardson assesses the existing system (if any), designs required upgrades, and coordinates with OFD Fire Prevention through the building permit process.',
+                ],
+                [
+                    'q' => 'How far does Richardson travel from Sacramento to Oakland?',
+                    'a' => 'Oakland is approximately 90 miles from Richardson\'s Antelope base, typically an 80–100 minute drive via I-80. We serve Oakland and the East Bay as part of our Bay Area service area and schedule project visits to minimize drive time impact on project timelines.',
+                ],
+                [
+                    'q' => 'What do TI fire sprinklers cost in Oakland commercial buildings?',
+                    'a' => 'Tenant improvement fire sprinkler costs in Oakland commercial buildings typically range from $4–$7 per square foot for standard office or retail occupancies, depending on existing system condition, ceiling configuration, and OFD required upgrades. Adaptive reuse projects with significant occupancy changes may run higher. Richardson provides detailed TI estimates after reviewing existing system documentation.',
+                ],
+            ],
+            'primary_services' => [
+                [
+                    'icon'     => '🏭',
+                    'tag'      => 'NFPA 13 Commercial',
+                    'title'    => 'Commercial Fire Sprinkler Systems',
+                    'desc'     => 'NFPA 13 design-build for mixed-use, adaptive reuse, and commercial projects in Oakland. Full OFD Fire Prevention coordination and first-pass permit submittal.',
+                    'features' => [ 'NFPA 13 hydraulic calculations', 'OFD pre-application meetings', 'Adaptive reuse occupancy analysis', 'NICET Level II stamped drawings' ],
+                    'link'     => '/commercial/',
+                ],
+                [
+                    'icon'     => '🏗️',
+                    'tag'      => 'Industrial / Warehouse',
+                    'title'    => 'Industrial & Port Logistics Fire Protection',
+                    'desc'     => 'ESFR and in-rack fire sprinkler systems for Oakland port logistics, East Oakland warehouses, and Coliseum Industrial facilities.',
+                    'features' => [ 'ESFR design & installation', 'Commodity classification letters', 'OFD high-piled storage review', 'In-rack sprinkler coordination' ],
+                    'link'     => '/industrial/',
+                ],
+                [
+                    'icon'     => '🔧',
+                    'tag'      => 'NFPA 25 ITM',
+                    'title'    => 'Fire Sprinkler Inspection & Testing',
+                    'desc'     => 'NFPA 25 annual inspection, testing, and maintenance for Oakland commercial and industrial properties. SB 1205 compliant written reports delivered to OFD.',
+                    'features' => [ 'Annual NFPA 25 flow tests', 'Quarterly and annual ITM', 'Written OFD-compliant reports', 'SB 1205 compliance documentation' ],
+                    'link'     => '/inspection-testing/',
+                ],
+            ],
+            'local_regulations' => [
+                [
+                    'code'      => 'Oakland Municipal Code — Fire Prevention',
+                    'authority' => 'Oakland Fire Department Fire Prevention Bureau',
+                    'summary'   => 'Oakland enforces the 2022 California Fire Code with local amendments. OFD Fire Prevention handles plan review for all commercial fire protection systems. High-rise and high-hazard scopes require pre-application meetings.',
+                ],
+                [
+                    'code'      => 'NFPA 13 / NFPA 13R (2019 Edition)',
+                    'authority' => 'Oakland Fire Department',
+                    'summary'   => 'OFD requires NFPA 13 for commercial and industrial occupancies. Multifamily buildings four stories or fewer may qualify for NFPA 13R. NICET-stamped calculations required for all new commercial systems.',
+                ],
+                [
+                    'code'      => 'SB 1205 — ITM Reporting',
+                    'authority' => 'State of California / OFD',
+                    'summary'   => 'Written ITM reports must be submitted to OFD for all commercial fire protection systems per California SB 1205. Richardson delivers reports directly to OFD Fire Prevention.',
+                ],
+                [
+                    'code'      => 'Oakland Soft-Story & Retrofit Ordinance',
+                    'authority' => 'City of Oakland Building Services',
+                    'summary'   => 'Soft-story wood-frame residential buildings undergoing retrofit may trigger fire sprinkler upgrades depending on occupancy and scope. Richardson coordinates with the building permit team for retrofit-triggered sprinkler requirements.',
+                ],
+            ],
+            'fire_pump_note' => 'Oakland\'s varied topography and aging water infrastructure mean that fire pump systems are frequently required in East Oakland industrial buildings and multi-story projects where available municipal supply pressure falls below NFPA 13 design demand. Richardson designs electric and diesel fire pump packages and coordinates acceptance testing with OFD Fire Prevention.',
+            'fire_pump_faqs' => [
+                [
+                    'q' => 'When is a fire pump required for an Oakland industrial building?',
+                    'a' => 'A fire pump is required when available municipal water supply pressure (from the Oakland East Bay MUD system) cannot meet the NFPA 13 design demand for the hydraulically most remote sprinkler area. This commonly occurs in large-footprint warehouses, multi-story buildings, and properties served by aging water mains. Richardson conducts water supply analysis as part of every new system design.',
+                ],
+                [
+                    'q' => 'Does OFD require a witnessed acceptance test for fire pumps?',
+                    'a' => 'Yes. OFD Fire Prevention requires a witnessed acceptance test for all new fire pump installations per NFPA 20. Richardson schedules the OFD inspector and provides all required test instrumentation, flow measurement equipment, and test documentation at the acceptance test.',
+                ],
+                [
+                    'q' => 'Can Richardson service fire pumps in occupied Oakland industrial facilities?',
+                    'a' => 'Yes. Richardson provides NFPA 25 annual fire pump flow testing, churn test documentation, controller testing, and repair services for existing installations throughout Oakland and Alameda County. All test reports meet SB 1205 written documentation requirements.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
+            ],
+        ],
+
+        'fremont' => [
+            'name'       => 'Fremont',
+            'slug'       => 'fremont',
+            'county'     => 'Alameda County',
+            'lat'        => 37.5485,
+            'lng'        => -121.9886,
+            'population' => 230504,
+            'intro'      => 'Fremont\'s industrial base — anchored by manufacturing, life sciences, and semiconductor facilities along the I-880 corridor — drives consistent demand for specialized fire protection systems. ESFR warehouse systems, pre-action for lab and data center environments, and tenant improvement work for tech campuses are Richardson\'s primary scope types in Fremont and the southern East Bay.',
+            'building_types' => [
+                'Technology & Semiconductor Manufacturing',
+                'High-Bay Warehouse & Distribution',
+                'Life Sciences & Laboratory',
+                'Mixed-Use & Commercial',
+            ],
+            'ahj_name'     => 'Fremont Fire Department',
+            'nearby_cities' => [ 'oakland', 'san-jose', 'concord', 'fairfield' ],
+            'services_note' => 'Fremont Fire Department coordinates plan review through the city\'s permit center. For manufacturing and lab occupancies, commodity classification documentation and special hazard suppression analysis are required. Richardson provides complete NFPA 13 packages with occupancy hazard justification letters.',
+            'neighborhoods' => [
+                'Warm Springs',
+                'Irvington',
+                'Centerville',
+                'Niles',
+                'Ardenwood',
+                'Mission San Jose',
+                'Central Fremont',
+                'Auto Mall Area',
+                'Pacific Commons',
+            ],
+            'faqs' => [
+                [
+                    'q' => 'How long does Fremont Fire Department plan review take for a commercial fire sprinkler system?',
+                    'a' => 'Fremont Fire Department typically completes plan review for standard NFPA 13 commercial systems in 3–5 weeks on first submittal. Semiconductor fabrication, laboratory, and high-piled storage scopes with special hazard analysis may require 6–10 weeks. Richardson submits complete packages with all required documentation to minimize correction cycles.',
+                ],
+                [
+                    'q' => 'What fire protection is required for data center and lab environments in Fremont?',
+                    'a' => 'Data centers and laboratory environments in Fremont typically require pre-action fire sprinkler systems to prevent accidental water discharge from damaging sensitive equipment. Double-interlock pre-action systems are common for server rooms and cleanroom environments. Richardson designs pre-action systems meeting NFPA 13 and Fremont Fire Department requirements, coordinating with the building automation system for detection interlock.',
+                ],
+                [
+                    'q' => 'Does Richardson install ESFR fire sprinkler systems for Fremont warehouses along I-880?',
+                    'a' => 'Yes. The Pacific Commons, Warm Springs, and Ardenwood industrial/distribution corridors along I-880 have significant demand for ESFR fire sprinkler systems. Richardson designs and installs ESFR systems with commodity classification analysis, submitting complete NFPA 13 packages to Fremont Fire Department.',
+                ],
+                [
+                    'q' => 'What fire protection is required for semiconductor and electronics manufacturing facilities in Fremont?',
+                    'a' => 'Semiconductor and electronics manufacturing facilities in Fremont are typically classified as high-hazard Group H occupancies under the CBC, requiring NFPA 13 Extra Hazard sprinkler design. Cleanrooms may also require special hazard suppression for specific chemical fire risks. Richardson provides occupancy-specific hazard analysis and coordinates with Fremont Fire Department on special hazard system requirements.',
+                ],
+                [
+                    'q' => 'What do TI fire sprinklers cost in Fremont tech campuses?',
+                    'a' => 'Tenant improvement fire sprinkler costs in Fremont tech campuses typically range from $4–$8 per square foot for standard office and lab occupancies. Special hazard environments (cleanrooms, server rooms) with pre-action systems run higher, $8–$15 per square foot depending on suppression agent and detection complexity. Richardson provides detailed TI estimates after reviewing existing system documentation.',
+                ],
+                [
+                    'q' => 'Has Richardson worked on Alameda County industrial fire protection projects before?',
+                    'a' => 'Richardson is expanding its Bay Area service area to serve the growing industrial and tech campus construction market in Alameda County. Our team is experienced with Fremont Fire Department\'s permit process and the specific fire protection requirements for semiconductor, life sciences, and high-bay warehouse occupancies common to the I-880 corridor.',
+                ],
+            ],
+            'primary_services' => [
+                [
+                    'icon'     => '🏭',
+                    'tag'      => 'Industrial / Tech',
+                    'title'    => 'Industrial & Tech Campus Fire Protection',
+                    'desc'     => 'NFPA 13 design-build for semiconductor manufacturing, life sciences, and tech campuses in Fremont. Special hazard analysis and Fremont Fire Department coordination.',
+                    'features' => [ 'High-hazard Group H occupancy design', 'Pre-action for cleanrooms and labs', 'Fremont Fire permit coordination', 'NICET Level II stamped drawings' ],
+                    'link'     => '/industrial/',
+                ],
+                [
+                    'icon'     => '🏗️',
+                    'tag'      => 'ESFR Warehouse',
+                    'title'    => 'Warehouse & Distribution Fire Sprinklers',
+                    'desc'     => 'ESFR and in-rack fire sprinkler systems for high-bay distribution centers and logistics facilities in the Pacific Commons and Warm Springs corridors.',
+                    'features' => [ 'ESFR design & installation', 'Commodity classification analysis', 'In-rack sprinkler systems', 'High-piled storage Fire Protection Plans' ],
+                    'link'     => '/industrial/',
+                ],
+                [
+                    'icon'     => '🔧',
+                    'tag'      => 'NFPA 25 ITM',
+                    'title'    => 'Fire Sprinkler Inspection & Testing',
+                    'desc'     => 'NFPA 25 annual inspection, testing, and maintenance for Fremont commercial, industrial, and tech facilities. SB 1205 compliant written reports.',
+                    'features' => [ 'Annual NFPA 25 flow tests', 'Pre-action system testing', 'Written Fremont FD-compliant reports', 'SB 1205 compliance documentation' ],
+                    'link'     => '/inspection-testing/',
+                ],
+            ],
+            'local_regulations' => [
+                [
+                    'code'      => 'California Fire Code (CFC 2022)',
+                    'authority' => 'Fremont Fire Department',
+                    'summary'   => 'Fremont enforces the 2022 California Fire Code. All commercial and industrial fire protection systems require Fremont Fire Department plan review. Group H high-hazard occupancies require additional documentation.',
+                ],
+                [
+                    'code'      => 'NFPA 13 (2019 Edition) — Special Hazards',
+                    'authority' => 'Fremont Fire Department',
+                    'summary'   => 'Fremont Fire references NFPA 13 2019 and requires occupancy hazard justification letters for semiconductor and chemical manufacturing occupancies. NICET-stamped calculations are required for all new commercial systems.',
+                ],
+                [
+                    'code'      => 'SB 1205 — ITM Reporting',
+                    'authority' => 'State of California / Fremont Fire',
+                    'summary'   => 'Written ITM reports must be submitted to Fremont Fire Department for all commercial fire protection systems per SB 1205. Richardson delivers reports directly to Fremont Fire Prevention.',
+                ],
+                [
+                    'code'      => 'City of Fremont — High-Piled Storage',
+                    'authority' => 'Fremont Fire Department',
+                    'summary'   => 'Warehouses with high-piled storage exceeding 12 feet require a Commodity Classification letter and Fire Protection Plan submitted to Fremont Fire Department before permit issuance.',
+                ],
+            ],
+            'fire_pump_note' => 'Large-footprint industrial facilities and tech campuses in Fremont\'s Warm Springs and Pacific Commons districts frequently require fire pump systems to meet NFPA 13 design demand. Richardson designs and installs electric and diesel fire pump packages coordinated with Fremont Fire Department for acceptance testing.',
+            'fire_pump_faqs' => [
+                [
+                    'q' => 'When is a fire pump required for a Fremont industrial or tech facility?',
+                    'a' => 'A fire pump is required when available municipal supply pressure from the Zone 7 Water Agency system cannot meet the NFPA 13 hydraulic design demand for the most remote sprinkler area. Large-footprint warehouses, multi-story tech campuses, and facilities with high-piled storage often require fire pump systems. Richardson conducts flow tests and system design to determine fire pump need on every new project.',
+                ],
+                [
+                    'q' => 'Does Fremont Fire require a witnessed acceptance test for fire pumps?',
+                    'a' => 'Yes. Fremont Fire Department requires a witnessed acceptance test for all new fire pump installations per NFPA 20 Section 14. Richardson schedules the Fremont Fire inspector and provides all required flow measurement, pressure instrumentation, and test documentation.',
+                ],
+                [
+                    'q' => 'Can Richardson service existing fire pumps in Fremont tech and manufacturing facilities?',
+                    'a' => 'Yes. Richardson provides NFPA 25 annual fire pump flow testing, churn test documentation, controller testing, and repair services for existing installations in Fremont and throughout Alameda County. All test reports are delivered in SB 1205 written format.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
+            ],
+        ],
+
+        'san-jose' => [
+            'name'       => 'San Jose',
+            'slug'       => 'san-jose',
+            'county'     => 'Santa Clara County',
+            'lat'        => 37.3382,
+            'lng'        => -121.8863,
+            'population' => 1013240,
+            'intro'      => 'San Jose is California\'s third-largest city and the economic center of Silicon Valley, with active construction across data centers, mixed-use high-rise, life sciences campuses, and industrial facilities. Richardson Fire Protection serves GCs and developers on complex San Jose projects — NFPA 13 and NFPA 13R design-build, San Jose Fire Department coordination, and high-rise fire protection for the South Bay development pipeline.',
+            'building_types' => [
+                'Data Centers & Server Rooms',
+                'Mixed-Use & High-Rise Residential',
+                'Life Sciences & Biotech Facilities',
+                'High-Bay Warehouse & Industrial',
+            ],
+            'ahj_name'     => 'San Jose Fire Department (SJFD)',
+            'nearby_cities' => [ 'fremont', 'oakland', 'concord', 'napa' ],
+            'services_note' => 'San Jose Fire Department has an active Fire Prevention Bureau handling commercial plan review through the city\'s online permit portal. High-rise and data center projects require pre-application meetings with SJFD. Richardson coordinates directly with SJFD Fire Prevention and submits NICET-stamped packages on first attempt.',
+            'neighborhoods' => [
+                'Downtown San Jose',
+                'North San Jose / Alviso',
+                'Santana Row / West San Jose',
+                'Willow Glen',
+                'Evergreen',
+                'Berryessa',
+                'Alum Rock',
+                'Silicon Valley / Montague Expressway Corridor',
+                'Brokaw Industrial',
+                'Airport Industrial',
+            ],
+            'faqs' => [
+                [
+                    'q' => 'How long does San Jose Fire Department plan review take for a commercial fire sprinkler system?',
+                    'a' => 'SJFD Fire Prevention typically reviews standard commercial NFPA 13 submittals in 4–8 weeks through the city\'s online permit portal. High-rise, data center, and life sciences scopes may require a pre-application meeting with SJFD and can run 8–14 weeks. Richardson coordinates pre-application meetings for complex scopes and submits complete packages to minimize correction rounds.',
+                ],
+                [
+                    'q' => 'What fire protection is required for data centers in San Jose?',
+                    'a' => 'Data centers in San Jose require NFPA 13 fire sprinkler systems with pre-action configurations for server halls and areas with raised flooring. Double-interlock pre-action systems are common to prevent accidental water discharge in mission-critical environments. SJFD requires a pre-application meeting for data center fire protection submittals over 20,000 square feet. Richardson has experience designing pre-action systems coordinated with building automation detection interlocks.',
+                ],
+                [
+                    'q' => 'What fire protection is required for high-rise buildings in San Jose?',
+                    'a' => 'San Jose high-rise buildings (75+ feet above grade) require NFPA 13 sprinkler systems on all floors, Class I standpipe systems, and fire pump systems where municipal supply pressure is insufficient. SJFD requires a pre-application meeting for all high-rise fire protection submittals. Richardson coordinates these meetings and delivers NICET Level II stamped designs for high-rise projects.',
+                ],
+                [
+                    'q' => 'Can Richardson install NFPA 13R fire sprinkler systems for San Jose multifamily buildings?',
+                    'a' => 'Yes. Multifamily residential buildings four stories or fewer in San Jose may qualify for NFPA 13R fire sprinkler systems, which reduce system cost by allowing certain exceptions for attic and concealed space coverage. SJFD determines NFPA 13R eligibility at plan review. Richardson designs both NFPA 13 and NFPA 13R systems and advises GCs on code compliance options at project kickoff.',
+                ],
+                [
+                    'q' => 'What fire pump requirements apply to Silicon Valley high-rise buildings?',
+                    'a' => 'High-rise buildings in San Jose\'s downtown and North San Jose corridors frequently require electric-driven fire pump packages where municipal supply pressure from the San Jose Water or Great Oaks Water systems is insufficient. Buildings over six stories almost always require a fire pump. Richardson conducts water supply analysis and designs NFPA 20-compliant fire pump packages coordinated with SJFD Fire Prevention.',
+                ],
+                [
+                    'q' => 'What is Richardson\'s Bay Area service area?',
+                    'a' => 'Richardson Fire Protection serves the Bay Area as a service expansion from our Sacramento Valley base. We cover San Jose, Fremont, Oakland, Concord, and Napa for commercial, industrial, and mixed-use fire protection projects. San Jose is approximately 130 miles from our Antelope base (roughly 2 hours via I-80 and I-680/US-101). We schedule Bay Area project visits to maintain project momentum while accounting for drive time.',
+                ],
+            ],
+            'primary_services' => [
+                [
+                    'icon'     => '🏢',
+                    'tag'      => 'High-Rise & Mixed-Use',
+                    'title'    => 'High-Rise & Mixed-Use Fire Protection',
+                    'desc'     => 'NFPA 13 design-build for San Jose high-rise, mixed-use, and large commercial projects. SJFD pre-application meeting coordination and high-rise standpipe systems.',
+                    'features' => [ 'NFPA 13 high-rise system design', 'Class I standpipe systems', 'SJFD pre-application meetings', 'NICET Level II stamped drawings' ],
+                    'link'     => '/commercial/',
+                ],
+                [
+                    'icon'     => '💻',
+                    'tag'      => 'Data Center / Life Sciences',
+                    'title'    => 'Data Center & Life Sciences Fire Protection',
+                    'desc'     => 'Pre-action and special hazard fire sprinkler systems for San Jose data centers, server rooms, and life sciences facilities in North San Jose and Brokaw Industrial.',
+                    'features' => [ 'Double-interlock pre-action design', 'Detection interlock coordination', 'Life sciences hazard analysis', 'Mission-critical system reliability' ],
+                    'link'     => '/commercial/',
+                ],
+                [
+                    'icon'     => '🏗️',
+                    'tag'      => 'Industrial / Warehouse',
+                    'title'    => 'Industrial & Warehouse Fire Sprinklers',
+                    'desc'     => 'ESFR and in-rack fire sprinkler systems for San Jose industrial facilities in the Brokaw, Airport Industrial, and Montague Expressway corridors.',
+                    'features' => [ 'ESFR design & installation', 'Commodity classification analysis', 'SJFD industrial permit coordination', 'In-rack sprinkler systems' ],
+                    'link'     => '/industrial/',
+                ],
+            ],
+            'local_regulations' => [
+                [
+                    'code'      => 'San Jose Municipal Code — Fire Prevention Ordinance',
+                    'authority' => 'San Jose Fire Department Fire Prevention Bureau',
+                    'summary'   => 'San Jose enforces the 2022 California Fire Code with local amendments. SJFD Fire Prevention handles all commercial plan review through the city\'s online permit portal. High-rise and data center scopes require pre-application meetings.',
+                ],
+                [
+                    'code'      => 'NFPA 13 / NFPA 13R (2019 Edition)',
+                    'authority' => 'San Jose Fire Department',
+                    'summary'   => 'SJFD requires NFPA 13 for commercial, industrial, and high-rise occupancies. NFPA 13R may apply to residential buildings four stories or fewer. NICET-stamped hydraulic calculations are required for all new commercial systems.',
+                ],
+                [
+                    'code'      => 'SB 1205 — ITM Reporting',
+                    'authority' => 'State of California / SJFD',
+                    'summary'   => 'Written ITM reports must be submitted to SJFD for all commercial fire protection systems per SB 1205. Richardson delivers reports directly to SJFD Fire Prevention.',
+                ],
+                [
+                    'code'      => 'High-Rise Safety Requirements — CFC Section 403',
+                    'authority' => 'San Jose Fire Department',
+                    'summary'   => 'High-rise buildings in San Jose require comprehensive fire protection systems including NFPA 13 sprinklers, Class I standpipes, smoke control, and fire command centers. SJFD mandates pre-application meetings for all high-rise fire protection submittals.',
+                ],
+            ],
+            'fire_pump_note' => 'San Jose\'s downtown high-rise towers and North San Jose tech campuses routinely require fire pump systems where municipal supply pressure from San Jose Water or Great Oaks Water cannot meet NFPA 13 hydraulic design demand. Richardson designs electric- and diesel-driven NFPA 20-compliant fire pump packages and coordinates acceptance testing with SJFD Fire Prevention.',
+            'fire_pump_faqs' => [
+                [
+                    'q' => 'When is a fire pump required for a San Jose high-rise or commercial building?',
+                    'a' => 'A fire pump is required when available municipal supply pressure cannot meet the NFPA 13 hydraulic design demand for the most remote or most demanding sprinkler area. For San Jose high-rise buildings, this typically occurs above the 4th or 5th floor depending on local water system static pressure. Richardson conducts water supply analysis on every new project to determine fire pump need before design begins.',
+                ],
+                [
+                    'q' => 'Does SJFD require a witnessed acceptance test for fire pumps?',
+                    'a' => 'Yes. San Jose Fire Department requires a witnessed acceptance test for all new fire pump installations per NFPA 20 Section 14. Richardson schedules the SJFD inspector and provides all required flow measurement equipment, pressure gauges, and test documentation at the acceptance test.',
+                ],
+                [
+                    'q' => 'Can Richardson service existing fire pumps in San Jose high-rise buildings?',
+                    'a' => 'Yes. Richardson provides NFPA 25 annual fire pump flow testing, churn test documentation, controller testing, and repair services for existing electric and diesel pump packages in San Jose high-rise and commercial buildings. All reports meet SB 1205 written documentation requirements for SJFD submission.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
+            ],
+        ],
+
+        'napa' => [
+            'name'       => 'Napa',
+            'slug'       => 'napa',
+            'county'     => 'Napa County',
+            'lat'        => 38.2975,
+            'lng'        => -122.2869,
+            'population' => 80915,
+            'intro'      => 'Napa\'s economy is anchored by the wine and hospitality industry, but it also has an active light industrial and mixed-use development corridor along Highway 29. Richardson Fire Protection serves GCs and building owners in Napa on winery facility fire protection, hotel and resort sprinkler systems, and industrial processing facilities — with direct experience in Napa County AHJ requirements and the unique fire protection challenges of hospitality occupancies.',
+            'building_types' => [
+                'Winery & Food Processing Facilities',
+                'Hospitality & Resort Hotels',
+                'Mixed-Use & Retail',
+                'Light Industrial & Storage',
+            ],
+            'ahj_name'     => 'City of Napa Fire Department',
+            'nearby_cities' => [ 'concord', 'fairfield', 'oakland', 'sacramento' ],
+            'services_note' => 'The City of Napa Fire Department coordinates plan review for most Napa city projects. Winery production facilities are classified as special occupancies under NFPA 13 and may require specific commodity analysis for high-rack wine storage. Richardson provides occupancy-specific hazard justification with every Napa winery submittal.',
+            'neighborhoods' => [
+                'Downtown Napa',
+                'South Napa',
+                'Highway 29 Corridor',
+                'Oxbow District',
+                'Browns Valley',
+                'Airport Industrial Area',
+                'Old Town Napa',
+                'Fuller Park',
+            ],
+            'faqs' => [
+                [
+                    'q' => 'What fire protection system is required for a winery in Napa?',
+                    'a' => 'Winery facilities in Napa are typically classified as Factory Group F-1 or High-Hazard Group H occupancies under the CBC depending on production processes and chemical storage. NFPA 13 Extra Hazard Group 2 sprinkler design applies to fermentation and barrel storage areas. High-rack wine barrel storage exceeding 12 feet triggers a Commodity Classification analysis. Richardson provides occupancy-specific hazard justification letters for every Napa winery submittal to Napa Fire Department.',
+                ],
+                [
+                    'q' => 'How long does City of Napa Fire Department plan review take for a commercial fire sprinkler system?',
+                    'a' => 'Napa Fire Department typically completes plan review for standard NFPA 13 commercial systems in 3–5 weeks. Winery and special hazard occupancy submittals with commodity analysis may require 5–8 weeks. Richardson submits complete packages with all required documentation to Napa Fire Prevention to minimize correction cycles.',
+                ],
+                [
+                    'q' => 'What fire sprinkler requirements apply to hotels and resorts in Napa?',
+                    'a' => 'Hotels and resort properties in Napa are classified as R-1 occupancies under the CBC and require NFPA 13 or NFPA 13R fire sprinkler systems depending on building height and size. Guest rooms in hotels over three stories require NFPA 13. Meeting facilities, kitchens, and commercial spaces in resort hotels require NFPA 13 Extra Hazard design for kitchen hood areas. Richardson has experience with hospitality occupancy fire protection and Napa Fire Department requirements.',
+                ],
+                [
+                    'q' => 'What fire protection is required for high-rack wine barrel storage in Napa?',
+                    'a' => 'High-rack wine barrel storage exceeding 12 feet in height triggers high-piled storage requirements under CFC Chapter 32. This requires a Commodity Classification letter determining the storage classification (wine in wood barrels is typically Class I-III commodity), a Fire Protection Plan, and in-rack sprinkler systems if rack height and aisle configuration exceed standard NFPA 13 limits. Richardson prepares all required documentation for Napa Fire Department review.',
+                ],
+                [
+                    'q' => 'Does Richardson install fire suppression systems for fermentation tanks and processing equipment in Napa?',
+                    'a' => 'Yes. Winery fermentation facilities with large stainless steel tanks, pumps, and chemical transfer equipment may require specialized fire suppression for specific fire risks. Richardson assesses the occupancy and equipment hazard profile and recommends appropriate suppression measures — from enhanced NFPA 13 coverage to foam-water systems for certain processes — in coordination with Napa Fire Prevention.',
+                ],
+                [
+                    'q' => 'How far does Richardson travel from Sacramento to Napa?',
+                    'a' => 'Napa is approximately 80 miles from Richardson\'s Antelope base, typically about 75–90 minutes via I-80 and Highway 12 or I-80 and Highway 29. We serve Napa and Napa County as part of our Bay Area expansion and can commit to project schedules that reflect the drive time for inspections, punch list visits, and service calls.',
+                ],
+            ],
+            'primary_services' => [
+                [
+                    'icon'     => '🍷',
+                    'tag'      => 'Winery & Food Processing',
+                    'title'    => 'Winery & Processing Facility Fire Protection',
+                    'desc'     => 'Specialized NFPA 13 fire protection for Napa winery production facilities, barrel storage, and fermentation areas. Commodity analysis and Napa Fire Department coordination.',
+                    'features' => [ 'High-piled wine barrel storage analysis', 'Extra Hazard Group 2 sprinkler design', 'Commodity Classification letters', 'Napa Fire permit coordination' ],
+                    'link'     => '/commercial/',
+                ],
+                [
+                    'icon'     => '🏨',
+                    'tag'      => 'Hospitality & Hotel',
+                    'title'    => 'Hotel & Resort Fire Sprinkler Systems',
+                    'desc'     => 'NFPA 13 and NFPA 13R fire protection for Napa Valley hotels, resort properties, and hospitality venues. Full Napa Fire Department plan review and coordination.',
+                    'features' => [ 'NFPA 13 / 13R hotel design', 'Kitchen hood fire suppression', 'Guest room sprinkler systems', 'Napa Fire Prevention coordination' ],
+                    'link'     => '/commercial/',
+                ],
+                [
+                    'icon'     => '🔧',
+                    'tag'      => 'NFPA 25 ITM',
+                    'title'    => 'Fire Sprinkler Inspection & Testing',
+                    'desc'     => 'NFPA 25 annual inspection, testing, and maintenance for Napa commercial, hospitality, and winery properties. SB 1205 compliant written reports.',
+                    'features' => [ 'Annual NFPA 25 flow tests', 'Quarterly alarm valve testing', 'Written Napa Fire-compliant reports', 'SB 1205 compliance documentation' ],
+                    'link'     => '/inspection-testing/',
+                ],
+            ],
+            'local_regulations' => [
+                [
+                    'code'      => 'California Fire Code (CFC 2022)',
+                    'authority' => 'City of Napa Fire Department',
+                    'summary'   => 'Napa enforces the 2022 California Fire Code with local amendments. City of Napa Fire Department handles plan review for all commercial fire protection systems within city limits. Winery and special hazard occupancies require additional documentation.',
+                ],
+                [
+                    'code'      => 'CFC Chapter 32 — High-Piled Combustible Storage',
+                    'authority' => 'City of Napa Fire Department',
+                    'summary'   => 'High-rack wine barrel storage exceeding 12 feet requires a Commodity Classification letter and Fire Protection Plan submitted to Napa Fire Department. Richardson prepares both documents for all Napa winery storage submittals.',
+                ],
+                [
+                    'code'      => 'SB 1205 — ITM Reporting',
+                    'authority' => 'State of California / Napa Fire',
+                    'summary'   => 'Written ITM reports must be submitted to City of Napa Fire Department for all commercial fire protection systems per SB 1205. Richardson delivers reports directly to Napa Fire Prevention.',
+                ],
+                [
+                    'code'      => 'Napa County — WUI Fire Hazard Severity Zones',
+                    'authority' => 'CAL FIRE / City of Napa',
+                    'summary'   => 'Portions of Napa County are designated Very High Fire Hazard Severity Zones (VHFHSZ) by CAL FIRE. Buildings in these zones may require NFPA 13D residential sprinkler systems and enhanced exterior fire protection measures under the 2022 CBC and CRC.',
+                ],
+            ],
+            'fire_pump_note' => 'Large winery production facilities, resort hotels, and industrial buildings in Napa may require fire pump systems to meet NFPA 13 design pressure in areas with limited municipal water supply capacity. Richardson designs and installs electric- and diesel-driven fire pump packages coordinated with City of Napa Fire Department for acceptance testing.',
+            'fire_pump_faqs' => [
+                [
+                    'q' => 'When is a fire pump required for a winery or hotel in Napa?',
+                    'a' => 'A fire pump is required when available municipal supply pressure from the City of Napa public water system cannot meet the NFPA 13 hydraulic design demand for the most remote sprinkler area. This commonly occurs in large winery production buildings, sprawling resort properties, and facilities in lower-pressure water service zones. Richardson conducts flow tests and water supply analysis to determine fire pump need before design begins.',
+                ],
+                [
+                    'q' => 'Does Napa Fire Department require a witnessed acceptance test for fire pumps?',
+                    'a' => 'Yes. City of Napa Fire Department requires a witnessed acceptance test for all new fire pump installations per NFPA 20 Section 14. Richardson schedules the Napa Fire inspector and provides all required test instrumentation and documentation at the acceptance test.',
+                ],
+                [
+                    'q' => 'Can Richardson service existing fire pumps at Napa wineries and hospitality properties?',
+                    'a' => 'Yes. Richardson provides NFPA 25 annual fire pump flow testing, churn test documentation, controller testing, and repair services for existing electric and diesel pump packages throughout Napa County. All test reports are delivered in SB 1205 written format for submission to City of Napa Fire Department.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
+            ],
+        ],
+
     ]; // end rfp_all_locations()
 }
