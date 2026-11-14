@@ -71,8 +71,8 @@ function rfp_get_page_seo() {
         if ( $parent && 'locations' === $parent->post_name && function_exists('rfp_location_data') ) {
             $loc = rfp_location_data( $slug );
             if ( $loc ) {
-                $raw = 'Richardson Fire Protection serves GCs and developers in ' . $loc['name'] . '. NFPA 13 design-build, ' . $loc['ahj_name'] . ' permit coordination, and first-pass inspections. Bids in 24–48 hrs. Call (916) 849-6441.';
-                $seo['title']       = 'Fire Protection ' . $loc['name'] . ', CA | ' . $loc['county'] . ' Fire Sprinkler Contractor';
+                $raw = 'Licensed fire sprinkler contractor serving ' . $loc['name'] . '. Richardson Fire Protection delivers commercial fire protection services — NFPA 13 design-build, ' . $loc['ahj_name'] . ' coordination, and 24/7 ITM. Bids in 24–48 hrs.';
+                $seo['title']       = $loc['name'] . ' Fire Sprinkler Contractor | Fire Protection Services | Richardson';
                 $seo['description'] = substr( wp_strip_all_tags( $raw ), 0, 157 ) . '...';
                 $seo['schema_type'] = 'location_city';
                 $seo['location']    = $loc;
@@ -85,8 +85,8 @@ function rfp_get_page_seo() {
         if ( function_exists('rfp_location_data') && ! $post->post_parent ) {
             $loc = rfp_location_data( $slug );
             if ( $loc ) {
-                $raw = 'Richardson Fire Protection is ' . $loc['name'] . '\'s preferred fire sprinkler sub for GCs and developers — NFPA 13 design-build, ' . $loc['ahj_name'] . ' permit coordination, and 24/7 ITM service. C-16 #1053506.';
-                $seo['title']       = 'Fire Protection ' . $loc['name'] . ', CA | NFPA 13 Design & Installation | Richardson';
+                $raw = 'Richardson Fire Protection — licensed fire sprinkler contractor in ' . $loc['name'] . '. Commercial fire protection services: NFPA 13 design-build, ' . $loc['ahj_name'] . ' permits, 24/7 ITM. C-16 #1053506.';
+                $seo['title']       = $loc['name'] . ' Fire Sprinkler Contractor | Fire Protection Services | Richardson';
                 $seo['description'] = substr( wp_strip_all_tags( $raw ), 0, 157 ) . '...';
                 $seo['schema_type'] = 'location_city';
                 $seo['location']    = $loc;
