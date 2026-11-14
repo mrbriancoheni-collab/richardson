@@ -235,6 +235,38 @@ get_header();
       </div>
     </section>
 
+    <!-- ========== RELATED GUIDES ========== -->
+    <section class="section" style="background: var(--c-surface); padding-top: 3rem; padding-bottom: 3rem;">
+      <div class="container">
+        <div class="section-header reveal-up" style="margin-bottom: 1.5rem;">
+          <div class="section-badge">Further Reading</div>
+          <h2 class="section-title">Related <span class="text-accent">Guides</span></h2>
+        </div>
+        <div class="services-grid services-grid--4 reveal-up">
+          <div class="service-card service-card--sm">
+            <div class="service-card__icon"><i class="fa-solid fa-code-branch"></i></div>
+            <h3 class="service-card__title">Wet Pipe vs. Dry Pipe Fire Sprinkler Systems</h3>
+            <a href="<?php echo esc_url( home_url( '/wet-pipe-vs-dry-pipe-sprinklers/' ) ); ?>" class="service-card__link">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card service-card--sm">
+            <div class="service-card__icon"><i class="fa-solid fa-server"></i></div>
+            <h3 class="service-card__title">Pre-Action Fire Sprinkler Systems</h3>
+            <a href="<?php echo esc_url( home_url( '/pre-action-fire-sprinkler-systems/' ) ); ?>" class="service-card__link">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card service-card--sm">
+            <div class="service-card__icon"><i class="fa-solid fa-warehouse"></i></div>
+            <h3 class="service-card__title">High-Piled Storage Fire Code</h3>
+            <a href="<?php echo esc_url( home_url( '/high-piled-storage-fire-code/' ) ); ?>" class="service-card__link">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card service-card--sm">
+            <div class="service-card__icon"><i class="fa-solid fa-droplet"></i></div>
+            <h3 class="service-card__title">ESFR vs. In-Rack Sprinklers</h3>
+            <a href="<?php echo esc_url( home_url( '/esfr-vs-in-rack/' ) ); ?>" class="service-card__link">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== CTA ========== -->
     <section style="background: #C41230; color: #fff; text-align: center; padding: 4rem 1.5rem;">
       <div class="container" style="max-width: 640px;">

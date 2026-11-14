@@ -252,6 +252,38 @@ get_header();
       </div>
     </section>
 
+    <!-- ========== RELATED GUIDES ========== -->
+    <section class="section" style="background: var(--c-surface); padding-top: 3rem; padding-bottom: 3rem;">
+      <div class="container">
+        <div class="section-header reveal-up" style="margin-bottom: 1.5rem;">
+          <div class="section-badge">Further Reading</div>
+          <h2 class="section-title">Related <span class="text-accent">Guides</span></h2>
+        </div>
+        <div class="services-grid services-grid--4 reveal-up">
+          <div class="service-card service-card--sm">
+            <div class="service-card__icon"><i class="fa-solid fa-hammer"></i></div>
+            <h3 class="service-card__title">Tenant Improvement Fire Sprinkler Requirements</h3>
+            <a href="<?php echo esc_url( home_url( '/tenant-improvement-fire-sprinklers/' ) ); ?>" class="service-card__link">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card service-card--sm">
+            <div class="service-card__icon"><i class="fa-solid fa-city"></i></div>
+            <h3 class="service-card__title">Mixed-Use Building Fire Protection</h3>
+            <a href="<?php echo esc_url( home_url( '/mixed-use-fire-protection/' ) ); ?>" class="service-card__link">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card service-card--sm">
+            <div class="service-card__icon"><i class="fa-solid fa-hard-hat"></i></div>
+            <h3 class="service-card__title">Fire Sprinkler Coordination Guide for GCs</h3>
+            <a href="<?php echo esc_url( home_url( '/fire-sprinkler-coordination-guide/' ) ); ?>" class="service-card__link">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card service-card--sm">
+            <div class="service-card__icon"><i class="fa-solid fa-drafting-compass"></i></div>
+            <h3 class="service-card__title">How to Read Fire Sprinkler Shop Drawings</h3>
+            <a href="<?php echo esc_url( home_url( '/fire-sprinkler-shop-drawings/' ) ); ?>" class="service-card__link">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== CTA ========== -->
     <section class="section contact" style="padding-top: 4rem; padding-bottom: 4rem; background: #C41230;">
       <div class="container" style="text-align: center; max-width: 640px;">
