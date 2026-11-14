@@ -214,6 +214,38 @@ $phone = $biz['phone_display'] ?? '(916) 849-6441';
       </div>
     </section>
 
+    <!-- ========== RELATED GUIDES ========== -->
+    <section class="section" style="background: var(--c-surface); padding-top: 3rem; padding-bottom: 3rem;">
+      <div class="container">
+        <div class="section-header reveal-up" style="margin-bottom: 1.5rem;">
+          <div class="section-badge">Further Reading</div>
+          <h2 class="section-title">Related <span class="text-accent">Guides</span></h2>
+        </div>
+        <div class="services-grid services-grid--4 reveal-up">
+          <div class="service-card service-card--sm">
+            <div class="service-card__icon"><i class="fa-solid fa-clipboard-check"></i></div>
+            <h3 class="service-card__title">NFPA 25: The Complete Inspection Guide</h3>
+            <a href="<?php echo esc_url( home_url( '/nfpa-25-inspection-guide/' ) ); ?>" class="service-card__link">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card service-card--sm">
+            <div class="service-card__icon"><i class="fa-solid fa-dollar-sign"></i></div>
+            <h3 class="service-card__title">Fire Sprinkler Inspection Cost Guide 2026</h3>
+            <a href="<?php echo esc_url( home_url( '/fire-sprinkler-inspection-cost/' ) ); ?>" class="service-card__link">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card service-card--sm">
+            <div class="service-card__icon"><i class="fa-solid fa-faucet"></i></div>
+            <h3 class="service-card__title">Fire Sprinkler Backflow Preventer Testing</h3>
+            <a href="<?php echo esc_url( home_url( '/fire-sprinkler-backflow-preventer/' ) ); ?>" class="service-card__link">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card service-card--sm">
+            <div class="service-card__icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <h3 class="service-card__title">Fire Pump Installation Guide & NFPA 20</h3>
+            <a href="<?php echo esc_url( home_url( '/fire-pump-installation-guide/' ) ); ?>" class="service-card__link">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== SCHEDULE CTA ========== -->
     <section id="schedule" style="background: var(--c-red); color: #fff; text-align: center; padding: 4rem 1.5rem;">
       <div class="container" style="max-width: 640px;">

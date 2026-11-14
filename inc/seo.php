@@ -36,6 +36,7 @@ function rfp_business_data() {
             'Auburn', 'Rocklin', 'Lincoln', 'Yuba City', 'Marysville',
         ],
         'social'        => [
+            'https://share.google/xZpbIqAER27ne0Itm',
             'https://www.facebook.com/richardsonfireprotection',
             'https://www.linkedin.com/company/richardson-fire-protection',
         ],
@@ -642,9 +643,9 @@ function rfp_schema_markup() {
         ],
         'aggregateRating'    => [
             '@type'       => 'AggregateRating',
-            'ratingValue' => '5.0',
-            'ratingCount' => '47',
-            'reviewCount' => '47',
+            'ratingValue' => '4.8',
+            'ratingCount' => '16',
+            'reviewCount' => '16',
             'bestRating'  => '5',
             'worstRating' => '1',
         ],

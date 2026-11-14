@@ -249,6 +249,38 @@ get_header();
       </div>
     </section>
 
+    <!-- ========== RELATED GUIDES ========== -->
+    <section class="section" style="background: var(--c-surface); padding-top: 3rem; padding-bottom: 3rem;">
+      <div class="container">
+        <div class="section-header reveal-up" style="margin-bottom: 1.5rem;">
+          <div class="section-badge">Further Reading</div>
+          <h2 class="section-title">Related <span class="text-accent">Guides</span></h2>
+        </div>
+        <div class="services-grid services-grid--4 reveal-up">
+          <div class="service-card service-card--sm">
+            <div class="service-card__icon"><i class="fa-solid fa-house"></i></div>
+            <h3 class="service-card__title">NFPA 13D Fire Sprinklers for California Homes</h3>
+            <a href="<?php echo esc_url( home_url( '/nfpa-13d-residential-fire-sprinklers/' ) ); ?>" class="service-card__link">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card service-card--sm">
+            <div class="service-card__icon"><i class="fa-solid fa-city"></i></div>
+            <h3 class="service-card__title">Mixed-Use Building Fire Protection</h3>
+            <a href="<?php echo esc_url( home_url( '/mixed-use-fire-protection/' ) ); ?>" class="service-card__link">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card service-card--sm">
+            <div class="service-card__icon"><i class="fa-solid fa-building"></i></div>
+            <h3 class="service-card__title">NFPA 13R vs. NFPA 13: Which Applies?</h3>
+            <a href="<?php echo esc_url( home_url( '/nfpa-13r-vs-13-apartment-sprinklers/' ) ); ?>" class="service-card__link">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card service-card--sm">
+            <div class="service-card__icon"><i class="fa-solid fa-calendar-check"></i></div>
+            <h3 class="service-card__title">How Long Does Fire Sprinkler Installation Take?</h3>
+            <a href="<?php echo esc_url( home_url( '/fire-sprinkler-installation-timeline/' ) ); ?>" class="service-card__link">Read Guide <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== CTA ========== -->
     <section style="background: #C41230; color: #fff; text-align: center; padding: 4rem 1.5rem;">
       <div class="container" style="max-width: 640px;">
