@@ -65,6 +65,7 @@ add_action( 'template_redirect', function () {
         [ 'loc' => home_url( '/how-fire-sprinklers-work/' ),             'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
         [ 'loc' => home_url( '/fire-pump-installation-guide/' ),         'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
         [ 'loc' => home_url( '/fire-sprinkler-installation-timeline/' ), 'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
+        [ 'loc' => home_url( '/fire-sprinkler-system-design/' ),        'priority' => '0.9', 'changefreq' => 'monthly', 'lastmod' => $now ],
         [ 'loc' => home_url( '/tenant-improvement-fire-sprinklers/' ),  'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
         [ 'loc' => home_url( '/wet-pipe-vs-dry-pipe-sprinklers/' ),     'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],
         [ 'loc' => home_url( '/restaurant-fire-sprinkler-requirements/' ), 'priority' => '0.8', 'changefreq' => 'monthly', 'lastmod' => $now ],

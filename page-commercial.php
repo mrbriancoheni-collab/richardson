@@ -25,7 +25,7 @@ get_header();
           Commercial Fire <span class="hero-title--accent">Sprinkler Systems</span>
         </h1>
         <p class="hero-desc reveal-up" style="max-width: 640px;">
-          We're the fire sprinkler sub that Sacramento GCs put on every commercial project — offices, retail, mixed-use, restaurants, and warehouses. We handle design, permits, AHJ coordination, and installation. NFPA 13 compliant from day one.
+          Richardson Fire Protection is Sacramento's preferred commercial fire sprinkler company for GCs and developers. We design and install commercial sprinkler systems for offices, retail centers, mixed-use, restaurants, and warehouses — NFPA 13 compliant, fully permitted, turnkey from bid to certificate.
         </p>
         <div class="hero-actions reveal-up">
           <a href="tel:+19168496441" class="btn btn--primary btn--lg">
