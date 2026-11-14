@@ -148,6 +148,106 @@ get_header();
             </a>
           </div>
 
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-hammer"></i></div>
+            <div class="service-card__tag">Tenant Improvements</div>
+            <h3 class="service-card__title">Fire Sprinkler Requirements for Tenant Improvements in California</h3>
+            <p class="service-card__desc">When does a TI require new or modified sprinklers? Head relocation rules, occupied-building procedures, AHJ submittal requirements, and cost ranges for Sacramento Valley commercial TI projects.</p>
+            <a href="<?php echo esc_url( home_url( '/tenant-improvement-fire-sprinklers/' ) ); ?>" class="service-card__link">
+              Read Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-code-branch"></i></div>
+            <div class="service-card__tag">System Design Guide</div>
+            <h3 class="service-card__title">Wet Pipe vs. Dry Pipe Fire Sprinkler Systems: When to Use Each</h3>
+            <p class="service-card__desc">When California code requires a dry-pipe system, how each type works, cost comparison, maintenance differences, and common mistakes. Essential for projects with freeze-exposed areas.</p>
+            <a href="<?php echo esc_url( home_url( '/wet-pipe-vs-dry-pipe-sprinklers/' ) ); ?>" class="service-card__link">
+              Read Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-utensils"></i></div>
+            <div class="service-card__tag">Food Service Guide</div>
+            <h3 class="service-card__title">Fire Sprinkler Requirements for California Restaurants</h3>
+            <p class="service-card__desc">NFPA 13 hazard classification for dining and kitchen areas, coordination with Type I hood suppression, change-of-occupancy triggers, and high-temperature head requirements above cooking equipment.</p>
+            <a href="<?php echo esc_url( home_url( '/restaurant-fire-sprinkler-requirements/' ) ); ?>" class="service-card__link">
+              Read Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-city"></i></div>
+            <div class="service-card__tag">Mixed-Use Development</div>
+            <h3 class="service-card__title">Mixed-Use Building Fire Protection: California Developer's Guide</h3>
+            <p class="service-card__desc">NFPA 13 vs. 13R zoning by occupancy, podium construction fire protection, occupancy separation, high-rise triggers, and design-build coordination for Sacramento mixed-use pipeline projects.</p>
+            <a href="<?php echo esc_url( home_url( '/mixed-use-fire-protection/' ) ); ?>" class="service-card__link">
+              Read Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-house"></i></div>
+            <div class="service-card__tag">Residential Construction</div>
+            <h3 class="service-card__title">NFPA 13D Fire Sprinklers for California Homes: Builder's Guide</h3>
+            <p class="service-card__desc">California's statewide residential sprinkler mandate, how NFPA 13D differs from NFPA 13, water supply requirements, common builder questions, and cost benchmarks for new single-family construction.</p>
+            <a href="<?php echo esc_url( home_url( '/nfpa-13d-residential-fire-sprinklers/' ) ); ?>" class="service-card__link">
+              Read Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-dollar-sign"></i></div>
+            <div class="service-card__tag">Cost &amp; Pricing</div>
+            <h3 class="service-card__title">Fire Sprinkler Inspection Cost Guide: California 2026</h3>
+            <p class="service-card__desc">Inspection pricing by building type and size, what's included vs. extra, 5-year internal inspection costs, fire pump testing fees, and how to compare quotes and verify contractor credentials.</p>
+            <a href="<?php echo esc_url( home_url( '/fire-sprinkler-inspection-cost/' ) ); ?>" class="service-card__link">
+              Read Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-hard-hat"></i></div>
+            <div class="service-card__tag">GC Project Management</div>
+            <h3 class="service-card__title">Ground-Up Commercial Construction: Fire Sprinkler Coordination Guide for GCs</h3>
+            <p class="service-card__desc">When to hire the fire sprinkler sub, AHJ submittal timelines by Sacramento Valley city, rough-in coordination, inspection sequence, and the most common causes of fire sprinkler schedule delay on commercial projects.</p>
+            <a href="<?php echo esc_url( home_url( '/fire-sprinkler-coordination-guide/' ) ); ?>" class="service-card__link">
+              Read Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-server"></i></div>
+            <div class="service-card__tag">Specialized Systems</div>
+            <h3 class="service-card__title">Pre-Action Fire Sprinkler Systems: When Are They Required?</h3>
+            <p class="service-card__desc">Single vs. double-interlock pre-action systems, when California facilities (data centers, cold storage, museums) specify pre-action, NFPA 13 requirements, and cost premium vs. wet-pipe systems.</p>
+            <a href="<?php echo esc_url( home_url( '/pre-action-fire-sprinkler-systems/' ) ); ?>" class="service-card__link">
+              Read Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-faucet"></i></div>
+            <div class="service-card__tag">System Maintenance</div>
+            <h3 class="service-card__title">Fire Sprinkler Backflow Preventer: Testing, Requirements &amp; Costs</h3>
+            <p class="service-card__desc">Why every California fire sprinkler system requires a backflow preventer, RPZ vs. DCVA, annual testing requirements, water district reporting, failure consequences, and replacement cost ranges.</p>
+            <a href="<?php echo esc_url( home_url( '/fire-sprinkler-backflow-preventer/' ) ); ?>" class="service-card__link">
+              Read Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-drafting-compass"></i></div>
+            <div class="service-card__tag">GC Reference Guide</div>
+            <h3 class="service-card__title">How to Read Fire Sprinkler Shop Drawings: A Guide for GCs</h3>
+            <p class="service-card__desc">Fire sprinkler shop drawing package explained — head symbols, pipe sizing notation, hydraulic calculation sheets, seismic bracing requirements, and the common submittal errors that delay permit approval.</p>
+            <a href="<?php echo esc_url( home_url( '/fire-sprinkler-shop-drawings/' ) ); ?>" class="service-card__link">
+              Read Guide <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
         </div>
       </div>
     </section>

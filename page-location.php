@@ -37,10 +37,10 @@ $all_locs  = rfp_all_locations();
           Fire Sprinkler Contractor — <?php echo esc_html( $name ); ?>, <?php echo esc_html( $county ); ?>
         </div>
         <h1 class="hero-title reveal-up">
-          Fire Protection in <span class="hero-title--accent"><?php echo esc_html( $name ); ?></span>
+          Fire Sprinkler Contractor in <span class="hero-title--accent"><?php echo esc_html( $name ); ?></span>
         </h1>
         <p class="hero-desc reveal-up" style="max-width: 640px;">
-          Richardson Fire Protection is the preferred fire sprinkler sub for GCs and developers working in <?php echo esc_html( $name ); ?>. We handle design, permits, <?php echo esc_html( $ahj ); ?> coordination, and installation — turnkey from bid to certificate.
+          Richardson Fire Protection is <?php echo esc_html( $name ); ?>'s C-16 licensed fire sprinkler contractor. We provide commercial fire protection services for GCs and developers — design, permits, <?php echo esc_html( $ahj ); ?> coordination, and installation, turnkey from bid to certificate.
         </p>
         <div class="hero-actions reveal-up">
           <a href="tel:+19168496441" class="btn btn--primary btn--lg">
@@ -62,6 +62,9 @@ $all_locs  = rfp_all_locations();
         </h2>
         <p class="reveal-up" style="font-size: 1.05rem; line-height: 1.85; color: var(--c-text); margin-bottom: 1.5rem;">
           <?php echo esc_html( $loc['intro'] ); ?>
+        </p>
+        <p class="reveal-up" style="font-size: 1.05rem; line-height: 1.85; color: var(--c-text); margin-bottom: 1.5rem;">
+          As a licensed fire sprinkler contractor in <?php echo esc_html( $name ); ?>, Richardson provides comprehensive fire protection services — commercial and industrial sprinkler design and installation, <?php echo esc_html( $ahj ); ?> permit coordination, and NFPA 25 inspection and testing. CSLB C-16 License #1053506. NICET Level II certified.
         </p>
         <div class="reveal-up" style="background: var(--c-surface); border: 1px solid var(--c-border); border-left: 3px solid var(--c-red); border-radius: var(--r-md); padding: 1.25rem 1.5rem;">
           <p style="font-size: 0.9rem; margin: 0; color: var(--c-text-muted);">

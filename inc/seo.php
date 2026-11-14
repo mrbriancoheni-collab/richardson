@@ -71,8 +71,8 @@ function rfp_get_page_seo() {
         if ( $parent && 'locations' === $parent->post_name && function_exists('rfp_location_data') ) {
             $loc = rfp_location_data( $slug );
             if ( $loc ) {
-                $raw = 'Richardson Fire Protection serves GCs and developers in ' . $loc['name'] . '. NFPA 13 design-build, ' . $loc['ahj_name'] . ' permit coordination, and first-pass inspections. Bids in 24–48 hrs. Call (916) 849-6441.';
-                $seo['title']       = 'Fire Protection ' . $loc['name'] . ', CA | ' . $loc['county'] . ' Fire Sprinkler Contractor';
+                $raw = 'Licensed fire sprinkler contractor serving ' . $loc['name'] . '. Richardson Fire Protection delivers commercial fire protection services — NFPA 13 design-build, ' . $loc['ahj_name'] . ' coordination, and 24/7 ITM. Bids in 24–48 hrs.';
+                $seo['title']       = $loc['name'] . ' Fire Sprinkler Contractor | Fire Protection Services | Richardson';
                 $seo['description'] = substr( wp_strip_all_tags( $raw ), 0, 157 ) . '...';
                 $seo['schema_type'] = 'location_city';
                 $seo['location']    = $loc;
@@ -85,8 +85,8 @@ function rfp_get_page_seo() {
         if ( function_exists('rfp_location_data') && ! $post->post_parent ) {
             $loc = rfp_location_data( $slug );
             if ( $loc ) {
-                $raw = 'Richardson Fire Protection is ' . $loc['name'] . '\'s preferred fire sprinkler sub for GCs and developers — NFPA 13 design-build, ' . $loc['ahj_name'] . ' permit coordination, and 24/7 ITM service. C-16 #1053506.';
-                $seo['title']       = 'Fire Protection ' . $loc['name'] . ', CA | NFPA 13 Design & Installation | Richardson';
+                $raw = 'Richardson Fire Protection — licensed fire sprinkler contractor in ' . $loc['name'] . '. Commercial fire protection services: NFPA 13 design-build, ' . $loc['ahj_name'] . ' permits, 24/7 ITM. C-16 #1053506.';
+                $seo['title']       = $loc['name'] . ' Fire Sprinkler Contractor | Fire Protection Services | Richardson';
                 $seo['description'] = substr( wp_strip_all_tags( $raw ), 0, 157 ) . '...';
                 $seo['schema_type'] = 'location_city';
                 $seo['location']    = $loc;
@@ -309,6 +309,76 @@ function rfp_get_page_seo() {
                 $seo['schema_type'] = 'licenses';
                 break;
 
+            case 'tenant-improvement-fire-sprinklers':
+                $seo['title']       = 'Fire Sprinkler Requirements for Tenant Improvements in California | Richardson';
+                $seo['description'] = 'When does a TI require new or modified fire sprinklers in California? Head relocation rules, occupied-building procedures, AHJ submittal, and cost ranges for Sacramento Valley TI projects.';
+                $seo['schema_type'] = 'ti_guide';
+                $seo['type']        = 'article';
+                break;
+
+            case 'wet-pipe-vs-dry-pipe-sprinklers':
+                $seo['title']       = 'Wet Pipe vs. Dry Pipe Fire Sprinkler Systems: When to Use Each | Richardson';
+                $seo['description'] = 'Wet pipe vs. dry pipe fire sprinklers — when California code requires a dry-pipe system, how each works, cost comparison, and maintenance differences. Written by a C-16 licensed contractor.';
+                $seo['schema_type'] = 'wet_dry_pipe_guide';
+                $seo['type']        = 'article';
+                break;
+
+            case 'restaurant-fire-sprinkler-requirements':
+                $seo['title']       = 'Fire Sprinkler Requirements for California Restaurants: Complete Guide | Richardson';
+                $seo['description'] = 'NFPA 13 hazard classification for restaurants, coordination with Type I hoods, change-of-occupancy triggers, high-temperature head requirements, and Sacramento TI permit process.';
+                $seo['schema_type'] = 'restaurant_guide';
+                $seo['type']        = 'article';
+                break;
+
+            case 'mixed-use-fire-protection':
+                $seo['title']       = 'Mixed-Use Building Fire Protection: California Developer\'s Guide | Richardson';
+                $seo['description'] = 'Fire protection for California mixed-use buildings — NFPA 13 vs. 13R zoning, podium construction, occupancy separation, high-rise triggers, and design-build coordination for Sacramento developers.';
+                $seo['schema_type'] = 'mixed_use_guide';
+                $seo['type']        = 'article';
+                break;
+
+            case 'nfpa-13d-residential-fire-sprinklers':
+                $seo['title']       = 'NFPA 13D Fire Sprinklers for California Homes: Builder\'s Guide | Richardson';
+                $seo['description'] = 'California\'s residential sprinkler mandate, how NFPA 13D differs from NFPA 13, water supply requirements, C-16 licensing, and common builder questions. Updated for 2026.';
+                $seo['schema_type'] = 'nfpa13d_guide';
+                $seo['type']        = 'article';
+                break;
+
+            case 'fire-sprinkler-inspection-cost':
+                $seo['title']       = 'Fire Sprinkler Inspection Cost Guide: California 2026 | Richardson Fire Protection';
+                $seo['description'] = 'Fire sprinkler inspection costs in California — pricing by building type, what\'s included, 5-year internal inspection, fire pump testing, and how to compare quotes. CSLB C-16 licensed contractor.';
+                $seo['schema_type'] = 'inspection_cost_guide';
+                $seo['type']        = 'article';
+                break;
+
+            case 'fire-sprinkler-coordination-guide':
+                $seo['title']       = 'Fire Sprinkler Coordination Guide for GCs: Ground-Up Commercial Construction | Richardson';
+                $seo['description'] = 'When to bring in the fire sprinkler sub, AHJ submittal timelines by Sacramento Valley city, rough-in coordination checklist, and the most common causes of schedule delay. Written for GCs.';
+                $seo['schema_type'] = 'coordination_guide';
+                $seo['type']        = 'article';
+                break;
+
+            case 'pre-action-fire-sprinkler-systems':
+                $seo['title']       = 'Pre-Action Fire Sprinkler Systems: When Are They Required? | Richardson';
+                $seo['description'] = 'Pre-action sprinkler systems explained — single vs. double-interlock, when California requires them (data centers, cold storage, museums), NFPA 13 requirements, and cost premium vs. wet pipe.';
+                $seo['schema_type'] = 'pre_action_guide';
+                $seo['type']        = 'article';
+                break;
+
+            case 'fire-sprinkler-backflow-preventer':
+                $seo['title']       = 'Fire Sprinkler Backflow Preventer: Testing, Requirements & Costs | Richardson';
+                $seo['description'] = 'Why fire sprinkler systems require backflow prevention in California, RPZ vs. DCVA, annual testing requirements, water district reporting, and replacement cost ranges. CSLB C-16 licensed guide.';
+                $seo['schema_type'] = 'backflow_guide';
+                $seo['type']        = 'article';
+                break;
+
+            case 'fire-sprinkler-shop-drawings':
+                $seo['title']       = 'How to Read Fire Sprinkler Shop Drawings: A Guide for GCs | Richardson';
+                $seo['description'] = 'Fire sprinkler shop drawing package explained — floor plan symbols, pipe sizing notation, hydraulic calculation sheets, seismic bracing, and the common submittal errors that delay permit approval.';
+                $seo['schema_type'] = 'shop_drawings_guide';
+                $seo['type']        = 'article';
+                break;
+
             case 'resources':
             case 'blog':
             case 'fire-protection-resources':
@@ -474,6 +544,8 @@ function rfp_schema_markup() {
     $rfp_article_schema_types = [
         'nfpa25_guide', 'article_13r_vs_13', 'high_piled_guide',
         'ca_fire_code_guide', 'wui_guide', 'permit_guide', 'esfr_guide',
+        'ti_guide', 'wet_dry_pipe_guide', 'restaurant_guide', 'mixed_use_guide', 'nfpa13d_guide',
+        'inspection_cost_guide', 'coordination_guide', 'pre_action_guide', 'backflow_guide', 'shop_drawings_guide',
         'nfpa13_guide', 'how_sprinklers_work', 'fire_pump_guide', 'installation_timeline',
     ];
 
@@ -1397,6 +1469,136 @@ function rfp_schema_markup() {
               'a' => 'The California State Fire Marshal (CSFM) maintains a registration system for fire protection contractors that is separate from, and in addition to, the CSLB C-16 license. CSFM registration is required for California SB 1205 inspection certification and for work on state-regulated facilities. Richardson holds active CSFM contractor registration.' ],
             [ 'q' => 'Can Richardson provide certificates of insurance?',
               'a' => 'Yes. Richardson Fire Protection carries general liability, workers\' compensation, umbrella liability, and commercial auto insurance. Certificates of insurance naming a GC or owner as additional insured can be provided within 24 hours of request. Contact us at Chris@Richardsonfirepro.com.' ],
+        ],
+
+        'ti_guide' => [
+            [ 'q' => 'Does a California tenant improvement always require fire sprinkler modifications?',
+              'a' => 'Not always. If the TI does not change the occupancy classification, add floor area, or relocate ceiling elements that affect sprinkler coverage, existing heads may remain. However, any new walls, dropped ceilings, or partitions that obstruct head coverage require head relocation or addition. California AHJs also trigger full upgrades on change-of-occupancy from low to higher hazard.' ],
+            [ 'q' => 'Who is required to perform fire sprinkler work in a California TI?',
+              'a' => 'California requires a CSLB C-16 licensed fire protection contractor for all fire sprinkler installation, modification, and repair — including TI head relocations. Property owners and GCs cannot self-perform this work. Richardson holds C-16 License #1053506 and handles TI scopes of all sizes.' ],
+            [ 'q' => 'How long does it take to get a fire sprinkler TI permit in Sacramento?',
+              'a' => 'Sacramento City Fire Department typically reviews commercial TI sprinkler submittals in 4–8 weeks for first review, depending on project complexity and current workload. First-pass completeness significantly reduces correction cycles. Richardson submits complete, coordinated packages to minimize delays.' ],
+            [ 'q' => 'Can fire sprinkler TI work be done in an occupied building?',
+              'a' => 'Yes, with proper planning. An impairment management plan must be filed with the AHJ before any system shutoff. Fire watch procedures are required during impairments. Richardson coordinates with property management and tenants, and schedules off-hours work when required to minimize disruption.' ],
+            [ 'q' => 'How much does fire sprinkler TI work cost?',
+              'a' => 'Simple head relocations run $150–$400 per head including labor and materials. A partial rezone in a commercial suite typically costs $3,000–$12,000. Full floor retrofits in existing buildings with minimal access range from $5–$9 per square foot. Contact Richardson at (916) 849-6441 for a project-specific estimate.' ],
+        ],
+
+        'wet_dry_pipe_guide' => [
+            [ 'q' => 'When is a dry-pipe fire sprinkler system required in California?',
+              'a' => 'NFPA 13 Section 7.2 requires dry-pipe or other freeze-protection alternatives in areas subject to freezing. In California, this applies to unheated loading docks, parking structures, cold storage rooms, refrigerated warehouses, and exterior covered walkways. Even in Sacramento\'s mild climate, areas exposed to temperatures below 40°F require dry-pipe or antifreeze systems.' ],
+            [ 'q' => 'Is a dry-pipe system more expensive than a wet-pipe system?',
+              'a' => 'Yes. Dry-pipe systems typically cost 20–35% more than a comparable wet-pipe system due to the dry-pipe valve, air compressor, nitrogen supervision equipment, and additional testing requirements. Annual NFPA 25 maintenance also costs more because dry-pipe systems require annual trip tests that wet-pipe systems do not.' ],
+            [ 'q' => 'How long does it take for water to reach a dry-pipe sprinkler head after activation?',
+              'a' => 'NFPA 13 Section 7.2.3.2 requires that water reach the hydraulically most remote sprinkler within 60 seconds of head activation. This delay is why dry-pipe systems are not permitted in high-hazard occupancies where fast suppression is critical. Accelerators and exhausters can be added to reduce delivery time.' ],
+            [ 'q' => 'Can I use antifreeze instead of a dry-pipe system?',
+              'a' => 'Yes, in limited applications. NFPA 13 permits listed antifreeze solutions in small isolated areas (typically not exceeding 40 gallons). However, antifreeze systems require annual concentration testing and maintenance, and the glycerin-based solutions now required by NFPA are less effective than older propylene glycol formulas. For larger freeze-exposed areas, dry-pipe is usually preferred.' ],
+            [ 'q' => 'What maintenance does a dry-pipe system require?',
+              'a' => 'Under NFPA 25, dry-pipe systems require quarterly air pressure checks, annual full trip tests (which discharge water into the system and require draining), and annual internal valve inspection. The 5-year internal pipe inspection is especially important for dry-pipe systems because oxygen introduced during trip tests accelerates internal corrosion.' ],
+        ],
+
+        'restaurant_guide' => [
+            [ 'q' => 'Is a restaurant kitchen classified as ordinary hazard for fire sprinkler design?',
+              'a' => 'Commercial restaurant kitchens are typically classified as Ordinary Hazard Group 1 or 2 under NFPA 13, depending on the type and quantity of cooking equipment. Dining areas are classified as Light Hazard. The higher hazard classification in the kitchen requires a higher design density — typically 0.15 or 0.20 GPM/sq ft over 1,500 sq ft — and affects pipe sizing and head spacing.' ],
+            [ 'q' => 'Do fire sprinklers replace the ANSUL hood suppression system in a restaurant?',
+              'a' => 'No. NFPA 13 does not require sprinklers inside Type I commercial kitchen hoods in lieu of a listed kitchen hood suppression system (ANSUL or equivalent). Both are required: the hood suppression system handles grease fires at the cooking equipment, while the NFPA 13 sprinkler system protects the building. These systems must be coordinated but are separate requirements.' ],
+            [ 'q' => 'Does a California restaurant TI require fire sprinklers?',
+              'a' => 'Yes if the occupancy classification changes to A-2 (Assembly — restaurants) in a building that previously lacked sprinklers, or if the existing sprinkler system must be modified to maintain coverage around new walls or ceilings. All new A-2 occupancies over 300 sq ft in California require fire sprinklers. Verify with the local AHJ as requirements vary.' ],
+            [ 'q' => 'What type of sprinkler head is required above commercial cooking equipment?',
+              'a' => 'Standard-temperature sprinkler heads (135–170°F) are not permitted directly above commercial cooking equipment because ambient temperatures near cooking surfaces can cause premature activation. NFPA 13 Section 8.3 requires high-temperature rated heads (212°F or higher) above cooking appliances. The installer must verify the ceiling temperature in the cooking zone before specifying head ratings.' ],
+            [ 'q' => 'How long does it take to get a fire sprinkler permit for a restaurant TI in Sacramento?',
+              'a' => 'Sacramento City Fire Department typically reviews restaurant TI sprinkler submittals in 4–8 weeks. Restaurant submittals often require additional documentation — including the Type I hood layout from the mechanical contractor and the ANSUL system specification — which Richardson coordinates as part of the permit package. We return complete bids within 24–48 hours of receiving your plans.' ],
+        ],
+
+        'mixed_use_guide' => [
+            [ 'q' => 'Does a mixed-use building in California need NFPA 13 or NFPA 13R?',
+              'a' => 'Most mixed-use buildings require both. NFPA 13R applies to the residential portions of buildings up to 4 stories. NFPA 13 is required for the commercial/retail portions and for all portions of buildings over 4 stories. When both standards apply, the system is typically designed with NFPA 13 throughout for simplicity, or separate zoned systems for each occupancy type per AHJ direction.' ],
+            [ 'q' => 'At what height does a California mixed-use building become a high-rise?',
+              'a' => 'California defines a high-rise as a building with an occupied floor more than 55 feet above the lowest fire department vehicle access level (CBC Section 403). Once that threshold is crossed, NFPA 13 is required throughout, a Class I dry standpipe is added, a voice alarm system replaces standard bells, and elevator lobby pressurization is required. Many 5–6 story mixed-use buildings in Sacramento hit this threshold unexpectedly.' ],
+            [ 'q' => 'Can a mixed-use building use a single fire sprinkler system for all floors?',
+              'a' => 'It depends on the AHJ and building configuration. Some allow a single NFPA 13 system throughout. Others require separate sprinkler zones or systems for the commercial and residential portions, with independent risers, control valves, and flow switches. Sacramento City Fire Department guidance on this varies by project; Richardson coordinates directly with SCFD Fire Prevention during design.' ],
+            [ 'q' => 'What is a podium-style mixed-use building and how does it affect fire protection design?',
+              'a' => 'A podium building has a concrete or steel ground-floor commercial level (the podium) with wood-frame residential construction above. The fire protection design differs between levels: the commercial podium typically requires a higher hazard classification and heavier pipe sizing, while the residential levels above may qualify for NFPA 13R. The fire service connection, main riser, and isolation valves are usually located in the podium.' ],
+            [ 'q' => 'When should I engage a fire sprinkler contractor for a Sacramento mixed-use project?',
+              'a' => 'During design development (DD phase), no later than 60% construction documents. Mixed-use buildings have complex coordination requirements — ceiling heights, pipe shaft locations, and penetrations through the Type IA podium slab all need to be resolved before structural drawings are finalized. Late engagement is the leading cause of costly change orders on mixed-use projects. Richardson provides pre-construction coordination at no additional cost for committed projects.' ],
+        ],
+
+        'nfpa13d_guide' => [
+            [ 'q' => 'Is a fire sprinkler system required in all new California homes?',
+              'a' => 'Yes. California Health and Safety Code Section 13113.7 requires fire sprinkler systems in all new one- and two-family dwellings and townhouses statewide, effective January 1, 2011. This is a statewide mandate — no local jurisdiction can opt out. The applicable standard for most single-family homes is NFPA 13D.' ],
+            [ 'q' => 'What areas of a home are exempt from NFPA 13D sprinkler coverage?',
+              'a' => 'NFPA 13D does not require sprinklers in bathrooms of 55 square feet or less, closets of 24 square feet or less, garages, attics, crawlspaces, or exterior porches. These exemptions reduce cost compared to commercial NFPA 13 systems, but the AHJ may require sprinklers in areas where they are technically exempt if there is a specific fire safety concern.' ],
+            [ 'q' => 'Can an NFPA 13D system share the home\'s domestic water supply?',
+              'a' => 'Yes, in most cases. NFPA 13D only requires sufficient flow for two heads simultaneously for 10 minutes. A standard 3/4-inch or 1-inch domestic water meter typically provides adequate flow if the pressure is sufficient at the most remote head. Richardson assesses the available water supply and meter size as part of every new construction scope. A dedicated fire service line may be required by the water district regardless of NFPA demand.' ],
+            [ 'q' => 'Who can install residential fire sprinklers in California?',
+              'a' => 'Even for NFPA 13D residential systems, California requires a CSLB C-16 licensed fire protection contractor. Plumbers, general contractors, and homeowners may not install fire sprinkler systems — not even when the system ties into the domestic water supply. This is a common misunderstanding that has led to enforcement action by California AHJs.' ],
+            [ 'q' => 'How much does NFPA 13D residential sprinkler installation cost?',
+              'a' => 'For new single-family construction in Sacramento Valley, NFPA 13D systems typically cost $1.50–$3.50 per square foot depending on home size, layout complexity, and water supply configuration. A 2,000 sq ft home generally runs $4,000–$9,000 installed. Custom homes with complex floor plans, tankless water heaters (which affect demand calculations), or low water pressure cost more. Call (916) 849-6441 for a project-specific estimate.' ],
+        ],
+
+        'inspection_cost_guide' => [
+            [ 'q' => 'How much does an annual fire sprinkler inspection cost in California?',
+              'a' => 'Annual NFPA 25 inspection costs range from $250–$500 for small commercial buildings under 5,000 sq ft to $2,500–$5,000+ for large industrial facilities. The primary cost driver is head count, not square footage. Buildings with dry-pipe systems, fire pumps, or multiple risers cost more due to additional testing procedures. Richardson provides flat-rate inspection contracts with no surprise line items.' ],
+            [ 'q' => 'What is included in a standard NFPA 25 annual inspection?',
+              'a' => 'A complete annual NFPA 25 inspection includes visual inspection of all sprinkler heads, pipes, hangers, control valves, alarm devices, and fire department connections; gauge testing; control valve position verification; written deficiency report with photographs; corrective action priority list; and SB 1205 certification for CSFM submission. Some vendors charge separately for the written report or SB 1205 certification — these should always be included.' ],
+            [ 'q' => 'What is the 5-year internal fire sprinkler inspection and what does it cost?',
+              'a' => 'NFPA 25 Chapter 14 requires an obstruction investigation every 5 years — a physical inspection of internal pipe condition for corrosion, scale, MIC (microbiologically influenced corrosion), and organic growth. A contractor opens representative pipe sections or uses borescope inspection. Cost ranges from $800–$2,500 for most commercial systems. This inspection is frequently skipped by under-qualified vendors and is where the most serious system integrity problems are found.' ],
+            [ 'q' => 'Does California SB 1205 require a written inspection report?',
+              'a' => 'Yes. SB 1205 requires a written inspection report with the inspector\'s name, C-16 license number, CSFM registration number, inspection date, deficiencies found, and corrective action recommendations. This report must be submitted to the CSFM database and provided to the building owner. Verbal-only inspections or one-page sign-off sheets do not comply with SB 1205.' ],
+            [ 'q' => 'How do I know if my fire sprinkler inspector is properly licensed in California?',
+              'a' => 'Verify CSLB C-16 license status at cslb.ca.gov and CSFM contractor registration at osfm.fire.ca.gov. Both are required under SB 1205. NICET certification is a separate credential indicating specialized training but is not independently required by California law. Any inspector who cannot provide both a current C-16 license number and CSFM registration number is operating illegally in California.' ],
+        ],
+
+        'coordination_guide' => [
+            [ 'q' => 'When should a GC hire the fire sprinkler sub on a commercial project?',
+              'a' => 'During design development — no later than 60% construction documents. The fire sprinkler design must be coordinated with ceiling heights, structural penetrations, pipe shafts, and MEP routing before those elements are finalized. Bringing in the fire sprinkler sub after permit submittal is the single leading cause of fire sprinkler-related change orders and schedule delays on commercial projects.' ],
+            [ 'q' => 'How long does Sacramento City Fire Department take to review a fire sprinkler submittal?',
+              'a' => 'Richardson\'s experience with SCFD Fire Prevention shows commercial plan review typically takes 4–6 weeks for first review. Correction cycles add 2–4 weeks per round. Projects submitted with incomplete packages — missing hydraulic calculations, unstamped drawings, or incomplete occupancy analysis — routinely run 10–14 weeks total. Richardson returns complete, well-organized submittals on first attempt to protect your critical path.' ],
+            [ 'q' => 'What information does the fire sprinkler sub need to start design?',
+              'a' => 'At minimum: architectural drawings at 50% SD or later (for occupancy classifications, building height, square footage, and ceiling heights), structural drawings for penetration coordination, MEP drawings for routing conflicts, the AHJ pre-application meeting notes if any, and the project schedule. The earlier the sub receives plans, the more economical the design — late changes to occupancy or ceiling height can require complete hydraulic redesign.' ],
+            [ 'q' => 'What is a rough-in inspection and when does it occur?',
+              'a' => 'A rough-in inspection is conducted by the AHJ after all sprinkler piping and heads are installed but before the ceiling is closed. The inspector verifies pipe sizing, head spacing, hanger locations, and seismic bracing before the work is concealed. No ceiling close-in can occur until the rough-in inspection is passed and signed off. Missing this inspection requires opening finished ceilings, which is costly and time-consuming.' ],
+            [ 'q' => 'What is a hydrostatic test and is it required in California?',
+              'a' => 'Yes. NFPA 13 Section 24.2 requires a hydrostatic test at 200 psi for 2 hours (or 50 psi above the maximum system working pressure) before system acceptance. This test verifies that all pipe joints are leak-free. It is witnessed by the AHJ as part of the final inspection. Richardson schedules the hydro test with the AHJ in advance to prevent last-minute delays to certificate of occupancy.' ],
+        ],
+
+        'pre_action_guide' => [
+            [ 'q' => 'What is the difference between a pre-action system and a dry-pipe system?',
+              'a' => 'Both use pressurized air to keep pipes dry until a head activates. The key difference: a dry-pipe system releases water when any sprinkler head fuses (one trigger). A pre-action system requires TWO independent events — a detection device (smoke or heat sensor) AND a sprinkler head activation — before water is released. This two-step activation prevents accidental water discharge in sensitive environments.' ],
+            [ 'q' => 'When is a double-interlock pre-action system specified?',
+              'a' => 'Double-interlock pre-action systems are specified where accidental water discharge would cause catastrophic damage — data centers, server rooms, museums, archival libraries, and telecommunications facilities. Both a detection device AND a sprinkler head must activate before the pre-action valve opens. This provides maximum protection against accidental discharge but results in the slowest water delivery of any sprinkler system type.' ],
+            [ 'q' => 'Is a pre-action system required in California data centers?',
+              'a' => 'California code does not specifically require pre-action systems in data centers — NFPA 13 wet-pipe systems are code-compliant. However, most data center operators, insurance carriers, and facility managers specify pre-action (or FM200/clean agent suppression in IT rooms) due to the value of equipment at risk. The system type is typically an owner/insurer specification requirement rather than a code mandate.' ],
+            [ 'q' => 'How much more does a pre-action system cost than a standard wet-pipe system?',
+              'a' => 'Single-interlock pre-action systems run 40–60% more than a comparable wet-pipe system. Double-interlock systems run 60–90% more, primarily due to the detection panel, supervisory wiring, pre-action valve assembly, and integration with the fire alarm system. Annual NFPA 25 testing for pre-action systems also costs more than wet-pipe testing because of the additional components.' ],
+            [ 'q' => 'Can Richardson design and install pre-action fire sprinkler systems?',
+              'a' => 'Yes. Richardson Fire Protection designs and installs single- and double-interlock pre-action systems for data centers, cold storage, and other sensitive environments across Sacramento Valley. Our team holds CSLB C-16 License #1053506 and coordinates with the fire alarm contractor to integrate the detection panel with the pre-action valve. Call (916) 849-6441 to discuss your project.' ],
+        ],
+
+        'backflow_guide' => [
+            [ 'q' => 'Is a backflow preventer required on every fire sprinkler system in California?',
+              'a' => 'Yes. California local water districts require a backflow prevention assembly on every fire protection connection to protect the potable water supply from contamination. Most Sacramento-area water districts require a reduced pressure zone (RPZ) assembly — the highest protection level — for fire system connections. Failure to install or maintain the backflow device can result in service shutoff by the water district.' ],
+            [ 'q' => 'How often does a fire sprinkler backflow preventer need to be tested in California?',
+              'a' => 'Annual testing is required by California Health and Safety Code and local water district rules. The test must be performed by a certified cross-connection control specialist and results submitted to the water district. NFPA 25 also requires annual inspection of the backflow assembly as part of the sprinkler system ITM. Richardson handles backflow testing as part of annual inspection contracts.' ],
+            [ 'q' => 'What is an RPZ backflow preventer and why is it required for fire systems?',
+              'a' => 'An RPZ (Reduced Pressure Zone) assembly is the highest-rated backflow prevention device. It uses two independent check valves separated by a reduced-pressure zone, plus a relief valve that discharges to the atmosphere if either check valve fails. RPZ devices are required for fire systems because the sprinkler piping contains non-potable water (corrosion inhibitors, nitrogen, and potentially antifreeze) that must never reach the potable supply.' ],
+            [ 'q' => 'What happens if my backflow preventer fails its annual test?',
+              'a' => 'A failed test must be reported to the water district. The property owner must have the device repaired or replaced and re-tested within the timeframe specified by the district — typically 30 days. During this period, the fire system may need to be monitored more closely. An RPZ relief valve that has been visibly discharging indicates a failed check valve requiring immediate repair — it is not a normal operating condition.' ],
+            [ 'q' => 'How much does backflow preventer replacement cost for a fire system?',
+              'a' => 'RPZ replacement costs range from $800–$1,800 for a 2-inch device to $4,000–$8,500 for a 6-inch device, including labor. Costs increase if the device is in a difficult access location, if the fire system must be shut down and an impairment managed, or if the water district requires a new test after installation. Richardson handles backflow device repairs, replacements, and annual testing. Call (916) 849-6441 for a quote.' ],
+        ],
+
+        'shop_drawings_guide' => [
+            [ 'q' => 'What documents are in a fire sprinkler shop drawing submittal package?',
+              'a' => 'A complete fire sprinkler submittal package includes: a cover sheet with project information and symbol legend, floor plan(s) showing sprinkler head layout and pipe sizing, reflected ceiling plan coordination, hydraulic calculation sheets, equipment cut sheets (listed heads, valves, and hangers), and an installer qualifications page showing the C-16 license number and NICET certification. Some AHJs require a NFPA 13 code analysis letter as well.' ],
+            [ 'q' => 'What does a GC need to review in the fire sprinkler shop drawings?',
+              'a' => 'GCs should check that sprinkler head locations do not conflict with the proposed ceiling grid, lighting layout, or HVAC diffusers; that pipe mains shown routing through the building do not conflict with structural members or large ductwork; and that pipe penetrations through rated walls are shown and coordinated. GCs do not need to verify the hydraulics, but should confirm that pipe sizes shown match what is being installed.' ],
+            [ 'q' => 'Does California require a NICET stamp on fire sprinkler hydraulic calculations?',
+              'a' => 'Some California AHJs require NICET Level II or higher certification on hydraulic calculation submittals — SCFD Fire Prevention and several other Sacramento Valley jurisdictions include this requirement. Even where not mandated, NICET-stamped calculations signal to the plan checker that the submittal is professionally prepared, which can accelerate review. Richardson\'s design staff holds NICET Level II certification.' ],
+            [ 'q' => 'What is the most common reason a fire sprinkler submittal gets rejected?',
+              'a' => 'The most common correction triggers are: head coverage exceeding NFPA 13 Section 8.5 maximums (15×15 ft for light hazard), inadequate or missing seismic bracing calculations per NFPA 13 Chapter 9 (Sacramento Valley is Seismic Design Category D), and a water supply data sheet based on a flow test more than 1 year old. Richardson submits complete, current packages to avoid correction cycles that add weeks to the schedule.' ],
+            [ 'q' => 'How do hydraulic calculations determine whether a fire pump is needed?',
+              'a' => 'The hydraulic calculation identifies the system\'s demand: the minimum flow rate (GPM) and pressure (PSI) required at the point of connection to the water supply. This demand is plotted on a water supply curve derived from a fire hydrant flow test. If the demand falls above the available supply curve, the system requires a fire pump to boost pressure. Richardson performs this analysis as part of every new construction design and advises on pump sizing if required.' ],
         ],
     ];
 
