@@ -25,7 +25,7 @@ get_header();
           Industrial Fire <span class="hero-title--accent">Sprinkler Systems</span>
         </h1>
         <p class="hero-desc reveal-up" style="max-width: 640px;">
-          GCs and industrial developers building high-bay warehouse, cold storage, or manufacturing facilities in Sacramento rely on us for in-rack sprinklers, ESFR systems, and special hazard suppression. We handle the complexity so your project keeps moving.
+          Richardson Fire Protection designs and installs industrial fire sprinkler systems for high-bay warehouses, cold storage, and manufacturing facilities across Sacramento Valley. ESFR systems, in-rack sprinklers, and special hazard suppression — engineered to NFPA 13, fully permitted, turnkey.
         </p>
         <div class="hero-actions reveal-up">
           <a href="tel:+19168496441" class="btn btn--primary btn--lg">

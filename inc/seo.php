@@ -140,15 +140,15 @@ function rfp_get_page_seo() {
         switch ( $slug ) {
             case 'commercial':
             case 'commercial-fire-protection':
-                $seo['title']       = 'Commercial Fire Sprinkler Contractor in Sacramento | Richardson Fire Protection';
-                $seo['description'] = 'Fire sprinkler design-build for GCs and developers on office, retail, mixed-use, and warehouse projects in Sacramento. NFPA 13 compliant. We pull permits, coordinate the AHJ, and hit your schedule.';
+                $seo['title']       = 'Commercial Sprinkler Systems Sacramento | NFPA 13 Design-Build | Richardson Fire Protection';
+                $seo['description'] = 'Commercial fire sprinkler systems for offices, retail, mixed-use, and warehouses in Sacramento. Full design-build: hydraulic calcs, AHJ permits, and installation. C-16 licensed commercial sprinkler company.';
                 $seo['schema_type'] = 'service_commercial';
                 break;
 
             case 'industrial':
             case 'industrial-fire-protection':
-                $seo['title']       = 'Industrial Fire Sprinkler Systems | ESFR, In-Rack & NFPA 13 Warehouse Protection | Richardson';
-                $seo['description'] = 'Industrial fire sprinkler design-build for high-bay warehouses, cold storage, and manufacturing in Sacramento Valley. ESFR, in-rack, and special hazard systems. CSLB C-16 #1053506.';
+                $seo['title']       = 'Industrial Fire Sprinkler Systems Sacramento | ESFR, In-Rack & NFPA 13 | Richardson';
+                $seo['description'] = 'Industrial fire sprinkler system design and installation for high-bay warehouses, cold storage, and manufacturing in Sacramento Valley. ESFR, in-rack, special hazard. NICET-certified design. C-16 #1053506.';
                 $seo['schema_type'] = 'service_industrial';
                 break;
 
@@ -308,6 +308,12 @@ function rfp_get_page_seo() {
                 $seo['title']       = 'Licenses & Certifications | Richardson Fire Protection — CSLB C-16 #1053506';
                 $seo['description'] = 'Richardson Fire Protection holds CSLB C-16 License #1053506, CSFM Contractor Registration, and NICET-certified design staff. Fully licensed and insured in California.';
                 $seo['schema_type'] = 'licenses';
+                break;
+
+            case 'fire-sprinkler-system-design':
+                $seo['title']       = 'Fire Sprinkler System Design & Engineering Sacramento | NICET Certified | Richardson';
+                $seo['description'] = 'Fire sprinkler system design near you — NICET Level II hydraulic calculations, shop drawings, and AHJ submittal for commercial, industrial, and multifamily projects in Sacramento Valley.';
+                $seo['schema_type'] = 'design_service';
                 break;
 
             case 'tenant-improvement-fire-sprinklers':

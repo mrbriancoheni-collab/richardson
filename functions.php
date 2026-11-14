@@ -60,6 +60,7 @@ add_filter( 'template_include', function( $template ) {
         'wui-sprinklers'                        => 'wui-sprinklers.php',
         'permit-guide-sacramento'               => 'permit-guide-sacramento.php',
         'esfr-vs-in-rack'                       => 'esfr-vs-in-rack.php',
+        'fire-sprinkler-system-design'          => 'fire-sprinkler-design.php',
         'tenant-improvement-fire-sprinklers'    => 'ti-fire-sprinklers.php',
         'wet-pipe-vs-dry-pipe-sprinklers'       => 'wet-dry-pipe-guide.php',
         'restaurant-fire-sprinkler-requirements' => 'restaurant-fire-sprinklers.php',
