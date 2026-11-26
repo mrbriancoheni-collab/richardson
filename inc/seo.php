@@ -34,6 +34,7 @@ function rfp_business_data() {
             'Sacramento', 'Elk Grove', 'Roseville', 'Folsom', 'Rancho Cordova',
             'Citrus Heights', 'Natomas', 'West Sacramento', 'Davis', 'Woodland',
             'Auburn', 'Rocklin', 'Lincoln', 'Yuba City', 'Marysville',
+            'Stockton', 'Fairfield', 'Concord', 'Oakland', 'Fremont', 'San Jose', 'Napa',
         ],
         'social'        => [
             'https://share.google/xZpbIqAER27ne0Itm',
