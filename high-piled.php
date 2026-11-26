@@ -40,6 +40,7 @@ get_header();
     <section class="section">
       <div class="container">
         <div style="max-width: 800px; margin: 0 auto;">
+          <?php include get_template_directory() . '/inc/author-byline.php'; ?>
 
           <h2>What Is High-Piled Storage?</h2>
           <p>Under the California Fire Code (CFC) Section 3202 and NFPA 13, "high-piled storage" refers to solid-piled, palletized, rack storage, bin box storage, or shelf storage in excess of 12 feet in height. When your warehouse stores materials above 12 feet, you trigger a separate fire protection regulatory category with specific sprinkler system, aisle, and permit requirements.</p>

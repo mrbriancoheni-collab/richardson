@@ -40,6 +40,7 @@ get_header();
     <section class="section">
       <div class="container">
         <div style="max-width: 800px; margin: 0 auto;">
+          <?php include get_template_directory() . '/inc/author-byline.php'; ?>
 
           <h2>What Drives Fire Sprinkler Inspection Cost</h2>
           <p>The most common question property managers ask is: "What does fire sprinkler inspection cost per square foot?" That framing leads to bad quotes, because square footage is a poor proxy for inspection labor. The real cost drivers are:</p>

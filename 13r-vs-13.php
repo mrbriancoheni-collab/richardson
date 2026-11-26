@@ -40,6 +40,7 @@ get_header();
     <section class="section">
       <div class="container">
         <div style="max-width: 800px; margin: 0 auto;">
+          <?php include get_template_directory() . '/inc/author-byline.php'; ?>
 
           <h2>The Three NFPA Sprinkler Standards for Residential Buildings</h2>
           <p>When a California multifamily project requires fire sprinklers — and nearly all of them do — the design standard used affects system cost, complexity, and performance. Three NFPA standards cover residential applications, each with different scopes:</p>

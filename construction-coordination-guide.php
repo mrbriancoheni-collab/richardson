@@ -40,6 +40,7 @@ get_header();
     <section class="section">
       <div class="container">
         <div style="max-width: 800px; margin: 0 auto;">
+          <?php include get_template_directory() . '/inc/author-byline.php'; ?>
 
           <h2>When Should the GC Bring in the Fire Sprinkler Sub?</h2>
           <p>The right answer is: during Design Development (DD) — not at permit submittal. Most schedule problems on fire sprinkler scopes trace back to a single root cause: the sprinkler sub was brought in too late to influence decisions that were already locked into the drawings.</p>

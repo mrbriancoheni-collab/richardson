@@ -40,6 +40,7 @@ $biz = rfp_business_data();
     <!-- ========== ARTICLE BODY ========== -->
     <section id="timeline-guide" class="section">
       <div class="container" style="max-width: 860px;">
+        <?php include get_template_directory() . '/inc/author-byline.php'; ?>
 
         <!-- SUMMARY TABLE -->
         <div class="reveal-up" style="margin-bottom: 3rem;">

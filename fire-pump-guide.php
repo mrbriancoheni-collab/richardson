@@ -40,6 +40,7 @@ $biz = rfp_business_data();
     <!-- ========== ARTICLE BODY ========== -->
     <section id="fire-pump-guide" class="section">
       <div class="container" style="max-width: 860px;">
+        <?php include get_template_directory() . '/inc/author-byline.php'; ?>
 
         <!-- WHEN IS A FIRE PUMP REQUIRED -->
         <div class="reveal-up" style="margin-bottom: 3rem;">

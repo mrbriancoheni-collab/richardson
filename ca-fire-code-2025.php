@@ -40,6 +40,7 @@ get_header();
     <section class="section">
       <div class="container">
         <div style="max-width: 800px; margin: 0 auto;">
+          <?php include get_template_directory() . '/inc/author-byline.php'; ?>
 
           <h2>California's Fire Code Adoption Cycle</h2>
           <p>California adopts the International Fire Code (IFC) on a 3-year cycle but amends it extensively to become the California Fire Code (CFC). The 2022 CFC, based on the IFC 2021 edition, took effect January 1, 2023 statewide. However, individual Authorities Having Jurisdiction (AHJs) — typically local fire departments — may adopt the new code on a slightly delayed schedule or apply local amendments that affect how the code is enforced in their jurisdiction.</p>

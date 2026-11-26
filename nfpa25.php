@@ -40,6 +40,7 @@ get_header();
     <section class="section">
       <div class="container">
         <div style="max-width: 800px; margin: 0 auto;">
+          <?php include get_template_directory() . '/inc/author-byline.php'; ?>
 
           <h2>What Is NFPA 25?</h2>
           <p>NFPA 25 is the Standard for the Inspection, Testing, and Maintenance of Water-Based Fire Protection Systems, published by the National Fire Protection Association. It establishes the minimum frequency and procedures for inspecting sprinkler systems, standpipes, fire pumps, water storage tanks, and private fire service mains. In California, NFPA 25 compliance is enforced by the local Authority Having Jurisdiction (AHJ) — typically the local fire department — and since 2019, California SB 1205 requires that inspections be performed by or under the supervision of a contractor holding a CSLB C-16 license and CSFM registration.</p>

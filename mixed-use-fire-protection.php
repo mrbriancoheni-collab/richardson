@@ -40,6 +40,7 @@ get_header();
     <section class="section">
       <div class="container">
         <div style="max-width: 800px; margin: 0 auto;">
+          <?php include get_template_directory() . '/inc/author-byline.php'; ?>
 
           <h2>What Is a Mixed-Use Building?</h2>
           <p>A mixed-use building combines two or more occupancy types — most commonly residential units above ground-floor commercial space (retail, restaurant, office). This building type dominates Sacramento's current development pipeline: Natomas is seeing mixed-use multifamily at scale, Midtown and Central City are dense with 5- and 6-story residential-over-retail projects, and the broader infill corridor from West Sacramento to Rancho Cordova is adding mixed-use projects on every previously commercial parcel.</p>

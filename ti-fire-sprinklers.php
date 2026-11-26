@@ -40,6 +40,7 @@ get_header();
     <section class="section">
       <div class="container">
         <div style="max-width: 800px; margin: 0 auto;">
+          <?php include get_template_directory() . '/inc/author-byline.php'; ?>
 
           <h2>What Counts as a Tenant Improvement?</h2>
           <p>A tenant improvement (TI) is any construction or alteration within an existing building shell — a new tenant buildout, an office reconfiguration, a change of use, or a partial renovation that stops short of full demolition. TIs are distinct from new construction because the building structure already exists and is often occupied, which creates a unique set of fire protection requirements that don't apply to ground-up projects.</p>
