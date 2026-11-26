@@ -56,6 +56,38 @@ get_header();
       <?php endif; ?>
     <?php endwhile; endif; ?>
 
+    <!-- ========== AT A GLANCE ========== -->
+    <section class="section" style="background: var(--c-surface); padding-top: 2.5rem; padding-bottom: 2.5rem;">
+      <div class="container">
+        <div class="services-grid services-grid--4 reveal-up">
+          <div class="service-card service-card--sm" style="text-align:center;">
+            <div class="service-card__icon"><i class="fa-solid fa-building-user"></i></div>
+            <h3 class="service-card__title">Multifamily Sprinkler Systems</h3>
+            <p class="service-card__desc">NFPA 13R, NFPA 13, and NFPA 13D — the right standard for your project height and construction type.</p>
+            <a href="<?php echo esc_url( home_url( '/multifamily-fire-sprinkler-system/' ) ); ?>" class="service-card__link">System Types &amp; Costs <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card service-card--sm" style="text-align:center;">
+            <div class="service-card__icon"><i class="fa-solid fa-house"></i></div>
+            <h3 class="service-card__title">NFPA 13R vs. NFPA 13</h3>
+            <p class="service-card__desc">Which standard applies to your 3-story vs. 5-story apartment project? Our guide explains the differences and costs.</p>
+            <a href="<?php echo esc_url( home_url( '/nfpa-13r-vs-13-apartment-sprinklers/' ) ); ?>" class="service-card__link">Read the Guide <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card service-card--sm" style="text-align:center;">
+            <div class="service-card__icon"><i class="fa-solid fa-drafting-compass"></i></div>
+            <h3 class="service-card__title">Fire Sprinkler System Design</h3>
+            <p class="service-card__desc">NICET II certified hydraulic calculations and stamped shop drawings for multifamily AHJ submittals.</p>
+            <a href="<?php echo esc_url( home_url( '/fire-sprinkler-system-design/' ) ); ?>" class="service-card__link">Design Services <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card service-card--sm" style="text-align:center;">
+            <div class="service-card__icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <h3 class="service-card__title">NFPA 25 Inspection &amp; Testing</h3>
+            <p class="service-card__desc">Annual ITM and SB 1205 certified reports for property managers and HOAs managing multifamily fire protection systems.</p>
+            <a href="<?php echo esc_url( home_url( '/inspection-testing/' ) ); ?>" class="service-card__link">Inspection Services <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== CORE SERVICES ========== -->
     <section id="residential-services" class="section residential">
       <div class="container">

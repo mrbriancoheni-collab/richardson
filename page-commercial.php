@@ -108,17 +108,17 @@ get_header();
             <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="service-card__link">Get a Quote <i class="fa-solid fa-arrow-right"></i></a>
           </div>
           <div class="service-card reveal-up" data-delay="100">
-            <div class="service-card__icon"><i class="fa-solid fa-bell"></i></div>
-            <div class="service-card__tag">Detection</div>
-            <h3 class="service-card__title">Fire Alarm Systems</h3>
-            <p class="service-card__desc">Addressable and conventional fire alarm systems from leading manufacturers — designed, installed, programmed, and monitored to NFPA 72 standards.</p>
+            <div class="service-card__icon"><i class="fa-solid fa-drafting-compass"></i></div>
+            <div class="service-card__tag">Engineering</div>
+            <h3 class="service-card__title">Fire Sprinkler System Design</h3>
+            <p class="service-card__desc">NICET II certified hydraulic calculations, stamped shop drawings, and NFPA 13 compliance packages — first-pass AHJ approval or we correct at no charge.</p>
             <ul class="service-card__features">
-              <li><i class="fa-solid fa-check"></i> Addressable &amp; conventional panels</li>
-              <li><i class="fa-solid fa-check"></i> Smoke, heat &amp; CO detection</li>
-              <li><i class="fa-solid fa-check"></i> Voice evacuation systems</li>
-              <li><i class="fa-solid fa-check"></i> Central station monitoring</li>
+              <li><i class="fa-solid fa-check"></i> Hydraulic calculations</li>
+              <li><i class="fa-solid fa-check"></i> Stamped shop drawings</li>
+              <li><i class="fa-solid fa-check"></i> AHJ permit submittal</li>
+              <li><i class="fa-solid fa-check"></i> NICET II certified team</li>
             </ul>
-            <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="service-card__link">Get a Quote <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="<?php echo esc_url( home_url( '/fire-sprinkler-system-design/' ) ); ?>" class="service-card__link">Design Services <i class="fa-solid fa-arrow-right"></i></a>
           </div>
           <div class="service-card reveal-up service-card--featured" data-delay="200">
             <div class="featured-badge">Most Requested</div>
@@ -128,7 +128,7 @@ get_header();
             <p class="service-card__desc">Stay code-compliant with thorough inspections, testing, and certification of all fire protection systems — fully documented for your AHJ and insurance carrier.</p>
             <ul class="service-card__features">
               <li><i class="fa-solid fa-check"></i> Sprinkler inspections (NFPA 25)</li>
-              <li><i class="fa-solid fa-check"></i> Alarm testing (NFPA 72)</li>
+              <li><i class="fa-solid fa-check"></i> Backflow preventer testing</li>
               <li><i class="fa-solid fa-check"></i> Fire pump testing</li>
               <li><i class="fa-solid fa-check"></i> Digital compliance reports</li>
             </ul>
@@ -142,10 +142,10 @@ get_header();
           $extra = [
             [ 'fa-solid fa-fire-extinguisher', 'Portable Extinguishers',    'Sales, service, and annual inspection for portable fire extinguishers.' ],
             [ 'fa-solid fa-door-open',          'Emergency Egress Lighting',  'Exit signs and emergency lighting installation and testing.' ],
-            [ 'fa-solid fa-plug',               'Monitoring &amp; Central Station', 'UL-listed central station monitoring for alarm and suppression systems.' ],
-            [ 'fa-solid fa-screwdriver-wrench', 'System Repairs',            'Fast repair of damaged or non-functional components — sprinklers, heads, valves, panels.' ],
+            [ 'fa-solid fa-screwdriver-wrench', 'System Repairs',            'Fast repair of damaged or non-functional components — sprinklers, heads, valves, and control panels.' ],
             [ 'fa-solid fa-clipboard-check',    'Permit &amp; AHJ Coordination', 'We pull permits and coordinate final inspections with the Authority Having Jurisdiction.' ],
-            [ 'fa-solid fa-truck-fast',         '24/7 Emergency Service',    'Around-the-clock response for sprinkler leaks, system impairments, and alarm failures.' ],
+            [ 'fa-solid fa-truck-fast',         '24/7 Emergency Service',    'Around-the-clock response for sprinkler leaks, system impairments, and equipment failures.' ],
+            [ 'fa-solid fa-fire-flame-curved',  'Special Hazard Systems',    'Pre-action, deluge, and clean-agent suppression for server rooms, paint booths, and chemical storage.' ],
           ];
           foreach ( $extra as $s ) : ?>
             <div class="service-card service-card--sm">

@@ -1599,5 +1599,934 @@ function rfp_all_locations() {
             ],
         ],
 
+        // ── ELK GROVE ─────────────────────────────────────────────────────────
+        'elk-grove' => [
+            'name'          => 'Elk Grove',
+            'slug'          => 'elk-grove',
+            'county'        => 'Sacramento County',
+            'lat'           => 38.4088,
+            'lng'           => -121.3716,
+            'population'    => 185000,
+            'intro'         => 'Elk Grove is Sacramento County\'s second-largest city and one of California\'s fastest-growing communities, with active mixed-use, commercial, and industrial development along the Highway 99 and I-5 corridors. Richardson Fire Protection serves GCs and developers building in Elk Grove — NFPA 13 design-build, Cosumnes CSD Fire coordination, and 24/7 ITM.',
+            'building_types' => [
+                'Mixed-Use & Commercial',
+                'Industrial & Logistics',
+                'Multifamily Residential',
+                'Retail & Restaurant',
+            ],
+            'ahj_name'      => 'Cosumnes Community Services District (CSD) Fire Department',
+            'nearby_cities' => [ 'sacramento', 'stockton', 'davis' ],
+            'services_note'  => 'Cosumnes Community Services District (CSD) Fire Department handles plan review and inspection for Elk Grove fire protection projects. Richardson submits complete NFPA 13 packages directly to CSD Fire Prevention and coordinates all required pre-final walkthroughs.',
+            'neighborhoods'  => [ 'Old Town Elk Grove', 'Laguna', 'Sheldon', 'Stonelake', 'Elk Grove Boulevard Corridor', 'Highway 99 Industrial', 'Elk Grove Florin', 'Southeast Industrial' ],
+            'faqs'           => [
+                [
+                    'q' => 'Who is the Authority Having Jurisdiction (AHJ) for fire protection in Elk Grove?',
+                    'a' => 'The Cosumnes Community Services District (CSD) Fire Department serves as the AHJ for fire protection system plan review and inspection in Elk Grove. Richardson submits stamped NFPA 13 packages directly to CSD Fire Prevention for plan check.',
+                ],
+                [
+                    'q' => 'How long does fire sprinkler plan review take at CSD Fire in Elk Grove?',
+                    'a' => 'CSD Fire Prevention typically reviews commercial fire sprinkler submittals in 3–5 weeks for complete first submittals. Incomplete packages or projects with complex occupancy classifications may require additional review time. Richardson submits complete packages on the first attempt to minimize correction cycles.',
+                ],
+                [
+                    'q' => 'What fire protection is required for new commercial buildings in Elk Grove?',
+                    'a' => 'Elk Grove adopts the 2022 California Fire Code, which requires automatic fire sprinkler systems in all new commercial construction under most occupancy classifications. CSD Fire has specific requirements for high-piled storage and industrial facilities along the Highway 99 and I-5 corridors.',
+                ],
+                [
+                    'q' => 'Can Richardson handle industrial fire protection along the Elk Grove industrial corridor?',
+                    'a' => 'Yes. The Highway 99 and I-5 corridors in Elk Grove have active logistics and industrial development. Richardson provides ESFR and in-rack sprinkler design for high-bay warehouses, coordinating commodity classification analysis and CSD Fire permit submittals.',
+                ],
+                [
+                    'q' => 'How much does fire sprinkler installation cost in Elk Grove?',
+                    'a' => 'Commercial fire sprinkler installation in Elk Grove typically runs $2.00–$5.50 per square foot installed depending on occupancy type and system complexity. Call (916) 849-6441 for a project-specific estimate returned within 24–48 hours.',
+                ],
+                [
+                    'q' => 'Does Richardson do tenant improvement fire sprinkler work in Elk Grove?',
+                    'a' => 'Yes. Richardson handles TI sprinkler work for GCs and tenants in Elk Grove — extending or modifying existing systems to cover new layouts, coordinating with CSD Fire on permit submittals, and working within your tenant\'s opening schedule.',
+                ],
+            ],
+            'primary_services' => [
+                [
+                    'icon'     => 'fa-solid fa-building',
+                    'tag'      => 'Commercial',
+                    'title'    => 'Commercial Fire Protection',
+                    'desc'     => 'NFPA 13 design-build for Elk Grove\'s growing mixed-use, retail, and restaurant corridor along Highway 99 and Big Horn Boulevard.',
+                    'features' => [ 'Wet & dry pipe systems', 'Tenant improvement retrofits', 'CSD Fire coordination' ],
+                    'link'     => '/commercial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-warehouse',
+                    'tag'      => 'Industrial',
+                    'title'    => 'Industrial & Logistics',
+                    'desc'     => 'ESFR and in-rack systems for Elk Grove\'s industrial corridor — from Southeast Industrial to the I-5 and Highway 99 logistics parks.',
+                    'features' => [ 'ESFR high-bay systems', 'High-piled storage compliance', 'Commodity classification analysis' ],
+                    'link'     => '/industrial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-building-user',
+                    'tag'      => 'Residential',
+                    'title'    => 'Multifamily Fire Protection',
+                    'desc'     => 'NFPA 13R and 13D systems for Elk Grove\'s active multifamily development pipeline — apartments, condos, and townhomes.',
+                    'features' => [ 'NFPA 13R apartment systems', 'NFPA 13D single-family', 'CSD Fire ITM' ],
+                    'link'     => '/residential/',
+                ],
+            ],
+            'local_regulations' => [
+                [
+                    'code'      => '2022 California Fire Code (CFC)',
+                    'authority' => 'Cosumnes CSD Fire Department',
+                    'summary'   => 'CSD Fire enforces the 2022 CFC for all commercial and industrial fire protection projects in Elk Grove, including automatic sprinkler requirements, high-piled storage permits, and annual ITM certification under SB 1205.',
+                ],
+                [
+                    'code'      => 'California Health & Safety Code §13100',
+                    'authority' => 'California State Fire Marshal',
+                    'summary'   => 'All fire sprinkler contractors working in Elk Grove must hold a CSLB C-16 license and CSFM registration. Richardson holds both — C-16 #1053506.',
+                ],
+                [
+                    'code'      => 'SB 1205 (2018)',
+                    'authority' => 'CSD Fire / State Fire Marshal',
+                    'summary'   => 'Requires annual fire protection system inspection records to be submitted to the CSFM. CSD Fire enforces compliance for all commercial and multifamily properties in Elk Grove.',
+                ],
+            ],
+            'fire_pump_note' => 'Richardson submits fire pump permit packages directly to CSD Fire Prevention — stamped NFPA 20 hydraulic calculations, pump data sheets, and controller wiring diagrams on the first submittal.',
+            'fire_pump_faqs' => [
+                [
+                    'q' => 'When does an Elk Grove building require a fire pump?',
+                    'a' => 'A fire pump is required when available municipal water pressure cannot meet the hydraulic demand of the sprinkler system. In Elk Grove, this most commonly applies to multi-story mixed-use buildings, large industrial facilities, and high-rise residential projects. CSD Fire reviews the hydraulic analysis during plan check.',
+                ],
+                [
+                    'q' => 'What are the NFPA 20 requirements for fire pump rooms in Elk Grove?',
+                    'a' => 'NFPA 20 requires minimum clearances around the pump assembly, a dedicated electrical service, adequate heat and ventilation (40°F minimum), a floor drain, and a test header stubbed outside the building. CSD Fire enforces these requirements during plan review and final inspection.',
+                ],
+                [
+                    'q' => 'How often must fire pumps be tested under NFPA 25 in Elk Grove?',
+                    'a' => 'NFPA 25 requires weekly churn (no-flow) tests, annual flow tests with performance curves, and internal inspection every five years for electric-drive pumps. Richardson provides annual testing and delivers SB 1205-compliant written reports for CSD Fire compliance.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
+            ],
+        ],
+
+        // ── RANCHO CORDOVA ────────────────────────────────────────────────────
+        'rancho-cordova' => [
+            'name'          => 'Rancho Cordova',
+            'slug'          => 'rancho-cordova',
+            'county'        => 'Sacramento County',
+            'lat'           => 38.5891,
+            'lng'           => -121.3024,
+            'population'    => 82000,
+            'intro'         => 'Rancho Cordova is one of Sacramento\'s primary commercial and industrial hubs, anchored by the Mather/Zinfandel corridor, the Sunrise Tech Center, and extensive warehousing along Folsom Boulevard and Douglas Road. Richardson Fire Protection serves GCs and industrial developers in Rancho Cordova — NFPA 13 design-build, Sacramento Metro Fire District coordination, and comprehensive ITM.',
+            'building_types' => [
+                'Technology & Office Campus',
+                'Industrial Warehouse & Distribution',
+                'Mixed-Use & Commercial',
+                'Government & Defense Facilities',
+            ],
+            'ahj_name'      => 'Sacramento Metropolitan Fire District',
+            'nearby_cities' => [ 'sacramento', 'folsom', 'davis' ],
+            'services_note'  => 'Sacramento Metropolitan Fire District coordinates plan review for Rancho Cordova commercial and industrial projects. Richardson has established relationships with Sacramento Metro Fire Prevention staff and submits complete packages for first-pass approval.',
+            'neighborhoods'  => [ 'Zinfandel Corridor', 'Mather Field', 'Douglas Road Corridor', 'Folsom Boulevard Industrial', 'Gold River', 'White Rock Road', 'Sunrise Tech Center', 'Anatolia' ],
+            'faqs'           => [
+                [
+                    'q' => 'Who is the AHJ for fire protection in Rancho Cordova?',
+                    'a' => 'Sacramento Metropolitan Fire District (SacMetro FD) serves as the AHJ for fire protection system plan review and inspection in Rancho Cordova. Richardson submits NFPA 13 packages directly to SacMetro Fire Prevention for plan check.',
+                ],
+                [
+                    'q' => 'How long does fire sprinkler plan review take with Sacramento Metro Fire District?',
+                    'a' => 'SacMetro Fire Prevention typically reviews commercial fire sprinkler submittals in 3–5 weeks for complete first submittals. Richardson submits complete, stamped packages every time to minimize correction cycles.',
+                ],
+                [
+                    'q' => 'What fire protection is required for Rancho Cordova industrial and warehouse buildings?',
+                    'a' => 'Industrial and warehouse buildings in Rancho Cordova require NFPA 13-compliant automatic fire sprinkler systems. High-bay warehouses over 25 feet typically require ESFR ceiling systems. Facilities with high-piled storage require a commodity analysis and may need in-rack protection.',
+                ],
+                [
+                    'q' => 'Can Richardson handle fire protection for Rancho Cordova\'s tech and office campuses?',
+                    'a' => 'Yes. The Sunrise Tech Center and Zinfandel corridor have active office and mixed-use development. Richardson provides NFPA 13 design-build for tech campuses, including pre-action systems for data center and server room spaces.',
+                ],
+                [
+                    'q' => 'How much does fire sprinkler installation cost in Rancho Cordova?',
+                    'a' => 'Commercial fire sprinkler installation in Rancho Cordova typically runs $2.00–$5.50 per square foot installed depending on occupancy and system type. Call (916) 849-6441 for a project-specific estimate in 24–48 hours.',
+                ],
+                [
+                    'q' => 'Does Richardson service Mather Field government and defense facilities?',
+                    'a' => 'Richardson provides fire sprinkler design, installation, and NFPA 25 inspection and testing for commercial and light industrial facilities in the Mather Field corridor. For classified or secured facilities, additional coordination requirements apply.',
+                ],
+            ],
+            'primary_services' => [
+                [
+                    'icon'     => 'fa-solid fa-warehouse',
+                    'tag'      => 'Industrial',
+                    'title'    => 'Industrial & Warehouse',
+                    'desc'     => 'ESFR and in-rack systems for Rancho Cordova\'s warehouse and distribution corridor along Douglas Road and Folsom Boulevard.',
+                    'features' => [ 'ESFR high-bay systems', 'High-piled storage compliance', 'SacMetro FD coordination' ],
+                    'link'     => '/industrial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-building',
+                    'tag'      => 'Commercial',
+                    'title'    => 'Commercial & Tech Campus',
+                    'desc'     => 'NFPA 13 design-build for Rancho Cordova\'s tech campuses, office buildings, and mixed-use development.',
+                    'features' => [ 'Wet & dry pipe systems', 'Pre-action for data centers', 'First-pass AHJ approval' ],
+                    'link'     => '/commercial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-magnifying-glass',
+                    'tag'      => 'Inspection',
+                    'title'    => 'NFPA 25 Inspection & Testing',
+                    'desc'     => 'Annual NFPA 25 inspection, testing, and SB 1205 certification for existing fire sprinkler systems in Rancho Cordova.',
+                    'features' => [ 'NFPA 25 annual ITM', 'SB 1205 certified reports', 'Same-visit deficiency repair' ],
+                    'link'     => '/inspection-testing/',
+                ],
+            ],
+            'local_regulations' => [
+                [
+                    'code'      => '2022 California Fire Code (CFC)',
+                    'authority' => 'Sacramento Metropolitan Fire District',
+                    'summary'   => 'SacMetro FD enforces the 2022 CFC for all commercial and industrial projects in Rancho Cordova, including automatic sprinkler requirements and annual ITM certification under SB 1205.',
+                ],
+                [
+                    'code'      => 'California Health & Safety Code §13100',
+                    'authority' => 'California State Fire Marshal',
+                    'summary'   => 'All fire sprinkler contractors working in Rancho Cordova must hold a CSLB C-16 license and CSFM registration. Richardson holds both — C-16 #1053506.',
+                ],
+                [
+                    'code'      => 'SB 1205 (2018)',
+                    'authority' => 'SacMetro FD / State Fire Marshal',
+                    'summary'   => 'Requires annual fire protection system inspection certification to be submitted to the CSFM. SacMetro FD enforces compliance for all commercial properties.',
+                ],
+            ],
+            'fire_pump_note' => 'Richardson submits fire pump permit packages directly to SacMetro FD — stamped NFPA 20 hydraulic calculations and pump data sheets included with every submittal.',
+            'fire_pump_faqs' => [
+                [
+                    'q' => 'When does a Rancho Cordova building require a fire pump?',
+                    'a' => 'A fire pump is required when available water supply pressure cannot meet the hydraulic demand of the sprinkler system. In Rancho Cordova, this commonly applies to multi-story tech campuses, large ESFR warehouse systems, and high-rise residential projects. SacMetro FD reviews the hydraulic analysis during plan check.',
+                ],
+                [
+                    'q' => 'How often must fire pumps be tested in Rancho Cordova?',
+                    'a' => 'NFPA 25 requires weekly churn tests, annual flow tests, and 5-year internal inspections. Richardson provides annual testing and delivers SB 1205-compliant written reports for SacMetro FD compliance.',
+                ],
+                [
+                    'q' => 'Can Richardson repair fire pumps in Rancho Cordova on an emergency basis?',
+                    'a' => 'Yes. Richardson provides 24/7 emergency fire pump repair for Rancho Cordova and Sacramento County. Call (916) 849-6441 for immediate response.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
+            ],
+        ],
+
+        // ── FOLSOM ────────────────────────────────────────────────────────────
+        'folsom' => [
+            'name'          => 'Folsom',
+            'slug'          => 'folsom',
+            'county'        => 'Sacramento County',
+            'lat'           => 38.6779,
+            'lng'           => -121.1760,
+            'population'    => 82000,
+            'intro'         => 'Folsom combines a major technology and professional services employment base with active residential and mixed-use development in the Central Folsom and Empire Ranch corridors. Richardson Fire Protection serves GCs and developers building in Folsom — NFPA 13 design-build, Folsom Fire Department coordination, and design-build from bid to certificate.',
+            'building_types' => [
+                'Technology Campus & Office',
+                'Mixed-Use & Commercial',
+                'Multifamily Residential',
+                'Retail & Restaurant',
+            ],
+            'ahj_name'      => 'Folsom Fire Department',
+            'nearby_cities' => [ 'sacramento', 'rancho-cordova', 'roseville' ],
+            'services_note'  => 'Folsom Fire Department conducts plan review for all commercial and industrial fire protection projects in the city. Richardson submits complete NFPA 13 packages to Folsom FD Fire Prevention for first-pass approval.',
+            'neighborhoods'  => [ 'Historic District', 'Willow Creek', 'Empire Ranch', 'Central Folsom', 'Iron Point', 'Blue Ravine', 'El Dorado Hills Adjacent', 'Natoma Station' ],
+            'faqs'           => [
+                [
+                    'q' => 'Who is the AHJ for fire protection in Folsom?',
+                    'a' => 'Folsom Fire Department serves as the Authority Having Jurisdiction for fire protection system plan review and inspection in Folsom. Richardson submits NFPA 13 packages directly to Folsom FD Fire Prevention and coordinates all required pre-final walkthroughs.',
+                ],
+                [
+                    'q' => 'How long does fire sprinkler plan review take at Folsom Fire Department?',
+                    'a' => 'Folsom Fire Prevention typically reviews commercial fire sprinkler submittals in 3–5 weeks for complete first submittals. Richardson submits complete, stamped packages on the first attempt to minimize correction cycles that delay your schedule.',
+                ],
+                [
+                    'q' => 'What fire protection is required for Folsom tech campuses and office buildings?',
+                    'a' => 'Commercial office and tech buildings in Folsom require NFPA 13-compliant automatic fire sprinkler systems. Data centers and server rooms may require pre-action systems to prevent accidental water discharge. Richardson provides complete design-build scopes for all Folsom office and tech occupancies.',
+                ],
+                [
+                    'q' => 'Does Richardson handle fire sprinkler work for Folsom multifamily developments?',
+                    'a' => 'Yes. Folsom\'s active multifamily pipeline — including apartments and condos in Empire Ranch and Central Folsom — typically requires NFPA 13R systems. Richardson provides NFPA 13R design-build from permit through certificate of occupancy.',
+                ],
+                [
+                    'q' => 'How much does fire sprinkler installation cost in Folsom?',
+                    'a' => 'Commercial fire sprinkler installation in Folsom typically runs $2.00–$5.50 per square foot installed. Tech campuses with server rooms or data center spaces may cost more due to pre-action system requirements. Call (916) 849-6441 for a detailed estimate.',
+                ],
+                [
+                    'q' => 'Can Richardson handle restaurant fire sprinkler and hood suppression in Folsom?',
+                    'a' => 'Yes. Folsom\'s Iron Point and retail corridors have active restaurant development. Richardson installs NFPA 13 wet pipe systems for restaurant occupancies and coordinates hood suppression and alarm integration.',
+                ],
+            ],
+            'primary_services' => [
+                [
+                    'icon'     => 'fa-solid fa-building',
+                    'tag'      => 'Commercial',
+                    'title'    => 'Commercial & Tech Campus',
+                    'desc'     => 'NFPA 13 design-build for Folsom\'s technology campuses, office buildings, and retail centers along East Bidwell and Iron Point.',
+                    'features' => [ 'Wet & pre-action systems', 'Data center protection', 'Folsom FD first-pass approval' ],
+                    'link'     => '/commercial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-building-user',
+                    'tag'      => 'Residential',
+                    'title'    => 'Multifamily Fire Protection',
+                    'desc'     => 'NFPA 13R and 13D systems for Folsom\'s multifamily development pipeline in Empire Ranch, Central Folsom, and Willow Creek.',
+                    'features' => [ 'NFPA 13R apartment systems', 'NFPA 13D single-family', 'Occupied building retrofits' ],
+                    'link'     => '/residential/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-magnifying-glass',
+                    'tag'      => 'Inspection',
+                    'title'    => 'NFPA 25 Inspection & Testing',
+                    'desc'     => 'Annual NFPA 25 inspection, testing, and SB 1205 certification for commercial and multifamily properties in Folsom.',
+                    'features' => [ 'NFPA 25 annual ITM', 'SB 1205 certified reports', 'Same-visit repair' ],
+                    'link'     => '/inspection-testing/',
+                ],
+            ],
+            'local_regulations' => [
+                [
+                    'code'      => '2022 California Fire Code (CFC)',
+                    'authority' => 'Folsom Fire Department',
+                    'summary'   => 'Folsom FD enforces the 2022 CFC for all commercial and residential projects, including automatic sprinkler requirements and annual ITM certification under SB 1205.',
+                ],
+                [
+                    'code'      => 'California Health & Safety Code §13100',
+                    'authority' => 'California State Fire Marshal',
+                    'summary'   => 'All fire sprinkler contractors working in Folsom must hold a CSLB C-16 license and CSFM registration. Richardson holds both — C-16 #1053506.',
+                ],
+                [
+                    'code'      => 'SB 1205 (2018)',
+                    'authority' => 'Folsom FD / State Fire Marshal',
+                    'summary'   => 'Requires annual fire protection system inspection records to be submitted to the CSFM. Folsom FD enforces compliance for all commercial and multifamily properties.',
+                ],
+            ],
+            'fire_pump_note' => 'Richardson submits fire pump permit packages directly to Folsom FD — stamped NFPA 20 hydraulic calculations and pump data sheets included.',
+            'fire_pump_faqs' => [
+                [
+                    'q' => 'When does a Folsom building require a fire pump?',
+                    'a' => 'A fire pump is typically required in Folsom when available municipal water pressure cannot meet NFPA 13 hydraulic demand. This most commonly applies to multi-story office and residential buildings and large retail centers. Folsom FD reviews the hydraulic analysis during plan check.',
+                ],
+                [
+                    'q' => 'How often must fire pumps be tested in Folsom?',
+                    'a' => 'NFPA 25 requires weekly churn tests, annual flow tests, and 5-year internal inspections. Richardson provides annual testing and delivers SB 1205-compliant written reports for Folsom FD compliance.',
+                ],
+                [
+                    'q' => 'Does Richardson repair fire pumps in Folsom on an emergency basis?',
+                    'a' => 'Yes. Richardson provides 24/7 emergency fire pump repair throughout Sacramento County including Folsom. Call (916) 849-6441 for immediate response.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
+            ],
+        ],
+
+        // ── VACAVILLE ─────────────────────────────────────────────────────────
+        'vacaville' => [
+            'name'          => 'Vacaville',
+            'slug'          => 'vacaville',
+            'county'        => 'Solano County',
+            'lat'           => 38.3566,
+            'lng'           => -121.9877,
+            'population'    => 108000,
+            'intro'         => 'Vacaville sits at the crossroads of I-80 and I-505, making it a critical logistics and distribution hub between Sacramento and the Bay Area. The NorthBay Business Park, Interphase Industrial Center, and growing retail corridor along Nut Tree Road drive consistent demand for commercial and industrial fire sprinkler systems. Richardson serves GCs and industrial developers in Vacaville and Solano County.',
+            'building_types' => [
+                'Logistics & Distribution',
+                'Pharmaceutical & Biotech',
+                'Mixed-Use & Commercial',
+                'Industrial Manufacturing',
+            ],
+            'ahj_name'      => 'Vacaville Fire Department',
+            'nearby_cities' => [ 'fairfield', 'napa', 'sacramento' ],
+            'services_note'  => 'Vacaville Fire Department coordinates plan review for commercial and industrial fire protection projects. Richardson has completed multiple projects in Solano County and submits NFPA 13 packages directly to Vacaville Fire Prevention.',
+            'neighborhoods'  => [ 'Downtown Vacaville', 'Nut Tree Road Corridor', 'NorthBay Business Park', 'Interphase Industrial', 'Browns Valley', 'Leisure Town', 'Allison Drive Commercial', 'I-80 Corridor' ],
+            'faqs'           => [
+                [
+                    'q' => 'Who is the AHJ for fire protection in Vacaville?',
+                    'a' => 'Vacaville Fire Department serves as the Authority Having Jurisdiction for fire protection plan review and inspection for projects within the city limits. Richardson submits NFPA 13 packages directly to Vacaville Fire Prevention.',
+                ],
+                [
+                    'q' => 'How long does fire sprinkler plan review take in Vacaville?',
+                    'a' => 'Vacaville FD typically reviews commercial fire sprinkler submittals in 3–5 weeks for complete first submittals. Richardson submits complete, stamped packages every time to minimize correction cycles.',
+                ],
+                [
+                    'q' => 'What fire protection is required for Vacaville\'s industrial and logistics facilities?',
+                    'a' => 'Industrial and logistics buildings in Vacaville require NFPA 13-compliant automatic fire sprinkler systems. High-bay warehouses along I-80 and I-505 typically require ESFR ceiling systems. High-piled storage requires a commodity analysis and may require in-rack protection.',
+                ],
+                [
+                    'q' => 'Can Richardson handle pharmaceutical and biotech fire protection in Vacaville?',
+                    'a' => 'Yes. Vacaville has a significant pharmaceutical and biotech presence. These facilities often require pre-action systems, special hazard suppression for laboratory environments, and enhanced coordination with both Vacaville FD and the building\'s process engineers.',
+                ],
+                [
+                    'q' => 'How much does fire sprinkler installation cost in Vacaville?',
+                    'a' => 'Commercial fire sprinkler installation in Vacaville typically runs $2.00–$5.50 per square foot installed. Industrial facilities with ESFR or in-rack requirements may run higher. Call (916) 849-6441 for a detailed estimate returned in 24–48 hours.',
+                ],
+                [
+                    'q' => 'Does Richardson travel to Vacaville from Sacramento?',
+                    'a' => 'Yes. Vacaville is approximately 50 miles from Richardson\'s Antelope base and is within our standard service area. We serve projects throughout Solano County including Vacaville, Fairfield, and Dixon.',
+                ],
+            ],
+            'primary_services' => [
+                [
+                    'icon'     => 'fa-solid fa-warehouse',
+                    'tag'      => 'Industrial',
+                    'title'    => 'Industrial & Logistics',
+                    'desc'     => 'ESFR and in-rack systems for Vacaville\'s NorthBay Business Park and I-80/I-505 industrial corridor.',
+                    'features' => [ 'ESFR high-bay systems', 'High-piled storage compliance', 'Vacaville FD coordination' ],
+                    'link'     => '/industrial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-building',
+                    'tag'      => 'Commercial',
+                    'title'    => 'Commercial Fire Protection',
+                    'desc'     => 'NFPA 13 design-build for Vacaville\'s retail, restaurant, and mixed-use projects along Nut Tree Road and Monte Vista Avenue.',
+                    'features' => [ 'Wet & dry pipe systems', 'Restaurant systems', 'First-pass AHJ approval' ],
+                    'link'     => '/commercial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-magnifying-glass',
+                    'tag'      => 'Inspection',
+                    'title'    => 'NFPA 25 Inspection & Testing',
+                    'desc'     => 'Annual NFPA 25 inspection and SB 1205 certification for commercial and industrial properties throughout Solano County.',
+                    'features' => [ 'NFPA 25 annual ITM', 'SB 1205 certified reports', 'Same-visit repair' ],
+                    'link'     => '/inspection-testing/',
+                ],
+            ],
+            'local_regulations' => [
+                [
+                    'code'      => '2022 California Fire Code (CFC)',
+                    'authority' => 'Vacaville Fire Department',
+                    'summary'   => 'Vacaville FD enforces the 2022 CFC for all commercial and industrial projects, including automatic sprinkler requirements and annual ITM certification under SB 1205.',
+                ],
+                [
+                    'code'      => 'California Health & Safety Code §13100',
+                    'authority' => 'California State Fire Marshal',
+                    'summary'   => 'All fire sprinkler contractors working in Vacaville must hold a CSLB C-16 license and CSFM registration. Richardson holds both — C-16 #1053506.',
+                ],
+                [
+                    'code'      => 'SB 1205 (2018)',
+                    'authority' => 'Vacaville FD / State Fire Marshal',
+                    'summary'   => 'Requires annual fire protection system inspection records to be submitted to the CSFM. Vacaville FD enforces compliance for commercial and multifamily properties.',
+                ],
+            ],
+            'fire_pump_note' => 'Richardson submits fire pump permit packages directly to Vacaville FD — stamped NFPA 20 hydraulic calculations and pump data sheets on the first submittal.',
+            'fire_pump_faqs' => [
+                [
+                    'q' => 'When does a Vacaville building require a fire pump?',
+                    'a' => 'A fire pump is required when municipal water pressure cannot meet the hydraulic demand of the sprinkler system. In Vacaville, this most commonly applies to large industrial facilities, multi-story commercial buildings, and ESFR warehouse systems. Vacaville FD reviews the hydraulic analysis during plan check.',
+                ],
+                [
+                    'q' => 'How often must fire pumps be tested in Vacaville under NFPA 25?',
+                    'a' => 'NFPA 25 requires weekly churn tests, annual flow tests with performance curves, and 5-year internal inspections. Richardson provides annual testing and delivers SB 1205-compliant written reports.',
+                ],
+                [
+                    'q' => 'Does Richardson service fire pumps at Vacaville pharmaceutical facilities?',
+                    'a' => 'Yes. Richardson provides NFPA 25 annual fire pump testing, repair, and emergency service for pharmaceutical and biotech facilities in Vacaville. Call (916) 849-6441 for 24/7 emergency response.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
+            ],
+        ],
+
+        // ── BRENTWOOD ─────────────────────────────────────────────────────────
+        'brentwood' => [
+            'name'          => 'Brentwood',
+            'slug'          => 'brentwood',
+            'county'        => 'Contra Costa County',
+            'lat'           => 37.9316,
+            'lng'           => -121.6957,
+            'population'    => 65000,
+            'intro'         => 'Brentwood and the eastern Contra Costa County corridor — including Discovery Bay and Byron — are among the Bay Area\'s fastest-growing markets for logistics, cold storage, and mixed-use development along the Highway 4 corridor. Richardson Fire Protection serves GCs and developers in Brentwood and East Contra Costa.',
+            'building_types' => [
+                'Logistics & Cold Storage',
+                'Mixed-Use & Commercial',
+                'Multifamily Residential',
+                'Agricultural Processing',
+            ],
+            'ahj_name'      => 'East Contra Costa Fire Protection District',
+            'nearby_cities' => [ 'concord', 'antioch', 'oakland' ],
+            'services_note'  => 'East Contra Costa Fire Protection District coordinates plan review for Brentwood and Eastern Contra Costa County projects. Richardson submits complete NFPA 13 packages to ECCFPD Fire Prevention for first-pass approval.',
+            'neighborhoods'  => [ 'Downtown Brentwood', 'Sand Creek Road Corridor', 'Balfour Road', 'Deer Ridge', 'Discovery Bay', 'Byron Highway Industrial', 'Empire Avenue Corridor', 'Trilogy at The Vineyards' ],
+            'faqs'           => [
+                [
+                    'q' => 'Who is the AHJ for fire protection in Brentwood?',
+                    'a' => 'East Contra Costa Fire Protection District (ECCFPD) serves as the AHJ for fire protection system plan review and inspection in Brentwood and surrounding East Contra Costa County. Richardson submits NFPA 13 packages directly to ECCFPD Fire Prevention.',
+                ],
+                [
+                    'q' => 'How long does fire sprinkler plan review take at ECCFPD?',
+                    'a' => 'ECCFPD typically reviews commercial fire sprinkler submittals in 4–6 weeks for complete first submittals. Richardson submits complete, stamped packages every time to minimize correction cycles.',
+                ],
+                [
+                    'q' => 'What fire protection is required for Brentwood logistics and cold storage facilities?',
+                    'a' => 'Logistics and cold storage buildings in Brentwood require NFPA 13-compliant automatic fire sprinkler systems. Cold storage and freezer facilities require dry-pipe or pre-action systems. High-bay warehouses may require ESFR ceiling systems depending on commodity class and storage height.',
+                ],
+                [
+                    'q' => 'Can Richardson handle fire protection for Brentwood multifamily development?',
+                    'a' => 'Yes. Brentwood\'s active multifamily pipeline typically requires NFPA 13R systems for apartment and condo projects. Richardson provides NFPA 13R design-build from permit through certificate of occupancy, coordinating with ECCFPD throughout.',
+                ],
+                [
+                    'q' => 'How much does fire sprinkler installation cost in Brentwood?',
+                    'a' => 'Commercial fire sprinkler installation in Brentwood typically runs $2.50–$6.00 per square foot installed. Bay Area labor rates are approximately 15–25% higher than Sacramento Valley. Call (916) 849-6441 for a project-specific estimate.',
+                ],
+                [
+                    'q' => 'Does Richardson travel to Brentwood from Sacramento?',
+                    'a' => 'Yes. Brentwood is approximately 75 miles from Richardson\'s Antelope base and is within our Bay Area service area. We serve projects throughout East Contra Costa County including Brentwood, Antioch, Discovery Bay, and Byron.',
+                ],
+            ],
+            'primary_services' => [
+                [
+                    'icon'     => 'fa-solid fa-warehouse',
+                    'tag'      => 'Industrial',
+                    'title'    => 'Logistics & Cold Storage',
+                    'desc'     => 'ESFR, dry pipe, and cold storage fire protection for Brentwood\'s growing Highway 4 logistics corridor.',
+                    'features' => [ 'ESFR high-bay systems', 'Cold storage dry-pipe', 'ECCFPD coordination' ],
+                    'link'     => '/industrial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-building',
+                    'tag'      => 'Commercial',
+                    'title'    => 'Commercial Fire Protection',
+                    'desc'     => 'NFPA 13 design-build for Brentwood\'s retail, restaurant, and mixed-use projects along Sand Creek Road and Brentwood Boulevard.',
+                    'features' => [ 'Wet & dry pipe systems', 'Tenant improvement retrofits', 'First-pass ECCFPD approval' ],
+                    'link'     => '/commercial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-building-user',
+                    'tag'      => 'Residential',
+                    'title'    => 'Multifamily Fire Protection',
+                    'desc'     => 'NFPA 13R and 13D systems for Brentwood\'s multifamily development pipeline.',
+                    'features' => [ 'NFPA 13R apartment systems', 'NFPA 13D single-family', 'Occupied building retrofits' ],
+                    'link'     => '/residential/',
+                ],
+            ],
+            'local_regulations' => [
+                [
+                    'code'      => '2022 California Fire Code (CFC)',
+                    'authority' => 'East Contra Costa Fire Protection District',
+                    'summary'   => 'ECCFPD enforces the 2022 CFC for all commercial and industrial projects in Brentwood and Eastern Contra Costa County, including automatic sprinkler requirements and annual ITM under SB 1205.',
+                ],
+                [
+                    'code'      => 'California Health & Safety Code §13100',
+                    'authority' => 'California State Fire Marshal',
+                    'summary'   => 'All fire sprinkler contractors working in Brentwood must hold a CSLB C-16 license and CSFM registration. Richardson holds both — C-16 #1053506.',
+                ],
+                [
+                    'code'      => 'SB 1205 (2018)',
+                    'authority' => 'ECCFPD / State Fire Marshal',
+                    'summary'   => 'Requires annual fire protection system inspection records to be submitted to the CSFM. ECCFPD enforces compliance for commercial and multifamily properties.',
+                ],
+            ],
+            'fire_pump_note' => 'Richardson submits fire pump permit packages to ECCFPD Fire Prevention — stamped NFPA 20 hydraulic calculations and pump data sheets included.',
+            'fire_pump_faqs' => [
+                [
+                    'q' => 'When does a Brentwood building require a fire pump?',
+                    'a' => 'A fire pump is required when available water pressure cannot meet the sprinkler system\'s hydraulic demand. In Brentwood, this most commonly applies to large industrial facilities and multi-story commercial buildings. ECCFPD reviews the hydraulic analysis during plan check.',
+                ],
+                [
+                    'q' => 'How often must fire pumps be tested under NFPA 25 in Brentwood?',
+                    'a' => 'NFPA 25 requires weekly churn tests, annual flow tests, and 5-year internal inspections. Richardson provides annual testing and SB 1205-compliant written reports.',
+                ],
+                [
+                    'q' => 'Does Richardson service fire pumps at Brentwood cold storage facilities?',
+                    'a' => 'Yes. Richardson provides NFPA 25 annual fire pump testing, repair, and emergency service for cold storage and logistics facilities in Brentwood and East Contra Costa County. Call (916) 849-6441.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
+            ],
+        ],
+
+        // ── PLEASANTON ────────────────────────────────────────────────────────
+        'pleasanton' => [
+            'name'          => 'Pleasanton',
+            'slug'          => 'pleasanton',
+            'county'        => 'Alameda County',
+            'lat'           => 37.6624,
+            'lng'           => -121.8747,
+            'population'    => 82000,
+            'intro'         => 'Pleasanton anchors the Tri-Valley\'s technology and biotech employment corridor along Hacienda Drive and the I-580/I-680 interchange. Active construction across corporate campuses, mixed-use developments, and multifamily projects makes Pleasanton one of Alameda County\'s most active markets for commercial fire protection. Richardson serves GCs and developers in Pleasanton and the Tri-Valley.',
+            'building_types' => [
+                'Technology & Biotech Campus',
+                'Mixed-Use & Corporate Campus',
+                'Multifamily Residential',
+                'Retail & Restaurant',
+            ],
+            'ahj_name'      => 'Pleasanton Fire Prevention Division',
+            'nearby_cities' => [ 'fremont', 'oakland', 'san-jose' ],
+            'services_note'  => 'Pleasanton\'s Fire Prevention Division coordinates plan review for all commercial and industrial fire protection projects in the city. Richardson submits complete stamped NFPA 13 packages to Pleasanton Fire Prevention for first-pass approval.',
+            'neighborhoods'  => [ 'Hacienda Business Park', 'Downtown Pleasanton', 'Val Vista', 'Vineyard', 'Ruby Hill', 'Birdland', 'Stoneridge', 'I-580 Corridor' ],
+            'faqs'           => [
+                [
+                    'q' => 'Who is the AHJ for fire protection in Pleasanton?',
+                    'a' => 'Pleasanton\'s Fire Prevention Division serves as the AHJ for fire protection system plan review and inspection. Richardson submits NFPA 13 packages directly to Pleasanton Fire Prevention for plan check.',
+                ],
+                [
+                    'q' => 'How long does fire sprinkler plan review take in Pleasanton?',
+                    'a' => 'Pleasanton Fire Prevention typically reviews commercial fire sprinkler submittals in 3–5 weeks for complete first submittals. Richardson submits complete, stamped packages on the first attempt to minimize correction cycles.',
+                ],
+                [
+                    'q' => 'What fire protection is required for Pleasanton tech and biotech campuses?',
+                    'a' => 'Commercial office and biotech buildings in Pleasanton require NFPA 13-compliant automatic fire sprinkler systems. Laboratory and research facilities may require pre-action systems. Data center and server room spaces typically require pre-action protection to prevent accidental water discharge.',
+                ],
+                [
+                    'q' => 'Can Richardson handle fire protection for Hacienda Business Park developments?',
+                    'a' => 'Yes. Hacienda Business Park is one of the largest office and tech parks in the East Bay. Richardson provides NFPA 13 design-build, TI sprinkler retrofits, and NFPA 25 annual ITM for Hacienda Business Park tenants and owners.',
+                ],
+                [
+                    'q' => 'How much does fire sprinkler installation cost in Pleasanton?',
+                    'a' => 'Commercial fire sprinkler installation in Pleasanton typically runs $2.50–$6.00 per square foot installed. Bay Area labor rates add approximately 15–25% over Sacramento Valley pricing. Call (916) 849-6441 for a project-specific estimate.',
+                ],
+                [
+                    'q' => 'Does Richardson service the Tri-Valley area beyond Pleasanton?',
+                    'a' => 'Yes. Richardson serves the full Tri-Valley area including Pleasanton, Livermore, Dublin, Danville, and San Ramon. All are within our Bay Area service area.',
+                ],
+            ],
+            'primary_services' => [
+                [
+                    'icon'     => 'fa-solid fa-building',
+                    'tag'      => 'Commercial',
+                    'title'    => 'Commercial & Tech Campus',
+                    'desc'     => 'NFPA 13 design-build for Pleasanton\'s tech campuses, biotech facilities, and corporate campuses in Hacienda Business Park.',
+                    'features' => [ 'Wet & pre-action systems', 'Lab & data center protection', 'Pleasanton FD first-pass' ],
+                    'link'     => '/commercial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-building-user',
+                    'tag'      => 'Residential',
+                    'title'    => 'Multifamily Fire Protection',
+                    'desc'     => 'NFPA 13R and 13D systems for Pleasanton\'s multifamily development pipeline in Vineyard and Val Vista.',
+                    'features' => [ 'NFPA 13R apartment systems', 'NFPA 13D single-family', 'Occupied building retrofits' ],
+                    'link'     => '/residential/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-magnifying-glass',
+                    'tag'      => 'Inspection',
+                    'title'    => 'NFPA 25 Inspection & Testing',
+                    'desc'     => 'Annual NFPA 25 inspection and SB 1205 certification for commercial properties throughout the Tri-Valley.',
+                    'features' => [ 'NFPA 25 annual ITM', 'SB 1205 certified reports', 'Same-visit repair' ],
+                    'link'     => '/inspection-testing/',
+                ],
+            ],
+            'local_regulations' => [
+                [
+                    'code'      => '2022 California Fire Code (CFC)',
+                    'authority' => 'Pleasanton Fire Prevention Division',
+                    'summary'   => 'Pleasanton enforces the 2022 CFC for all commercial and industrial projects, including automatic sprinkler requirements and annual ITM certification under SB 1205.',
+                ],
+                [
+                    'code'      => 'California Health & Safety Code §13100',
+                    'authority' => 'California State Fire Marshal',
+                    'summary'   => 'All fire sprinkler contractors working in Pleasanton must hold a CSLB C-16 license and CSFM registration. Richardson holds both — C-16 #1053506.',
+                ],
+                [
+                    'code'      => 'SB 1205 (2018)',
+                    'authority' => 'Pleasanton FD / State Fire Marshal',
+                    'summary'   => 'Requires annual fire protection system inspection records to be submitted to the CSFM. Pleasanton Fire Prevention enforces compliance for all commercial and multifamily properties.',
+                ],
+            ],
+            'fire_pump_note' => 'Richardson submits fire pump permit packages directly to Pleasanton Fire Prevention — stamped NFPA 20 hydraulic calculations and pump data sheets included.',
+            'fire_pump_faqs' => [
+                [
+                    'q' => 'When does a Pleasanton building require a fire pump?',
+                    'a' => 'A fire pump is required when available water pressure cannot meet the sprinkler system\'s hydraulic demand. In Pleasanton, this most commonly applies to multi-story office towers, large tech campuses, and high-rise residential buildings. Pleasanton Fire Prevention reviews the hydraulic analysis during plan check.',
+                ],
+                [
+                    'q' => 'How often must fire pumps be tested in Pleasanton?',
+                    'a' => 'NFPA 25 requires weekly churn tests, annual flow tests with performance curves, and 5-year internal inspections. Richardson provides annual testing and SB 1205-compliant written reports.',
+                ],
+                [
+                    'q' => 'Does Richardson service fire pumps at Hacienda Business Park?',
+                    'a' => 'Yes. Richardson provides NFPA 25 annual fire pump testing, repair, and emergency service for tech campuses and biotech facilities at Hacienda Business Park and throughout Pleasanton. Call (916) 849-6441.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
+            ],
+        ],
+
+        // ── ANTIOCH ───────────────────────────────────────────────────────────
+        'antioch' => [
+            'name'          => 'Antioch',
+            'slug'          => 'antioch',
+            'county'        => 'Contra Costa County',
+            'lat'           => 37.9960,
+            'lng'           => -121.8058,
+            'population'    => 118000,
+            'intro'         => 'Antioch\'s waterfront industrial district and Highway 4 commercial corridor are among East Contra Costa\'s most active fire protection markets, with significant warehouse, light industrial, and mixed-use development alongside a growing multifamily residential sector. Richardson serves GCs and developers in Antioch and the northern Contra Costa industrial corridor.',
+            'building_types' => [
+                'Waterfront Industrial & Port Facilities',
+                'Logistics & Warehouse',
+                'Mixed-Use & Commercial',
+                'Multifamily Residential',
+            ],
+            'ahj_name'      => 'Contra Costa County Fire Protection District (ConFire)',
+            'nearby_cities' => [ 'concord', 'brentwood', 'oakland' ],
+            'services_note'  => 'Contra Costa County Fire Protection District (ConFire) handles plan review for Antioch and most of Contra Costa County. Richardson has experience with ConFire Fire Prevention and submits complete NFPA 13 packages for first-pass approval.',
+            'neighborhoods'  => [ 'Downtown Antioch', 'Rivertown Waterfront', 'Highway 4 Corridor', 'L Street Industrial', 'Lone Tree', 'Hillcrest', 'Sand Creek Road', 'Delta Coves' ],
+            'faqs'           => [
+                [
+                    'q' => 'Who is the AHJ for fire protection in Antioch?',
+                    'a' => 'Contra Costa County Fire Protection District (ConFire) serves as the AHJ for fire protection system plan review and inspection in Antioch. Richardson submits NFPA 13 packages directly to ConFire Fire Prevention for plan check.',
+                ],
+                [
+                    'q' => 'How long does fire sprinkler plan review take at ConFire for Antioch projects?',
+                    'a' => 'ConFire Fire Prevention typically reviews commercial fire sprinkler submittals in 4–6 weeks for complete first submittals. Richardson submits complete, stamped packages every time to minimize correction cycles.',
+                ],
+                [
+                    'q' => 'What fire protection is required for Antioch waterfront industrial facilities?',
+                    'a' => 'Industrial and waterfront facilities in Antioch require NFPA 13-compliant automatic fire sprinkler systems. Warehouses and logistics facilities may require ESFR systems. Special hazard suppression may be required for facilities handling flammable liquids or hazardous materials near the Delta waterfront.',
+                ],
+                [
+                    'q' => 'Can Richardson handle fire protection for Antioch multifamily developments?',
+                    'a' => 'Yes. Antioch\'s multifamily development pipeline typically requires NFPA 13R systems for apartment and condo projects. Richardson provides NFPA 13R design-build from permit through certificate of occupancy, coordinating with ConFire throughout.',
+                ],
+                [
+                    'q' => 'How much does fire sprinkler installation cost in Antioch?',
+                    'a' => 'Commercial fire sprinkler installation in Antioch typically runs $2.50–$6.00 per square foot installed. Bay Area labor rates add approximately 15–25% over Sacramento Valley pricing. Call (916) 849-6441 for a project-specific estimate.',
+                ],
+                [
+                    'q' => 'Does Richardson serve other Contra Costa County cities beyond Antioch?',
+                    'a' => 'Yes. Richardson serves the full ConFire jurisdiction including Antioch, Concord, Pleasant Hill, Martinez, and Brentwood. We also serve Pleasanton, Oakland, and Fremont in the broader Bay Area.',
+                ],
+            ],
+            'primary_services' => [
+                [
+                    'icon'     => 'fa-solid fa-warehouse',
+                    'tag'      => 'Industrial',
+                    'title'    => 'Industrial & Waterfront',
+                    'desc'     => 'ESFR and in-rack systems for Antioch\'s waterfront industrial district and Highway 4 logistics corridor.',
+                    'features' => [ 'ESFR high-bay systems', 'Waterfront industrial protection', 'ConFire coordination' ],
+                    'link'     => '/industrial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-building',
+                    'tag'      => 'Commercial',
+                    'title'    => 'Commercial Fire Protection',
+                    'desc'     => 'NFPA 13 design-build for Antioch\'s retail, restaurant, and mixed-use projects along Highway 4 and Lone Tree Way.',
+                    'features' => [ 'Wet & dry pipe systems', 'Tenant improvement retrofits', 'ConFire first-pass approval' ],
+                    'link'     => '/commercial/',
+                ],
+                [
+                    'icon'     => 'fa-solid fa-building-user',
+                    'tag'      => 'Residential',
+                    'title'    => 'Multifamily Fire Protection',
+                    'desc'     => 'NFPA 13R and 13D systems for Antioch\'s multifamily residential development pipeline.',
+                    'features' => [ 'NFPA 13R apartment systems', 'NFPA 13D single-family', 'Occupied building retrofits' ],
+                    'link'     => '/residential/',
+                ],
+            ],
+            'local_regulations' => [
+                [
+                    'code'      => '2022 California Fire Code (CFC)',
+                    'authority' => 'Contra Costa County Fire Protection District (ConFire)',
+                    'summary'   => 'ConFire enforces the 2022 CFC for all commercial and industrial projects in Antioch, including automatic sprinkler requirements and annual ITM certification under SB 1205.',
+                ],
+                [
+                    'code'      => 'California Health & Safety Code §13100',
+                    'authority' => 'California State Fire Marshal',
+                    'summary'   => 'All fire sprinkler contractors working in Antioch must hold a CSLB C-16 license and CSFM registration. Richardson holds both — C-16 #1053506.',
+                ],
+                [
+                    'code'      => 'SB 1205 (2018)',
+                    'authority' => 'ConFire / State Fire Marshal',
+                    'summary'   => 'Requires annual fire protection system inspection records to be submitted to the CSFM. ConFire enforces compliance for all commercial and multifamily properties in its jurisdiction.',
+                ],
+            ],
+            'fire_pump_note' => 'Richardson submits fire pump permit packages directly to ConFire Fire Prevention — stamped NFPA 20 hydraulic calculations and pump data sheets included.',
+            'fire_pump_faqs' => [
+                [
+                    'q' => 'When does an Antioch building require a fire pump?',
+                    'a' => 'A fire pump is required when municipal water pressure cannot meet the hydraulic demand of the sprinkler system. In Antioch, this applies to large industrial facilities, multi-story commercial buildings, and waterfront facilities with limited supply pressure. ConFire reviews the hydraulic analysis during plan check.',
+                ],
+                [
+                    'q' => 'How often must fire pumps be tested in Antioch?',
+                    'a' => 'NFPA 25 requires weekly churn tests, annual flow tests with performance curves, and 5-year internal inspections. Richardson provides annual testing and SB 1205-compliant written reports for ConFire compliance.',
+                ],
+                [
+                    'q' => 'Does Richardson provide emergency fire pump repair in Antioch?',
+                    'a' => 'Yes. Richardson provides 24/7 emergency fire pump repair for Antioch and Contra Costa County. Call (916) 849-6441 for immediate response.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
+            ],
+        ],
+
+        'daly-city' => [
+            'name'          => 'Daly City',
+            'slug'          => 'daly-city',
+            'county'        => 'San Mateo County',
+            'lat'           => 37.6879,
+            'lng'           => -122.4702,
+            'population'    => 104901,
+            'intro'         => 'Daly City is the largest city in San Mateo County, bordered by San Francisco to the north. Its dense residential and commercial development, proximity to SFO, and the BART corridor create a steady demand for multifamily fire sprinkler retrofits, commercial TI work, and inspection services for older buildings.',
+            'building_types'=> [ 'Dense multifamily residential', 'Ground-floor retail / mixed-use', 'Older commercial buildings', 'Medical and professional offices', 'Industrial near the bayfront' ],
+            'ahj_name'      => 'Daly City Fire Department',
+            'nearby_cities' => [ 'san-francisco', 'south-san-francisco', 'san-mateo', 'oakland' ],
+            'services_note' => 'Daly City projects frequently involve NFPA 13R retrofits in older apartment buildings and tenant improvement work in ground-floor retail. Richardson manages AHJ coordination with Daly City FD for all permit submittals.',
+            'neighborhoods' => [ 'Westlake', 'Serramonte', 'Bayshore', 'Mission Hills', 'Crocker' ],
+            'faqs'          => [
+                [
+                    'q' => 'Does Daly City require fire sprinklers in existing apartment buildings?',
+                    'a' => 'California law and local fire codes require fire sprinklers in substantially renovated multifamily buildings. Daly City Fire Department enforces NFPA 13R for residential buildings up to four stories. Contact Richardson at (916) 849-6441 for a code analysis of your project.',
+                ],
+                [
+                    'q' => 'Who is the AHJ for fire sprinkler permits in Daly City?',
+                    'a' => 'The Authority Having Jurisdiction for fire sprinkler systems in Daly City is the Daly City Fire Department. Richardson handles all AHJ submittal, plan check coordination, and inspection scheduling for Daly City projects.',
+                ],
+                [
+                    'q' => 'Does Richardson service fire sprinkler systems in Daly City?',
+                    'a' => 'Yes. Richardson provides fire sprinkler installation, inspection, testing, and repair services throughout Daly City and San Mateo County. Call (916) 849-6441 or use our contact form to request service.',
+                ],
+                [
+                    'q' => 'What NFPA standard applies to apartment buildings in Daly City?',
+                    'a' => 'NFPA 13R applies to residential buildings up to four stories; NFPA 13 applies to buildings over four stories and all mixed-use structures. Daly City\'s dense multifamily stock includes many buildings that qualify for NFPA 13R but require careful AHJ coordination given building age and construction type.',
+                ],
+                [
+                    'q' => 'How much does a fire sprinkler system cost for a building in Daly City?',
+                    'a' => 'Costs vary by project type and system standard. NFPA 13R apartment systems typically run $4,000–$9,500 per unit for new construction and more for retrofit. Commercial TI modifications range widely by scope. Richardson provides free estimates — call (916) 849-6441.',
+                ],
+                [
+                    'q' => 'Does Richardson provide emergency fire sprinkler repair in Daly City?',
+                    'a' => 'Yes. Richardson provides 24/7 emergency fire sprinkler repair for Daly City and the broader Bay Area. Call (916) 849-6441 for immediate response to system impairments, leaking heads, or burst pipes.',
+                ],
+            ],
+            'primary_services' => [
+                [
+                    'title' => 'Multifamily Fire Sprinkler Systems',
+                    'desc'  => 'NFPA 13R and NFPA 13 design-build for Daly City\'s dense residential stock — new construction and occupied-building retrofit.',
+                    'link'  => '/multifamily-fire-sprinkler-system/',
+                ],
+                [
+                    'title' => 'Commercial Fire Protection',
+                    'desc'  => 'Fire sprinkler installation and tenant improvement modifications for Daly City\'s retail, medical, and mixed-use buildings.',
+                    'link'  => '/commercial/',
+                ],
+                [
+                    'title' => 'Inspection, Testing &amp; Repair',
+                    'desc'  => 'NFPA 25 annual inspection and 24/7 repair response for all commercial and multifamily properties in Daly City.',
+                    'link'  => '/inspection-testing/',
+                ],
+            ],
+            'local_regulations' => 'Daly City adopts the 2022 California Fire Code with San Mateo County amendments. Daly City Fire Department reviews fire sprinkler submittals for all commercial and multifamily projects. Title 19 inspection and testing requirements apply to all installed systems.',
+            'fire_pump_note'    => 'Fire pumps are required for high-rise and larger multifamily buildings in Daly City where municipal pressure cannot meet sprinkler hydraulic demand. Richardson performs water supply analysis as part of every design engagement.',
+            'fire_pump_faqs'    => [
+                [
+                    'q' => 'Does my Daly City building need a fire pump?',
+                    'a' => 'Whether a fire pump is required depends on building height and water supply pressure. Richardson performs a hydraulic analysis as part of the design process and advises on fire pump requirements early in the project.',
+                ],
+                [
+                    'q' => 'Does Richardson service fire pumps in Daly City?',
+                    'a' => 'Yes. Richardson provides fire pump installation, annual testing, and emergency repair for Daly City and San Mateo County. Call (916) 849-6441.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
+            ],
+        ],
+
+        'union-city' => [
+            'name'          => 'Union City',
+            'slug'          => 'union-city',
+            'county'        => 'Alameda County',
+            'lat'           => 37.5934,
+            'lng'           => -122.0438,
+            'population'    => 75000,
+            'intro'         => 'Union City sits between Fremont and Hayward in the East Bay, with a mix of industrial, logistics, and residential development. The city\'s growing warehouse and distribution sector along the I-880 corridor and its multifamily housing pipeline make it an active market for ESFR warehouse sprinkler systems and apartment fire protection.',
+            'building_types'=> [ 'Warehouse and distribution centers', 'Light industrial and manufacturing', 'Multifamily residential', 'Retail and commercial', 'Mixed-use near BART stations' ],
+            'ahj_name'      => 'Union City Fire Department',
+            'nearby_cities' => [ 'fremont', 'hayward', 'newark', 'oakland' ],
+            'services_note' => 'Union City fire protection work centers on warehouse ESFR systems along the I-880 corridor and NFPA 13R multifamily projects. Richardson coordinates with Union City Fire Department for all plan submittals and inspections.',
+            'neighborhoods' => [ 'Alvarado', 'Decoto', 'Dyer', 'New Haven', 'Station District' ],
+            'faqs'          => [
+                [
+                    'q' => 'Who is the AHJ for fire sprinkler permits in Union City?',
+                    'a' => 'The Authority Having Jurisdiction for fire sprinkler systems in Union City is the Union City Fire Department. Richardson handles AHJ submittal, plan check coordination, and inspection scheduling for all Union City projects.',
+                ],
+                [
+                    'q' => 'Does Richardson install ESFR sprinkler systems in Union City warehouses?',
+                    'a' => 'Yes. Richardson designs and installs ESFR and in-rack fire sprinkler systems for warehouses and distribution centers throughout Union City and the broader I-880 East Bay corridor. Call (916) 849-6441 for a commodity analysis and preliminary bid.',
+                ],
+                [
+                    'q' => 'What fire sprinkler system does a Union City apartment building need?',
+                    'a' => 'Buildings up to four stories typically require NFPA 13R; five stories and above require full NFPA 13. Mixed-use buildings with ground-floor commercial generally require NFPA 13 throughout. Richardson provides code analysis and design for Union City multifamily projects.',
+                ],
+                [
+                    'q' => 'How much does fire sprinkler installation cost in Union City?',
+                    'a' => 'Commercial and industrial new construction typically runs $3.00–$7.50 per square foot depending on system type. Multifamily runs $4,000–$9,500 per unit for NFPA 13R and more for NFPA 13 buildings. Call (916) 849-6441 for a project-specific estimate.',
+                ],
+                [
+                    'q' => 'Does Richardson provide fire sprinkler inspection in Union City?',
+                    'a' => 'Yes. Richardson provides NFPA 25 annual inspection and testing for commercial, industrial, and multifamily buildings throughout Union City and Alameda County. Contact (916) 849-6441 to schedule.',
+                ],
+                [
+                    'q' => 'Does Richardson provide emergency fire sprinkler repair in Union City?',
+                    'a' => 'Yes. Richardson provides 24/7 emergency fire sprinkler repair for Union City and the East Bay. Call (916) 849-6441 for immediate response to impairments, leaking heads, or burst pipes.',
+                ],
+            ],
+            'primary_services' => [
+                [
+                    'title' => 'Industrial &amp; Warehouse Fire Sprinklers',
+                    'desc'  => 'ESFR and in-rack fire sprinkler systems for Union City\'s I-880 warehouse and distribution corridor.',
+                    'link'  => '/industrial/',
+                ],
+                [
+                    'title' => 'Multifamily Fire Sprinkler Systems',
+                    'desc'  => 'NFPA 13R and NFPA 13 design-build for Union City apartment and mixed-use residential projects.',
+                    'link'  => '/multifamily-fire-sprinkler-system/',
+                ],
+                [
+                    'title' => 'Inspection, Testing &amp; Repair',
+                    'desc'  => 'NFPA 25 annual inspection and 24/7 repair response for all Union City commercial and multifamily properties.',
+                    'link'  => '/inspection-testing/',
+                ],
+            ],
+            'local_regulations' => 'Union City adopts the 2022 California Fire Code with Alameda County and local amendments. Union City Fire Department reviews fire sprinkler submittals. NFPA 25 inspection and testing requirements apply to all installed systems.',
+            'fire_pump_note'    => 'Fire pumps are required for large warehouse and industrial facilities in Union City where municipal supply cannot meet ESFR hydraulic demand. Richardson performs a water supply analysis as part of every design engagement.',
+            'fire_pump_faqs'    => [
+                [
+                    'q' => 'Does my Union City warehouse need a fire pump?',
+                    'a' => 'Large ESFR systems often require a fire pump when street pressure is insufficient. Richardson performs hydraulic analysis as part of the design process and advises on fire pump requirements early in the project.',
+                ],
+                [
+                    'q' => 'Does Richardson service fire pumps in Union City?',
+                    'a' => 'Yes. Richardson provides fire pump installation, annual testing, and emergency repair for Union City and Alameda County. Call (916) 849-6441.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
+            ],
+        ],
+
     ]; // end rfp_all_locations()
 }
