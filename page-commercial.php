@@ -128,7 +128,7 @@ get_header();
             <p class="service-card__desc">Stay code-compliant with thorough inspections, testing, and certification of all fire protection systems — fully documented for your AHJ and insurance carrier.</p>
             <ul class="service-card__features">
               <li><i class="fa-solid fa-check"></i> Sprinkler inspections (NFPA 25)</li>
-              <li><i class="fa-solid fa-check"></i> Alarm testing (NFPA 72)</li>
+              <li><i class="fa-solid fa-check"></i> Backflow preventer testing</li>
               <li><i class="fa-solid fa-check"></i> Fire pump testing</li>
               <li><i class="fa-solid fa-check"></i> Digital compliance reports</li>
             </ul>
@@ -142,10 +142,10 @@ get_header();
           $extra = [
             [ 'fa-solid fa-fire-extinguisher', 'Portable Extinguishers',    'Sales, service, and annual inspection for portable fire extinguishers.' ],
             [ 'fa-solid fa-door-open',          'Emergency Egress Lighting',  'Exit signs and emergency lighting installation and testing.' ],
-            [ 'fa-solid fa-plug',               'Monitoring &amp; Central Station', 'UL-listed central station monitoring for alarm and suppression systems.' ],
-            [ 'fa-solid fa-screwdriver-wrench', 'System Repairs',            'Fast repair of damaged or non-functional components — sprinklers, heads, valves, panels.' ],
+            [ 'fa-solid fa-screwdriver-wrench', 'System Repairs',            'Fast repair of damaged or non-functional components — sprinklers, heads, valves, and control panels.' ],
             [ 'fa-solid fa-clipboard-check',    'Permit &amp; AHJ Coordination', 'We pull permits and coordinate final inspections with the Authority Having Jurisdiction.' ],
-            [ 'fa-solid fa-truck-fast',         '24/7 Emergency Service',    'Around-the-clock response for sprinkler leaks, system impairments, and alarm failures.' ],
+            [ 'fa-solid fa-truck-fast',         '24/7 Emergency Service',    'Around-the-clock response for sprinkler leaks, system impairments, and equipment failures.' ],
+            [ 'fa-solid fa-fire-flame-curved',  'Special Hazard Systems',    'Pre-action, deluge, and clean-agent suppression for server rooms, paint booths, and chemical storage.' ],
           ];
           foreach ( $extra as $s ) : ?>
             <div class="service-card service-card--sm">
