@@ -56,13 +56,42 @@ get_header();
       <?php endif; ?>
     <?php endwhile; endif; ?>
 
+    <!-- ========== AT A GLANCE ========== -->
+    <section class="section" style="background: var(--c-surface); padding-top: 2.5rem; padding-bottom: 2.5rem;">
+      <div class="container">
+        <div class="services-grid services-grid--4 reveal-up">
+          <div class="service-card service-card--sm" style="text-align:center;">
+            <div class="service-card__icon"><i class="fa-solid fa-droplet"></i></div>
+            <h3 class="service-card__title">Commercial Sprinkler System Design</h3>
+            <p class="service-card__desc">NFPA 13 hydraulic calculations, shop drawings, and AHJ-compliant packages stamped by our NICET II team.</p>
+            <a href="<?php echo esc_url( home_url( '/commercial-sprinkler-system/' ) ); ?>" class="service-card__link">System Types &amp; Costs <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card service-card--sm" style="text-align:center;">
+            <div class="service-card__icon"><i class="fa-solid fa-hard-hat"></i></div>
+            <h3 class="service-card__title">Commercial Sprinkler Installation</h3>
+            <p class="service-card__desc">Licensed C-16 crews install commercial fire sprinkler systems for new construction, TIs, and major renovations.</p>
+          </div>
+          <div class="service-card service-card--sm" style="text-align:center;">
+            <div class="service-card__icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <h3 class="service-card__title">Inspection &amp; Testing</h3>
+            <p class="service-card__desc">Annual NFPA 25 inspections keep your commercial fire sprinkler system code-compliant and insurance-ready.</p>
+          </div>
+          <div class="service-card service-card--sm" style="text-align:center;">
+            <div class="service-card__icon"><i class="fa-solid fa-file-contract"></i></div>
+            <h3 class="service-card__title">Permit &amp; AHJ Coordination</h3>
+            <p class="service-card__desc">We pull commercial fire sprinkler permits directly — one contractor, one contract, first-pass AHJ approvals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== CORE SERVICES ========== -->
     <section id="commercial-services" class="section commercial">
       <div class="container">
         <div class="section-header reveal-up">
           <div class="section-badge">Commercial Services</div>
-          <h2 class="section-title">Everything Your Building <span class="text-accent">Needs</span></h2>
-          <p class="section-desc">From initial design through ongoing annual inspections, Richardson handles every aspect of commercial fire protection.</p>
+          <h2 class="section-title">Commercial Sprinkler System <span class="text-accent">Design &amp; Installation</span></h2>
+          <p class="section-desc">Sacramento's trusted commercial fire sprinkler installation contractor for GCs and developers. NFPA 13-compliant commercial sprinkler systems for offices, retail centers, restaurants, warehouses, and mixed-use buildings — engineered, permitted, and installed by our licensed team.</p>
         </div>
         <div class="services-grid">
           <div class="service-card reveal-up" data-delay="0">
@@ -202,14 +231,16 @@ get_header();
         </div>
       </div>
       <p class="section-desc reveal-up" style="text-align:center; margin-top:1.5rem; padding: 0 1.5rem;">
-        We serve commercial projects across the Sacramento Valley — including
+        We serve commercial sprinkler installation projects across Northern California and the Bay Area — including
         <a href="<?php echo esc_url( home_url( '/locations/sacramento/' ) ); ?>">Sacramento</a>,
         <a href="<?php echo esc_url( home_url( '/locations/roseville/' ) ); ?>">Roseville</a>,
-        <a href="<?php echo esc_url( home_url( '/locations/rocklin/' ) ); ?>">Rocklin</a>,
         <a href="<?php echo esc_url( home_url( '/locations/stockton/' ) ); ?>">Stockton</a>,
         <a href="<?php echo esc_url( home_url( '/locations/fairfield/' ) ); ?>">Fairfield</a>,
-        <a href="<?php echo esc_url( home_url( '/locations/yuba-city/' ) ); ?>">Yuba City</a>, and
-        <a href="<?php echo esc_url( home_url( '/locations/davis/' ) ); ?>">Davis</a>.
+        <a href="<?php echo esc_url( home_url( '/locations/concord/' ) ); ?>">Concord</a>,
+        <a href="<?php echo esc_url( home_url( '/locations/oakland/' ) ); ?>">Oakland</a>,
+        <a href="<?php echo esc_url( home_url( '/locations/fremont/' ) ); ?>">Fremont</a>,
+        <a href="<?php echo esc_url( home_url( '/locations/san-jose/' ) ); ?>">San Jose</a>, and
+        <a href="<?php echo esc_url( home_url( '/locations/napa/' ) ); ?>">Napa</a>.
       </p>
     </section>
 

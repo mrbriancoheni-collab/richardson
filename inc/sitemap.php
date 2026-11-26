@@ -35,6 +35,7 @@ add_action( 'template_redirect', function () {
         // Service hubs
         [ 'loc' => home_url( '/services/' ),                     'priority' => '0.9', 'changefreq' => 'weekly',  'lastmod' => $now ],
         [ 'loc' => home_url( '/commercial/' ),                   'priority' => '0.9', 'changefreq' => 'weekly',  'lastmod' => $now ],
+        [ 'loc' => home_url( '/commercial-sprinkler-system/' ), 'priority' => '0.9', 'changefreq' => 'monthly', 'lastmod' => $now ],
         [ 'loc' => home_url( '/industrial/' ),                   'priority' => '0.9', 'changefreq' => 'weekly',  'lastmod' => $now ],
         [ 'loc' => home_url( '/residential/' ),                  'priority' => '0.9', 'changefreq' => 'weekly',  'lastmod' => $now ],
         [ 'loc' => home_url( '/fire-pump/' ),                    'priority' => '0.9', 'changefreq' => 'weekly',  'lastmod' => $now ],
