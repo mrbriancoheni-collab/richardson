@@ -145,6 +145,24 @@ function rfp_get_page_seo() {
                 $seo['schema_type'] = 'commercial_sprinkler_system';
                 break;
 
+            case 'industrial-sprinkler-system':
+                $seo['title']       = 'Industrial Fire Sprinkler System Design & Installation Sacramento | ESFR | Richardson';
+                $seo['description'] = 'Industrial fire sprinkler systems for warehouses, manufacturing, and cold storage in Sacramento and Northern California. ESFR, in-rack, dry pipe — NFPA 13 design-build, C-16 licensed, commodity analysis included.';
+                $seo['schema_type'] = 'industrial_sprinkler_system';
+                break;
+
+            case 'warehouse-fire-sprinkler-system':
+                $seo['title']       = 'Warehouse Fire Sprinkler System Installation Sacramento | ESFR & High-Piled | Richardson';
+                $seo['description'] = 'Warehouse fire sprinkler system design and installation in Sacramento — ESFR, in-rack, and ceiling-only systems for high-bay warehouses and distribution centers. Commodity analysis, NFPA 13 Ch. 20, C-16 licensed.';
+                $seo['schema_type'] = 'warehouse_sprinkler_system';
+                break;
+
+            case 'fire-sprinkler-installation':
+                $seo['title']       = 'Fire Sprinkler Installation Companies Sacramento | C-16 Licensed | Richardson Fire Protection';
+                $seo['description'] = 'Licensed fire sprinkler installation contractor in Sacramento. Commercial, industrial, and multifamily fire sprinkler installation — full design-build, AHJ permits, 24–48 hr bids. CSLB C-16 #1053506.';
+                $seo['schema_type'] = 'installation_hub';
+                break;
+
             case 'commercial':
             case 'commercial-fire-protection':
                 $seo['title']       = 'Commercial Sprinkler Systems Sacramento | NFPA 13 Design-Build | Richardson Fire Protection';
