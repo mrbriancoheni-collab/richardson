@@ -108,17 +108,17 @@ get_header();
             <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="service-card__link">Get a Quote <i class="fa-solid fa-arrow-right"></i></a>
           </div>
           <div class="service-card reveal-up" data-delay="100">
-            <div class="service-card__icon"><i class="fa-solid fa-bell"></i></div>
-            <div class="service-card__tag">Detection</div>
-            <h3 class="service-card__title">Fire Alarm Systems</h3>
-            <p class="service-card__desc">Addressable and conventional fire alarm systems from leading manufacturers — designed, installed, programmed, and monitored to NFPA 72 standards.</p>
+            <div class="service-card__icon"><i class="fa-solid fa-drafting-compass"></i></div>
+            <div class="service-card__tag">Engineering</div>
+            <h3 class="service-card__title">Fire Sprinkler System Design</h3>
+            <p class="service-card__desc">NICET II certified hydraulic calculations, stamped shop drawings, and NFPA 13 compliance packages — first-pass AHJ approval or we correct at no charge.</p>
             <ul class="service-card__features">
-              <li><i class="fa-solid fa-check"></i> Addressable &amp; conventional panels</li>
-              <li><i class="fa-solid fa-check"></i> Smoke, heat &amp; CO detection</li>
-              <li><i class="fa-solid fa-check"></i> Voice evacuation systems</li>
-              <li><i class="fa-solid fa-check"></i> Central station monitoring</li>
+              <li><i class="fa-solid fa-check"></i> Hydraulic calculations</li>
+              <li><i class="fa-solid fa-check"></i> Stamped shop drawings</li>
+              <li><i class="fa-solid fa-check"></i> AHJ permit submittal</li>
+              <li><i class="fa-solid fa-check"></i> NICET II certified team</li>
             </ul>
-            <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>" class="service-card__link">Get a Quote <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="<?php echo esc_url( home_url( '/fire-sprinkler-system-design/' ) ); ?>" class="service-card__link">Design Services <i class="fa-solid fa-arrow-right"></i></a>
           </div>
           <div class="service-card reveal-up service-card--featured" data-delay="200">
             <div class="featured-badge">Most Requested</div>

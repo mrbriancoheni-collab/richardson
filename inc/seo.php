@@ -145,6 +145,24 @@ function rfp_get_page_seo() {
                 $seo['schema_type'] = 'commercial_sprinkler_system';
                 break;
 
+            case 'multifamily-fire-sprinkler-system':
+                $seo['title']       = 'Multifamily Fire Sprinkler System Design Sacramento | NFPA 13R & 13 | Richardson';
+                $seo['description'] = 'Multifamily fire sprinkler systems for apartment complexes, condos, and mixed-use buildings in Sacramento. NFPA 13R (1-4 story), NFPA 13 (5+ story), and NFPA 13D (SFR) — full design-build, C-16 licensed.';
+                $seo['schema_type'] = 'multifamily_sprinkler_system';
+                break;
+
+            case 'fire-sprinkler-repair':
+                $seo['title']       = 'Fire Sprinkler Repair Companies Sacramento | C-16 Licensed | Richardson Fire Protection';
+                $seo['description'] = 'Licensed fire sprinkler repair contractor in Sacramento — leaking heads, burst pipes, valve repair, head replacement, and system modifications. Commercial, industrial, and residential. CSLB C-16 #1053506.';
+                $seo['schema_type'] = 'repair_service';
+                break;
+
+            case 'fire-protection-services':
+                $seo['title']       = 'Fire Protection Services Sacramento | C-16 Licensed Contractor | Richardson Fire Protection';
+                $seo['description'] = 'Complete fire protection services in Sacramento — sprinkler design, installation, inspection, repair, and 24/7 emergency service for commercial, industrial, and multifamily buildings. CSLB C-16 #1053506.';
+                $seo['schema_type'] = 'services_hub';
+                break;
+
             case 'industrial-sprinkler-system':
                 $seo['title']       = 'Industrial Fire Sprinkler System Design & Installation Sacramento | ESFR | Richardson';
                 $seo['description'] = 'Industrial fire sprinkler systems for warehouses, manufacturing, and cold storage in Sacramento and Northern California. ESFR, in-rack, dry pipe — NFPA 13 design-build, C-16 licensed, commodity analysis included.';
