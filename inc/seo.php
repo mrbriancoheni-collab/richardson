@@ -35,6 +35,7 @@ function rfp_business_data() {
             'Citrus Heights', 'Natomas', 'West Sacramento', 'Davis', 'Woodland',
             'Auburn', 'Rocklin', 'Lincoln', 'Yuba City', 'Marysville',
             'Stockton', 'Fairfield', 'Concord', 'Oakland', 'Fremont', 'San Jose', 'Napa',
+            'Daly City', 'Union City', 'Vacaville', 'Elk Grove', 'Brentwood', 'Antioch', 'Pleasanton',
         ],
         'social'        => [
             'https://share.google/xZpbIqAER27ne0Itm',

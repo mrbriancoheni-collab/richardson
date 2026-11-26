@@ -2376,5 +2376,157 @@ function rfp_all_locations() {
             ],
         ],
 
+        'daly-city' => [
+            'name'          => 'Daly City',
+            'slug'          => 'daly-city',
+            'county'        => 'San Mateo County',
+            'lat'           => 37.6879,
+            'lng'           => -122.4702,
+            'population'    => 104901,
+            'intro'         => 'Daly City is the largest city in San Mateo County, bordered by San Francisco to the north. Its dense residential and commercial development, proximity to SFO, and the BART corridor create a steady demand for multifamily fire sprinkler retrofits, commercial TI work, and inspection services for older buildings.',
+            'building_types'=> [ 'Dense multifamily residential', 'Ground-floor retail / mixed-use', 'Older commercial buildings', 'Medical and professional offices', 'Industrial near the bayfront' ],
+            'ahj_name'      => 'Daly City Fire Department',
+            'nearby_cities' => [ 'san-francisco', 'south-san-francisco', 'san-mateo', 'oakland' ],
+            'services_note' => 'Daly City projects frequently involve NFPA 13R retrofits in older apartment buildings and tenant improvement work in ground-floor retail. Richardson manages AHJ coordination with Daly City FD for all permit submittals.',
+            'neighborhoods' => [ 'Westlake', 'Serramonte', 'Bayshore', 'Mission Hills', 'Crocker' ],
+            'faqs'          => [
+                [
+                    'q' => 'Does Daly City require fire sprinklers in existing apartment buildings?',
+                    'a' => 'California law and local fire codes require fire sprinklers in substantially renovated multifamily buildings. Daly City Fire Department enforces NFPA 13R for residential buildings up to four stories. Contact Richardson at (916) 849-6441 for a code analysis of your project.',
+                ],
+                [
+                    'q' => 'Who is the AHJ for fire sprinkler permits in Daly City?',
+                    'a' => 'The Authority Having Jurisdiction for fire sprinkler systems in Daly City is the Daly City Fire Department. Richardson handles all AHJ submittal, plan check coordination, and inspection scheduling for Daly City projects.',
+                ],
+                [
+                    'q' => 'Does Richardson service fire sprinkler systems in Daly City?',
+                    'a' => 'Yes. Richardson provides fire sprinkler installation, inspection, testing, and repair services throughout Daly City and San Mateo County. Call (916) 849-6441 or use our contact form to request service.',
+                ],
+                [
+                    'q' => 'What NFPA standard applies to apartment buildings in Daly City?',
+                    'a' => 'NFPA 13R applies to residential buildings up to four stories; NFPA 13 applies to buildings over four stories and all mixed-use structures. Daly City\'s dense multifamily stock includes many buildings that qualify for NFPA 13R but require careful AHJ coordination given building age and construction type.',
+                ],
+                [
+                    'q' => 'How much does a fire sprinkler system cost for a building in Daly City?',
+                    'a' => 'Costs vary by project type and system standard. NFPA 13R apartment systems typically run $4,000–$9,500 per unit for new construction and more for retrofit. Commercial TI modifications range widely by scope. Richardson provides free estimates — call (916) 849-6441.',
+                ],
+                [
+                    'q' => 'Does Richardson provide emergency fire sprinkler repair in Daly City?',
+                    'a' => 'Yes. Richardson provides 24/7 emergency fire sprinkler repair for Daly City and the broader Bay Area. Call (916) 849-6441 for immediate response to system impairments, leaking heads, or burst pipes.',
+                ],
+            ],
+            'primary_services' => [
+                [
+                    'title' => 'Multifamily Fire Sprinkler Systems',
+                    'desc'  => 'NFPA 13R and NFPA 13 design-build for Daly City\'s dense residential stock — new construction and occupied-building retrofit.',
+                    'link'  => '/multifamily-fire-sprinkler-system/',
+                ],
+                [
+                    'title' => 'Commercial Fire Protection',
+                    'desc'  => 'Fire sprinkler installation and tenant improvement modifications for Daly City\'s retail, medical, and mixed-use buildings.',
+                    'link'  => '/commercial/',
+                ],
+                [
+                    'title' => 'Inspection, Testing &amp; Repair',
+                    'desc'  => 'NFPA 25 annual inspection and 24/7 repair response for all commercial and multifamily properties in Daly City.',
+                    'link'  => '/inspection-testing/',
+                ],
+            ],
+            'local_regulations' => 'Daly City adopts the 2022 California Fire Code with San Mateo County amendments. Daly City Fire Department reviews fire sprinkler submittals for all commercial and multifamily projects. Title 19 inspection and testing requirements apply to all installed systems.',
+            'fire_pump_note'    => 'Fire pumps are required for high-rise and larger multifamily buildings in Daly City where municipal pressure cannot meet sprinkler hydraulic demand. Richardson performs water supply analysis as part of every design engagement.',
+            'fire_pump_faqs'    => [
+                [
+                    'q' => 'Does my Daly City building need a fire pump?',
+                    'a' => 'Whether a fire pump is required depends on building height and water supply pressure. Richardson performs a hydraulic analysis as part of the design process and advises on fire pump requirements early in the project.',
+                ],
+                [
+                    'q' => 'Does Richardson service fire pumps in Daly City?',
+                    'a' => 'Yes. Richardson provides fire pump installation, annual testing, and emergency repair for Daly City and San Mateo County. Call (916) 849-6441.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
+            ],
+        ],
+
+        'union-city' => [
+            'name'          => 'Union City',
+            'slug'          => 'union-city',
+            'county'        => 'Alameda County',
+            'lat'           => 37.5934,
+            'lng'           => -122.0438,
+            'population'    => 75000,
+            'intro'         => 'Union City sits between Fremont and Hayward in the East Bay, with a mix of industrial, logistics, and residential development. The city\'s growing warehouse and distribution sector along the I-880 corridor and its multifamily housing pipeline make it an active market for ESFR warehouse sprinkler systems and apartment fire protection.',
+            'building_types'=> [ 'Warehouse and distribution centers', 'Light industrial and manufacturing', 'Multifamily residential', 'Retail and commercial', 'Mixed-use near BART stations' ],
+            'ahj_name'      => 'Union City Fire Department',
+            'nearby_cities' => [ 'fremont', 'hayward', 'newark', 'oakland' ],
+            'services_note' => 'Union City fire protection work centers on warehouse ESFR systems along the I-880 corridor and NFPA 13R multifamily projects. Richardson coordinates with Union City Fire Department for all plan submittals and inspections.',
+            'neighborhoods' => [ 'Alvarado', 'Decoto', 'Dyer', 'New Haven', 'Station District' ],
+            'faqs'          => [
+                [
+                    'q' => 'Who is the AHJ for fire sprinkler permits in Union City?',
+                    'a' => 'The Authority Having Jurisdiction for fire sprinkler systems in Union City is the Union City Fire Department. Richardson handles AHJ submittal, plan check coordination, and inspection scheduling for all Union City projects.',
+                ],
+                [
+                    'q' => 'Does Richardson install ESFR sprinkler systems in Union City warehouses?',
+                    'a' => 'Yes. Richardson designs and installs ESFR and in-rack fire sprinkler systems for warehouses and distribution centers throughout Union City and the broader I-880 East Bay corridor. Call (916) 849-6441 for a commodity analysis and preliminary bid.',
+                ],
+                [
+                    'q' => 'What fire sprinkler system does a Union City apartment building need?',
+                    'a' => 'Buildings up to four stories typically require NFPA 13R; five stories and above require full NFPA 13. Mixed-use buildings with ground-floor commercial generally require NFPA 13 throughout. Richardson provides code analysis and design for Union City multifamily projects.',
+                ],
+                [
+                    'q' => 'How much does fire sprinkler installation cost in Union City?',
+                    'a' => 'Commercial and industrial new construction typically runs $3.00–$7.50 per square foot depending on system type. Multifamily runs $4,000–$9,500 per unit for NFPA 13R and more for NFPA 13 buildings. Call (916) 849-6441 for a project-specific estimate.',
+                ],
+                [
+                    'q' => 'Does Richardson provide fire sprinkler inspection in Union City?',
+                    'a' => 'Yes. Richardson provides NFPA 25 annual inspection and testing for commercial, industrial, and multifamily buildings throughout Union City and Alameda County. Contact (916) 849-6441 to schedule.',
+                ],
+                [
+                    'q' => 'Does Richardson provide emergency fire sprinkler repair in Union City?',
+                    'a' => 'Yes. Richardson provides 24/7 emergency fire sprinkler repair for Union City and the East Bay. Call (916) 849-6441 for immediate response to impairments, leaking heads, or burst pipes.',
+                ],
+            ],
+            'primary_services' => [
+                [
+                    'title' => 'Industrial &amp; Warehouse Fire Sprinklers',
+                    'desc'  => 'ESFR and in-rack fire sprinkler systems for Union City\'s I-880 warehouse and distribution corridor.',
+                    'link'  => '/industrial/',
+                ],
+                [
+                    'title' => 'Multifamily Fire Sprinkler Systems',
+                    'desc'  => 'NFPA 13R and NFPA 13 design-build for Union City apartment and mixed-use residential projects.',
+                    'link'  => '/multifamily-fire-sprinkler-system/',
+                ],
+                [
+                    'title' => 'Inspection, Testing &amp; Repair',
+                    'desc'  => 'NFPA 25 annual inspection and 24/7 repair response for all Union City commercial and multifamily properties.',
+                    'link'  => '/inspection-testing/',
+                ],
+            ],
+            'local_regulations' => 'Union City adopts the 2022 California Fire Code with Alameda County and local amendments. Union City Fire Department reviews fire sprinkler submittals. NFPA 25 inspection and testing requirements apply to all installed systems.',
+            'fire_pump_note'    => 'Fire pumps are required for large warehouse and industrial facilities in Union City where municipal supply cannot meet ESFR hydraulic demand. Richardson performs a water supply analysis as part of every design engagement.',
+            'fire_pump_faqs'    => [
+                [
+                    'q' => 'Does my Union City warehouse need a fire pump?',
+                    'a' => 'Large ESFR systems often require a fire pump when street pressure is insufficient. Richardson performs hydraulic analysis as part of the design process and advises on fire pump requirements early in the project.',
+                ],
+                [
+                    'q' => 'Does Richardson service fire pumps in Union City?',
+                    'a' => 'Yes. Richardson provides fire pump installation, annual testing, and emergency repair for Union City and Alameda County. Call (916) 849-6441.',
+                ],
+            ],
+            'testimonial' => [
+                'quote'   => '',
+                'author'  => '',
+                'company' => '',
+                'project' => '',
+            ],
+        ],
+
     ]; // end rfp_all_locations()
 }
