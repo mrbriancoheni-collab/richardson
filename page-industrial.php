@@ -56,6 +56,38 @@ get_header();
       <?php endif; ?>
     <?php endwhile; endif; ?>
 
+    <!-- ========== AT A GLANCE ========== -->
+    <section class="section" style="background: var(--c-surface); padding-top: 2.5rem; padding-bottom: 2.5rem;">
+      <div class="container">
+        <div class="services-grid services-grid--4 reveal-up">
+          <div class="service-card service-card--sm" style="text-align:center;">
+            <div class="service-card__icon"><i class="fa-solid fa-warehouse"></i></div>
+            <h3 class="service-card__title">Industrial Sprinkler System Design</h3>
+            <p class="service-card__desc">ESFR, in-rack, and dry pipe systems engineered for commodity class and ceiling height.</p>
+            <a href="<?php echo esc_url( home_url( '/industrial-sprinkler-system/' ) ); ?>" class="service-card__link">System Types &amp; Costs <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card service-card--sm" style="text-align:center;">
+            <div class="service-card__icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+            <h3 class="service-card__title">Warehouse Sprinkler Systems</h3>
+            <p class="service-card__desc">High-bay ESFR systems, in-rack protection, and high-piled storage compliance for Sacramento's logistics corridor.</p>
+            <a href="<?php echo esc_url( home_url( '/warehouse-fire-sprinkler-system/' ) ); ?>" class="service-card__link">Warehouse Guide <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card service-card--sm" style="text-align:center;">
+            <div class="service-card__icon"><i class="fa-solid fa-hard-hat"></i></div>
+            <h3 class="service-card__title">Industrial Sprinkler Installation</h3>
+            <p class="service-card__desc">C-16 licensed installation crews coordinating with GC schedules on industrial construction projects.</p>
+            <a href="<?php echo esc_url( home_url( '/fire-sprinkler-installation/' ) ); ?>" class="service-card__link">Installation Overview <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="service-card service-card--sm" style="text-align:center;">
+            <div class="service-card__icon"><i class="fa-solid fa-drafting-compass"></i></div>
+            <h3 class="service-card__title">ESFR vs. In-Rack Analysis</h3>
+            <p class="service-card__desc">Not sure which system your warehouse needs? Our commodity classification guide explains the decision.</p>
+            <a href="<?php echo esc_url( home_url( '/esfr-vs-in-rack/' ) ); ?>" class="service-card__link">ESFR vs. In-Rack Guide <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== CORE SERVICES ========== -->
     <section id="industrial-services" class="section industrial" style="background: #fafafa;">
       <div class="container">
