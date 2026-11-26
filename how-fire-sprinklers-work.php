@@ -40,6 +40,7 @@ $biz = rfp_business_data();
     <!-- ========== ARTICLE BODY ========== -->
     <section id="how-sprinklers-work" class="section">
       <div class="container" style="max-width: 860px;">
+        <?php include get_template_directory() . '/inc/author-byline.php'; ?>
 
         <!-- THE COMMON MISCONCEPTION -->
         <div class="reveal-up" style="margin-bottom: 3rem;">

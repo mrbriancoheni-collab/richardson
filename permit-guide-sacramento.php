@@ -40,6 +40,7 @@ get_header();
     <section class="section">
       <div class="container">
         <div style="max-width: 800px; margin: 0 auto;">
+          <?php include get_template_directory() . '/inc/author-byline.php'; ?>
 
           <h2>Overview: Who Issues Fire Sprinkler Permits in Sacramento</h2>
           <p>Fire sprinkler permits in Sacramento City are issued by the Sacramento City Fire Department (SCFD) Prevention Division, located at Fire Station 1 on H Street. The SCFD handles all fire life safety permits for projects within the Sacramento city limits — which covers most of the central city, Midtown, Land Park, South Natomas, and the airport area, among others.</p>

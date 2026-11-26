@@ -40,6 +40,7 @@ get_header();
     <section class="section">
       <div class="container">
         <div style="max-width: 800px; margin: 0 auto;">
+          <?php include get_template_directory() . '/inc/author-byline.php'; ?>
 
           <h2>Why Every Fire Sprinkler System Has a Backflow Preventer</h2>
           <p>California Health and Safety Code Section 116800 and local water district cross-connection control programs require a physical barrier between any fire protection system and the public potable water supply. This requirement exists because fire sprinkler systems are classified as a high-hazard cross-connection — meaning contamination from the sprinkler system could seriously threaten public health.</p>

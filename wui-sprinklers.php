@@ -40,6 +40,7 @@ get_header();
     <section class="section">
       <div class="container">
         <div style="max-width: 800px; margin: 0 auto;">
+          <?php include get_template_directory() . '/inc/author-byline.php'; ?>
 
           <h2>What Is a WUI Zone and Why It Matters</h2>
           <p>"WUI" (Wildland-Urban Interface) refers to areas where developed land meets or intermingles with undeveloped wildland. California CAL FIRE designates lands across the state into two primary responsibility categories: State Responsibility Areas (SRA), where CAL FIRE has primary firefighting responsibility, and Local Responsibility Areas (LRA), which include incorporated cities and most suburban areas where local fire departments have jurisdiction.</p>

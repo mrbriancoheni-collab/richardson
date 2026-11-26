@@ -40,6 +40,7 @@ get_header();
     <section class="section">
       <div class="container">
         <div style="max-width: 800px; margin: 0 auto;">
+          <?php include get_template_directory() . '/inc/author-byline.php'; ?>
 
           <h2>California's Residential Sprinkler Mandate</h2>
           <p>California Health and Safety Code Section 13113.7, effective January 1, 2011, requires fire sprinkler systems in all new one- and two-family dwellings and townhouses permitted for construction on or after that date. This mandate applies statewide — no California jurisdiction can opt out or exempt new residential construction from the sprinkler requirement. This makes California one of the strongest residential sprinkler mandates in the country; most other states have no such statewide requirement.</p>

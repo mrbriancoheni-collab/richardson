@@ -40,6 +40,7 @@ get_header();
     <section class="section">
       <div class="container">
         <div style="max-width: 800px; margin: 0 auto;">
+          <?php include get_template_directory() . '/inc/author-byline.php'; ?>
 
           <h2>What Is a Fire Sprinkler Shop Drawing Package?</h2>
           <p>A fire sprinkler shop drawing package is the complete design and installation document set that a licensed fire sprinkler contractor submits to the AHJ (Authority Having Jurisdiction) for plan review before installation begins. It is different from the architectural or structural drawings in an important way: it shows exactly how the fire sprinkler system will be built — specific pipe sizes, head locations, hanger points, and equipment specifications — not just conceptual design intent.</p>

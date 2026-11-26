@@ -40,6 +40,7 @@ get_header();
     <section class="section">
       <div class="container">
         <div style="max-width: 800px; margin: 0 auto;">
+          <?php include get_template_directory() . '/inc/author-byline.php'; ?>
 
           <h2>The Core Difference</h2>
           <p>A wet-pipe fire sprinkler system keeps all supply piping permanently filled with pressurized water. When a sprinkler head activates — triggered by heat melting a glass bulb or fusible link — water flows immediately from that head only. This is the simplest, fastest, and most reliable type of sprinkler system. Approximately 85–90% of all commercial sprinkler systems installed in the U.S. are wet-pipe, and for good reason: fewer components means fewer failure points, lower installation cost, and easier annual maintenance.</p>

@@ -40,6 +40,7 @@ get_header();
     <section class="section">
       <div class="container">
         <div style="max-width: 800px; margin: 0 auto;">
+          <?php include get_template_directory() . '/inc/author-byline.php'; ?>
 
           <h2>Which NFPA 13 Hazard Classification Applies to Restaurants?</h2>
           <p>Hazard classification is the foundation of a sprinkler system design — it determines the design density (gallons per minute per square foot) and the hydraulic calculation area, which together determine pipe sizing, head spacing, and water supply demand. Getting the classification wrong means submitting a design the AHJ will reject, or worse, installing an undersized system that fails in a fire.</p>

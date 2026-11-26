@@ -40,6 +40,7 @@ get_header();
     <section class="section">
       <div class="container">
         <div style="max-width: 800px; margin: 0 auto;">
+          <?php include get_template_directory() . '/inc/author-byline.php'; ?>
 
           <h2>What Is a Pre-Action Fire Sprinkler System?</h2>
           <p>A pre-action fire sprinkler system is a dry-pipe variant that holds its piping under supervised air pressure (or nitrogen) rather than water. Unlike a standard dry-pipe system — which releases water when any single head fuses from heat — a pre-action system requires two independent events before water can reach the sprinkler heads.</p>

@@ -40,6 +40,7 @@ get_header();
     <section class="section">
       <div class="container">
         <div style="max-width: 800px; margin: 0 auto;">
+          <?php include get_template_directory() . '/inc/author-byline.php'; ?>
 
           <h2>The Two Main Warehouse Sprinkler Approaches</h2>
           <p>Most California warehouses with storage heights exceeding 12 feet require engineered fire sprinkler systems designed to NFPA 13 Chapter 16 (Storage Occupancies). The code-driven fire protection design is determined primarily by commodity classification, storage height, rack configuration, and building ceiling height — and the system that results from those variables almost always falls into one of two categories: Early Suppression Fast Response (ESFR) ceiling sprinklers, or in-rack sprinkler systems (also called rack storage sprinklers).</p>
