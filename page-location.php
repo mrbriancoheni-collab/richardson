@@ -143,6 +143,34 @@ $all_locs  = rfp_all_locations();
               Fire Pump Services in <?php echo esc_html( $name ); ?> <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="service-card__tag">Inspection &amp; Testing</div>
+            <h3 class="service-card__title">Fire Sprinkler Inspection &amp; Testing in <?php echo esc_html( $name ); ?></h3>
+            <p class="service-card__desc">NFPA 25-compliant annual inspections, 5-year internal inspections, and ITM for all commercial and industrial fire sprinkler systems in <?php echo esc_html( $county ); ?>. SB 1205 certified reports.</p>
+            <ul class="service-card__features">
+              <li><i class="fa-solid fa-check"></i> NFPA 25 annual ITM</li>
+              <li><i class="fa-solid fa-check"></i> SB 1205 certified reports</li>
+              <li><i class="fa-solid fa-check"></i> Same-visit deficiency repair</li>
+            </ul>
+            <a href="<?php echo esc_url( home_url( '/inspection-testing/' ) ); ?>" class="service-card__link">
+              Inspection &amp; Testing Services <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon"><i class="fa-solid fa-drafting-compass"></i></div>
+            <div class="service-card__tag">Engineering</div>
+            <h3 class="service-card__title">Fire Sprinkler System Design for <?php echo esc_html( $name ); ?> Projects</h3>
+            <p class="service-card__desc">NICET II certified hydraulic calculations, stamped shop drawings, and NFPA 13 compliance packages for <?php echo esc_html( $ahj ); ?> submittals. First-pass approval or we correct at no charge.</p>
+            <ul class="service-card__features">
+              <li><i class="fa-solid fa-check"></i> NICET II certified team</li>
+              <li><i class="fa-solid fa-check"></i> Hydraulic calcs &amp; shop drawings</li>
+              <li><i class="fa-solid fa-check"></i> <?php echo esc_html( $ahj ); ?> first-pass submittals</li>
+            </ul>
+            <a href="<?php echo esc_url( home_url( '/fire-sprinkler-system-design/' ) ); ?>" class="service-card__link">
+              Fire Sprinkler System Design <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -246,6 +246,16 @@ $phone = $biz['phone_display'] ?? '(916) 849-6441';
       </div>
     </section>
 
+    <!-- ========== RELATED SERVICES BRIDGE ========== -->
+    <div style="background: var(--c-bg); border-top: 1px solid var(--c-border); padding: 1.25rem 0;">
+      <div class="container" style="text-align: center; font-size: 0.95rem; color: var(--c-text-muted);">
+        Related services:
+        <a href="<?php echo esc_url( home_url( '/fire-pump/' ) ); ?>" style="margin: 0 0.5rem;">Fire Pump NFPA 25 Testing &amp; Repair</a> &bull;
+        <a href="<?php echo esc_url( home_url( '/commercial/' ) ); ?>" style="margin: 0 0.5rem;">Commercial Fire Sprinkler Systems</a> &bull;
+        <a href="<?php echo esc_url( home_url( '/emergency-repair/' ) ); ?>" style="margin: 0 0.5rem;">24/7 Emergency Repair</a>
+      </div>
+    </div>
+
     <!-- ========== SCHEDULE CTA ========== -->
     <section id="schedule" style="background: var(--c-red); color: #fff; text-align: center; padding: 4rem 1.5rem;">
       <div class="container" style="max-width: 640px;">

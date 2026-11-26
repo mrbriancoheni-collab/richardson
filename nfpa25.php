@@ -178,6 +178,15 @@ get_header();
       </div>
     </section>
 
+    <!-- ========== SCHEDULE INSPECTION CALLOUT ========== -->
+    <div style="background: var(--c-surface); border: 1px solid var(--c-border); border-left: 3px solid var(--c-red); padding: 1.25rem 1.5rem; max-width: 800px; margin: 0 auto 2rem; border-radius: var(--r-md);">
+      <p style="margin: 0; font-size: 0.95rem;">
+        <strong>Need a certified NFPA 25 inspection?</strong> Richardson Fire Protection provides
+        <a href="<?php echo esc_url( home_url( '/inspection-testing/' ) ); ?>">fire sprinkler inspection and testing services</a>
+        across Sacramento and Northern California — SB 1205 compliant reports, same-visit deficiency repair, CSLB C-16 licensed.
+      </p>
+    </div>
+
 <?php get_template_part( 'template-parts/author-bio' ); ?>
 
     <!-- ========== CTA ========== -->

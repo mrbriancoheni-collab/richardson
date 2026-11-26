@@ -139,6 +139,12 @@ function rfp_get_page_seo() {
         $slug = $post->post_name ?? '';
 
         switch ( $slug ) {
+            case 'commercial-sprinkler-system':
+                $seo['title']       = 'Commercial Sprinkler System Design & Installation Sacramento | NFPA 13 | Richardson Fire Protection';
+                $seo['description'] = 'Commercial sprinkler system types, NFPA 13 code requirements, installation costs, and the design-build process — by Sacramento\'s C-16 licensed fire sprinkler contractor. Wet pipe, dry pipe, pre-action, and deluge systems.';
+                $seo['schema_type'] = 'commercial_sprinkler_system';
+                break;
+
             case 'commercial':
             case 'commercial-fire-protection':
                 $seo['title']       = 'Commercial Sprinkler Systems Sacramento | NFPA 13 Design-Build | Richardson Fire Protection';

@@ -64,6 +64,7 @@ get_header();
             <div class="service-card__icon"><i class="fa-solid fa-droplet"></i></div>
             <h3 class="service-card__title">Commercial Sprinkler System Design</h3>
             <p class="service-card__desc">NFPA 13 hydraulic calculations, shop drawings, and AHJ-compliant packages stamped by our NICET II team.</p>
+            <a href="<?php echo esc_url( home_url( '/commercial-sprinkler-system/' ) ); ?>" class="service-card__link">System Types &amp; Costs <i class="fa-solid fa-arrow-right"></i></a>
           </div>
           <div class="service-card service-card--sm" style="text-align:center;">
             <div class="service-card__icon"><i class="fa-solid fa-hard-hat"></i></div>

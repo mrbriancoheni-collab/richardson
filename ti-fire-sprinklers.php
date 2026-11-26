@@ -154,6 +154,16 @@ get_header();
       </div>
     </section>
 
+    <!-- ========== SERVICE CALLOUT ========== -->
+    <div style="background: var(--c-surface); border: 1px solid var(--c-border); border-left: 3px solid var(--c-red); padding: 1.25rem 1.5rem; max-width: 800px; margin: 0 auto 2rem; border-radius: var(--r-md);">
+      <p style="margin: 0; font-size: 0.95rem;">
+        <strong>Need TI fire sprinkler work in Sacramento?</strong> Richardson handles
+        <a href="<?php echo esc_url( home_url( '/commercial/' ) ); ?>">commercial fire sprinkler systems</a>
+        for GCs and tenants — including occupied-building TI retrofits, NFPA 13 compliance, and AHJ coordination.
+        See our <a href="<?php echo esc_url( home_url( '/fire-sprinkler-system-design/' ) ); ?>">fire sprinkler design service</a> for stamped packages and hydraulic calculations.
+      </p>
+    </div>
+
 <?php get_template_part( 'template-parts/author-bio' ); ?>
 
     <!-- ========== CTA ========== -->
