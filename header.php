@@ -14,20 +14,6 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-  <!-- ========== PRELOADER ========== -->
-  <div id="preloader">
-    <div class="preloader-inner">
-      <div class="preloader-logo">
-        <img
-          src="<?php echo esc_url( rfp_logo_url() ); ?>"
-          alt="Richardson Fire Protection"
-          style="height: 38px; width: auto; filter: brightness(0) invert(1);"
-        />
-      </div>
-      <div class="preloader-bar"><span></span></div>
-    </div>
-  </div>
-
   <!-- ========== NAVIGATION ========== -->
   <nav id="navbar" class="navbar">
     <div class="container nav-container">
