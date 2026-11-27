@@ -10,6 +10,7 @@
               src="<?php echo esc_url( rfp_logo_url() ); ?>"
               alt="Richardson Fire Protection"
               class="nav-logo__img"
+              width="192" height="48"
               loading="lazy"
             />
           </a>

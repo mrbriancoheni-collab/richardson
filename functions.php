@@ -253,11 +253,23 @@ function rfp_enqueue_assets() {
         null
     );
 
-    // Font Awesome
+    // Font Awesome — solid + regular subsets only (omit brands/duotone/light/thin)
+    wp_enqueue_style(
+        'rfp-font-awesome-base',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/fontawesome.min.css',
+        [],
+        '6.5.0'
+    );
     wp_enqueue_style(
         'rfp-font-awesome',
-        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
-        [],
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/solid.min.css',
+        [ 'rfp-font-awesome-base' ],
+        '6.5.0'
+    );
+    wp_enqueue_style(
+        'rfp-font-awesome-regular',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/regular.min.css',
+        [ 'rfp-font-awesome-base' ],
         '6.5.0'
     );
 
@@ -265,7 +277,7 @@ function rfp_enqueue_assets() {
     wp_enqueue_style(
         'rfp-style',
         get_template_directory_uri() . '/css/style.css',
-        [ 'rfp-google-fonts', 'rfp-font-awesome' ],
+        [ 'rfp-google-fonts', 'rfp-font-awesome-base', 'rfp-font-awesome', 'rfp-font-awesome-regular' ],
         $css_ver
     );
 
@@ -287,9 +299,21 @@ function rfp_enqueue_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'rfp_enqueue_assets' );
 
+// ─── Remove unused WordPress default render-blocking assets ─────────────────
+add_action( 'wp_enqueue_scripts', function () {
+    wp_dequeue_style( 'wp-block-library' );
+    wp_dequeue_style( 'wp-block-library-theme' );
+    wp_dequeue_style( 'global-styles' );
+    wp_dequeue_style( 'classic-theme-styles' );
+}, 100 );
+remove_action( 'wp_head',             'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles',     'print_emoji_styles' );
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'admin_print_styles',  'print_emoji_styles' );
+
 // ─── Non-blocking external CSS (Google Fonts + Font Awesome) ────────────────
 add_filter( 'style_loader_tag', function ( $html, $handle ) {
-    if ( ! in_array( $handle, [ 'rfp-google-fonts', 'rfp-font-awesome' ], true ) ) {
+    if ( ! in_array( $handle, [ 'rfp-google-fonts', 'rfp-font-awesome-base', 'rfp-font-awesome', 'rfp-font-awesome-regular' ], true ) ) {
         return $html;
     }
     $async = str_replace( "media='all'", "media='print' onload=\"this.media='all'\"", $html );

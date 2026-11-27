@@ -74,6 +74,7 @@
             <img
               src="<?php echo esc_url( rfp_truck_img_url() ); ?>"
               alt="Richardson Fire Protection service truck"
+              width="400" height="500"
               style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block;"
               loading="lazy"
             />
@@ -82,6 +83,7 @@
             <img
               src="<?php echo esc_url( rfp_bg_img_url() ); ?>"
               alt="Richardson Fire Protection team at work"
+              width="400" height="400"
               style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block;"
               loading="lazy"
             />
