@@ -11,25 +11,6 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 const on = (el, ev, fn, opts) => el && el.addEventListener(ev, fn, opts);
 
 /* ============================================================
-   PRELOADER
-   ============================================================ */
-function initPreloader() {
-  const preloader = $('#preloader');
-  if (!preloader) return;
-
-  const hide = () => {
-    preloader.classList.add('done');
-    document.body.style.overflow = '';
-  };
-
-  document.body.style.overflow = 'hidden';
-
-  // Remove after animation completes (1.4s bar + 0.3s fade)
-  setTimeout(hide, 1800);
-  on(window, 'load', () => setTimeout(hide, 400));
-}
-
-/* ============================================================
    NAVBAR — scroll state & mobile toggle
    ============================================================ */
 function initNavbar() {
@@ -381,7 +362,6 @@ function initParallax() {
    INIT
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
-  initPreloader();
   initNavbar();
   initScrollReveal();
   initCounters();

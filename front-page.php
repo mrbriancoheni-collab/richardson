@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<main class="site-main" id="main-content">
+
   <!-- ========== HERO ========== -->
   <section id="hero" class="hero">
     <div class="hero-bg" style="background-image: url('<?php echo esc_url( rfp_bg_img_url() ); ?>'); background-size: cover; background-position: center;">
@@ -72,6 +74,7 @@
             <img
               src="<?php echo esc_url( rfp_truck_img_url() ); ?>"
               alt="Richardson Fire Protection service truck"
+              width="400" height="500"
               style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block;"
               loading="lazy"
             />
@@ -80,6 +83,7 @@
             <img
               src="<?php echo esc_url( rfp_bg_img_url() ); ?>"
               alt="Richardson Fire Protection team at work"
+              width="400" height="400"
               style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block;"
               loading="lazy"
             />
@@ -475,7 +479,7 @@
             <span class="blog-tag"><?php echo $cat_name; ?></span>
             <h3><?php the_title(); ?></h3>
             <p><?php echo wp_trim_words( get_the_excerpt(), 25, '&hellip;' ); ?></p>
-            <a href="<?php the_permalink(); ?>" class="blog-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="<?php the_permalink(); ?>" class="blog-link" aria-label="Read more: <?php the_title_attribute(); ?>">Read More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
         <?php
@@ -490,7 +494,7 @@
             <span class="blog-tag">Compliance</span>
             <h3>NFPA 25: What Every Property Manager Needs to Know</h3>
             <p>Understanding your annual sprinkler inspection requirements under NFPA 25 and what to expect from a compliant inspection report.</p>
-            <a href="#" class="blog-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="<?php echo esc_url( home_url( '/nfpa-25-inspection-guide/' ) ); ?>" class="blog-link" aria-label="Read more: NFPA 25 — What Every Property Manager Needs to Know">Read More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
         <article class="blog-card">
@@ -499,7 +503,7 @@
             <span class="blog-tag">Multifamily</span>
             <h3>NFPA 13R vs. 13: Which Standard Applies to Your Apartment Complex?</h3>
             <p>Understanding the difference between NFPA 13 and 13R — and which one your multifamily project requires — is critical before breaking ground.</p>
-            <a href="#" class="blog-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="<?php echo esc_url( home_url( '/nfpa-13r-vs-13-apartment-sprinklers/' ) ); ?>" class="blog-link" aria-label="Read more: NFPA 13R vs. 13 — Which Standard Applies to Your Apartment Complex">Read More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
         <article class="blog-card">
@@ -508,7 +512,7 @@
             <span class="blog-tag">Industrial</span>
             <h3>High-Piled Storage &amp; Fire Code: A Warehouse Owner's Guide</h3>
             <p>Storing commodities over 12 feet triggers specific fire code requirements. Here's what you need to know before your next AHJ inspection.</p>
-            <a href="#" class="blog-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="<?php echo esc_url( home_url( '/high-piled-storage-fire-code/' ) ); ?>" class="blog-link" aria-label="Read more: High-Piled Storage &amp; Fire Code — A Warehouse Owner's Guide">Read More <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
           </div>
         </article>
         <?php endif; ?>
@@ -650,5 +654,7 @@
     </section>
 
 <?php get_template_part( 'template-parts/locations-strip' ); ?>
+
+</main><!-- /#main-content -->
 
 <?php get_footer(); ?>

@@ -10,6 +10,7 @@
               src="<?php echo esc_url( rfp_logo_url() ); ?>"
               alt="Richardson Fire Protection"
               class="nav-logo__img"
+              width="192" height="48"
               loading="lazy"
             />
           </a>
@@ -20,7 +21,7 @@
         </div>
 
         <div class="footer-links-group">
-          <h4>Services</h4>
+          <h3>Services</h3>
           <ul>
             <li><a href="<?php echo esc_url( home_url( '/services/' ) ); ?>">All Services</a></li>
             <li><a href="<?php echo esc_url( home_url( '/commercial/' ) ); ?>">Commercial</a></li>
@@ -32,7 +33,7 @@
         </div>
 
         <div class="footer-links-group">
-          <h4>Company</h4>
+          <h3>Company</h3>
           <ul>
             <li><a href="<?php echo esc_url( home_url( '/#about' ) ); ?>">About Us</a></li>
             <li><a href="<?php echo esc_url( home_url( '/#testimonials' ) ); ?>">Reviews</a></li>
@@ -43,7 +44,7 @@
         </div>
 
         <div class="footer-links-group">
-          <h4>Service Areas</h4>
+          <h3>Service Areas</h3>
           <ul>
             <?php
             $rfp_footer_cities = [
@@ -62,7 +63,7 @@
         </div>
 
         <div class="footer-newsletter">
-          <h4>Fire Safety Newsletter</h4>
+          <h3>Fire Safety Newsletter</h3>
           <p>Code updates, maintenance tips, and safety reminders — delivered monthly.</p>
           <form class="newsletter-form" id="newsletterForm">
             <input type="email" placeholder="your@email.com" required />
